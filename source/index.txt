@@ -10,7 +10,9 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-
- 1_pcset
+   
+   1_pcset
+   2_itpassport
+   3_fundamental_information
 
 
