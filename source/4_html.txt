@@ -10,9 +10,71 @@ HTML入門
 | 突然ですが、実際にHTMLファイルと呼ばれるものを作成してみましょう。
 | 1. 今回のトレーニングで一番最初にインストールしたテキストエディタ(TeraPad, mi)を開いてください。
 | 2. エディタに以下のコードを書き込んでください。
-| 
-|     <h1>サンプルコードを記述</h1>
-|     <p>Hello, World!</p>
+
+
+
+.. code-block:: html
+ 
+     <!DOCTYPE html>
+     <html lang="ja">
+     <head>
+         <meta charset="UTF-8">
+         <title>Webページのタイトル</title>
+     </head>
+     <body>
+         <h1>h1タグは一番大きな見出しになります</h1>
+         <h2>h2タグはその次に大きい見出しで</h2>
+         <h3>h3タグはその次に大きい見出しになります</h3>
+     	
+         <p>pタグを使うと文章が書くことができます。
+         しかしhtmlファイルの方で改行しても出力時には改行されません。<br>
+         改行するためには<br>という改行タグを使います。
+         <a href="http://www.google.co.jp">Google</a>へのリンクも簡単に作れます。<br>
+         strongタグを使用するとその名の通り<strong>ストロング</strong>なものができます。<br>
+         画像を貼付けるのもとても簡単です。</p>
+     	
+         <img src="http://www.uhero.co.jp/common/images/logo.png" />
+     	
+         <ul>
+             <li>普通のリスト</li>
+     	  <li>普通のリスト</li>
+             <li>普通のリスト</li>
+         </ul>
+     
+         <ol>
+             <li>数字リスト</li>
+             <li>数字リスト</li>
+             <li>数字リスト</li>
+         </ol>
+     	
+         <table>
+             <tr>
+                 <th>名前</th>
+                 <th>フルーツ</th>
+                 <th>スポーツ</th>
+             </tr>
+             <tr>
+                 <td>田中</td>
+                 <td>りんご</td>
+                 <td>サッカー</td>
+             </tr>
+             <tr>
+                 <td>鈴木</td>
+                 <td>オレンジ</td>
+                 <td>野球</td>
+             </tr>
+     	  <tr>
+                 <td>佐藤</td>
+                 <td>ぶどう</td>
+                 <td>バスケ</td>
+             </tr>
+         </table>	
+     </body>
+     </html>
+
+
+
+
 | 
 | 3. test.html という名前でデスクトップなど分かりやすい所に保存します。
 | 4. test.html ファイルをダブルクリックします。
