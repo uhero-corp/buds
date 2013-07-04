@@ -1,0 +1,116 @@
+==========
+CSS入門
+==========
+
+ここではCSSに関する基礎的な知識や書き方について解説していきます。
+
+やってみよう!
+===============
+
+| 前回のチャプターのようにまた新たにHTMLファイルを作成します。
+| そしてそれに加え、新たにCSSファイルと呼ばれるものを作成します。
+| 
+| テキストエディタで以下のようにtest2.htmlを作成してください。
+| 
+
+
+.. code-block:: html
+
+    <!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+	    <link href="style.css" rel="stylesheet" type="text/css">
+        <title>CSS演習</title>
+    </head>
+    <body>
+        <h1 id="red">赤の見出し</h1>
+        <h1 id="blue">青の見出し</h1>
+    	<h1 id="yellow">黄の見出し</h1>
+	    
+    	<p id="back">背景の色を変えることも簡単にできます</p>
+	    
+    	<div class="colorBlocks">
+    	    <p>背景に画像を指定することも可能です。</p><br>
+    		<p>色や画像によってHTMLにデコレーションを追加します。</p>
+    	</div>
+	    
+    	<img id="border" src="http://www.uhero.co.jp/common/images/logo.png" alt="uhero"/>
+	    
+    	<ul>
+	    	<li id="left">左寄り</li>
+	    	<li id="center">中央</li>
+	    	<li id="right">右寄り</li>
+	    </ul>
+	    
+	    <p id="font">他にもフォントを変更したり</p>
+	    <p id="size">サイズを変更したり</p>
+	    <p id="line">取り消し線を引いたり</p>
+	    <p id="shadow">影をつけたりできます。</p>
+    </body>
+    </html>
+
+| またエディタで以下を書き込み、style.cssという名前で保存し、test2.htmlと同じディレクトリに置いてください。
+
+.. code-block:: css
+
+    #red {
+        color: red
+    }
+    
+    #blue {
+        color: blue
+    }
+    
+    #yellow {
+        color: yellow
+    }
+    
+    #left {
+        text-align: left;
+    }
+    
+    #back {
+        background-color: orange;
+    }
+    
+    .colorBlocks {
+        background-image: url("http://works45.jp/img/backimg/menu_cboard_light24.gif")
+    }
+    
+    #border {
+        margin: 30px 30px;
+        padding: 10px;
+        border: medium solid green;
+    }
+    
+    #center {
+        text-align: center;
+    }
+    
+    #right {
+        text-align: right;
+    }
+    
+    #font {
+        font-family: "ＭＳ ゴシック",sans-serif; 
+    }
+    
+    #line {
+        text-decoration: line-through;
+    }
+    
+    #size {
+        font-size: 25px;
+    }
+    
+    #shadow {
+        text-shadow:3px 3px 2px red;
+    }
+
+| HTMLだけの時と比べて大きな変化が見られましたか？
+| ほとんどのウェブサイトがCSSを使用して色や画像、背景、文字のフォントなどを指定しています。
+| Webデザインは近年話題に上がることも多く、注目度の高い分野の一つです。
+| ファイルを見れば分かる通り、色の指定や装飾のほとんどは英単語がそのまま使用されています。
+| 最初は慣れが必要ですが、たくさん使っていくうちにきっとCSSのテクニックをマスターできることでしょう。
+
