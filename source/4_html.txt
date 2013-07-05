@@ -313,3 +313,61 @@ imgタグは表示するべき画像を知ることができたので、画像�
 
     .. warning::
        <table>タグは表であることを示すものです。tableタグを初め、HTMLは文書構造を示すためのものであり、デザインのため使ってはいけません。デザインはCSSを用いて行いましょう。
+
+
+
+HTMLのバージョンについて
+=========================
+
+HTML5は現在W3Cが2014年の正式勧告に向けて策定している規格です。
+今世紀入ってから最大の改定となります。
+既に最新のブラウザーではHTML5の機能の多くが使うことができるようになっています。
+
+
+HTML4.01のDOCTYPE宣言：
+
+    .. code-block:: html
+
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+HTML5のDOCTYPE宣言：
+
+    .. code-block:: html
+
+        <!DOCTYPE html>
+
+
+HTML5ではaudioやvideoなど、マルチメディアをHTMLから直接扱うことが可能になりました。
+
+HTML5での動画再生の例：
+
+    .. code-block:: html
+
+        <video src="example.mp4"></video>
+
+
+また、フォーム関連の新しい機能が多数追加されました。
+
+HTML5でのフォームの例：
+
+    .. code-block:: html
+
+        <form action="submit.php" method="post">
+        <input type="datetime-local" name="datetime-local">
+        <input type="submit" value="送信">
+
+
+ブラウザでの表示例：
+
+    .. raw:: html
+
+        <form action="submit.php" method="post">
+        <input type="datetime-local" name="datetime-local">
+        <input type="submit" value="送信">
+
+
+文章構造を示す言語としての性格も強化されており、
+<header>、<footer>、<section>、<article>などが追加されました。
+これにより、<div id="header">など何もかも<div>タグにならずにより正確に表現できるようになりました。
+
