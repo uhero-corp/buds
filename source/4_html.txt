@@ -372,8 +372,9 @@ HTML5でのフォームの例：
     .. code-block:: html
 
         <form action="submit.php" method="post">
-        <input type="datetime-local" name="datetime-local">
+        <input type="range" name="range">
         <input type="submit" value="送信">
+        </form>
 
 
 ブラウザでの表示例：
@@ -381,8 +382,12 @@ HTML5でのフォームの例：
     .. raw:: html
 
         <form action="submit.php" method="post">
-        <input type="datetime-local" name="datetime-local">
+        <input type="range" name="range">
         <input type="submit" value="送信">
+        </form>
+
+    .. note::
+       最新のChrome、Internet Explorer10で閲覧してください。
 
 
 文章構造を示す言語としての性格も強化されており、
