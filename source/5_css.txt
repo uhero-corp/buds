@@ -245,3 +245,157 @@ HTML5における要素の分類は `こちら <http://www.htmq.com/html5/007.sh
            <p style="margin-bottom:-80px;background:yellow;height:160px;width:160px">黄<br>margin-bottom:-80px</p>
            <p style="margin-left:80px;background:red;height:160px;width:160px">赤<br>margin-left:80px</p>
        
+=======
+主要cssの紹介
+================
+| cssは非常に多くの種類があります。
+| ここではいくつかメジャーなものを紹介しますが、
+| ウェブを使って `リファレンスサイト <http://www.htmq.com/style/>`_ を見つけ出し、様々なcssに挑戦してみてください。
+| 
+
+     ==============  ====================  ============  ==================== 
+       プロパティ         概要                   値            サンプルコード 
+     ==============  ====================  ============  ====================
+       color            色を変える             色            color : red  
+     ==============  ====================  ============  ====================
+	 
+	 .. raw :: html
+	 
+	   <p>ブラウザ表示例 : <span style="color:red">サンプルテキスト</span></p>
+
+
+     ==============  ===================  ================  ======================== 
+       プロパティ         概要                  値            サンプルコード 
+     ==============  ===================  ================  ========================
+       background        背景を変える        色や画像など      background : yellow 
+     ==============  ===================  ================  ========================
+	 
+	 .. raw :: html
+	 
+	   <p>ブラウザ表示例 : <span style="background:yellow">サンプルテキスト</span></p>
+	   
+	   
+     ==============  ======================  ================  ======================== 
+       プロパティ         概要                  値               サンプルコード 
+     ==============  ======================  ================  ========================
+       font-size      文字サイズを変える        数値や%等        font-size : 35px 
+     ==============  ======================  ================  ========================
+	 
+	 .. raw :: html
+	 
+	   <p>ブラウザ表示例 : <span style="font-size:35px">サンプルテキスト</span></p>
+	   
+     ==============  ======================  ================  ======================== 
+       プロパティ         概要                  値               サンプルコード 
+     ==============  ======================  ================  ========================
+       text-align      行揃えの位置を変える     left,right等        text-align : right 
+     ==============  ======================  ================  ========================
+
+	 
+	 .. raw :: html
+	 
+	   <ul>ブラウザ表示例 : <li style="text-align:right">サンプルテキスト</li></ul>
+	   
+	   
+     ==============  ==================  ==================  ========================= 
+       プロパティ         概要                  値                サンプルコード 
+     ==============  ==================  ==================  =========================
+       border         枠線を指定         スタイル・太さ等       border : double 10px red 
+     ==============  ==================  ==================  =========================
+
+	 
+	 .. raw :: html
+	 
+	   <p>ブラウザ表示例 : <span style=" border:double 10px red">サンプルテキスト</span></p>
+	   
+|　	   
+| cssでコンテンツの位置を指定るするのに **margin** と **padding** というのがあります。
+| 大事な点なのでこの2つの違いをしっかりと覚えましょう。
+| 簡単に言うと、marginは領域間のスペースでpaddingは領域内のスペースのことです。
+| 
+| 分かりやすいように、文字の背景を水色に設定したテキストを設置します。
+
+   .. raw :: html 
+   
+      <p style="background:#afeeee">サンプルテキスト</p>
+	  
+	  <p style="background:#afeeee;margin:30px 30px 30px 30px">サンプルテキスト　margin:30px 30px 30px 30px</p>
+	  
+	  <p style="background:#afeeee;padding:30px 30px 30px 30px">サンプルテキスト padding:30px 30px 30px 30px</p>
+	  
+	  <p style="background:#afeeee;margin:30px 30px 30px 30px;padding:30px 30px 30px 30px">サンプルテキスト margin:30px 30px 30px 30px   padding:30px 30px 30px 30px</p>
+	   
+| 違いが分かりますでしょうか?
+| 領域間のスペースを指定するmarginが設定されているものは、水色の背景が四方向から30pxひとまわり小さくなっています。
+| 領域内のスペースを指定するpaddingが設定されているものは、テキストから
+| 30pxという値が4つも指定されているのは、それぞれ記述した順に[上][右][下][左]のmarginおよびpaddingを表しています。
+| マージンに負の値を指定することもでき、そうすることでいくつかのコンテンツを重ねて表示することも可能です。
+| しかし、ブラウザの環境などによって順番や位置が違う可能性があるため、注意しなければなりません。以下がその例です。
+
+       .. raw :: html 
+       
+           <p style="margin-bottom:-80px;background:yellow;height:160px;width:160px">黄<br>margin-bottom:-80px</p>
+           <p style="margin-left:80px;background:red;height:160px;width:160px">赤<br>margin-left:80px</p>
+		   
+		
+CSSのバージョンについて   
+=========================
+
+| CSSはこれまでCSS1,CSS2,CSS2.1とバージョンが新しくなってきており、
+| 現在ではCSS3というバージョンが一番新しいものとなっています。
+| 
+| 結論から言ってしまうと、記述方法などに基本的に大きな違いはありません。
+| 今までのCSS2.1で書かれたCSSも問題なく動作します。
+| 
+| 主な変更点としては今までになかったアニメーションや装飾の機能が追加されたということです。
+| 
+| 例えば以下のようなCSSを書くと
+|
+
+    .. code-block:: css
+	
+            p {
+                color: red;
+                opacity: 0.5;
+            }
+			
+| 
+| ブラウザでの表示は
+
+    .. raw :: html
+	
+	    <p style="opacity:0.5;color:red">サンプルテキスト</p>
+
+| このようになります。
+| opacityプロパティは透明度を指定するものであり、CSS3で新しく追加された機能です。
+| 
+| 他にもボーダーの角を丸くするborder-radiusプロパティ
+
+    .. raw :: html
+	  
+          <p style="border:solid;border-radius:10px">サンプルテキスト</p>
+		  
+| 
+| transitionプロパティを使用したアニメーション
+
+    .. raw :: html
+
+          <style type="text/css">
+          <!--
+          .animation {
+              background-color:yellow; width:200px; height:50px; 
+              -moz-transition: background-color 0.5s linear 0 , width 1s linear 0 , height 1s linear 0;
+              -webkit-transition: background-color 0.5s linear 0 , width 1s linear 0 , height 1s linear 0;
+              -o-transition: background-color 0.5s linear 0 , width 1s linear 0 , height 1s linear 0;
+              -ms-transition: background-color 0.5s linear 0 , width 1s linear 0 , height 1s linear 0;
+          }
+
+          .animation:hover {
+              background-color:orange; width:400px; height:200px; 
+          s}
+          -->
+          </style>
+          <p class="animation">マウスをかざしてください</p>
+		  
+| といった様々な新しい機能が追加されたので、リファレンスサイト等で見てみるといいでしょう。
+
