@@ -154,6 +154,62 @@ HTML5における要素の分類は `こちら <http://www.htmq.com/html5/007.sh
 
 
 
+CSSの使い方
+============================================
+
+| CSSは適用する部分を指定して使用します。
+| タグや、ID、CLASSなどで指定することができます。
+
+
+**例１：全ての<p>タグに適用する場合**
+
+    .. code-block:: css
+	
+            p {
+                color: red;
+                opacity: 0.5;
+            }
+			
+
+**例２：一つの特定の<p>タグに適用する場合**
+
+HTML
+    .. code-block:: html
+	
+            <p id="hogehoge">ここには適用されます。</p>
+            <p>ここには適用されません。</p>
+CSS
+    .. code-block:: css
+	
+            #hogehoge {
+                color: red;
+                opacity: 0.5;
+            }
+			
+    .. warning::
+       同一のIDはひとつのHTML文書の中では一回しか使うことができません。
+
+
+**例３：いくつかの<p>タグにまとめて適用する場合**
+
+HTML
+    .. code-block:: html
+	
+            <p class="foo">ここには適用されます。</p>
+            <p>ここには適用されません。</p>
+            <p class="foo">ここにも適用されます。</p>
+CSS
+    .. code-block:: css
+	
+            .foo {
+                color: red;
+                opacity: 0.5;
+            }
+
+    .. note::
+       CLASSは複数の要素で使うことができます。
+
+
 主要cssの紹介
 ================
 | cssは非常に多くの種類があります。
