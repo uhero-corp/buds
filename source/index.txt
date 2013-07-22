@@ -9,6 +9,11 @@
 Contents:
 
 .. toctree::
+   :maxdepth: 1
+
+   0_changelog
+
+.. toctree::
    :maxdepth: 2
    
    1_pcset
