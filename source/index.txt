@@ -17,3 +17,4 @@ Contents:
    4_html
    5_css
    6_introduction_programming
+   7_JavaScript
