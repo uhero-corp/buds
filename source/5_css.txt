@@ -295,8 +295,13 @@ CSS
 | cssでコンテンツの位置を指定るするのに **margin** と **padding** というのがあります。
 | 大事な点なのでこの2つの違いをしっかりと覚えましょう。
 | 簡単に言うと、marginは領域間のスペースでpaddingは領域内のスペースのことです。
+
+       
+| わかりやすく表すと、次の画像のようになります。
+ 
+ 	  .. image:: /_static/margin.png
 | 
-| 分かりやすいように、文字の背景を水色に設定したテキストを設置します。
+| さらに分かりやすいように、文字の背景を水色に設定したテキストを設置します。
 
    .. raw :: html 
    
@@ -319,8 +324,7 @@ CSS
        
            <p style="margin-bottom:-80px;background:yellow;height:160px;width:160px">黄<br>margin-bottom:-80px</p>
            <p style="margin-left:80px;background:red;height:160px;width:160px">赤<br>margin-left:80px</p>
-       
-		   
+
 		
 
 CSSのバージョンについて   
