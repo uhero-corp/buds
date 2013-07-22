@@ -9,10 +9,17 @@
 Contents:
 
 .. toctree::
+   :maxdepth: 1
+
+   0_changelog
+
+.. toctree::
    :maxdepth: 2
    
    1_pcset
    2_itpassport
    3_fundamental_information
-
-
+   4_html
+   5_css
+   6_introduction_programming
+   7_JavaScript
