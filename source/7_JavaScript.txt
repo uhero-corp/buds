@@ -46,7 +46,7 @@ JavaScript中にコメントを記述するには、コメントにしたい文�
    */
 
 
-| /*と*/で囲まれた部分はコメントとなります。
+| /\*と\*/で囲まれた部分はコメントとなります。
 | Javascriptに限った話ではなく、後々のためにも、そして他の人のためにもプログラムには適時コメントを書き残しておきましょう。
 
 
@@ -67,8 +67,7 @@ JavaScript中にコメントを記述するには、コメントにしたい文�
 
 .. code-block:: javascript
 
-   document.write("Hello World!!");
-   document.write("Hello Japan!!");
+   document.write("Hello World!!")document.write("Hello Japan!!");
 
 
 | document.write("Hello World!!")document.write("Hello Japan!!"); で一つの処理と認識されてしまい、文法エラーとなってしまいます。
