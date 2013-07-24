@@ -1,3 +1,44 @@
 =========================================
-Javascript
+JavaScript入門
 =========================================
+
+Hello, World!
+=======================
+
+| それではJavaScriptについて勉強していきたいと思います。
+| JavaScriptはHTML内に記述することができます。
+| headタグ内、もしくはbodyタグ内に下記のような記述をしたHTMLファイルを作成してみてください。
+
+    .. code-block:: html
+	
+	   <script type="text/javascript">
+	   <!--
+	   document.write("Hello, World!");
+	   // -->
+	   </script>
+	   
+| 作成したHTMLファイルをブラウザで確認してみましょう。
+| Hello, World! と表示されたら成功です。
+|  
+
+外部JavaScriptファイル(.js)
+------------------------------
+
+| JavaScriptもCSSと同様に、基本的にHTMLファイルから分離させます。
+| 以下の１行を書いたファイルをsample.jsという名前で作成してください。
+
+    .. code-block:: js
+	
+	  document.write("It Works!!");
+	  
+	  
+| そして、このjsファイルを読み込むためのHTMLファイルを作成します。
+| hello.jsと同じ階層に以下のようなファイルを作成してください。
+
+     .. code-block:: html
+	 
+	   <script type="text/javascript" src="sample.js"></script>
+	
+| うまく外部ファイルを読み込めましたでしょうか？
+| It Works!!と表示されたら成功です。
+
