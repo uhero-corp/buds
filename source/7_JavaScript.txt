@@ -42,3 +42,42 @@ Hello, World!
 | うまく外部ファイルを読み込めましたでしょうか？
 | It Works!!と表示されたら成功です。
 
+
+switch文
+=================
+
+| 条件分岐の項目でif文について理解したと思います。
+| switch文は与えられた変数の値によって処理を分岐する方法です。
+| caseの後に想定する変数の値を記述し、case毎に処理を記述します。
+| 実行時に変数に渡された値と、caseの後に記述した値が一致すると処理が実行されます。
+| それぞれの処理の終了部分には「break;」を記述します。「break;」が記述されていないと以下に続く処理が続いて実行されてしまいますので気をつけましょう。
+
+ .. code-block:: js
+
+    var science = 'chemistry';                            // 変数scienceを定義し、chemistryという文字列を代入
+    
+    switch (science) {
+        case 'physics':                                   // 変数scienveの値がphysicsであれば以下の処理を実行
+            document.write("私は物理が好きです。");          // 「私は物理が好きです。」と表示する
+            break;                                       // switch文を終了
+        case 'biology':                                  // 変数schienceの値がbiologyであれば以下の処理を実行
+            document.write("私は生物が好きです。");         // 「私は生物が好きです。」と表示する
+            break;                                       // switch文を終了
+        case 'chemistry':                                // 変数schienceの値がchemistryであれば以下の処理を実行       
+            document.write("私は化学が好きです。");         // 「私は化学が好きです。」と表示する
+            break;                                      // switch文を終了
+        default:                                        // 変数scienceの値がphysicsでもbiologyでもchemistryでもない場合、以下の処理を実行
+            document.write("私は理科が好きです。");        // 「私は理科が好きです。」と表示する
+            break;                                      // switch文を終了
+    }
+
+| 上記の例では変数scienceにchemistryが代入されているので「case 'chemistry':」の処理が実行され、「私は化学が好きです。」と表示されます。
+|   
+
+課題
+---------
+
+| 数値を入れ、100以上200未満の場合は、その数を3で割った余りを「漢数字」で表示するプログラムを作りましょう。
+| if文とswitch文の両方を使ってください。
+
+
