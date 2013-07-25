@@ -546,8 +546,45 @@ for文
 =============
 
 
-オブジェクト
-==============
+オブジェクトの利用
+=====================
+
+| オブジェクトとは、とても省略して誤解を恐れずに言ってしまうと **メソッドとプロパティを格納しているもの** です。
+| メソッドは"関数"、プロパティは"変数"と考えてください。
+| JavaScriptでは予め定義されたオブジェクトを利用することができます。
+
+ .. code-block:: js
+ 
+      オブジェクト名：document
+      メソッド名：write
+      引数：文字列
+
+| どこかで見た気がしますね。
+| そう、document.write()です。
+| document.writeとはdocumentオブジェクトのwriteメソッドです。
+| オブジェクト名とメソッド名をドットで繋いで記述します。
+
+課題
+-------
+
+ .. code-block:: js
+
+      var date = new Date();
+	  
+| としたとき、dateにはその時間の情報が入っています。
+| Dateでは、日付や時間、曜日などを取り扱うメソッドがあらかじめ用意されています。
+| 例えば、
+
+ .. code-block:: js
+
+    date.getYear();
+	
+| で、その年が引き出せます。
+| この機能を使って、dateを引数にとり、文字列で"○年○月○日○時○分○秒(○曜日)"という形で値を表示する関数を作ってください。
+| **参考サイト**
+| `Dateオブジェクト / JavaScriptリファレンス <http://www.scollabo.com/banban/java/ref_15.html>`_
+| `Date - JavaScript | MDN <https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Date>`_
+
 
 
 JavaScript最終課題
