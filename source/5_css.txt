@@ -161,7 +161,7 @@ HTML5における要素の分類は `こちら <http://www.htmq.com/html5/007.sh
   .. code-block:: css
  
       p {
-      color: red;
+          color: red;
       }
 
 | このCSSは **pタグの文字色を赤にする** という意味です。
@@ -178,9 +178,9 @@ HTML5における要素の分類は `こちら <http://www.htmq.com/html5/007.sh
   .. code-block:: css
  
       p {
-      color: red;
-	  font-size: 15px;
-	  background-color: black;
+          color: red;
+          font-size: 15px;
+          background-color: black;
       }
 
 | さて、ここで問題が発生しました。
