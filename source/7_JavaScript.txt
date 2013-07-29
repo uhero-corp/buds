@@ -465,7 +465,7 @@ switch文
     var science = 'chemistry';                            // 変数scienceを定義し、chemistryという文字列を代入
     
     switch (science) {
-        case 'physics':                                   // 変数scienveの値がphysicsであれば以下の処理を実行
+        case 'physics':                                   // 変数scienceの値がphysicsであれば以下の処理を実行
             document.write("私は物理が好きです。");          // 「私は物理が好きです。」と表示する
             break;                                       // switch文を終了
         case 'biology':                                  // 変数schienceの値がbiologyであれば以下の処理を実行
@@ -599,12 +599,12 @@ for文
 課題
 ------------ 
 
-| ①while文を使って、xの3乗の値を表示させて下さい。xの定義域は-10?10とします。
+| ①while文を使って、xの3乗の値を表示させて下さい。xの定義域は-10以上10以下とします。
 | 
 | **出力例**
 | x = -10のとき, y = -1000
 | x = -9のとき, y = -729
-| ?????省略?????
+| ~~~~~~~~省略~~~~~~~~
 | x = 10のとき, y = 1000
 |  
 | ②for文をネストさせて、使って九九の表を作ってください。
