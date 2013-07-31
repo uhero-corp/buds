@@ -290,7 +290,7 @@ CSS
      
      .. raw :: html
      
-       <ul>ブラウザ表示例 : <li style="text-align:right">サンプルテキスト</li></ul>
+       ブラウザ表示例 : <p style="text-align:right">サンプルテキスト</p>
        
        
      ==============  ==================  ==================  ========================= 
@@ -314,7 +314,11 @@ CSS
      
      .. raw :: html
      
-       <p>ブラウザ表示例 : <li style="list-style:square">サンプルテキスト</span></p>	
+       <p>ブラウザ表示例 :</p>
+       <ol>
+           <li style="list-style:square">サンプルテキスト</li>
+       </ol>
+
 
      ==============  ===================================================  ============ 
        プロパティ         概要                                               値
@@ -380,7 +384,7 @@ CSS
             background-color: green;
         }
       </style>
-      <p>ブザウザ表示例: <span id="sample">マウスをかざしてください</span></p>
+      <p>ブラウザ表示例: <span id="sample">マウスをかざしてください</span></p>
 	   
 margin と padding       
 -----------------------
