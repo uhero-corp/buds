@@ -489,7 +489,9 @@ switch文
 | if文とswitch文の両方を使ってください。
 
 
+.. raw :: html
 
+     <a class="jsbin-embed" href="http://jsbin.com/adupil/7/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 繰り返し文
