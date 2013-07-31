@@ -457,9 +457,7 @@ floatとclear
       }
       </style>
       <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
-	  <div style="clear:left" />
-	  <br />
-	  
+
  
 | ここで実はひとつ問題が生じてしまいました。
 | 先述した通り、float:leftが設定されている画像以降の要素はすべて画像の右側に回ってしまうのです。
@@ -482,7 +480,6 @@ floatとclear
       <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
       <p>いろいろな要素を後に記述しても</p>
       <p>すべて右に回ってしまいます。</p>
-      <div style="clear:left" />
 	  
 
 | ここで登場するのがclearプロパティです。
@@ -507,6 +504,7 @@ both	    左フロートに対する廻り込みと右フロートに対する�
       <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
       <div style="clear:left" />
       <p>clearしているので、フロートの右に回ることはありません。</p>
+      </div>
 	  
 | このfloatとclearを巧く使いこなせれば
 | Webページでよく見るサイドナビなどを配置したりできるようになります。
