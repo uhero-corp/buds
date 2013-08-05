@@ -183,8 +183,25 @@ HTML5における要素の分類は `こちら <http://www.htmq.com/html5/007.sh
           background-color: black;
       }
 
+|
+|
+
+**課題**
+
+    下記のCSSを正しく埋めて、<h1>タグを青くするCSSを書きなさい。
+
+       .. code-block:: css
+
+            {
+               color: ;
+           }
+
+
+|
+|
+|
 | さて、ここで問題が発生しました。
-| 上のような記述をしてしまうと、HTMLのすべてのpタグのスタイルが変更されてしまいます。
+| 上のような記述をしてしまうと、指定したHTMLタグ全てのスタイルが変更されてしまいます。
 | こっちとあっちのpタグで違うスタイルを反映させたいという時に使うのがidとclassです。
 
 idとclass
@@ -240,9 +257,33 @@ CSS
 
     .. note::
        CLASSは複数の要素で使うことができます。
-	   
-	   
-	   
+
+
+**課題**
+
+下記のHTMLとCSSの不足部分を補い、「青い」が含まれる段落（<p>タグで囲まれた部分）を青く、「赤い」が含まれる段落を赤くしなさい。
+
+HTML
+    .. code-block:: html
+	
+            <p class="blue">青いですー！</p>
+              <p>ここは関係なーい！</p>
+              <p class="red">赤いですなー</p>
+              <p>赤いですね</p>
+              <p>青いです！</p>
+              <p>無関係だよん。</p>
+
+CSS
+    .. code-block:: css
+	
+             {
+                color: red;
+            }
+               {
+                color: blue;
+            }
+
+
 ウェブカラーとピクセル
 ======================
 
@@ -357,7 +398,28 @@ CSS
            <p style="margin-bottom:-80px;background:yellow;height:160px;width:160px">黄<br>margin-bottom:-80px</p>
            <p style="margin-left:80px;background:red;height:160px;width:160px">赤<br>margin-left:80px</p>
 
-		
+
+**課題**
+
+<div>タグを使って、領域間のスペースが60px、領域内のスペースが30px、幅が200px、高さが150pxで背景を黄色になるように下記のCSSを書いてみましょう。
+
+HTML
+    .. code-block:: html
+	
+            <div></div>
+
+CSS
+    .. code-block:: css
+	
+            div {
+                margin:
+                padding:
+                width:200px;
+                height:
+                background-color: yellow;
+            }
+
+
 
 CSSのバージョンについて   
 =========================
