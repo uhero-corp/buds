@@ -332,9 +332,22 @@ HTML
        background        背景を変える        色や画像など      background : yellow 
      ==============  ===================  ================  ========================
      
+
      .. raw :: html
      
        <p>ブラウザ表示例 : <span style="background:yellow">サンプルテキスト</span></p>
+       
+       
+     ==============  ==========================  ================  ======================== 
+       プロパティ         概要                    値               サンプルコード 
+     ==============  ==========================  ================  ========================
+       font-weight      フォントの太さを変える        スタイル        font-weight : bold
+     ==============  ==========================  ================  ========================
+
+
+      .. raw :: html
+     
+        <p>ブラウザ表示例 : <span style="font-weight:bold">サンプルテキスト</span></p>
        
        
      ==============  ======================  ================  ======================== 
@@ -356,7 +369,7 @@ HTML
      
      .. raw :: html
      
-       <ul>ブラウザ表示例 : <li style="text-align:right">サンプルテキスト</li></ul>
+       ブラウザ表示例 : <p style="text-align:right">サンプルテキスト</p>
        
        
      ==============  ==================  ==================  ========================= 
@@ -369,8 +382,92 @@ HTML
      .. raw :: html
      
        <p>ブラウザ表示例 : <span style=" border:double 10px red">サンプルテキスト</span></p>
-       
-|　    
+	   
+
+     ==============  ========================  ==================  ======================== 
+       プロパティ         概要                  値                 サンプルコード 
+     ==============  ========================  ==================  ========================
+       list-style      マーカーに関する指定       スタイル・画像      list-style: square
+     ==============  ========================  ==================  ========================
+
+     
+     .. raw :: html
+     
+       <p>ブラウザ表示例 :</p>
+       <ol>
+           <li style="list-style:square">サンプルテキスト</li>
+       </ol>
+
+
+     ==============  ===================================================  ============ 
+       プロパティ         概要                                               値
+     ==============  ===================================================  ============
+       display        要素の表示形式（ブロック・インライン）を指定する         スタイル 
+     ==============  ===================================================  ============
+
+
+    .. code-block:: html
+	
+           <ul id="navi">
+             <li>サンプルテキスト1</li>
+             <li>サンプルテキスト2</li>
+             <li>サンプルテキスト3</li>
+           </ul>
+		   
+		
+    .. code-block:: css
+	 
+        #navi li{
+            display: inline;
+        }
+	 
+	 
+   .. raw :: html
+     
+       <p>ブラウザ表示例 : <ul><li style="display:inline">サンプルテキスト1</li><li style="display:inline">サンプルテキスト2</li><li style="display:inline">サンプルテキスト3</li></ul></p>	   
+	   
+	   
+マウスをかざした時のhover
+-------------------------
+
+| CSSにはマウスをかざした時にスタイルを変更するhoverという機能があります。
+| セレクタの後に:hoverと記述するだけで、更に幅広いスタイルングが実現できます。
+| しかし、タッチパネルが主流となっているスマートフォン向けのWebサイトでは
+| マウスポインタをかざすことができないので、その点を考慮してhoverを使用するようにしましょう。
+
+| 例えば以下は、通常は文字色が赤であるテキストが
+| マウスポインタをかざすと色が黄色になり、背景が緑に変化するコードです。
+
+   .. code-block:: html
+   
+        <p>マウスをかざしてください</p>
+
+   .. code-block:: css
+   
+        p {
+            color: red;
+        }
+        p:hover {
+            color: yellow;
+            background-color: green;
+        }
+  
+  .. raw :: html
+    
+      <style type="text/css">
+        #sample {
+            color: red;
+        }
+        #sample:hover {
+            color: yellow;
+            background-color: green;
+        }
+      </style>
+      <p>ブラウザ表示例: <span id="sample">マウスをかざしてください</span></p>
+	   
+margin と padding       
+-----------------------
+	
 | cssでコンテンツの位置を指定るするのに **margin** と **padding** というのがあります。
 | 大事な点なのでこの2つの違いをしっかりと覚えましょう。
 | 簡単に言うと、marginは領域間のスペースでpaddingは領域内のスペースのことです。
@@ -378,9 +475,9 @@ HTML
        
 | わかりやすく表すと、次の画像のようになります。
  
-      .. image:: /_static/margin.png
+ 	  .. image:: /_static/margin.png
 
-| 分かりやすいように、文字の背景を水色に設定したテキストを設置します。
+| さらに分かりやすいように、文字の背景を水色に設定したテキストを設置します。
 
    .. raw :: html 
    
@@ -403,6 +500,7 @@ HTML
        
            <p style="margin-bottom:-80px;background:yellow;height:160px;width:160px">黄<br>margin-bottom:-80px</p>
            <p style="margin-left:80px;background:red;height:160px;width:160px">赤<br>margin-left:80px</p>
+		   
 
 
 **課題**
@@ -426,9 +524,100 @@ CSS
             }
 
 
+floatとclear
+-----------------
+
+| floatとclearも要素の配置を定めるのに重要なプロパティです。
+| floatプロパティは指定された要素を左または右に寄せて配置する際に使用します。
+| 聞こえは簡単なのですが、初心者がつまずいてしまうのは「後に続く内容が反対側に回り込む」からです。
+
+   .. code-block:: html
+ 
+       <p>ユヒーロのロゴです。<img src="http://www.uhero.co.jp/common/images/logo.png">floatが無い状態です。</p>
+   
+.. raw:: html
+  
+      <p>ユヒーロのロゴです。<img src="http://www.uhero.co.jp/common/images/logo.png">floatが無い状態です。</p>
+	  
+| 
+| それでは画像にlogoという名前でidを付け、float:leftというCSSを反映させてみましょう。
+
+
+  .. code-block:: html
+
+       <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
+	   
+	   
+.. code-block:: css
+
+    #logo {
+        float: left;
+    }
+
+.. raw:: html
+      
+      <style>
+      #logo {
+        float: left;
+      }
+      </style>
+      <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
+
+ 
+| ここで実はひとつ問題が生じてしまいました。
+| 先述した通り、float:leftが設定されている画像以降の要素はすべて画像の右側に回ってしまうのです。
+|  
+
+  .. code-block:: html
+
+       <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
+       <p>いろいろな要素を後に記述しても</p>
+       <p>すべて右に回ってしまいます。</p>
+
+
+.. raw:: html
+      
+      <style>
+      #logo {
+        float: left;
+      }
+      </style>
+      <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
+      <p>いろいろな要素を後に記述しても</p>
+      <p>すべて右に回ってしまいます。</p>
+	  
+
+| ここで登場するのがclearプロパティです。
+
+=========  =================================================================================
+right	    右フロートに対する廻り込みを解除します。
+left	    左フロートに対する廻り込みを解除します。
+both	    左フロートに対する廻り込みと右フロートに対する廻り込みの双方を解除します。
+=========  =================================================================================
+
+| 使い方は、floatが設定されているHTMLの後にclearが設定されているブロックレベルボックスを用意します。
+|
+
+.. code-block:: html
+     
+      <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
+      <div style="clear:left" />
+      <p>clearしているので、フロートの右に回ることはありません。</p>
+	  
+.. raw:: html
+     
+      <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
+      <div style="clear:left" />
+      <p>clearしているので、フロートの右に回ることはありません。</p>
+      </div>
+	  
+| このfloatとclearを巧く使いこなせれば
+| Webページでよく見るサイドナビなどを配置したりできるようになります。
+| 
+
 
 CSSのバージョンについて   
-=========================
+===========================
 
 | CSSはこれまでCSS1,CSS2,CSS2.1とバージョンが新しくなってきており、
 | 現在ではCSS3というバージョンが一番新しいものとなっています。
