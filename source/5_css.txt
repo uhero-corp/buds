@@ -188,12 +188,12 @@ HTML5における要素の分類は `こちら <http://www.htmq.com/html5/007.sh
 
 **課題**
 
-    下記のCSSを正しく埋めて、<h1>タグを青くするCSSを書きなさい。
+    下記のCSSの[todo]部分を正しく埋めて、<h1>タグを青くするCSSを書きなさい。
 
        .. code-block:: css
 
-            {
-               color: ;
+           [todo] {
+               color: [todo];
            }
 
 
@@ -213,28 +213,31 @@ idとclass
 **例１：全ての<p>タグに適用する場合**
 
     .. code-block:: css
-	
+    
             p {
                 color: red;
                 opacity: 0.5;
             }
-			
+            
 
 **例２：一つの特定の<p>タグに適用する場合**
 
 HTML
+
     .. code-block:: html
-	
-            <p id="hogehoge">ここには適用されます。</p>
-            <p>ここには適用されません。</p>
+
+       <p id="hogehoge">ここには適用されます。</p>
+       <p>ここには適用されません。</p>
+
 CSS
+
     .. code-block:: css
-	
-            #hogehoge {
-                color: red;
-                opacity: 0.5;
-            }
-			
+
+       #hogehoge {
+           color: red;
+           opacity: 0.5;
+       }
+            
     .. warning::
        同一のIDはひとつのHTML文書の中では一回しか使うことができません。
 
@@ -243,13 +246,13 @@ CSS
 
 HTML
     .. code-block:: html
-	
+    
             <p class="foo">ここには適用されます。</p>
             <p>ここには適用されません。</p>
             <p class="foo">ここにも適用されます。</p>
 CSS
     .. code-block:: css
-	
+    
             .foo {
                 color: red;
                 opacity: 0.5;
@@ -261,27 +264,30 @@ CSS
 
 **課題**
 
-下記のHTMLとCSSの不足部分を補い、「青い」が含まれる段落（<p>タグで囲まれた部分）を青く、「赤い」が含まれる段落を赤くしなさい。
+下記のHTMLの<p>タグに適切なclass名を書いた上でCSSの[todo]部分を補い、「青い」が含まれる段落（<p>タグで囲まれた部分）を青く、「赤い」が含まれる段落を赤くしなさい。
 
 HTML
-    .. code-block:: html
-	
-            <p class="blue">青いですー！</p>
-              <p>ここは関係なーい！</p>
-              <p class="red">赤いですなー</p>
-              <p>赤いですね</p>
-              <p>青いです！</p>
-              <p>無関係だよん。</p>
 
-CSS
-    .. code-block:: css
-	
-             {
-                color: red;
-            }
-               {
-                color: blue;
-            }
+
+    .. code-block:: html
+
+        <p class="blue">青いですー！</p>
+        <p>ここは関係なーい！</p>
+        <p class="red">赤いですなー</p>
+        <p>赤いですね</p>
+        <p>青いです！</p>
+        <p>無関係だよん。</p>
+
+
+  .. code-block:: css
+ 
+       [todo] {
+          color: red;
+       }
+       [todo] {
+          color: blue;
+       }
+
 
 
 ウェブカラーとピクセル
@@ -372,7 +378,7 @@ CSS
        
 | わかりやすく表すと、次の画像のようになります。
  
- 	  .. image:: /_static/margin.png
+      .. image:: /_static/margin.png
 
 | 分かりやすいように、文字の背景を水色に設定したテキストを設置します。
 
@@ -401,21 +407,21 @@ CSS
 
 **課題**
 
-<div>タグを使って、領域間のスペースが60px、領域内のスペースが30px、幅が200px、高さが150pxで背景を黄色になるように下記のCSSを書いてみましょう。
+<div>タグを使って、領域間のスペースが60px、領域内のスペースが30px、幅が200px、高さが150pxで背景を黄色になるように下記のCSSの[todo]部分を補いましょう。
 
 HTML
     .. code-block:: html
-	
+    
             <div></div>
 
 CSS
     .. code-block:: css
-	
+    
             div {
-                margin:
-                padding:
-                width:200px;
-                height:
+                margin: [todo];
+                padding: [todo];
+                [todo]:200px;
+                height: [todo];
                 background-color: yellow;
             }
 
@@ -436,18 +442,18 @@ CSSのバージョンについて
 |
 
     .. code-block:: css
-	
+    
             p {
                 color: red;
                 opacity: 0.5;
             }
-			
+            
 | 
 | ブラウザでの表示は
 
     .. raw :: html
-	
-	    <p style="opacity:0.5;color:red">サンプルテキスト</p>
+    
+        <p style="opacity:0.5;color:red">サンプルテキスト</p>
 
 | このようになります。
 | opacityプロパティは透明度を指定するものであり、CSS3で新しく追加された機能です。
@@ -455,9 +461,9 @@ CSSのバージョンについて
 | 他にもボーダーの角を丸くするborder-radiusプロパティ
 
     .. raw :: html
-	  
+      
           <p style="border:solid;border-radius:10px">サンプルテキスト</p>
-		  
+          
 | 
 | transitionプロパティを使用したアニメーション
 
@@ -479,7 +485,7 @@ CSSのバージョンについて
           -->
           </style>
           <p class="animation">マウスをかざしてください</p>
-		  
+          
 | といった様々な新しい機能が追加されたので、リファレンスサイト等で見てみるといいでしょう。
 
 
@@ -495,7 +501,7 @@ CSS課題 - ユヒーロWebサイトをつくろう
 | 今回の課題はこのWebページと同じものを作るというものです。
 | HTMLや画像などはあらかじめ用意されているので、スタイルシートにcssを記述し、できるだけ同じように表示されるようなページを制作してください。
 
-	それではまず :download:`assignment_css.zip </_static/assignment_css.zip>` をダウンロードし、デスクトップなど分かりやすい所に保存してください。
+    それではまず :download:`assignment_css.zip </_static/assignment_css.zip>` をダウンロードし、デスクトップなど分かりやすい所に保存してください。
 
 | ファイルをダブルクリックして、圧縮されているファイルを解凍してください。
 | ファイルの中にはassignment.html、style.css、imagesフォルダが含まれています。
@@ -505,7 +511,7 @@ CSS課題 - ユヒーロWebサイトをつくろう
 
 
      ここから :download:`制作例 </_static/assignment_css_ex.zip>` がダウンロードできます。
-	 
+     
 | CSSの記述には様々な方法があります。
 | 似たような表示だからといってHTMLやスタイルシートが同じということは決してありません。
 | あくまでも参考にする程度にし、できるだけ自分の力でCSSを書き上げてみてください。
