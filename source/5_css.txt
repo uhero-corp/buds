@@ -4,6 +4,16 @@ CSS入門
 
 ここではCSSに関する基礎的な知識や書き方について解説していきます。
 
+.. raw:: html
+      
+      <style>
+          .preview {
+              border-width: 2px;
+	          border-style: ridge;
+          }
+      </style>
+
+
 やってみよう!
 ===============
 
@@ -484,15 +494,14 @@ margin と padding
 | さらに分かりやすいように、文字の背景を水色に設定したテキストを設置します。
 
    .. raw :: html 
-   
-      <p style="background:#afeeee">サンプルテキスト</p>
-      
-      <p style="background:#afeeee;margin:30px 30px 30px 30px">サンプルテキスト　margin:30px 30px 30px 30px</p>
-      
-      <p style="background:#afeeee;padding:30px 30px 30px 30px">サンプルテキスト padding:30px 30px 30px 30px</p>
-      
-      <p style="background:#afeeee;margin:30px 30px 30px 30px;padding:30px 30px 30px 30px">サンプルテキスト margin:30px 30px 30px 30px   padding:30px 30px 30px 30px</p>
-       
+
+     <div class="preview">
+        <p style="background:#afeeee">サンプルテキスト</p>
+        <p style="background:#afeeee;margin:30px 30px 30px 30px">サンプルテキスト　margin:30px 30px 30px 30px</p>
+        <p style="background:#afeeee;padding:30px 30px 30px 30px">サンプルテキスト padding:30px 30px 30px 30px</p>
+        <p style="background:#afeeee;margin:30px 30px 30px 30px;padding:30px 30px 30px 30px">サンプルテキスト margin:30px 30px 30px 30px   padding:30px 30px 30px 30px</p>
+     </div>
+
 | 違いが分かりますでしょうか?
 | 領域間のスペースを指定するmarginが設定されているものは、水色の背景が四方向から30pxひとまわり小さくなっています。
 | 領域内のスペースを指定するpaddingが設定されているものは、テキストから
@@ -501,10 +510,11 @@ margin と padding
 | しかし、ブラウザの環境などによって順番や位置が違う可能性があるため、注意しなければなりません。以下がその例です。
 
        .. raw :: html 
-       
+
+         <div class="preview">
            <p style="margin-bottom:-80px;background:yellow;height:160px;width:160px">黄<br>margin-bottom:-80px</p>
            <p style="margin-left:80px;background:red;height:160px;width:160px">赤<br>margin-left:80px</p>
-		   
+		 </div>
 
 
 **課題**
@@ -543,7 +553,7 @@ floatとclear
    
 .. raw:: html
   
-      <p>ユヒーロのロゴです。<img src="http://www.uhero.co.jp/common/images/logo.png">floatが無い状態です。</p>
+      <p class="preview">ユヒーロのロゴです。<img src="http://www.uhero.co.jp/common/images/logo.png">floatが無い状態です。</p>
 	  
 | 
 | それでは画像にlogoという名前でidを付け、float:leftというCSSを反映させてみましょう。
@@ -567,9 +577,14 @@ floatとclear
         float: left;
       }
       </style>
-      <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
+      <div class="preview">
+          <p>ユヒーロのロゴです。</p>
+          <img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">
+          <p>画像にfloat:leftがついています。<br><br><br></p>
+      </div>
+      <div style="clear:left">
 
- 
+| 
 | ここで実はひとつ問題が生じてしまいました。
 | 先述した通り、float:leftが設定されている画像以降の要素はすべて画像の右側に回ってしまうのです。
 |  
@@ -582,16 +597,20 @@ floatとclear
 
 
 .. raw:: html
-      
+
+      </div>
       <style>
       #logo {
         float: left;
       }
       </style>
-      <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
-      <p>いろいろな要素を後に記述しても</p>
-      <p>すべて右に回ってしまいます。</p>
-	  
+      <div class="preview">
+          <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
+          <p>いろいろな要素を後に記述しても</p>
+          <p>すべて右に回ってしまいます。</p>
+	  </div>
+
+
 
 | ここで登場するのがclearプロパティです。
 
@@ -612,11 +631,14 @@ both	    左フロートに対する廻り込みと右フロートに対する�
 	  
 .. raw:: html
      
-      <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
-      <div style="clear:left" />
-      <p>clearしているので、フロートの右に回ることはありません。</p>
+      <div class="preview">
+          <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
+          <div style="clear:left">
+              <p>clearしているので、フロートの右に回ることはありません。</p>
+          </div>
       </div>
-	  
+
+
 | このfloatとclearを巧く使いこなせれば
 | Webページでよく見るサイドナビなどを配置したりできるようになります。
 | 
