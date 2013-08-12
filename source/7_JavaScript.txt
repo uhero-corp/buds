@@ -529,7 +529,7 @@ while文
 
  .. code-block:: js
  
-    while (1 == 1){
+    while (1 == 1) {
         document.write("ありがとう");
     }
 	
@@ -539,10 +539,10 @@ while文
  .. code-block:: js
 
     var i = 0;                   // 変数iを定義して0を代入
-    while (1 == 1){               // 1 == 1 は真となるので必ず処理を実行
+    while (1 == 1) {               // 1 == 1 は真となるので必ず処理を実行
         document.write("ありがとう");    // 「ありがとう」と表示する
         i++;                       // 変数iに1を追加する
-        if(i > 100){               // もし変数iが100より大きければ以下の処理を実行
+        if (i > 100) {               // もし変数iが100より大きければ以下の処理を実行
             break;                   // ループを終了
         }
     }                            // 条件式へ戻る
@@ -576,7 +576,7 @@ for文
  .. code-block:: js
 
                                        // 変数iを定義し0を代入 ※ループの初回のみ実行される
-    for (var i = 0; i < 100; i++){      // 変数iが100未満だったら以下の処理を実行、変数iが100より大きければ処理を実行せずにループを終了
+    for (var i = 0; i < 100; i++) {      // 変数iが100未満だったら以下の処理を実行、変数iが100より大きければ処理を実行せずにループを終了
         document.write("ありがとう");    // 「ありがとう」と表示する
     }                                  // 変数iに1を加算し、継続条件式へ再び「i < 100」が真となるか判断する。
 	
@@ -589,8 +589,8 @@ for文
 
  .. code-block:: js
 
-    for (var i = 0; i < 100; i++){
-        for (var j = 1; j <= 100; j++){
+    for (var i = 0; i < 100; i++) {
+        for (var j = 1; j <= 100; j++) {
             document.write(j);
         }
     } 
@@ -613,8 +613,8 @@ for文
 
 .. code-block:: js
 
-    for(var i = 1; i <= 9; i++){
-        for(var j = 1; j <= 9; j++){
+    for (var i = 1; i <= 9; i++) {
+        for (var j = 1; j <= 9; j++) {
         }
     }
 
@@ -629,9 +629,9 @@ for文
 .. raw:: html
    
     <script>
-        for (var i = 1; i <= 9; i++){
+        for (var i = 1; i <= 9; i++) {
 		    document.write("<table><tr>");
-            for(var j = 1; j <= 9; j++){
+            for (var j = 1; j <= 9; j++) {
                 document.write("<td>" + i*j + "</td>");
             }
 			document.write("</tr></table>");
