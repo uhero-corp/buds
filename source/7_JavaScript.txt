@@ -141,6 +141,10 @@ JavaScript中にコメントを記述するには、コメントにしたい文�
 | document.write()、及びalert()を使って、自由に文章を表示してみましょう。
 | 文章を表示することが出来たら、文章内にHTMLタグを打ち込んでみましょう。
 
+.. raw :: html
+
+     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
 
 
 データ型
@@ -349,6 +353,10 @@ JavaScript中にコメントを記述するには、コメントにしたい文�
 
     と入力し、それぞれどういう違いがでるか確かめてみてください。
 
+.. raw :: html
+
+     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
 
 条件分岐
 ==========
@@ -519,7 +527,7 @@ switch文
 
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/adupil/7/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 繰り返し文
@@ -636,7 +644,12 @@ for文
 | x = -9のとき, y = -729
 | ~~~~~~~~省略~~~~~~~~
 | x = 10のとき, y = 1000
-|  
+
+.. raw :: html
+
+     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
+| 
 | ②for文をネストさせて、使って九九の表を作ってください。
 
 .. code-block:: js
@@ -665,6 +678,11 @@ for文
 			document.write("</tr></table>");
         }
 	</script>
+	
+	
+.. raw :: html
+
+     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 
@@ -827,6 +845,12 @@ for文
     }
 
 | となります。
+| 
+
+.. raw :: html
+
+     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
 
 関数の作成
 =============
@@ -948,6 +972,9 @@ for文
 | `Dateオブジェクト / JavaScriptリファレンス <http://www.scollabo.com/banban/java/ref_15.html>`_
 | `Date - JavaScript | MDN <https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Date>`_
 
+.. raw :: html
+
+     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 JavaScript最終課題
@@ -972,3 +999,7 @@ JavaScript最終課題
 
 参考サイト
 `JavaScript による日付・時刻・時間の計算・演算のまとめ <http://www.hoge256.net/2007/08/64.html>`_
+
+.. raw :: html
+
+     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
