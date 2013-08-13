@@ -65,15 +65,15 @@ CSS入門
 .. code-block:: css
 
     #red {
-        color: red
+        color: red;
     }
     
     #blue {
-        color: blue
+        color: blue;
     }
     
     #yellow {
-        color: yellow
+        color: yellow;
     }
     
     #left {
@@ -85,7 +85,7 @@ CSS入門
     }
     
     .colorBlocks {
-        background-image: url("http://works45.jp/img/backimg/menu_cboard_light24.gif")
+        background-image: url("http://works45.jp/img/backimg/menu_cboard_light24.gif");
     }
     
     #border {
