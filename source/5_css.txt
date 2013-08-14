@@ -65,15 +65,15 @@ CSS入門
 .. code-block:: css
 
     #red {
-        color: red
+        color: red;
     }
     
     #blue {
-        color: blue
+        color: blue;
     }
     
     #yellow {
-        color: yellow
+        color: yellow;
     }
     
     #left {
@@ -85,7 +85,7 @@ CSS入門
     }
     
     .colorBlocks {
-        background-image: url("http://works45.jp/img/backimg/menu_cboard_light24.gif")
+        background-image: url("http://works45.jp/img/backimg/menu_cboard_light24.gif");
     }
     
     #border {
@@ -237,6 +237,8 @@ idとclass
 
 **例２：一つの特定の<p>タグに適用する場合**
 
+| idにスタイルを適用する際は、cssで **#** の後にid名を記述します。
+
 HTML
 
     .. code-block:: html
@@ -258,6 +260,8 @@ CSS
 
 
 **例３：いくつかの<p>タグにまとめて適用する場合**
+
+| classにスタイルを適用する際は、cssで **.** の後にclass名を記述します。
 
 HTML
 
@@ -544,6 +548,25 @@ CSS
          background-color: yellow;
      }
 
+中央配置にしてみる
+-------------------
+
+| またここで1つ問題が生じてしまいました。
+| Webサイトをデザインしているときにページを中央配置にしたいことが多いと思います。
+| その際にコンテンツの左右に例えば30pxのmarginをとったとします。
+| 一見製作中は問題なくデザインできていると思うかもしれませんが、ウィンドウのサイズを変えてみてください。
+| すると、30pxという固定の値でmarginを取ってしまっているため、コンテンツの位置がバラバラになってしまいます。
+| text-align:centerはインライン要素のため使用できません。
+| そんな時に使用するのがautoです。
+
+ .. code-block:: css
+    
+    margin: 0 auto;
+
+| と記述すると、marginの値が自動的に定まり、常に適切なスペースを保ちながらの中央揃えが可能となります。
+| IEなど一部のブラウザでは対応していないので注意してください。
+| `参考サイト <http://www.css-lecture.com/log/css-beginner/026.html>`_
+
 
 floatとclear
 -----------------
@@ -648,6 +671,31 @@ both	    左フロートに対する廻り込みと右フロートに対する�
 | Webページでよく見るサイドナビなどを配置したりできるようになります。
 | 
 
+**課題**
+
+| 赤いボックスと2つのテキストが書かれたHTMLとCSSがあります。
+| "私を右側にまわりこませて。"と書かれたpタグを赤いボックスの右側にまわりこむようにcssの[todo]に適切なプロパティと値を記述してください。
+| その際、"私はまわりこませないで。"と書かれたpタグも赤いボックスの右側にまわりこんでしまいます。
+| 右側にまわりこませずに通常通り下に表示されるよう[todo]に適切なHTMLを記述してください。
+| ※このHTMLにはstyle属性を適用します。または、idかclassを指定し、新たにcssを記述しても構いません。
+
+.. code-block:: html
+  
+  <div id="redBox"></div>
+  <p>私を右側にまわりこませて。</p>
+  [todo]
+  <p>私はまわりこませないで。</p>
+
+.. code-block:: css
+
+  #redBox {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      [todo]
+  }
+
+
 
 CSSのバージョンについて   
 ===========================
@@ -709,6 +757,11 @@ CSSのバージョンについて
           <p class="animation">マウスをかざしてください</p>
           
 | といった様々な新しい機能が追加されたので、リファレンスサイト等で見てみるといいでしょう。
+
+**課題**
+
+| Google等の検索エンジンを使ってcssプロパティを紹介しているサイトを閲覧し、
+| このトレーニングで紹介されていないcssをひとつ選び、実際に挙動を確認してください。
 
 
 
