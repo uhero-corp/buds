@@ -4,6 +4,16 @@ CSS入門
 
 ここではCSSに関する基礎的な知識や書き方について解説していきます。
 
+.. raw:: html
+      
+      <style>
+          .preview {
+              border-width: 2px;
+	          border-style: ridge;
+          }
+      </style>
+
+
 やってみよう!
 ===============
 
@@ -55,15 +65,15 @@ CSS入門
 .. code-block:: css
 
     #red {
-        color: red
+        color: red;
     }
     
     #blue {
-        color: blue
+        color: blue;
     }
     
     #yellow {
-        color: yellow
+        color: yellow;
     }
     
     #left {
@@ -75,7 +85,7 @@ CSS入門
     }
     
     .colorBlocks {
-        background-image: url("http://works45.jp/img/backimg/menu_cboard_light24.gif")
+        background-image: url("http://works45.jp/img/backimg/menu_cboard_light24.gif");
     }
     
     #border {
@@ -127,7 +137,6 @@ CSSとは?
 | <center>や<font>といったHTMLのタグもありますが、これらはHTML5では非推奨のものであり、cssでの記述が望ましいです。
 
 
-
 ブロックレベル要素とインライン要素について
 ============================================
 
@@ -152,65 +161,158 @@ CSSとは?
 
 HTML5における要素の分類は `こちら <http://www.htmq.com/html5/007.shtml>`_ を参照してください。
 
+| <div>タグはそれ自体に意味はありません。
+| しかし、CSSでスタイルを指定する時にテキストや画像等ひとつひとつに記述するのではなく
+| 段落のようにひとつのブロックにまとめてとしてくくってスタイルを適用したいときに使います。
+| 後ほど学習する"idとclass"や最終課題にも関わってきます。
 
 
-CSSの使い方
-============================================
+セレクタとプロパティと値
+=========================
 
-| CSSは適用する部分を指定して使用します。
-| タグや、ID、CLASSなどで指定することができます。
+| CSSの記述には3つの要素が必要です。
+| 例えば、以下のCSSを見てみましょう。
+
+  .. code-block:: css
+ 
+      p {
+          color: red;
+      }
+
+| このCSSは **pタグの文字色を赤にする** という意味です。
+| pというのはHTMLのpタグを示しており、"セレクタ"と呼ばれる部分です。HTMLのどの部分のスタイルを変更するか指定します。
+| colorというのはどのようなスタイルを当てるかを記述する"プロパティ"です。colorプロパティは文字色を指定するプロパティです。
+| redというのはcolorプロパティの"値"に相当する部分です。プロパティで変更すると決めたスタイルを実際どのようなものにするかを記述します。
+
+| 値がどのようなものになるのかはプロパティによって変わります。
+| 色を指定するプロパティなら色、配置を指定するプロパティならピクセルや%、枠線を指定するプロパティなら点線や二重線などになります。
+
+| プロパティと値の間は:(コロン)で繋ぎ、値の後に;(セミコロン)を書きます。
+| 以下のようにひとつのセレクタに対し、複数のプロパティを反映することも可能です。
+
+  .. code-block:: css
+ 
+      p {
+          color: red;
+          font-size: 15px;
+          background-color: black;
+      }
+
+|
+|
+
+**課題**
+
+    下記のCSSの[todo]部分を正しく埋めて、<h1>タグを青くするCSSを書きなさい。
+
+       .. code-block:: css
+
+           [todo] {
+               color: [todo];
+           }
+
+
+|
+|
+|
+| さて、ここで問題が発生しました。
+| 上のような記述をしてしまうと、指定したHTMLタグ全てのスタイルが変更されてしまいます。
+| こっちとあっちのpタグで違うスタイルを反映させたいという時に使うのがidとclassです。
+
+idとclass
+==============
+
+| idとclassをHTMLおよびCSSを記述することで幅広いスタイリングが可能になります。
 
 
 **例１：全ての<p>タグに適用する場合**
 
     .. code-block:: css
-	
+    
             p {
                 color: red;
                 opacity: 0.5;
             }
-			
+            
 
 **例２：一つの特定の<p>タグに適用する場合**
 
+| idにスタイルを適用する際は、cssで **#** の後にid名を記述します。
+
 HTML
+
     .. code-block:: html
-	
-            <p id="hogehoge">ここには適用されます。</p>
-            <p>ここには適用されません。</p>
+
+       <p id="hogehoge">ここには適用されます。</p>
+       <p>ここには適用されません。</p>
+
 CSS
+
     .. code-block:: css
-	
-            #hogehoge {
-                color: red;
-                opacity: 0.5;
-            }
-			
+
+       #hogehoge {
+           color: red;
+           opacity: 0.5;
+       }
+            
     .. warning::
        同一のIDはひとつのHTML文書の中では一回しか使うことができません。
 
 
 **例３：いくつかの<p>タグにまとめて適用する場合**
 
-HTML
-    .. code-block:: html
-	
-            <p class="foo">ここには適用されます。</p>
-            <p>ここには適用されません。</p>
-            <p class="foo">ここにも適用されます。</p>
-CSS
-    .. code-block:: css
-	
-            .foo {
-                color: red;
-                opacity: 0.5;
-            }
+| classにスタイルを適用する際は、cssで **.** の後にclass名を記述します。
 
-    .. note::
-       CLASSは複数の要素で使うことができます。
-	   
-	   
-	   
+HTML
+
+  .. code-block:: html
+
+      <p class="foo">ここには適用されます。</p>
+      <p>ここには適用されません。</p>
+      <p class="foo">ここにも適用されます。</p>
+
+CSS
+
+  .. code-block:: css
+
+     .foo {
+        color: red;
+        opacity: 0.5;
+     }
+
+
+  .. note::
+      CLASSは複数の要素で使うことができます。
+
+
+**課題**
+
+下記のHTMLの<p>タグに適切なclass名を書いた上でCSSの[todo]部分を補い、「青い」が含まれる段落（<p>タグで囲まれた部分）を青く、「赤い」が含まれる段落を赤くしなさい。
+
+HTML
+
+
+    .. code-block:: html
+
+        <p class="blue">青いですー！</p>
+        <p>ここは関係なーい！</p>
+        <p class="red">赤いですなー</p>
+        <p>赤いですね</p>
+        <p>青いです！</p>
+        <p>無関係だよん。</p>
+
+
+  .. code-block:: css
+ 
+       [todo] {
+          color: red;
+       }
+       [todo] {
+          color: blue;
+       }
+
+
+
 ウェブカラーとピクセル
 ======================
 
@@ -253,9 +355,22 @@ CSS
        background        背景を変える        色や画像など      background : yellow 
      ==============  ===================  ================  ========================
      
+
      .. raw :: html
      
        <p>ブラウザ表示例 : <span style="background:yellow">サンプルテキスト</span></p>
+       
+       
+     ==============  ==========================  ================  ======================== 
+       プロパティ         概要                    値               サンプルコード 
+     ==============  ==========================  ================  ========================
+       font-weight      フォントの太さを変える        スタイル        font-weight : bold
+     ==============  ==========================  ================  ========================
+
+
+      .. raw :: html
+     
+        <p>ブラウザ表示例 : <span style="font-weight:bold">サンプルテキスト</span></p>
        
        
      ==============  ======================  ================  ======================== 
@@ -277,7 +392,7 @@ CSS
      
      .. raw :: html
      
-       <ul>ブラウザ表示例 : <li style="text-align:right">サンプルテキスト</li></ul>
+       ブラウザ表示例 : <p style="text-align:right">サンプルテキスト</p>
        
        
      ==============  ==================  ==================  ========================= 
@@ -290,8 +405,92 @@ CSS
      .. raw :: html
      
        <p>ブラウザ表示例 : <span style=" border:double 10px red">サンプルテキスト</span></p>
-       
-|　    
+	   
+
+     ==============  ========================  ==================  ======================== 
+       プロパティ         概要                  値                 サンプルコード 
+     ==============  ========================  ==================  ========================
+       list-style      マーカーに関する指定       スタイル・画像      list-style: square
+     ==============  ========================  ==================  ========================
+
+     
+     .. raw :: html
+     
+       <p>ブラウザ表示例 :</p>
+       <ol>
+           <li style="list-style:square">サンプルテキスト</li>
+       </ol>
+
+
+     ==============  ===================================================  ============ 
+       プロパティ         概要                                               値
+     ==============  ===================================================  ============
+       display        要素の表示形式（ブロック・インライン）を指定する         スタイル 
+     ==============  ===================================================  ============
+
+
+    .. code-block:: html
+	
+           <ul id="navi">
+             <li>サンプルテキスト1</li>
+             <li>サンプルテキスト2</li>
+             <li>サンプルテキスト3</li>
+           </ul>
+		   
+		
+    .. code-block:: css
+	 
+        #navi li{
+            display: inline;
+        }
+	 
+	 
+   .. raw :: html
+     
+       <p>ブラウザ表示例 : <ul><li style="display:inline">サンプルテキスト1</li><li style="display:inline">サンプルテキスト2</li><li style="display:inline">サンプルテキスト3</li></ul></p>	   
+	   
+	   
+マウスをかざした時のhover
+-------------------------
+
+| CSSにはマウスをかざした時にスタイルを変更するhoverという機能があります。
+| セレクタの後に:hoverと記述するだけで、更に幅広いスタイルングが実現できます。
+| しかし、タッチパネルが主流となっているスマートフォン向けのWebサイトでは
+| マウスポインタをかざすことができないので、その点を考慮してhoverを使用するようにしましょう。
+
+| 例えば以下は、通常は文字色が赤であるテキストが
+| マウスポインタをかざすと色が黄色になり、背景が緑に変化するコードです。
+
+   .. code-block:: html
+   
+        <p>マウスをかざしてください</p>
+
+   .. code-block:: css
+   
+        p {
+            color: red;
+        }
+        p:hover {
+            color: yellow;
+            background-color: green;
+        }
+  
+  .. raw :: html
+    
+      <style type="text/css">
+        #sample {
+            color: red;
+        }
+        #sample:hover {
+            color: yellow;
+            background-color: green;
+        }
+      </style>
+      <p>ブラウザ表示例: <span id="sample">マウスをかざしてください</span></p>
+	   
+margin と padding       
+-----------------------
+	
 | cssでコンテンツの位置を指定るするのに **margin** と **padding** というのがあります。
 | 大事な点なのでこの2つの違いをしっかりと覚えましょう。
 | 簡単に言うと、marginは領域間のスペースでpaddingは領域内のスペースのことです。
@@ -300,19 +499,18 @@ CSS
 | わかりやすく表すと、次の画像のようになります。
  
  	  .. image:: /_static/margin.png
-| 
+
 | さらに分かりやすいように、文字の背景を水色に設定したテキストを設置します。
 
    .. raw :: html 
-   
-      <p style="background:#afeeee">サンプルテキスト</p>
-      
-      <p style="background:#afeeee;margin:30px 30px 30px 30px">サンプルテキスト　margin:30px 30px 30px 30px</p>
-      
-      <p style="background:#afeeee;padding:30px 30px 30px 30px">サンプルテキスト padding:30px 30px 30px 30px</p>
-      
-      <p style="background:#afeeee;margin:30px 30px 30px 30px;padding:30px 30px 30px 30px">サンプルテキスト margin:30px 30px 30px 30px   padding:30px 30px 30px 30px</p>
-       
+
+     <div class="preview">
+        <p style="background:#afeeee">サンプルテキスト</p>
+        <p style="background:#afeeee;margin:30px 30px 30px 30px">サンプルテキスト　margin:30px 30px 30px 30px</p>
+        <p style="background:#afeeee;padding:30px 30px 30px 30px">サンプルテキスト padding:30px 30px 30px 30px</p>
+        <p style="background:#afeeee;margin:30px 30px 30px 30px;padding:30px 30px 30px 30px">サンプルテキスト margin:30px 30px 30px 30px   padding:30px 30px 30px 30px</p>
+     </div>
+
 | 違いが分かりますでしょうか?
 | 領域間のスペースを指定するmarginが設定されているものは、水色の背景が四方向から30pxひとまわり小さくなっています。
 | 領域内のスペースを指定するpaddingが設定されているものは、テキストから
@@ -321,14 +519,186 @@ CSS
 | しかし、ブラウザの環境などによって順番や位置が違う可能性があるため、注意しなければなりません。以下がその例です。
 
        .. raw :: html 
-       
+
+         <div class="preview">
            <p style="margin-bottom:-80px;background:yellow;height:160px;width:160px">黄<br>margin-bottom:-80px</p>
            <p style="margin-left:80px;background:red;height:160px;width:160px">赤<br>margin-left:80px</p>
+		 </div>
 
-		
+
+**課題**
+
+<div>タグを使って、領域間のスペースが60px、領域内のスペースが30px、幅が200px、高さが150pxで背景を黄色になるように下記のCSSの[todo]部分を補いましょう。
+
+HTML
+  .. code-block:: html
+
+     <div></div>
+
+
+CSS
+
+  .. code-block:: css
+
+     div {
+         margin: [todo];
+         padding: [todo];
+         [todo]:200px;
+         height: [todo];
+         background-color: yellow;
+     }
+
+中央配置にしてみる
+-------------------
+
+| またここで1つ問題が生じてしまいました。
+| Webサイトをデザインしているときにページを中央配置にしたいことが多いと思います。
+| その際にコンテンツの左右に例えば30pxのmarginをとったとします。
+| 一見製作中は問題なくデザインできていると思うかもしれませんが、ウィンドウのサイズを変えてみてください。
+| すると、30pxという固定の値でmarginを取ってしまっているため、コンテンツの位置がバラバラになってしまいます。
+| text-align:centerはインライン要素のため使用できません。
+| そんな時に使用するのがautoです。
+
+ .. code-block:: css
+    
+    margin: 0 auto;
+
+| と記述すると、marginの値が自動的に定まり、常に適切なスペースを保ちながらの中央揃えが可能となります。
+| IEなど一部のブラウザでは対応していないので注意してください。
+| `参考サイト <http://www.css-lecture.com/log/css-beginner/026.html>`_
+
+
+floatとclear
+-----------------
+
+| floatとclearも要素の配置を定めるのに重要なプロパティです。
+| floatプロパティは指定された要素を左または右に寄せて配置する際に使用します。
+| 聞こえは簡単なのですが、初心者がつまずいてしまうのは「後に続く内容が反対側に回り込む」からです。
+
+   .. code-block:: html
+ 
+       <p>ユヒーロのロゴです。<img src="http://www.uhero.co.jp/common/images/logo.png">floatが無い状態です。</p>
+   
+.. raw:: html
+  
+      <p class="preview">ユヒーロのロゴです。<img src="http://www.uhero.co.jp/common/images/logo.png">floatが無い状態です。</p>
+	  
+| 
+| それでは画像にlogoという名前でidを付け、float:leftというCSSを反映させてみましょう。
+
+
+  .. code-block:: html
+
+       <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
+	   
+	   
+.. code-block:: css
+
+    #logo {
+        float: left;
+    }
+
+.. raw:: html
+      
+      <style>
+      #logo {
+        float: left;
+      }
+      </style>
+      <div class="preview">
+          <p>ユヒーロのロゴです。</p>
+          <img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">
+          <p>画像にfloat:leftがついています。<br><br><br></p>
+      </div>
+      <div style="clear:left">
+
+| 
+| ここで実はひとつ問題が生じてしまいました。
+| 先述した通り、float:leftが設定されている画像以降の要素はすべて画像の右側に回ってしまうのです。
+|  
+
+  .. code-block:: html
+
+       <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
+       <p>いろいろな要素を後に記述しても</p>
+       <p>すべて右に回ってしまいます。</p>
+
+
+.. raw:: html
+
+      </div>
+      <style>
+      #logo {
+        float: left;
+      }
+      </style>
+      <div class="preview">
+          <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
+          <p>いろいろな要素を後に記述しても</p>
+          <p>すべて右に回ってしまいます。</p>
+	  </div>
+
+
+
+| ここで登場するのがclearプロパティです。
+
+=========  =================================================================================
+right	    右フロートに対する廻り込みを解除します。
+left	    左フロートに対する廻り込みを解除します。
+both	    左フロートに対する廻り込みと右フロートに対する廻り込みの双方を解除します。
+=========  =================================================================================
+
+| 使い方は、floatが設定されているHTMLの後にclearが設定されているブロックレベルボックスを用意します。
+|
+
+.. code-block:: html
+     
+      <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
+      <div style="clear:left" />
+      <p>clearしているので、フロートの右に回ることはありません。</p>
+	  
+.. raw:: html
+     
+      <div class="preview">
+          <p>ユヒーロのロゴです。<img id="logo" src="http://www.uhero.co.jp/common/images/logo.png">画像にfloat:leftがついています。</p>
+          <div style="clear:left">
+              <p>clearしているので、フロートの右に回ることはありません。</p>
+          </div>
+      </div>
+
+
+| このfloatとclearを巧く使いこなせれば
+| Webページでよく見るサイドナビなどを配置したりできるようになります。
+| 
+
+**課題**
+
+| 赤いボックスと2つのテキストが書かれたHTMLとCSSがあります。
+| "私を右側にまわりこませて。"と書かれたpタグを赤いボックスの右側にまわりこむようにcssの[todo]に適切なプロパティと値を記述してください。
+| その際、"私はまわりこませないで。"と書かれたpタグも赤いボックスの右側にまわりこんでしまいます。
+| 右側にまわりこませずに通常通り下に表示されるよう[todo]に適切なHTMLを記述してください。
+| ※このHTMLにはstyle属性を適用します。または、idかclassを指定し、新たにcssを記述しても構いません。
+
+.. code-block:: html
+  
+  <div id="redBox"></div>
+  <p>私を右側にまわりこませて。</p>
+  [todo]
+  <p>私はまわりこませないで。</p>
+
+.. code-block:: css
+
+  #redBox {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      [todo]
+  }
+
+
 
 CSSのバージョンについて   
-=========================
+===========================
 
 | CSSはこれまでCSS1,CSS2,CSS2.1とバージョンが新しくなってきており、
 | 現在ではCSS3というバージョンが一番新しいものとなっています。
@@ -342,18 +712,18 @@ CSSのバージョンについて
 |
 
     .. code-block:: css
-	
+    
             p {
                 color: red;
                 opacity: 0.5;
             }
-			
+            
 | 
 | ブラウザでの表示は
 
     .. raw :: html
-	
-	    <p style="opacity:0.5;color:red">サンプルテキスト</p>
+    
+        <p style="opacity:0.5;color:red">サンプルテキスト</p>
 
 | このようになります。
 | opacityプロパティは透明度を指定するものであり、CSS3で新しく追加された機能です。
@@ -361,9 +731,9 @@ CSSのバージョンについて
 | 他にもボーダーの角を丸くするborder-radiusプロパティ
 
     .. raw :: html
-	  
+      
           <p style="border:solid;border-radius:10px">サンプルテキスト</p>
-		  
+          
 | 
 | transitionプロパティを使用したアニメーション
 
@@ -385,8 +755,13 @@ CSSのバージョンについて
           -->
           </style>
           <p class="animation">マウスをかざしてください</p>
-		  
+          
 | といった様々な新しい機能が追加されたので、リファレンスサイト等で見てみるといいでしょう。
+
+**課題**
+
+| Google等の検索エンジンを使ってcssプロパティを紹介しているサイトを閲覧し、
+| このトレーニングで紹介されていないcssをひとつ選び、実際に挙動を確認してください。
 
 
 
@@ -401,7 +776,7 @@ CSS課題 - ユヒーロWebサイトをつくろう
 | 今回の課題はこのWebページと同じものを作るというものです。
 | HTMLや画像などはあらかじめ用意されているので、スタイルシートにcssを記述し、できるだけ同じように表示されるようなページを制作してください。
 
-	それではまず :download:`assignment_css.zip </_static/assignment_css.zip>` をダウンロードし、デスクトップなど分かりやすい所に保存してください。
+    それではまず :download:`assignment_css.zip </_static/assignment_css.zip>` をダウンロードし、デスクトップなど分かりやすい所に保存してください。
 
 | ファイルをダブルクリックして、圧縮されているファイルを解凍してください。
 | ファイルの中にはassignment.html、style.css、imagesフォルダが含まれています。
@@ -411,7 +786,7 @@ CSS課題 - ユヒーロWebサイトをつくろう
 
 
      ここから :download:`制作例 </_static/assignment_css_ex.zip>` がダウンロードできます。
-	 
+     
 | CSSの記述には様々な方法があります。
 | 似たような表示だからといってHTMLやスタイルシートが同じということは決してありません。
 | あくまでも参考にする程度にし、できるだけ自分の力でCSSを書き上げてみてください。
