@@ -936,8 +936,8 @@ for文
 | document.writeとはdocumentオブジェクトのwriteメソッドです。
 | オブジェクト名とメソッド名を.(ピリオド)で繋いで記述します。
 | 
-| 他にもDate、Math、String等の組み込みオブジェクトがあります。
-| 例としてMathオブジェクトを見てみましょう。
+| 他にもMath、String、Date等の組み込みオブジェクトがあります。
+| まずMathオブジェクトを見てみましょう。
 
  .. code-block:: js
 
@@ -947,8 +947,43 @@ for文
 | 例えばこのようにMathオブジェクトのPIメソッドを使うと円周率を得る事ができます。
 | piという変数を用意し、そこにMath.PIを格納し、piを表示すると"3.141592653589793"となります。
 | Mathオブジェクトには数字の絶対値を出すabsメソッドや平方根(ルート)を出すsqrtメソッド、三角関数のsinメソッド、cosメソッド、taメソッド等があります。
+| 
+| 次に、Stringオブジェクトを見てみましょう。Stringオブジェクトでは文字列に関する処理が含まれています。
+| まず一番有名なlengthというプロパティを見てみましょう。
+| これは文字列の文字数を返します。
+
+  .. code-block:: js
+  
+    var hello =  new String("Hello,World!");
+    //または
+    var hello = "Hello,World!";
+	
+    document.write(hello.length);
+
+| こうすると、Hello,World!という文字列の文字数である12という数字が表示されることになります。
+| 他にも指定の開始位置から指定した文字列分だけを抜き出すsubstrメソッドや、
+| 文字列を大文字にするtoUpperCaseメソッド、複数の文字列を結合するconcatメソッド等があります。
+
+  .. code-block:: js
+  
+    var lastName  = "Suzuki";
+    var firstName = "Ichiro";
+
+    var text = lastName.substr(2,4);    // 3文字目から文字を4つ抜き取る
+    document.write(text);    // zuki
+
+    var Omoji = lastName.toUpperCase();    //文字列を大文字にする
+    document.write(Omoji);    // SUZUKI
+
+    var fullName = lastName.concat(firstName);    //文字列を結合する
+    document.write(fullName);    // SuzukiIchiro
+	
+ 
+| 他にも様々なメソッド等が使えます。
+| `Stringオブジェクト 参考サイト <http://memopad.bitter.jp/w3c/jsref/jsref_obj_string.html>`_
+| 
 | これらを使用することで更に高度なプログラムを作る事が出来ます。
-| `参考ウェブサイト <http://www.ibm.com/developerworks/jp/web/library/wa-objectsinjs-v1b/?cmp=dw&cpb=dwwdv&ct=dwrss&cr=dwrss&ccy=jp&csr=091611>`_ 
+| `JavaScript組み込みオブジェクト 参考サイト <http://www.ibm.com/developerworks/jp/web/library/wa-objectsinjs-v1b/?cmp=dw&cpb=dwwdv&ct=dwrss&cr=dwrss&ccy=jp&csr=091611>`_ 
 | 
 
 課題
