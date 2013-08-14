@@ -930,13 +930,13 @@ for文
 
   .. code-block:: js
   
-    var hello = String("Hello,World!");
+    var hello =  new String("Hello,World!");
     //または
     var hello = "Hello,World!";
 	
     document.write(hello.length);
 
-| こうすると、Hello,World!という文字列の文字数である4という数字が表示されることになります。
+| こうすると、Hello,World!という文字列の文字数である12という数字が表示されることになります。
 | 他にも指定の開始位置から指定した文字列分だけを抜き出すsubstrメソッドや、
 | 文字列を大文字にするtoUpperCaseメソッド、複数の文字列を結合するconcatメソッド等があります。
 
