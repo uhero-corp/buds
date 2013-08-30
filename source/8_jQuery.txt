@@ -38,6 +38,38 @@ $(this)について
 addClassとCSS
 =================================
 
+addClassでは指定した要素にCSSクラスを追加することができます。
+
+例：CSS
+
+.. code-block:: css
+
+   p {
+      font-size:12px;
+   }
+   .selected {
+       color:red;
+   }
+
+
+例：HTML
+
+.. code-block:: html
+
+   <p>Hello!</p>
+
+
+例：JavaScript
+
+
+.. code-block:: javascript
+
+   $("p").addClass("selected");
+
+
+これをうまく活用することにより、特定のイベントが起きたときにCSSを切り替えるなどが可能になります。
+
+
 
 alertとlengthでのデバッグ
 =================================
