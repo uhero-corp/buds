@@ -34,7 +34,26 @@ ready関数
 | jQueryのイベントハンドラは、何かが起きた時に自動で呼び出されるメソッドです。
 | 上記ready関数も「ページが読み込み終わった時に自動で呼び出される」イベントハンドラの一つです。
 | 
-| 例：ボタンが押されると呼び出される。
+
+bind() 
+-------
+
+| clickやmouseoverなどのDOMイベントや、カスタムイベントにコールバック関数を紐付けることができます。
+| 例：
+
+.. code-block:: javascript
+
+   $("button").bind("click", function(){
+       alert($(this).val());
+   });
+
+| このような記述で、buttonタグをクリックした際の動作を設定します。
+
+click(), mouseover()
+---------------------
+
+| bindでなくとも、clickやmouseoverといったイベント毎の関数が用意されています。
+| 例：
 
 .. code-block:: javascript
 
@@ -56,6 +75,8 @@ ready関数
    });
 
 
+| 
+| 
 | jQueryには他にも多数のイベントハンドラが存在します。
 | 詳細は `jQuery.Event - jQuery 日本語リファレンス <http://semooh.jp/jquery/api/events/>`_ を参照してください。
 | 
