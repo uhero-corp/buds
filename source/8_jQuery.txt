@@ -6,6 +6,22 @@ jQuery入門
 jQueryを体験してみよう
 =================================
 
+| 突然ですが、実際にjQueryがどんなものなのか触ってみてみましょう。
+| 以下のJsBinのOutPutの中の指示に従って挙動を確認してみてください。
+
+  .. raw:: html
+  
+      <a class="jsbin-embed" href="http://jsbin.com/ugoyoh/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+	  <a class="jsbin-embed" href="http://jsbin.com/iwuqic/3/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+	  <a class="jsbin-embed" href="http://jsbin.com/ibihuv/12/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script> 
+	  <a class="jsbin-embed" href="http://jsbin.com/apalec/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+	 
+	  
+	  
+| 
+| 色のボックスが様々な動きをしたのが確認できましたでしょうか?
+| これらはほんの一部ですが、このようにアニメーションや表示・非表示など多様な機能を使ってより高度のプログラムを実現することができるのがjQueryです。
+
 
 jQueryとは
 =================================
