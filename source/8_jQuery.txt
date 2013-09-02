@@ -38,6 +38,49 @@ $(this)について
 addClassとCSS
 =================================
 
+
+css()
+--------
+
+.. code-block:: none
+
+   css(CSSプロパティ[, 値]);
+
+
+| CSSプロパティで指定した要素を直接操作します。
+| 値を指定しなければ、指定したCSSプロパティの値を取得します。
+
+
+.. code-block:: javascript
+
+   $("div").css("border-color");
+
+
+| 1番目のdivのborder-colorプロパティの値を取得します。
+| プロパティの値を設定したい場合は、値を入れます。
+
+
+.. code-block:: javascript
+
+   $("div").css("color", "#F00");
+
+
+| 引数にハッシュを指定すれば、一度に複数のプロパティを操作できます。
+
+
+.. code-block:: javascript
+
+   $("div").css({
+       margin: "0",
+       color: "#F00",
+       background: "#FFF"
+   });
+
+| この例ではmargin, color並びにbackgroundプロパティを同時に操作します。
+
+addClass()
+-----------
+
 addClassでは指定した要素にCSSクラスを追加することができます。
 
 例：CSS
