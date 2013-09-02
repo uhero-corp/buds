@@ -47,6 +47,106 @@ toggleとanimate
 =================================
 
 
+show(), hide(), toggle()
+-------------------------
+
+
+| show()は非表示の要素を表示、hide()は表示されている要素を非表示、toggle()は表示/非表示を切り替えます。
+| 例１：
+
+    .. code-block:: html
+	
+      <button>切替</button>
+      <p>表示されています。</p>
+      <p style="display: none">表示されていません。</p>
+
+    .. code-block:: javascript
+	
+      $("button").click(function () {
+          $("p").toggle();
+      });
+
+| この例では、ボタンをクリックすることで、表示されている部分を非表示に、代わりに非表示部分を表示させることができます。
+| 
+| 例２：
+
+    .. code-block:: javascript
+	
+      $("button.clicker").bind("click", function(){
+          $("div.toggleArea").toggle();
+      });
+
+| 例２では、clickerというクラスを持ったbuttonをクリックで、toggleAreaというクラスを持ったdivを非表示にしたり表示したりが出来ます。
+| toggle()では第1引数として表示/非表示を行う際の速度が設定できます。
+| 速度はslow, normal, fast, もしくはミリ秒で指定します。
+|
+| 例３：
+
+    .. code-block:: javascript
+	
+      $("button.clicker").bind("click", function(){
+          $("div.toggleArea").toggle("1500");
+      });
+
+
+| 例３：
+
+    .. code-block:: javascript
+	
+      $("button.clicker").bind("click", function(){
+          $("div.toggleArea").toggle("1500");
+      });
+
+| 例３では表示/非表示の切り替えを1.5秒でおこないます。
+| また、第2引数に関数を指定することでコールバックを設定できます。
+| 
+| 例４：
+
+    .. code-block:: javascript
+	
+      $("button.clicker").bind("click", function(){
+          $("div.toggleArea").toggle("1500", function(){
+              alert("toggle!!");
+          });
+      });
+
+| この例では、表示/非表示の切り替えが終わると、「toggle!!」というアラートが表示されます。
+|
+
+
+animate()
+-----------
+
+| animate()メソッドでは、様々なアニメーションをすることができます。
+| 
+| animate()はこのように使います。
+
+    .. code-block:: javascript
+
+      $('セレクタ').animate({'動かすプロパティ': '数値'});
+
+
+| 例：
+
+    .. code-block:: javascript
+
+      $(".yellowBox").animate({"left": "+=50px"});
+
+
+| 第2引数では、速度を数値かslow,normal,fastで指定することができます。
+| 例：
+
+    .. code-block:: javascript
+
+      $(".yellowBox").animate({"left": "+=50px"}, "slow");
+
+
+| 第3引数では、変化のしかたを指定することができます。徐々に速くするなどが指定可能です。
+| 第4引数では、アニメーション終了時に実行する関数のポインタを渡すことができます。
+|
+| 詳細は`animate - jQuery日本語リファレンス <http://semooh.jp/jquery/api/effects/animate/params,+%5Bduration%5D,+%5Beasing%5D,+%5Bcallback%5D/>`_ を閲覧してください。
+
+
 jQuery最終課題
 =================================
 
