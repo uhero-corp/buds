@@ -44,6 +44,32 @@ jQueryとは
 jQueryの使い方とDOM
 =================================
 
+| jQueryを使用するための環境設定の方法には主に2通りあります。
+
+| 1つ目は、本家である`jQueryダウンロードページ <http://jquery.com>`_ の下にあるダウンロードしたいバージョン番号の隣に書かれたMinifiedボタンを右クリックし、名前を付けて保存(ダウンロード)します。
+| そしてheadタグ内にscriptタグを記述し、src要素にダウンロードしたファイルへのパスを記述すればそれ以降、jQueryのコードを書く事ができます。
+| 例)
+
+ .. code-block: html
+ 
+   <head>
+      <script src="js/jquery-1.10.1.min.js"></script>
+   </head>
+
+| 
+| 2つ目の方法はもっと簡単です。
+| ズバリ言ってしまえば、
+
+ .. code-block: html
+ 
+   <head>
+      <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+   </head>
+
+| と記述するだけで、ファイルをダウンロードしたり、パスを指定したりせずにjQueryが使えるようになります。
+| ここではCDN(Contents Delivery Network)という、Webコンテンツをインターネット経由で配信するために最適化されたネットワーク機能を使っています。
+| 他にも別のバージョンのCDNや、Googleが配信しているjQueryのCDNがあります。
+
 
 セレクタについて
 =================================
