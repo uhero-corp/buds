@@ -144,7 +144,7 @@ animate()
 | 第3引数では、変化のしかたを指定することができます。徐々に速くするなどが指定可能です。
 | 第4引数では、アニメーション終了時に実行する関数のポインタを渡すことができます。
 |
-| 詳細は`animate - jQuery日本語リファレンス <http://semooh.jp/jquery/api/effects/animate/params,+%5Bduration%5D,+%5Beasing%5D,+%5Bcallback%5D/>`_ を閲覧してください。
+| 詳細は `animate - jQuery日本語リファレンス <http://semooh.jp/jquery/api/effects/animate/params,+%5Bduration%5D,+%5Beasing%5D,+%5Bcallback%5D/>`_ を閲覧してください。
 
 
 jQuery最終課題
