@@ -90,6 +90,98 @@ DOM
 セレクタについて
 =================================
 
+| あれを書き換えたい、これをクリックしたときに何かをしたい。
+| こんなJavascriptを書くには、その「対象」を選択することが必要になってきます。
+| その対象を選択するのがこのSelectorsで、これで選択した要素に対して色々な処理を記述していきます。
+| 
+
+
+＃id
+----------
+
+
+.. code-block:: javascript
+
+   $("#hoge");
+
+
+
+| #から始まるselectorは、一致するidを検索します。
+| この例はhogeというidを持つエレメントを返します。
+| DOMの記述では
+| 
+
+.. code-block:: javascript
+
+   document.getElementById("hoge");
+
+
+| となります。
+
+
+．class
+---------
+
+.. code-block:: javascript
+
+   $(".hoge");
+
+
+| .から始まるselectorは、一致するclassを検索します。
+| この例はhogeというclassを持つエレメントを返します。
+| DOMの記述では
+
+.. code-block:: javascript
+
+   document.getElementsByClassName("hoge");
+
+
+| となりますが、この記述ではIE6で正しく動作しません。
+| (jQueryはクロスブラウザ対応なので、classセレクタも正しく動作します。)
+
+
+element
+--------
+
+.. code-block:: javascript
+
+   $("hoge");
+
+
+| 何も付けないselectorは、一致するタグを検索します。
+| この例はhogeというエレメントを返します。
+| DOMの記述では
+
+.. code-block:: javascript
+
+   document.getElementsByTagName("hoge");
+
+
+| となります。
+| 
+| これらを組み合わせることも出来ます。
+| headerというclassを持つdivを参照したければ
+
+
+.. code-block:: javascript
+
+   $("div.header");
+
+
+| と記述します。
+
+
+selector, selector
+---------------------
+
+| 複数の条件を指定したければ「,」で区切ります。
+
+.. code-block:: javascript
+
+   $("div.header, #headerArea");
+
+| この記述ではheaderというクラスを持つdivと、headerAreaというidを持つエレメントを返します。
+
 
 いろいろなメソッドを使ってみよう
 =================================
