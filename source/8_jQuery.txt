@@ -273,6 +273,18 @@ click(), mouseover()
    });
 
 
+課題
+----------
+
+| 青い部分の上をマウスが通過すると赤い部分が消えたり表示されたりするようにしなさい。
+
+
+  .. raw:: html
+  
+      <a class="jsbin-embed" href="http://jsbin.com/ukOVIyi/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
+
+
 | 
 | 
 | jQueryには他にも多数のイベントハンドラが存在します。
@@ -376,6 +388,17 @@ addClassでは指定した要素にCSSクラスを追加することができま
 
 
 これをうまく活用することにより、特定のイベントが起きたときにCSSを切り替えるなどが可能になります。
+
+
+課題
+--------
+
+| CSSやHTMLを書き換えずに、addClassを用いて、赤い部分をクリックすると青くなるようにしなさい。
+
+
+  .. raw:: html
+  
+      <a class="jsbin-embed" href="http://jsbin.com/oTOdEhU/1/embed?html,css,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 
