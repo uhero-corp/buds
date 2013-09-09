@@ -66,6 +66,12 @@ show(), hide(), toggle()
           $("p").toggle();
       });
 
+    .. raw:: html
+
+         <a class="jsbin-embed" href="http://jsbin.com/IZUdEyO/1/embed?js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
+
+
 | この例では、ボタンをクリックすることで、表示されている部分を非表示に、代わりに非表示部分を表示させることができます。
 | 
 | 例２：
@@ -89,14 +95,6 @@ show(), hide(), toggle()
       });
 
 
-| 例３：
-
-    .. code-block:: javascript
-	
-      $("button.clicker").bind("click", function(){
-          $("div.toggleArea").toggle("1500");
-      });
-
 | 例３では表示/非表示の切り替えを1.5秒でおこないます。
 | また、第2引数に関数を指定することでコールバックを設定できます。
 | 
@@ -109,6 +107,11 @@ show(), hide(), toggle()
               alert("toggle!!");
           });
       });
+
+    .. raw:: html
+
+         <a class="jsbin-embed" href="http://jsbin.com/AVumabI/2/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
 
 | この例では、表示/非表示の切り替えが終わると、「toggle!!」というアラートが表示されます。
 |
@@ -143,7 +146,12 @@ animate()
 
 | 第3引数では、変化のしかたを指定することができます。徐々に速くするなどが指定可能です。
 | 第4引数では、アニメーション終了時に実行する関数のポインタを渡すことができます。
-|
+
+
+    .. raw:: html
+
+         <a class="jsbin-embed" href="http://jsbin.com/apalec/1/embed?js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
 | 詳細は `animate - jQuery日本語リファレンス <http://semooh.jp/jquery/api/effects/animate/params,+%5Bduration%5D,+%5Beasing%5D,+%5Bcallback%5D/>`_ を閲覧してください。
 
 
