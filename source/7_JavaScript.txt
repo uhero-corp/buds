@@ -143,7 +143,7 @@ JavaScript中にコメントを記述するには、コメントにしたい文�
 
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 
@@ -355,7 +355,7 @@ JavaScript中にコメントを記述するには、コメントにしたい文�
 
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 条件分岐
@@ -527,7 +527,7 @@ switch文
 
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 繰り返し文
@@ -647,7 +647,7 @@ for文
 
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 | 
 | ②for文をネストさせて、使って九九の表を作ってください。
@@ -682,7 +682,7 @@ for文
 	
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 
@@ -849,7 +849,7 @@ for文
 
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 関数の作成
@@ -926,7 +926,7 @@ for文
 
 .. raw :: html
 
-    <a class="jsbin-embed" href="http://jsbin.com/UpONOnu/3/embed?output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+    <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/2/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 | すると、○○さん、こんにちは！というアラートが出ましたね。
 | もちろんこのアラートは最初からあなたの名前を知っていた訳ではありません。
@@ -1049,7 +1049,7 @@ for文
 
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 JavaScript最終課題
@@ -1077,4 +1077,4 @@ JavaScript最終課題
 
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
