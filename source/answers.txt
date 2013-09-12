@@ -18,6 +18,7 @@ idとclass
 ----------------
 
   .. code-block:: css
+    
     .red {
         color: red;
     }
@@ -114,7 +115,89 @@ switch文
   } else {
       document.write("100以上200未満の数字ではありません");
   }
+  
+while文
+------------
 
+.. code-block:: js
+
+  var x = -10;
+
+  while (x <= 10) {
+      document.write("x = " + x + "のとき、y = " + x*x*x);
+      document.write("<br>");
+      x++;
+  }
+
+.. code-block:: js
+
+  document.write("<table>");
+
+  for (var i = 1; i <= 9; i++) {
+      document.write("<tr>");
+ 
+      for (var j = 1; j <= 9; j++) {
+          document.write("<td>" + i * j + "</td>");
+      }
+  
+      document.write("</tr>");
+  }
+
+  document.write("</table>");
+  
+配列
+--------
+
+.. code-block:: js
+
+  var people = new Array(3);
+  people[0] = new Array("a","b","c");
+  people[1] = new Array("a","b","c");
+  people[2] = new Array("a","b","c");
+
+  document.write("<table>");
+  for (i = 0; i < people.length; i++) {
+    document.write("<tr>");
+    for (j = 0; j < people[i].length; j++) {
+        document.write("<td>" + people[i][j] + "</td>");
+    }
+    document.write("</tr>");
+  }  
+  document.write("</table>");
+  
+値の取得
+----------
+
+.. code-block:: html
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta charset=utf-8 />
+  <title>JS Bin</title>
+  </head>
+  <body>
+    <p>名: </p><input type="text" id="firstName" /><br>
+    <p>姓: </p><input type="text" id="lastName" /><br>
+    <p>年齢: </p><input type="text" id="age" /><br>
+    <p>性別: </p><input type="text" id="gender" /><br>
+    <p>出身地: </p><input type="text" id="born" /><br>
+    <input type="submit" onclick="introduce()" />
+  </body>
+  </html>
+
+.. code-block:: js
+
+   var firstName = getElementById("firstName");
+   var lastName = getElementById("lastName");
+   var age = getElementById("age");
+   var gender = getElementById("gender");
+   var born = getElementById("born");
+
+   function introduce()
+   {
+       alert("私の名前は" + lastName.value + firstName.value + "です。" + age.value + "歳の" + gender.value + "で、" + born.value + "出身です。");
+   }
 
 jQuery課題
 =============
