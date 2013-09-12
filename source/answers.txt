@@ -208,7 +208,7 @@ while文
   
   var year = date.getFullYear();
   var month = date.getMonth() + 1;
-  var hinichi = date.getDate();
+  var today = date.getDate();
   var hour = date.getHours();
   var minute = date.getMinutes();
   var second = date.getSeconds();
@@ -216,7 +216,7 @@ while文
   var day_index = date.getDay();
   var days = new Array("月","火","水","木","金","土","日");
 
-  document.write(year + "年" + month + "月" + hinichi + "日" + hour + "時" + minute + "分" + second + "秒(" + days[day_index] + "曜日)");
+  document.write(year + "年" + month + "月" + today + "日" + hour + "時" + minute + "分" + second + "秒(" + days[day_index] + "曜日)");
 
 jQuery課題
 =============
