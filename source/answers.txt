@@ -199,6 +199,25 @@ while文
        alert("私の名前は" + lastName.value + firstName.value + "です。" + age.value + "歳の" + gender.value + "で、" + born.value + "出身です。");
    }
 
+オブジェクトの利用
+--------------------
+
+.. code-block:: js
+
+  var date = new Date();
+  
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  var hinichi = date.getDate();
+  var hour = date.getHours();
+  var minute = date.getMinutes();
+  var second = date.getSeconds();
+  
+  var day_index = date.getDay();
+  var days = new Array("月","火","水","木","金","土","日");
+
+  document.write(year + "年" + month + "月" + hinichi + "日" + hour + "時" + minute + "分" + second + "秒(" + days[day_index] + "曜日)");
+
 jQuery課題
 =============
 
