@@ -1,0 +1,69 @@
+=============
+課題の解答
+=============
+
+CSS課題
+==========
+
+セレクタとプロパティと値
+-------------------------
+
+ ..code-block:: css
+ 
+    h1 {
+        color: blue;
+    }
+
+idとclass
+----------------
+
+  ..code-block:: css
+  
+    .red {
+        color: red;
+    }
+	
+    .blue {
+        color: blue;
+    }
+
+marginとpadding
+--------------------
+
+  ..code-block:: css
+
+    div {
+        margin: 60px;
+        padding: 30px;
+        width:200px;
+        height: 150px;
+        background-color: yellow;
+    }
+	
+floatとclear
+------------------
+
+  ..code-block:: html
+  
+   <div id="redBox"></div>
+   <p>私を右側にまわりこませて。</p>
+   <div style="claer:left" />
+   <p>私はまわりこませないで。</p>
+  
+  ..code-block:: css
+  
+     #redBox {
+       width: 100px;
+       height: 100px;
+       background-color: red;
+       float: left;
+     }
+	
+
+JavaScript課題
+=================
+
+
+jQuery課題
+=============
+
