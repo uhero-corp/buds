@@ -12,7 +12,7 @@ jQueryを体験してみよう
   .. raw:: html
   
       <a class="jsbin-embed" href="http://jsbin.com/iMOtizU/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
-	  <a class="jsbin-embed" href="http://jsbin.com/apimEQU/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+	  <a class="jsbin-embed" href="http://jsbin.com/Agocizu/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 	  <a class="jsbin-embed" href="http://jsbin.com/ACUvAvE/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script> 
 	  <a class="jsbin-embed" href="http://jsbin.com/ODAMUlu/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 	 
@@ -413,4 +413,4 @@ jQuery最終課題
 
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/iqakiW/1/embed?html,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
