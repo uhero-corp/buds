@@ -17,7 +17,16 @@ CSS課題
 idとclass
 ----------------
 
-  .. code-block:: css
+    .. code-block:: html
+
+      <p class="blue">青いですー！</p>
+      <p>ここは関係なーい！</p>
+      <p class="red">赤いですなー</p>
+      <p class="red">赤いですね</p>
+      <p class="blue">青いです！</p>
+      <p>無関係だよん。</p>
+
+ .. code-block:: css
     
     .red {
         color: red;
@@ -119,6 +128,8 @@ switch文
 while文
 ------------
 
+| 課題①
+
 .. code-block:: js
 
   var x = -10;
@@ -128,6 +139,8 @@ while文
       document.write("<br>");
       x++;
   }
+
+| 課題②
 
 .. code-block:: js
 
@@ -151,9 +164,9 @@ while文
 .. code-block:: js
 
   var people = new Array(3);
-  people[0] = new Array("a","b","c");
-  people[1] = new Array("a","b","c");
-  people[2] = new Array("a","b","c");
+  people[0] = new Array("田中","鈴木","佐藤");
+  people[1] = new Array("橋本","山本","森川","中井");
+  people[2] = new Array("丸山","松本");
 
   document.write("<table>");
   for (i = 0; i < people.length; i++) {
@@ -188,16 +201,16 @@ while文
 
 .. code-block:: js
 
-   var firstName = getElementById("firstName");
-   var lastName = getElementById("lastName");
-   var age = getElementById("age");
-   var gender = getElementById("gender");
-   var born = getElementById("born");
+    function introduce()
+    {
+        var firstName = document.getElementById("firstName");
+        var lastName = document.getElementById("lastName");
+        var age = document.getElementById("age");
+        var gender = document.getElementById("gender");
+        var born = document.getElementById("born");
 
-   function introduce()
-   {
-       alert("私の名前は" + lastName.value + firstName.value + "です。" + age.value + "歳の" + gender.value + "で、" + born.value + "出身です。");
-   }
+        alert("私の名前は" + lastName.value + firstName.value + "です。" + age.value + "歳の" + gender.value + "で、" + born.value + "出身です。");
+    }
 
 オブジェクトの利用
 --------------------
