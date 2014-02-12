@@ -1,0 +1,593 @@
+====================
+jQuery入門
+====================
+
+
+jQueryを体験してみよう
+=================================
+
+| 突然ですが、実際にjQueryがどんなものなのか触ってみてみましょう。
+| 以下のJsBinのOutPutの中の指示に従って挙動を確認してみてください。
+
+  .. raw:: html
+  
+      <a class="jsbin-embed" href="http://jsbin.com/iMOtizU/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+	  <a class="jsbin-embed" href="http://jsbin.com/Agocizu/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+	  <a class="jsbin-embed" href="http://jsbin.com/ACUvAvE/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script> 
+	  <a class="jsbin-embed" href="http://jsbin.com/ODAMUlu/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+	 
+	  
+	  
+| 
+| 色のボックスが様々な動きをしたのが確認できましたでしょうか?
+| これらはほんの一部ですが、このようにアニメーションや表示・非表示など多様な機能を使ってより高度のプログラムを実現することができるのがjQueryです。
+
+
+jQueryとは
+=================================
+
+.. image:: /_static/jQuery_logo.png
+    :height: 60px
+
+| jQueryとは一言で言ってしまうと、前回のチャプターで勉強した **JavaScriptのライブラリ** のことです。
+| ライブラリとは汎用性の高い複数のプログラムを、簡単で便利に使えるような形にまとめあげたもののことです。
+| たくさんのJavaScriptのライブラリがある中、jQueryはかなりの人気と支持があります。
+| jQueryのロゴの下に"write less, do more"と書かれています。
+| 日本語に直すと"書くのは少しだけで、もっと多くのことをする"という意味ですね。
+| 先ほどのJsBinのコードを見てみてください。
+| 本来のJavaScriptで同じプログラムを実現しようとすると膨大な量のコードになってしまう中、jQueryを使うと数行程度でできてしまうという最大のメリットがあります。
+| 他にも、jQueryを使うとブラウザごとの挙動の違いを気にする必要がほとんどなかったり、他の人たちが開発したjQueryを拡張してくれる"プラグイン"が豊富に用意されています。
+| jQueryをマスターすると、より高度なプログラムをより手軽に作り上げることができるのです。
+| シンプルだけど奥が深い。そんなjQueryをそれでは学習していきましょう。
+
+
+jQueryの使い方とDOM
+=================================
+
+| jQueryを使用するための環境設定の方法には主に2通りあります。
+
+| 1つ目は、本家である `jQueryダウンロードページ <http://jquery.com>`_ の下にあるダウンロードしたいバージョン番号の隣に書かれたMinifiedボタンを右クリックし、名前を付けて保存(ダウンロード)します。
+| そしてheadタグ内にscriptタグを記述し、src要素にダウンロードしたファイルへのパスを記述すればそれ以降、jQueryのコードを書く事ができます。
+| 例)
+
+ .. code-block:: html
+ 
+   <head>
+      <script src="js/jquery-1.10.1.min.js"></script>
+   </head>
+
+| 
+| 2つ目の方法はもっと簡単です。
+| ズバリ言ってしまえば、
+
+ .. code-block:: html
+ 
+   <head>
+      <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+   </head>
+
+| と記述するだけで、ファイルをダウンロードしたり、パスを指定したりせずにjQueryが使えるようになります。
+| ここではCDN(Contents Delivery Network)という、Webコンテンツをインターネット経由で配信するために最適化されたネットワーク機能を使っています。
+| 他にも別のバージョンのCDNや、Googleが配信しているjQueryのCDNがあります。
+| 
+
+DOM
+-----
+
+| jQueryを学ぶ際に覚えて欲しい言葉の1つに **DOM** があります。
+| DOMとは、文書オブジェクトモデル(Document Object Model)の略であり、
+| ここではHTMLをJavascriptなどのアプリケーションから操作・利用するための仕組みであると認識してください。
+| jQueryのコードは次のような構造になっています。
+
+.. image:: /_static/jQuery_sample.png
+    :height: 50px
+
+| セレクタで指定した部位に、パラメータという引数を用いて、メソッドという挙動を当てる。
+| このような構造によりjQueryではDOMを操作・利用して汎用性の高い動作を実装できます。
+| それではjQueryを詳しく学習していきましょう。
+
+
+セレクタについて
+=================================
+
+| あれを書き換えたい、これをクリックしたときに何かをしたい。
+| こんなJavascriptを書くには、その「対象」を選択することが必要になってきます。
+| その対象を選択するのがこのSelectorsで、これで選択した要素に対して色々な処理を記述していきます。
+| 
+
+
+＃id
+----------
+
+
+.. code-block:: javascript
+
+   $("#hoge");
+
+
+
+| #から始まるselectorは、一致するidを検索します。
+| この例はhogeというidを持つエレメントを返します。
+| DOMの記述では
+| 
+
+.. code-block:: javascript
+
+   document.getElementById("hoge");
+
+
+| となります。
+
+
+．class
+---------
+
+.. code-block:: javascript
+
+   $(".hoge");
+
+
+| .から始まるselectorは、一致するclassを検索します。
+| この例はhogeというclassを持つエレメントを返します。
+| DOMの記述では
+
+.. code-block:: javascript
+
+   document.getElementsByClassName("hoge");
+
+
+| となりますが、この記述ではIE6で正しく動作しません。
+| (jQueryはクロスブラウザ対応なので、classセレクタも正しく動作します。)
+
+
+element
+--------
+
+.. code-block:: javascript
+
+   $("hoge");
+
+
+| 何も付けないselectorは、一致するタグを検索します。
+| この例はhogeというエレメントを返します。
+| DOMの記述では
+
+.. code-block:: javascript
+
+   document.getElementsByTagName("hoge");
+
+
+| となります。
+| 
+| これらを組み合わせることも出来ます。
+| headerというclassを持つdivを参照したければ
+
+
+.. code-block:: javascript
+
+   $("div.header");
+
+
+| と記述します。
+
+
+selector, selector
+---------------------
+
+| 複数の条件を指定したければ「,」で区切ります。
+
+.. code-block:: javascript
+
+   $("div.header, #headerArea");
+
+| この記述ではheaderというクラスを持つdivと、headerAreaというidを持つエレメントを返します。
+
+
+課題
+----------
+
+
+| 既に書いてあるソースを参考にしながら、赤い部分をクリックすると灰色の部分が消えたり表示されたりするようにしなさい。
+
+  .. raw:: html
+  
+      <a class="jsbin-embed" href="http://jsbin.com/awaVUnA/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
+
+いろいろなメソッドを使ってみよう
+=================================
+
+
+jQueryでは様々なメソッドを使って、HTMLを書き換えることができます。
+ここではその一例を紹介します。
+
+
+after() メソッド
+------------------
+
+afterメソッドではセレクタの後に、指定した内容を挿入することができます。
+
+例：
+
+.. code-block:: javascript
+
+   $(document).ready(function(){
+     $("p").after("<p>本文中のｐタグの後にこれを挿入します。</p>");
+   });
+
+
+
+replaceWith() メソッド
+------------------------
+
+replaceWithメソッドでは、セレクタの内容を書き換えることができます。
+
+例：
+
+.. code-block:: javascript
+
+   $(document).ready(function(){
+     $("p").replaceWith("ｐタグの内容をこれに書き換えます。");
+   });
+
+
+
+
+ready関数
+=================================
+
+
+| readyは、DOMが読み込まれ、解析や操作が可能になった時点で、関数を実行するメソッドです。
+| これを利用しないと、HTMLの読み込みが完了する前にJavaScriptが走ってしまい、正常に動作しないことがあります。
+| この関数を用いることで、HTMLのロードが確実に完了してから関数を実行させることができます。
+
+ .. code-block:: javascript
+
+   $(document).ready(function(){
+    //中身
+   });
+
+
+| $(document).ready();はjQuery関数にエイリアスが貼られているため
+
+ .. code-block:: javascript
+
+   $(function(){
+    //中身
+   });
+
+
+| でも同じ動作をします。
+
+
+いろいろなイベントを使ってみよう
+=================================
+
+
+| jQueryのイベントハンドラは、何かが起きた時に自動で呼び出されるメソッドです。
+| 上記ready関数も「ページが読み込み終わった時に自動で呼び出される」イベントハンドラの一つです。
+| 
+
+bind() 
+-------
+
+| clickやmouseoverなどのDOMイベントや、カスタムイベントにコールバック関数を紐付けることができます。
+| 例：
+
+.. code-block:: javascript
+
+   $("button").bind("click", function(){
+       alert($(this).val());
+   });
+
+| このような記述で、buttonタグをクリックした際の動作を設定します。
+
+click(), mouseover()
+---------------------
+
+| bindでなくとも、clickやmouseoverといったイベント毎の関数が用意されています。
+| 例：
+
+.. code-block:: javascript
+
+   $(document).ready(function(){
+       $("button").click(function(){
+           //ボタンを押すとここが実行されます。
+       });
+   });
+
+
+| 例：pタグの上をマウスが通過すると呼び出される。
+
+.. code-block:: javascript
+
+   $(document).ready(function(){
+       $("p").mouseover(function(){
+           //マウスが通過するとここが実行されます。
+       });
+   });
+
+
+課題
+----------
+
+| 青い部分の上をマウスが通過すると赤い部分が消えたり表示されたりするようにしなさい。
+
+
+  .. raw:: html
+  
+      <a class="jsbin-embed" href="http://jsbin.com/ukOVIyi/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
+
+
+| 
+| 
+| jQueryには他にも多数のイベントハンドラが存在します。
+| 詳細は `jQuery.Event - jQuery 日本語リファレンス <http://semooh.jp/jquery/api/events/>`_ を参照してください。
+| 
+
+
+$(this)について
+=================================
+
+
+$(this)は同じセレクタを使うことを示します。
+
+例：
+
+.. code-block:: javascript
+
+   $(document).ready(function(){
+       $("button").click(function(){
+           $(this).hide() //ボタンを押すとそのボタンが消えます。
+       });
+   });
+
+
+このようにすることで、毎回セレクタを書く手間を省くことができます。
+
+
+addClassとCSS
+=================================
+
+
+css()
+--------
+
+.. code-block:: none
+
+   css(CSSプロパティ[, 値]);
+
+
+| CSSプロパティで指定した要素を直接操作します。
+| 値を指定しなければ、指定したCSSプロパティの値を取得します。
+
+
+.. code-block:: javascript
+
+   $("div").css("border-color");
+
+
+| 1番目のdivのborder-colorプロパティの値を取得します。
+| プロパティの値を設定したい場合は、値を入れます。
+
+
+.. code-block:: javascript
+
+   $("div").css("color", "#F00");
+
+
+| 引数にハッシュを指定すれば、一度に複数のプロパティを操作できます。
+
+
+.. code-block:: javascript
+
+   $("div").css({
+       margin: "0",
+       color: "#F00",
+       background: "#FFF"
+   });
+
+| この例ではmargin, color並びにbackgroundプロパティを同時に操作します。
+
+addClass()
+-----------
+
+addClassでは指定した要素にCSSクラスを追加することができます。
+
+例：CSS
+
+.. code-block:: css
+
+   p {
+      font-size:12px;
+   }
+   .selected {
+       color:red;
+   }
+
+
+例：HTML
+
+.. code-block:: html
+
+   <p>Hello!</p>
+
+
+例：JavaScript
+
+
+.. code-block:: javascript
+
+   $("p").addClass("selected");
+
+
+これをうまく活用することにより、特定のイベントが起きたときにCSSを切り替えるなどが可能になります。
+
+
+課題
+--------
+
+| CSSやHTMLを書き換えずに、addClassを用いて、赤い部分をクリックすると青くなるようにしなさい。
+
+
+  .. raw:: html
+  
+      <a class="jsbin-embed" href="http://jsbin.com/oTOdEhU/1/embed?html,css,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
+
+
+alertとlengthでのデバッグ
+=================================
+
+
+| 選択したいものが正しくセレクタで指定できているかを確かめる手段として、alertとlengthを使う方法があります。
+
+.. code-block:: javascript
+
+   alert($('button').length);
+
+
+| このようにすれば、button要素数を調べることができます。
+| これを活用することにより、セレクタの指定を確認することができます。
+
+
+toggleとanimate
+=================================
+
+
+show(), hide(), toggle()
+-------------------------
+
+
+| show()は非表示の要素を表示、hide()は表示されている要素を非表示、toggle()は表示/非表示を切り替えます。
+| 例１：
+
+    .. code-block:: html
+	
+      <button>切替</button>
+      <p>表示されています。</p>
+      <p style="display: none">表示されていません。</p>
+
+    .. code-block:: javascript
+	
+      $("button").click(function () {
+          $("p").toggle();
+      });
+
+    .. raw:: html
+
+         <a class="jsbin-embed" href="http://jsbin.com/IZUdEyO/1/embed?js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
+
+
+| この例では、ボタンをクリックすることで、表示されている部分を非表示に、代わりに非表示部分を表示させることができます。
+| 
+| 例２：
+
+    .. code-block:: javascript
+	
+      $("button.clicker").bind("click", function(){
+          $("div.toggleArea").toggle();
+      });
+
+| 例２では、clickerというクラスを持ったbuttonをクリックで、toggleAreaというクラスを持ったdivを非表示にしたり表示したりが出来ます。
+| toggle()では第1引数として表示/非表示を行う際の速度が設定できます。
+| 速度はslow, normal, fast, もしくはミリ秒で指定します。
+|
+| 例３：
+
+    .. code-block:: javascript
+	
+      $("button.clicker").bind("click", function(){
+          $("div.toggleArea").toggle("1500");
+      });
+
+
+| 例３では表示/非表示の切り替えを1.5秒でおこないます。
+| また、第2引数に関数を指定することでコールバックを設定できます。
+| 
+| 例４：
+
+    .. code-block:: javascript
+	
+      $("button.clicker").bind("click", function(){
+          $("div.toggleArea").toggle("1500", function(){
+              alert("toggle!!");
+          });
+      });
+
+    .. raw:: html
+
+         <a class="jsbin-embed" href="http://jsbin.com/AVumabI/2/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
+
+| この例では、表示/非表示の切り替えが終わると、「toggle!!」というアラートが表示されます。
+|
+
+
+animate()
+-----------
+
+| animate()メソッドでは、様々なアニメーションをすることができます。
+| 
+| animate()はこのように使います。
+
+    .. code-block:: javascript
+
+      $('セレクタ').animate({'動かすプロパティ': '数値'});
+
+
+| 例：
+
+    .. code-block:: javascript
+
+      $(".yellowBox").animate({"left": "+=50px"});
+
+
+| 第2引数では、速度を数値かslow,normal,fastで指定することができます。
+| 例：
+
+    .. code-block:: javascript
+
+      $(".yellowBox").animate({"left": "+=50px"}, "slow");
+
+
+| 第3引数では、変化のしかたを指定することができます。徐々に速くするなどが指定可能です。
+| 第4引数では、アニメーション終了時に実行する関数のポインタを渡すことができます。
+
+
+    .. raw:: html
+
+         <a class="jsbin-embed" href="http://jsbin.com/apalec/1/embed?js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
+| 詳細は `animate - jQuery日本語リファレンス <http://semooh.jp/jquery/api/effects/animate/params,+%5Bduration%5D,+%5Beasing%5D,+%5Bcallback%5D/>`_ を閲覧してください。
+
+
+jQuery最終課題
+=================================
+
+| jQueryはとても親切に解説してあるサイトが多数あります。
+| 今までここで習ってきた知識に加えてほしい情報があれば、是非積極的に検索してみてください。
+| 
+
+
+課題：**jQueryを用いて、文字サイズ変更ボタンを実装してみましょう**
+--------------------------------------------------------------------------
+
+| 
+
+    **3パターン文字サイズが変更できる**
+        大、中、小の3つの文字サイズパターンが存在し、文字サイズボタンに応じた文字の大きさに変更される。
+
+    **文字サイズ変更ボタンクリックで変更される**
+        クリックしなければ何も起こらないように。
+
+    **現在適応中の文字サイズに対応したボタンだけ強調表示する**
+        ボタンが画像なら、画像ファイルが変わる、ボタンが文字なら文字色が変わる、等。
+
+| 
+
+.. raw :: html
+
+     <a class="jsbin-embed" href="http://jsbin.com/iqakiW/1/embed?html,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>

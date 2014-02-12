@@ -143,7 +143,7 @@ JavaScript中にコメントを記述するには、コメントにしたい文�
 
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 
@@ -355,7 +355,7 @@ JavaScript中にコメントを記述するには、コメントにしたい文�
 
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 条件分岐
@@ -527,7 +527,7 @@ switch文
 
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 繰り返し文
@@ -647,7 +647,7 @@ for文
 
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 | 
 | ②for文をネストさせて、使って九九の表を作ってください。
@@ -682,7 +682,7 @@ for文
 	
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 
@@ -849,7 +849,7 @@ for文
 
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 関数の作成
@@ -916,6 +916,46 @@ for文
 | が返ってきます。
 | 関数にはもっと複雑な処理を入れることも可能ですし、引数と戻り値の型が違っていても問題ありません。
 | 戻り値を指定しなければ、処理を実行するだけの関数となります。
+
+値の取得
+==========
+
+| 何らかのWebサービスを使用したときに、ユーザー情報を記述したことはありませんか?
+| ここではJavaScriptを使ってユーザーが入力した情報を取得する方法を解説します。
+| 下のJsBinの入力欄に名前を入力し、送信ボタンを押してみてください。
+
+.. raw :: html
+
+    <a class="jsbin-embed" href="http://jsbin.com/uMUJolO/2/embed?output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
+| すると、○○さん、こんにちは！というアラートが出ましたね。
+| もちろんこのアラートは最初からあなたの名前を知っていた訳ではありません。
+| あなたが入力したテキストを取得、それを変数に格納し、その変数に少し文言を付け加えてアラートしたのです。
+| ユーザーの入力した情報を取得するにはgetElementByIdメソッドを使用します。
+| その名の通り、idによって取得したい情報を特定します。
+| JsBinに書かれたHTMLとJavaScriptを見てみてください。
+| 入力欄を用意するinputタグが2つあります。1つ目にはmyNameというidがついており、ユーザーはここに名前を入力します。
+| それをJavaScriptではmyNameという変数の中にgetElementById("myName")を格納しています。
+| もう一つのinputタグは送信ボタンです。onclick="hello()"と書かれているのが分かりますね。
+| これはその名の通りonclick、つまりクリックされたときにJavaScriptのhello関数を呼ぶというものです。
+| hello関数は自作した関数であり、取得したあなたの名前をアラートするようになっています。
+| ここで注意しなければいけないのが、アラートする名前の部分がmyName.valueとなっていることです。
+| myName変数の中にはgetElementById("myName")が格納されており、このままアラートしてしまうと実は[object HTMLInputElement]さん、こんにちは！と表示されてしまいます。
+| 次のチャプターで学習しますが、このままではHTMLでインプットした情報の"オブジェクト"が格納されているからなのです。
+| ユーザーが入力したテキストを取得するために.valueを付け加えます。
+
+課題
+---------
+
+ユーザーの名字、名前、年齢、性別、出身を入力する欄を作り、
+送信ボタンをクリックすると自己紹介文を生成してアラートするプログラムを書きなさい。
+
+出力例) 私の名前は鈴木太郎です。22歳の男性で、東京都出身です。
+
+.. raw :: html
+
+  <a class="jsbin-embed" href="http://jsbin.com/UdAmoKI/1/embed?html,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
 
 オブジェクトの利用
 =====================
@@ -1009,7 +1049,7 @@ for文
 
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 
 JavaScript最終課題
@@ -1037,4 +1077,4 @@ JavaScript最終課題
 
 .. raw :: html
 
-     <a class="jsbin-embed" href="http://jsbin.com/aqiviv/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+     <a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>

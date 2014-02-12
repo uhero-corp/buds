@@ -16,6 +16,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
    
+   introduction
    1_pcset
    2_itpassport
    3_fundamental_information
@@ -23,3 +24,6 @@ Contents:
    5_css
    6_introduction_programming
    7_JavaScript
+   8_jQuery
+   9_online_shop
+   
