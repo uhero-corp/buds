@@ -25,4 +25,5 @@ Contents:
    6_introduction_programming
    7_JavaScript
    8_jQuery
-   answers
+   9_online_shop
+   
