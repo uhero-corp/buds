@@ -23,7 +23,7 @@ PHPブロック
 | PHPは全て「<?php」で始まり「?>」で終了するPHPブロックの内側で実行されます。
 | 終了タグは必要ある場合のみ書いてください。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	PHPブロックの外側はそのまま出力されます。
 	<?php
@@ -34,7 +34,7 @@ PHPブロック
 PHPの設定情報を出力する
 -------------------------
 
-  .. code-block:: guess
+  .. code-block:: php
 
 	<?php
 	phpinfo();
@@ -47,12 +47,12 @@ PHPの設定情報を出力する
 文
 ---------
 
-  .. code-block:: guess
+  .. code-block:: php
 
 	<?php
 	echo 'PHPは文末に「;」を書きます。';
 	echo '途中に改行や
-　　　	スペースがあっても無視されます。';
+	　	スペースがあっても無視されます。';
 
 | PHPは文の区切りにセミコロンを使用します。
 | 途中で行が変わったりスペースが入っていても無視されます。
@@ -61,7 +61,7 @@ PHPの設定情報を出力する
 コメント
 ---------
 
-  .. code-block:: guess
+  .. code-block:: php
 
 	<?php
 	echo 'ここはコメントではありません'; //ここが１行コメントです。
@@ -77,7 +77,7 @@ PHPの設定情報を出力する
 出力
 ---------
 
-  .. code-block:: guess
+  .. code-block:: php
 	
 	<?php
 	echo 'PHPで出力するときはechoを使います。';
@@ -89,7 +89,7 @@ PHPの設定情報を出力する
 エラー設定
 =================================
 
-  .. code-block:: guess
+  .. code-block:: php
 
 	<?php
 	error_reporting(E_ALL);
@@ -106,7 +106,7 @@ PHPの設定情報を出力する
 
 変数
 ---------
-  .. code-block:: guess
+  .. code-block:: php
 
 	<?php
 	$var  = '全てのPHPの変数は必ず先頭に$がつきます。';
@@ -141,7 +141,7 @@ PHPの設定情報を出力する
 
 | 整数型は10進法の他に8進法、16進法に対応しています。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$i = 18;
@@ -151,7 +151,7 @@ PHPの設定情報を出力する
 
 | 倍精度浮動小数点型とは整数型で表すことができない実数を入れる型です。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$d = 4.015;
@@ -161,7 +161,7 @@ PHPの設定情報を出力する
 
 | PHPでは多くの場合、文字列型を使います。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$a = '文字列型';
@@ -170,7 +170,7 @@ PHPの設定情報を出力する
 | 文字列を代入するときは、シングルクォーテーションまたはダブルクオーテーションを使います。
 | ダブルクオーテーションの中ではエスケープ文字や変数が展開されますが、シングルクォーテーションの中では展開されません。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$a = '文字列型';
@@ -179,7 +179,7 @@ PHPの設定情報を出力する
 
 | これを実行すると、「文字 文字列型 列型」と出力されますが
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$a = "文字列型";
@@ -188,7 +188,7 @@ PHPの設定情報を出力する
 
 | この場合は「文字 $a 列型」となります。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$a = 'う';
@@ -198,7 +198,7 @@ PHPの設定情報を出力する
 | この場合、「あいうえお」が出力されることが期待されるのですが、変数「$aえお」が存在しないというエラーになってしまいます。
 | このようなことを防ぐために
 
-     .. code-block:: guess
+     .. code-block:: php
 	
 	<?php
 	$a = 'う';
@@ -212,7 +212,7 @@ PHPの設定情報を出力する
 
 | true/falseの真偽値を入れておく型です。
 
-     .. code-block:: guess
+     .. code-block:: php
 	
 	<?php
 	$flag = true;
@@ -224,7 +224,7 @@ PHPの設定情報を出力する
 | 複数の値を代入することができます。
 | $配列変数名 = array(キー => 値, キー => 値, キー => 値, );の形式で可能です。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$a = 'りんご';
@@ -233,7 +233,7 @@ PHPの設定情報を出力する
 | 一つの配列に複数の型が混在しても構いません。
 | PHPは全て連想配列ですが、キーを指定する必要はありません。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$fruits = array('バナナ', 'オレンジ', 'りんご', '桃');
@@ -241,7 +241,7 @@ PHPの設定情報を出力する
 
 | このように表記することもできます。この場合は
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$fruits = array(0 => 'バナナ', 1 => 'オレンジ', 2 => 'りんご', 3 => '桃');
@@ -249,7 +249,7 @@ PHPの設定情報を出力する
 | と同じ意味になります。
 | 配列の中の値を利用するには、「配列変数名[キー]」のようにして取り出します。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$fruits = array(0 => 'バナナ', 1 => 'オレンジ', 2 => 'りんご', 3 => '桃');
@@ -257,7 +257,7 @@ PHPの設定情報を出力する
 
 | 配列の中に配列を入れることも可能です。それを多次元配列といいます。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$apple = array('青りんご', '赤りんご', '緑りんご');
@@ -279,7 +279,7 @@ null型
 | 特定の型でしか出来ない処理に、異なる型が与えられた場合
 | また、文字列型でも処理する双方の値の中身が数字の場合は整数型や倍精度浮動小数点型に自動でキャストします。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	if ('007' == '7.0') {
@@ -298,7 +298,7 @@ var_dump()
 
 | 変数の中身や型を確認したいときはvar_dump()を使いましょう。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$a = 'apple';
@@ -315,7 +315,7 @@ var_dump()
 
 | 左辺の値を右辺の値と同じにします。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$a = 'apple'; 
@@ -329,7 +329,7 @@ var_dump()
 | 除算 /
 | 剰余(割ったあまりを返す) %
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$a = 1 + 2;
@@ -341,7 +341,7 @@ var_dump()
 | 複合演算子は演算した結果を元の変数に代入したい場合に使います。
 | 使い方は「左辺 演算子= 右辺」です。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$a = 1;
@@ -354,7 +354,7 @@ var_dump()
 | デクリメント(整数型の値から1を引く) - -
 | 「$a++;」は「$a += 1;」と同意義になります。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$a = 3;
@@ -381,7 +381,7 @@ var_dump()
 | 排他的論理和 (片方がtrueで、もう片方がfalseの場合true)　xor
 | 否定 (falseならtrue)　!
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$a = true;
@@ -407,7 +407,7 @@ var_dump()
 
 | PHPでは文字列を繋げるときは「.」を使います。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$a = 'あい';
@@ -425,7 +425,7 @@ PHPの制御構造
 | ただし、PHPではelse ifをelseifと省略できるなど多少の違いはあります。
 | また、PHPの制御構造は同じファイルであれば、PHPブロックを超えて継続します。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	if (true) {
@@ -443,7 +443,7 @@ if文(条件分岐)
 
 | if文は「もし条件ならば、処理◯◯を実行する。条件でなければ、処理××を実行する」という制御構造です。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$a = 10;          // 変数aに、10を代入
@@ -462,7 +462,7 @@ switch文
 | それぞれの処理の終了部分には「break;」を記述します。
 | 「break;」が記述されていないと以下に続く処理が続いて実行されてしまいますので気をつけましょう。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
  	$science = 'chemistry';                            // 変数scienceを定義し、chemistryという文字列を代入 
@@ -488,7 +488,7 @@ while文
 | while文は条件式が真の間だけ、処理を繰り返し実行するものです。
 | 以下は"ありがとう"を100回表示するプログラムです。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$i = 0;                         // 変数iを定義して0を代入
@@ -504,7 +504,7 @@ for文
 | for文は継続条件式が真の間繰り返し実行されるというものです。定義は以下の通りです。
 
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	for(初期化式; 継続条件式; 再初期化式){
     	    処理;
@@ -520,7 +520,7 @@ for文
 
 | 例えばwhileの例であった、「ありがとう」を100個表示するプログラムをfor文で記述してみましょう。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	                                      // 変数iを定義し0を代入 ※ループの初回のみ実行される
@@ -533,7 +533,7 @@ foreach文
 
 | foreachは配列など反復可能なデータ構造の中の値を一個づつ処理するのに使います。
 
-     .. code-block:: guess
+     .. code-block:: none
 
 	foreach(配列 as 値){
     	    処理;
@@ -541,7 +541,7 @@ foreach文
 
 | 現在の配列のキーを取得したい場合は
 
-     .. code-block:: guess
+     .. code-block:: none
 
 	foreach(配列 as キー => 値){
     	    処理;
@@ -550,14 +550,14 @@ foreach文
 | となります。
 | 例えば
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$fruits = array('banana' => 'バナナ', 'orange' =>  'オレンジ', 'apple' => 'りんご', 'peach' => '桃');
 
 | という配列があって、この配列の中身を全て出力したい場合、下記のようにします。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$fruits = array('banana' => 'バナナ', 'orange' =>  'オレンジ', 'apple' => 'りんご', 'peach' => '桃');
@@ -581,7 +581,7 @@ PHPの関数
 
 | PHPでは、関数もjavascriptと同じように使うことができます。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	function 関数名(引数)
 	{
@@ -589,7 +589,7 @@ PHPの関数
     	    return 戻り値;
 	}
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	function hello($name)
@@ -608,7 +608,7 @@ PHPの関数
 
 | PHPでもjavascriptと同じように無名関数を使うこともできます。変数自体が関数オブジェクトとなります。使い方は、変数を代入する時と同じようなやり方です。
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	$a = function(){
@@ -655,7 +655,7 @@ PHPの関数
 | 初期値を登録するときはコンストラクタでできるようにしましょう。それを実装してみるとこのようになります。
 
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	class TwitterAccount
@@ -719,7 +719,7 @@ PHPの関数
 | 継承はクラスのメソッドやプロパティを引き継いで、新しいクラスを作ることです。
 
 
-     .. code-block:: guess
+     .. code-block:: none
 
 	class クラス名 extends 親クラス名
 	{
@@ -771,10 +771,11 @@ PHPの関数
      	    }
  	}
 
+
 | AdminUserクラスにはsubmitメソッドは存在しませんが、Userクラスを継承しているため、呼び出すことができます。
 
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	<?php
 	//上記の続き
@@ -790,7 +791,7 @@ PHPの関数
 | その結果、studentクラスを直接インスタンス化することは起きません。このようなクラスを抽象クラスといいます。
 
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	abstract クラス名
 	{
@@ -889,7 +890,7 @@ PHPの関数
 | インターフェイスはこのように作成します。
 
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	interface インターフェイス名
 	{
@@ -900,7 +901,7 @@ PHPの関数
 | 実装はこのように行います。
 
 
-     .. code-block:: guess
+     .. code-block:: php
 
 	class クラス名 implents インターフェイス名[, インターフェイス名(複数指定も可), ...]
 	{
