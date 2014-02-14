@@ -1,0 +1,3875 @@
+[
+  {
+    "created_at":"Tue Jan 21 03:59:19 +0000 2014",
+    "id":425477683082825729,
+    "id_str":"425477683082825729",
+    "text":"今回はユヒーロブログの中で2013年に最もご好評をいただいた記事をご紹介します。ブログを読んで下さる皆さま、ありがとうございます。 Webの分析のレポート作成の負担を軽減するポイントをご紹介したこの記事を 是非ご活用ください！ http:\/\/t.co\/rOKyQFlgbD",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/rOKyQFlgbD",
+          "expanded_url":"http:\/\/blog.uhero.jp\/fae\/2013\/05\/google-014d.html",
+          "display_url":"blog.uhero.jp\/fae\/2013\/05\/go…",
+          "indices":[
+            114,
+            136
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Thu Jan 16 00:48:10 +0000 2014",
+    "id":423617639588450304,
+    "id_str":"423617639588450304",
+    "text":"ユヒーロブログを更新いたしました！ \n今年最初のブログは、モノのインターネット化についての動きを、海外のニュースも取り入れながら、分かりやすくご紹介します。 http:\/\/t.co\/CrGAhgLYOq",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/CrGAhgLYOq",
+          "expanded_url":"http:\/\/blog.uhero.jp\/fae\/2014\/01\/post-0ed4.html",
+          "display_url":"blog.uhero.jp\/fae\/2014\/01\/po…",
+          "indices":[
+            79,
+            101
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Jan 14 01:02:36 +0000 2014",
+    "id":422896496082554880,
+    "id_str":"422896496082554880",
+    "text":"今日は嬉しいニュースです。\nマーケティング関連資料の無料ダウンロードサイト「マーケメディア」の 2013年間ランキングにおいて、弊社資料が7位にランクインしました！ ↓上記の資料は下記URLからもダウンロード出来ます↓ http:\/\/t.co\/6Ik3zWfyTg",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/6Ik3zWfyTg",
+          "expanded_url":"http:\/\/www.uhero.co.jp\/service\/fae\/form\/form.html",
+          "display_url":"uhero.co.jp\/service\/fae\/fo…",
+          "indices":[
+            110,
+            132
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Thu Nov 28 06:27:05 +0000 2013",
+    "id":405945925509455872,
+    "id_str":"405945925509455872",
+    "text":"ユヒーロブログを更新致しました！\n世の中に溢れる情報＝データとマーケティングの関係、そしてこれからの展望を紹介致します。\n「多面的データが活用される現代マーケティング」 http:\/\/t.co\/Ubi0pHbEjH",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":2,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/Ubi0pHbEjH",
+          "expanded_url":"http:\/\/blog.uhero.jp\/fae\/2013\/11\/post-8df8.html",
+          "display_url":"blog.uhero.jp\/fae\/2013\/11\/po…",
+          "indices":[
+            85,
+            107
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Nov 05 07:47:57 +0000 2013",
+    "id":397631357213364224,
+    "id_str":"397631357213364224",
+    "text":"ユヒーロブログを更新致しました！\n 「動画共有アプリというマーケティングツール(Vine) 」\nhttp:\/\/t.co\/nVhSUwZUaK",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/nVhSUwZUaK",
+          "expanded_url":"http:\/\/blog.uhero.jp\/fae\/2013\/10\/vine-cf5e.html",
+          "display_url":"blog.uhero.jp\/fae\/2013\/10\/vi…",
+          "indices":[
+            48,
+            70
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Oct 15 01:59:27 +0000 2013",
+    "id":389933508652593152,
+    "id_str":"389933508652593152",
+    "text":"ユヒーロブログを更新致しました！\n未来を感じる、自動運転の自動車について、海外の動きをご紹介いたします「世界中でクルマのIT化が進む」\nhttp:\/\/t.co\/ypaPNaQJFb",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":2,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/ypaPNaQJFb",
+          "expanded_url":"http:\/\/blog.uhero.jp\/fae\/2013\/10\/it-50b8.html",
+          "display_url":"blog.uhero.jp\/fae\/2013\/10\/it…",
+          "indices":[
+            68,
+            90
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Thu Sep 19 07:43:16 +0000 2013",
+    "id":380597948007981058,
+    "id_str":"380597948007981058",
+    "text":"RT @TwitterAdsJP: アドテック東京 TwitterブースでTwitterミラーとセミナー実施中！ http:\/\/t.co\/T3feWU6mAb #adtechtokyo with @uhero_PR http:\/\/t.co\/W2ukD7H9w5",
+    "source":"<a href=\"http:\/\/twitter.com\/download\/iphone\" rel=\"nofollow\">Twitter for iPhone<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweeted_status":{
+      "created_at":"Thu Sep 19 07:39:57 +0000 2013",
+      "id":380597113999998976,
+      "id_str":"380597113999998976",
+      "text":"アドテック東京 TwitterブースでTwitterミラーとセミナー実施中！ http:\/\/t.co\/T3feWU6mAb #adtechtokyo with @uhero_PR http:\/\/t.co\/W2ukD7H9w5",
+      "source":"<a href=\"http:\/\/www.apple.com\" rel=\"nofollow\">iOS<\/a>",
+      "truncated":false,
+      "in_reply_to_status_id":null,
+      "in_reply_to_status_id_str":null,
+      "in_reply_to_user_id":null,
+      "in_reply_to_user_id_str":null,
+      "in_reply_to_screen_name":null,
+      "user":{
+        "id":632708673,
+        "id_str":"632708673"
+      },
+      "geo":null,
+      "coordinates":null,
+      "place":null,
+      "contributors":null,
+      "retweet_count":2,
+      "favorite_count":2,
+      "entities":{
+        "hashtags":[
+          {
+            "text":"adtechtokyo",
+            "indices":[
+              62,
+              74
+            ]
+          }
+        ],
+        "symbols":[
+          
+        ],
+        "urls":[
+          {
+            "url":"http:\/\/t.co\/T3feWU6mAb",
+            "expanded_url":"http:\/\/bit.ly\/adtechtokyo2013",
+            "display_url":"bit.ly\/adtechtokyo2013",
+            "indices":[
+              39,
+              61
+            ]
+          }
+        ],
+        "user_mentions":[
+          {
+            "screen_name":"uhero_PR",
+            "name":"株式会社ユヒーロ",
+            "id":328938134,
+            "id_str":"328938134",
+            "indices":[
+              80,
+              89
+            ]
+          }
+        ],
+        "media":[
+          {
+            "id":380597113853194240,
+            "id_str":"380597113853194240",
+            "indices":[
+              90,
+              112
+            ],
+            "media_url":"http:\/\/pbs.twimg.com\/media\/BUgnDv3CMAAOYiq.jpg",
+            "media_url_https":"https:\/\/pbs.twimg.com\/media\/BUgnDv3CMAAOYiq.jpg",
+            "url":"http:\/\/t.co\/W2ukD7H9w5",
+            "display_url":"pic.twitter.com\/W2ukD7H9w5",
+            "expanded_url":"http:\/\/twitter.com\/TwitterAdsJP\/status\/380597113999998976\/photo\/1",
+            "type":"photo",
+            "sizes":{
+              "thumb":{
+                "w":150,
+                "h":150,
+                "resize":"crop"
+              },
+              "small":{
+                "w":340,
+                "h":453,
+                "resize":"fit"
+              },
+              "medium":{
+                "w":600,
+                "h":800,
+                "resize":"fit"
+              },
+              "large":{
+                "w":960,
+                "h":1280,
+                "resize":"fit"
+              }
+            }
+          }
+        ]
+      },
+      "favorited":false,
+      "retweeted":false,
+      "possibly_sensitive":false,
+      "lang":"ja"
+    },
+    "retweet_count":2,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        {
+          "text":"adtechtokyo",
+          "indices":[
+            80,
+            92
+          ]
+        }
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/T3feWU6mAb",
+          "expanded_url":"http:\/\/bit.ly\/adtechtokyo2013",
+          "display_url":"bit.ly\/adtechtokyo2013",
+          "indices":[
+            57,
+            79
+          ]
+        }
+      ],
+      "user_mentions":[
+        {
+          "screen_name":"TwitterAdsJP",
+          "name":"Twitter Ads Japan",
+          "id":632708673,
+          "id_str":"632708673",
+          "indices":[
+            3,
+            16
+          ]
+        },
+        {
+          "screen_name":"uhero_PR",
+          "name":"株式会社ユヒーロ",
+          "id":328938134,
+          "id_str":"328938134",
+          "indices":[
+            98,
+            107
+          ]
+        }
+      ],
+      "media":[
+        {
+          "id":380597113853194240,
+          "id_str":"380597113853194240",
+          "indices":[
+            108,
+            130
+          ],
+          "media_url":"http:\/\/pbs.twimg.com\/media\/BUgnDv3CMAAOYiq.jpg",
+          "media_url_https":"https:\/\/pbs.twimg.com\/media\/BUgnDv3CMAAOYiq.jpg",
+          "url":"http:\/\/t.co\/W2ukD7H9w5",
+          "display_url":"pic.twitter.com\/W2ukD7H9w5",
+          "expanded_url":"http:\/\/twitter.com\/TwitterAdsJP\/status\/380597113999998976\/photo\/1",
+          "type":"photo",
+          "sizes":{
+            "thumb":{
+              "w":150,
+              "h":150,
+              "resize":"crop"
+            },
+            "small":{
+              "w":340,
+              "h":453,
+              "resize":"fit"
+            },
+            "medium":{
+              "w":600,
+              "h":800,
+              "resize":"fit"
+            },
+            "large":{
+              "w":960,
+              "h":1280,
+              "resize":"fit"
+            }
+          }
+        }
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Wed Sep 18 05:17:08 +0000 2013",
+    "id":380198783520215041,
+    "id_str":"380198783520215041",
+    "text":"2013年9月18日、ad:tech初日です！ 様々なブースを訪れたり、様々な方がブースにいらっしゃったり、活気溢れるイベントとなっています！  まだまだ私共ユヒーロのブースではご案内を続けて参りますので、ぜひとも一度お立ち寄りください！",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Sep 17 02:34:04 +0000 2013",
+    "id":379795359385391104,
+    "id_str":"379795359385391104",
+    "text":"There will be our exhibition at 『ad:tech tokyo 2013』,starting tomorrow(9\/18~19). Click for more information↓ \n http:\/\/t.co\/gqlaDvcu8q",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/gqlaDvcu8q",
+          "expanded_url":"http:\/\/www.adtech-tokyo.com\/en\/",
+          "display_url":"adtech-tokyo.com\/en\/",
+          "indices":[
+            111,
+            133
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"en"
+  },
+  {
+    "created_at":"Tue Sep 17 02:33:34 +0000 2013",
+    "id":379795235116564480,
+    "id_str":"379795235116564480",
+    "text":"uheroは明日から開催される『ad:tech tokyo 2013』に出展します！！\n詳しくはこちら→http:\/\/t.co\/aPQqoXy73V ご覧になった方は当日ブースにてプレゼントがあります！\nad:tech公式サイト→http:\/\/t.co\/8liwSI58do",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/aPQqoXy73V",
+          "expanded_url":"http:\/\/www.uhero.co.jp\/event\/exhibition\/adtech2013.html",
+          "display_url":"uhero.co.jp\/event\/exhibiti…",
+          "indices":[
+            52,
+            74
+          ]
+        },
+        {
+          "url":"http:\/\/t.co\/8liwSI58do",
+          "expanded_url":"http:\/\/www.adtech-tokyo.com\/ja\/",
+          "display_url":"adtech-tokyo.com\/ja\/",
+          "indices":[
+            115,
+            137
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Fri Sep 13 03:17:12 +0000 2013",
+    "id":378356661968052224,
+    "id_str":"378356661968052224",
+    "text":"There will be our exhibition at 『ad:tech tokyo 2013』,starting next week(9\/18~19). \nClick for more information↓\nhttp:\/\/t.co\/gqlaDvcu8q",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/gqlaDvcu8q",
+          "expanded_url":"http:\/\/www.adtech-tokyo.com\/en\/",
+          "display_url":"adtech-tokyo.com\/en\/",
+          "indices":[
+            111,
+            133
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"en"
+  },
+  {
+    "created_at":"Fri Sep 13 03:08:54 +0000 2013",
+    "id":378354575469604865,
+    "id_str":"378354575469604865",
+    "text":"【直前告知】 uheroは来週18,19日に開催される『ad:tech tokyo 2013』に出展します！！ \n詳しくはこちら→http:\/\/t.co\/aPQqoXy73V\nad:tech公式サイトはこちら→http:\/\/t.co\/8liwSI58do",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":3,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/aPQqoXy73V",
+          "expanded_url":"http:\/\/www.uhero.co.jp\/event\/exhibition\/adtech2013.html",
+          "display_url":"uhero.co.jp\/event\/exhibiti…",
+          "indices":[
+            65,
+            87
+          ]
+        },
+        {
+          "url":"http:\/\/t.co\/8liwSI58do",
+          "expanded_url":"http:\/\/www.adtech-tokyo.com\/ja\/",
+          "display_url":"adtech-tokyo.com\/ja\/",
+          "indices":[
+            105,
+            127
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Thu Sep 12 02:39:20 +0000 2013",
+    "id":377984744991899650,
+    "id_str":"377984744991899650",
+    "text":"ユヒーロブログを更新いたしました！\n海外の動向についてFacebookの新たな活動を紹介しています。\nhttp:\/\/t.co\/4YKfmMvBb3",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/4YKfmMvBb3",
+          "expanded_url":"http:\/\/blog.uhero.jp\/fae\/2013\/09\/facebookinterne-b2b8.html",
+          "display_url":"blog.uhero.jp\/fae\/2013\/09\/fa…",
+          "indices":[
+            51,
+            73
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Thu Sep 05 02:12:33 +0000 2013",
+    "id":375441290696990720,
+    "id_str":"375441290696990720",
+    "text":"【告知!!】9月18日、19日に行われる『ad:tech tokyo2013』にuheroは今年も出展いたします!! \n詳しくはこちら http:\/\/t.co\/aPQqoXy73V \nad:tech公式サイトはこちら http:\/\/t.co\/8liwSI58do",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":2,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/aPQqoXy73V",
+          "expanded_url":"http:\/\/www.uhero.co.jp\/event\/exhibition\/adtech2013.html",
+          "display_url":"uhero.co.jp\/event\/exhibiti…",
+          "indices":[
+            68,
+            90
+          ]
+        },
+        {
+          "url":"http:\/\/t.co\/8liwSI58do",
+          "expanded_url":"http:\/\/www.adtech-tokyo.com\/ja\/",
+          "display_url":"adtech-tokyo.com\/ja\/",
+          "indices":[
+            109,
+            131
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Mon Aug 26 07:26:55 +0000 2013",
+    "id":371896524327776256,
+    "id_str":"371896524327776256",
+    "text":"ユヒーロブログを更新しました！\n海外企業動向：米オムニコムと仏ピュブリシスの合併 世界一規模の広告代理店へ\nhttp:\/\/t.co\/xy8fW3qpT5",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/xy8fW3qpT5",
+          "expanded_url":"http:\/\/blog.uhero.jp\/fae\/2013\/08\/post-9659.html",
+          "display_url":"blog.uhero.jp\/fae\/2013\/08\/po…",
+          "indices":[
+            54,
+            76
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Jul 23 06:51:36 +0000 2013",
+    "id":359566449011998720,
+    "id_str":"359566449011998720",
+    "text":"ユヒーロブログを更新しました！\n原点回帰：なぜブランドは、ソーシャルメディアの活用法を読み誤るのか\nhttp:\/\/t.co\/fRtkbNQxUf",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/fRtkbNQxUf",
+          "expanded_url":"http:\/\/blog.uhero.jp\/fae\/2013\/07\/post-93d0.html",
+          "display_url":"blog.uhero.jp\/fae\/2013\/07\/po…",
+          "indices":[
+            50,
+            72
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Wed Jul 10 00:34:30 +0000 2013",
+    "id":354760505266675712,
+    "id_str":"354760505266675712",
+    "text":"本社オフィスの花が夏らしく向日葵になりました！私たちもこの向日葵のように、厳しい日差しにも下を向かず、頑張って行きたいものです。 http:\/\/t.co\/8jC1DD5LCE",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        
+      ],
+      "user_mentions":[
+        
+      ],
+      "media":[
+        {
+          "id":354760505279258624,
+          "id_str":"354760505279258624",
+          "indices":[
+            65,
+            87
+          ],
+          "media_url":"http:\/\/pbs.twimg.com\/media\/BOxczMmCIAAxxMd.jpg",
+          "media_url_https":"https:\/\/pbs.twimg.com\/media\/BOxczMmCIAAxxMd.jpg",
+          "url":"http:\/\/t.co\/8jC1DD5LCE",
+          "display_url":"pic.twitter.com\/8jC1DD5LCE",
+          "expanded_url":"http:\/\/twitter.com\/uhero_PR\/status\/354760505266675712\/photo\/1",
+          "type":"photo",
+          "sizes":{
+            "medium":{
+              "w":600,
+              "h":829,
+              "resize":"fit"
+            },
+            "large":{
+              "w":1024,
+              "h":1414,
+              "resize":"fit"
+            },
+            "thumb":{
+              "w":150,
+              "h":150,
+              "resize":"crop"
+            },
+            "small":{
+              "w":340,
+              "h":470,
+              "resize":"fit"
+            }
+          }
+        }
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Wed Jul 03 09:30:34 +0000 2013",
+    "id":352358698242416641,
+    "id_str":"352358698242416641",
+    "text":"ユヒーロブログを更新しました！\nGoogleアナリティクスのフィルタ機能の便利な使い方について\nhttp:\/\/t.co\/CTFqs5QB9Y",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":2,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/CTFqs5QB9Y",
+          "expanded_url":"http:\/\/blog.uhero.jp\/fae\/2013\/07\/post-93a6.html",
+          "display_url":"blog.uhero.jp\/fae\/2013\/07\/po…",
+          "indices":[
+            48,
+            70
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Thu Jun 27 03:36:41 +0000 2013",
+    "id":350095310078492672,
+    "id_str":"350095310078492672",
+    "text":"ユヒーロブログを更新しました！\nデジタルマーケティング分野での海外動向について\nhttp:\/\/t.co\/cfN3wAxvD0",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":3,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/cfN3wAxvD0",
+          "expanded_url":"http:\/\/blog.uhero.jp\/fae\/2013\/06\/doubleclick-fac-c282.html",
+          "display_url":"blog.uhero.jp\/fae\/2013\/06\/do…",
+          "indices":[
+            40,
+            62
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Jun 18 06:00:27 +0000 2013",
+    "id":346870002504310784,
+    "id_str":"346870002504310784",
+    "text":"弊社の実践ウェブマーケティング勉強会、始まりました！ http:\/\/t.co\/PTaHNwOX6X",
+    "source":"<a href=\"http:\/\/twitter.com\/download\/iphone\" rel=\"nofollow\">Twitter for iPhone<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        
+      ],
+      "user_mentions":[
+        
+      ],
+      "media":[
+        {
+          "id":346870002508505088,
+          "id_str":"346870002508505088",
+          "indices":[
+            27,
+            49
+          ],
+          "media_url":"http:\/\/pbs.twimg.com\/media\/BNBUbfLCIAAOlNg.jpg",
+          "media_url_https":"https:\/\/pbs.twimg.com\/media\/BNBUbfLCIAAOlNg.jpg",
+          "url":"http:\/\/t.co\/PTaHNwOX6X",
+          "display_url":"pic.twitter.com\/PTaHNwOX6X",
+          "expanded_url":"http:\/\/twitter.com\/uhero_PR\/status\/346870002504310784\/photo\/1",
+          "type":"photo",
+          "sizes":{
+            "medium":{
+              "w":600,
+              "h":450,
+              "resize":"fit"
+            },
+            "large":{
+              "w":1024,
+              "h":768,
+              "resize":"fit"
+            },
+            "thumb":{
+              "w":150,
+              "h":150,
+              "resize":"crop"
+            },
+            "small":{
+              "w":340,
+              "h":255,
+              "resize":"fit"
+            }
+          }
+        }
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Jun 18 00:10:22 +0000 2013",
+    "id":346781899395563521,
+    "id_str":"346781899395563521",
+    "text":"ユヒーロブログを更新しました！\nGoogleAnalyticsの新機能とその可能性について\nhttp:\/\/t.co\/PEeTgnTCTr",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/PEeTgnTCTr",
+          "expanded_url":"http:\/\/blog.uhero.jp\/fae\/2013\/06\/googleanalytics-d46e.html",
+          "display_url":"blog.uhero.jp\/fae\/2013\/06\/go…",
+          "indices":[
+            46,
+            68
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Fri Jun 07 03:02:43 +0000 2013",
+    "id":342839007325069313,
+    "id_str":"342839007325069313",
+    "text":"新規獲得のための「実践ウェブマーケティング勉強会」\n※当初より部屋が変更になりました。\n東京国際フォーラム　ガラス棟会議室（G505室）\nエレベーターで5階へ上がって頂き、出て右手すぐの部屋になります。\nhttp:\/\/t.co\/fmHweDzwqW",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/fmHweDzwqW",
+          "expanded_url":"http:\/\/www.uhero.co.jp\/r\/conference001a.html",
+          "display_url":"uhero.co.jp\/r\/conference00…",
+          "indices":[
+            102,
+            124
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Wed Jun 05 00:15:24 +0000 2013",
+    "id":342072122434277377,
+    "id_str":"342072122434277377",
+    "text":"新規獲得のための「実践ウェブマーケティング勉強会」開催！！\n ○日時： 6月18日（火）14：30 ～ 16：00\n ○場所： 東京国際フォーラム　ガラス棟会議室（G601室）\n☆詳細はこちら☆\nhttp:\/\/t.co\/fmHweDzwqW",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":3,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/fmHweDzwqW",
+          "expanded_url":"http:\/\/www.uhero.co.jp\/r\/conference001a.html",
+          "display_url":"uhero.co.jp\/r\/conference00…",
+          "indices":[
+            98,
+            120
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Mon Jun 03 00:44:05 +0000 2013",
+    "id":341354566069149697,
+    "id_str":"341354566069149697",
+    "text":"ユヒーロブログを更新いたしました！\nGoogleアナリティクスがスマートフォンやSNSの普及を受けて、更に機能を追加した事について、ご紹介致します。\nhttp:\/\/t.co\/oUlkpoYalO",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":2,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/oUlkpoYalO",
+          "expanded_url":"http:\/\/blog.uhero.jp\/fae\/2013\/06\/googleanalytics-8768.html",
+          "display_url":"blog.uhero.jp\/fae\/2013\/06\/go…",
+          "indices":[
+            75,
+            97
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Wed May 29 13:13:20 +0000 2013",
+    "id":339731182747013121,
+    "id_str":"339731182747013121",
+    "text":"ユヒーロブログを更新いたしました！\n GAのデータをスプレッドシートに自動的に落とし込む方法。Google社が公開している英語のチュートリアルに従って試しています。使いこなすことができればレポートがより楽になることは間違いありません！http:\/\/t.co\/rOKyQFlgbD",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/rOKyQFlgbD",
+          "expanded_url":"http:\/\/blog.uhero.jp\/fae\/2013\/05\/google-014d.html",
+          "display_url":"blog.uhero.jp\/fae\/2013\/05\/go…",
+          "indices":[
+            117,
+            139
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Mar 05 10:08:58 +0000 2013",
+    "id":308881816025190401,
+    "id_str":"308881816025190401",
+    "text":"facebookを更新しました！「春の訪れ」http:\/\/t.co\/IpvqXFaXYg",
+    "source":"<a href=\"http:\/\/twitter.com\/download\/iphone\" rel=\"nofollow\">Twitter for iPhone<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/IpvqXFaXYg",
+          "expanded_url":"http:\/\/m.facebook.com\/?_rdr#!\/uheroPR?__user=100003314566764",
+          "display_url":"m.facebook.com\/?_rdr#!\/uheroP…",
+          "indices":[
+            22,
+            44
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Fri Mar 01 07:09:11 +0000 2013",
+    "id":307387019485659136,
+    "id_str":"307387019485659136",
+    "text":"GoogleAnalytics（サイトの使用に基づくデータの考察）を活用したサービスについて紹介しています！！　http:\/\/t.co\/vgIo5J6eOp?",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/vgIo5J6eOp",
+          "expanded_url":"http:\/\/www.uhero.co.jp\/service\/ga\/ga_service.html#what_is_GA",
+          "display_url":"uhero.co.jp\/service\/ga\/ga_…",
+          "indices":[
+            56,
+            78
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Fri Mar 01 05:50:49 +0000 2013",
+    "id":307367299680178176,
+    "id_str":"307367299680178176",
+    "text":"facebookページの方も随時更新しておりますのでこちらも、いいね！よろしくお願いいたします！\nhttp:\/\/t.co\/pkO7E4zHTG",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/pkO7E4zHTG",
+          "expanded_url":"http:\/\/www.facebook.com\/uheroPR",
+          "display_url":"facebook.com\/uheroPR",
+          "indices":[
+            49,
+            71
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Fri Mar 01 04:48:40 +0000 2013",
+    "id":307351658264944640,
+    "id_str":"307351658264944640",
+    "text":"お客様の創造的なビジネスを支援いたします、株式会社ユヒーロです。こちらのアカウントですが、本格始動いたします！企業情報から皆様に耳寄りな情報などを定期的に発信いたしますので、是非フォローお願いいたします！！！",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Mon Feb 04 09:03:18 +0000 2013",
+    "id":298356043887566848,
+    "id_str":"298356043887566848",
+    "text":"Facebookのアルバム「湘南藤沢オフィス内をぐるり」に写真を4枚アップロードしました http:\/\/t.co\/n0YRyBs4",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/n0YRyBs4",
+          "expanded_url":"http:\/\/fb.me\/FLl442mV",
+          "display_url":"fb.me\/FLl442mV",
+          "indices":[
+            45,
+            65
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Jan 29 08:48:03 +0000 2013",
+    "id":296177879455236096,
+    "id_str":"296177879455236096",
+    "text":"今回はみなさまに湘南藤沢のオフィスをご紹介します！\n\n日本橋の本社から湘南台へ電車で1時間、さらにバスに乗って20分。... http:\/\/t.co\/k2s0krAY",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/k2s0krAY",
+          "expanded_url":"http:\/\/fb.me\/2a9ytEYnZ",
+          "display_url":"fb.me\/2a9ytEYnZ",
+          "indices":[
+            63,
+            83
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Thu Jan 24 07:54:19 +0000 2013",
+    "id":294352417020080128,
+    "id_str":"294352417020080128",
+    "text":"特設ページ公開中！\n『第三者配信をウルトラハイパーテクノロジカルファンタジスタ配信にする方法』... http:\/\/t.co\/IMe7Vl2V",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/IMe7Vl2V",
+          "expanded_url":"http:\/\/fb.me\/1weY2F43G",
+          "display_url":"fb.me\/1weY2F43G",
+          "indices":[
+            51,
+            71
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Thu Jan 24 03:40:24 +0000 2013",
+    "id":294288514193977344,
+    "id_str":"294288514193977344",
+    "text":"特設ページ公開中！\n\n『第三者配信をウルトラハイパーテクノロジカルファンタジスタ配信にする方法』\n\nhttp:\/\/t.co\/EBIfMMcC\n\nユヒーロでは、次世代のマーケッターを... http:\/\/t.co\/oPfJteY2",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/EBIfMMcC",
+          "expanded_url":"http:\/\/www.uhero.co.jp\/fae.html",
+          "display_url":"uhero.co.jp\/fae.html",
+          "indices":[
+            50,
+            70
+          ]
+        },
+        {
+          "url":"http:\/\/t.co\/oPfJteY2",
+          "expanded_url":"http:\/\/fb.me\/U2X66fJr",
+          "display_url":"fb.me\/U2X66fJr",
+          "indices":[
+            94,
+            114
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Fri Dec 28 07:41:21 +0000 2012",
+    "id":284564681803321344,
+    "id_str":"284564681803321344",
+    "text":"本日はユヒーロで大掃除です！\n念願だったブラインドの掃除ができて社長もニッコリ http:\/\/t.co\/z85SxYWG",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/z85SxYWG",
+          "expanded_url":"http:\/\/fb.me\/xDjcTLF4",
+          "display_url":"fb.me\/xDjcTLF4",
+          "indices":[
+            40,
+            60
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Dec 04 08:25:10 +0000 2012",
+    "id":275878400126763008,
+    "id_str":"275878400126763008",
+    "text":"年末年始営業日のご案内\n\n年末年始における休業期間は、2012年12月29日（土）～2013年1月3日（木）とさせて頂きます。\n\nhttp:\/\/t.co\/SIVf3EAE http:\/\/t.co\/2oCAnBB5",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/SIVf3EAE",
+          "expanded_url":"http:\/\/www.uhero.co.jp\/index.html",
+          "display_url":"uhero.co.jp\/index.html",
+          "indices":[
+            65,
+            85
+          ]
+        },
+        {
+          "url":"http:\/\/t.co\/2oCAnBB5",
+          "expanded_url":"http:\/\/fb.me\/12u6BOvAH",
+          "display_url":"fb.me\/12u6BOvAH",
+          "indices":[
+            86,
+            106
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Mon Nov 12 23:49:59 +0000 2012",
+    "id":268138604956643329,
+    "id_str":"268138604956643329",
+    "text":"当社では新しいデジタル広告配信名を提唱いたします！\nその名も… http:\/\/t.co\/MNpfadeF",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/MNpfadeF",
+          "expanded_url":"http:\/\/fb.me\/2lxbCXi3u",
+          "display_url":"fb.me\/2lxbCXi3u",
+          "indices":[
+            32,
+            52
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Thu Nov 08 08:55:57 +0000 2012",
+    "id":266464060269273088,
+    "id_str":"266464060269273088",
+    "text":"ユヒーロブログを更新いたしました！\n【ウルトラハイパーテクノロジカルファンタジスタ配信】が誕生した瞬間の貴重な映像がご覧いただけます！ http:\/\/t.co\/Y82vT8b9",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/Y82vT8b9",
+          "expanded_url":"http:\/\/fb.me\/ABcq6KUM",
+          "display_url":"fb.me\/ABcq6KUM",
+          "indices":[
+            68,
+            88
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Thu Nov 08 04:52:25 +0000 2012",
+    "id":266402774852460544,
+    "id_str":"266402774852460544",
+    "text":"ad:tech tokyo 2012 株式会社ユヒーロブースにて。\nその２。 http:\/\/t.co\/0H5O7PVN",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/0H5O7PVN",
+          "expanded_url":"http:\/\/fb.me\/1H7PjXJQ2",
+          "display_url":"fb.me\/1H7PjXJQ2",
+          "indices":[
+            39,
+            59
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Thu Nov 08 04:49:43 +0000 2012",
+    "id":266402094775431168,
+    "id_str":"266402094775431168",
+    "text":"ad:tech tokyo 2012 株式会社ユヒーロブースにて。\n\nWEBマーケティングテクノロジーサービスをご紹介させていただきました。\n\nGoogleアナリティクス活用サービスページ... http:\/\/t.co\/VLHeaA1P",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/VLHeaA1P",
+          "expanded_url":"http:\/\/fb.me\/1I6UVuRAu",
+          "display_url":"fb.me\/1I6UVuRAu",
+          "indices":[
+            98,
+            118
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Fri Nov 02 08:58:24 +0000 2012",
+    "id":264290350527553536,
+    "id_str":"264290350527553536",
+    "text":"ユヒーロブログ更新いたしました！\nAd tech tokyo 2012 にてユヒーロが展開したプロモーションの第一報です。\n\nhttp:\/\/t.co\/fRleV6zS http:\/\/t.co\/Mm4S3QBE",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/fRleV6zS",
+          "expanded_url":"http:\/\/blog.uhero.jp\/fae\/cat9015929\/",
+          "display_url":"blog.uhero.jp\/fae\/cat9015929\/",
+          "indices":[
+            63,
+            83
+          ]
+        },
+        {
+          "url":"http:\/\/t.co\/Mm4S3QBE",
+          "expanded_url":"http:\/\/fb.me\/16i5PYfih",
+          "display_url":"fb.me\/16i5PYfih",
+          "indices":[
+            84,
+            104
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Fri Nov 02 06:44:06 +0000 2012",
+    "id":264256553828364288,
+    "id_str":"264256553828364288",
+    "text":"エントランスのお花が、真っ赤に色づいたもみじに変わりました。\n秋も一層深まり、徐々に冬の足音が聞こえてくる季節ですね。 http:\/\/t.co\/wt3R9lcb",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/wt3R9lcb",
+          "expanded_url":"http:\/\/fb.me\/2gptEvPrN",
+          "display_url":"fb.me\/2gptEvPrN",
+          "indices":[
+            60,
+            80
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Mon Sep 24 05:38:11 +0000 2012",
+    "id":250106836580192257,
+    "id_str":"250106836580192257",
+    "text":"そろそろ秋の気配を感じるようになってきました。\nエントランスの花も変わりましたよ。 http:\/\/t.co\/C0dEIpBP",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/C0dEIpBP",
+          "expanded_url":"http:\/\/fb.me\/22VoctuGu",
+          "display_url":"fb.me\/22VoctuGu",
+          "indices":[
+            42,
+            62
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Thu Aug 23 02:19:49 +0000 2012",
+    "id":238460506556465152,
+    "id_str":"238460506556465152",
+    "text":"ユヒーロブログアップしました！\n今回はプライバシー問題について。あらゆる情報がデータ化される時代だからこそ、ココロが大切になるのではないでしょうか。... http:\/\/t.co\/tgXbHb3E",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/tgXbHb3E",
+          "expanded_url":"http:\/\/fb.me\/1CTvp63t3",
+          "display_url":"fb.me\/1CTvp63t3",
+          "indices":[
+            78,
+            98
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Mon Jul 30 09:34:03 +0000 2012",
+    "id":229872473217327105,
+    "id_str":"229872473217327105",
+    "text":"今回のテーマは「モバイルに投資を行うとき、PCで培ったノウハウは役に立つのか？」というお話です！ http:\/\/t.co\/t6ubRUVa",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/t6ubRUVa",
+          "expanded_url":"http:\/\/fb.me\/2jyAMRlFD",
+          "display_url":"fb.me\/2jyAMRlFD",
+          "indices":[
+            49,
+            69
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Jul 24 03:51:57 +0000 2012",
+    "id":227612054025023489,
+    "id_str":"227612054025023489",
+    "text":"梅雨も開けきって、夏本番。エントランスのお花も、元気なひまわりに変わりました。 http:\/\/t.co\/1evJp8RN",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/1evJp8RN",
+          "expanded_url":"http:\/\/fb.me\/1xttb6Usq",
+          "display_url":"fb.me\/1xttb6Usq",
+          "indices":[
+            40,
+            60
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Jul 03 05:56:36 +0000 2012",
+    "id":220033279091425280,
+    "id_str":"220033279091425280",
+    "text":"モバイルファースト！\nスマホサイトから情報設計を行うという新し考え方！ http:\/\/t.co\/BGISHLE5",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/BGISHLE5",
+          "expanded_url":"http:\/\/fb.me\/U1KFJUnv",
+          "display_url":"fb.me\/U1KFJUnv",
+          "indices":[
+            36,
+            56
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Jul 03 04:33:45 +0000 2012",
+    "id":220012428644188160,
+    "id_str":"220012428644188160",
+    "text":"ブログを更新しました！\n「モバイルファースト」という考えの元、スマホサイトの必要性について説明してあります。前回から引き続き、第２回目です！是非、ご覧下さい！ http:\/\/t.co\/bz5dS0wW",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/bz5dS0wW",
+          "expanded_url":"http:\/\/fb.me\/1u1fl5MJA",
+          "display_url":"fb.me\/1u1fl5MJA",
+          "indices":[
+            80,
+            100
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Fri Jun 15 10:39:07 +0000 2012",
+    "id":213581395094806528,
+    "id_str":"213581395094806528",
+    "text":"ユヒーロはブログを立ち上げました！マーケティングのテクノロジーという観点から、情報を発信していこうと考えております。\n\n今回のブログは、先日行われた「DoubleClick Insights... http:\/\/t.co\/ShIwDjGN",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/ShIwDjGN",
+          "expanded_url":"http:\/\/fb.me\/2bQ2C49cY",
+          "display_url":"fb.me\/2bQ2C49cY",
+          "indices":[
+            99,
+            119
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Fri Jun 08 03:34:43 +0000 2012",
+    "id":210937876320493568,
+    "id_str":"210937876320493568",
+    "text":"ところで、今から10年前の集合写真。\n10年前はみんな学生だったんです^^ http:\/\/t.co\/ew7uSH65",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/ew7uSH65",
+          "expanded_url":"http:\/\/fb.me\/21NWku41a",
+          "display_url":"fb.me\/21NWku41a",
+          "indices":[
+            38,
+            58
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Fri Jun 01 13:13:20 +0000 2012",
+    "id":208546773201993728,
+    "id_str":"208546773201993728",
+    "text":"歓送迎会にて集合写真！ http:\/\/t.co\/R4gEhIjv",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/R4gEhIjv",
+          "expanded_url":"http:\/\/fb.me\/1UjPqsfld",
+          "display_url":"fb.me\/1UjPqsfld",
+          "indices":[
+            12,
+            32
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Fri Jun 01 13:05:21 +0000 2012",
+    "id":208544766739230720,
+    "id_str":"208544766739230720",
+    "text":"ばっきー、10年間ありがとう！\nいつまでもバラをくわえていてください♪ http:\/\/t.co\/hgHaTUsa",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/hgHaTUsa",
+          "expanded_url":"http:\/\/fb.me\/17h6F5dpk",
+          "display_url":"fb.me\/17h6F5dpk",
+          "indices":[
+            36,
+            56
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Wed May 30 11:43:39 +0000 2012",
+    "id":207799428512366592,
+    "id_str":"207799428512366592",
+    "text":"梅雨を目前にして、エントランスのお花が新しくなりました。目の覚めるような、青いバラと、紫陽花。清涼感あふれますね！ http:\/\/t.co\/HmjTJMj1",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/HmjTJMj1",
+          "expanded_url":"http:\/\/fb.me\/24aGipp1N",
+          "display_url":"fb.me\/24aGipp1N",
+          "indices":[
+            58,
+            78
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Wed May 30 08:50:37 +0000 2012",
+    "id":207755885433454593,
+    "id_str":"207755885433454593",
+    "text":"5\/28に、ユヒーロのボス2名の合同誕生日を行いました！ケーキのプレートにご注目ください・・・。 http:\/\/t.co\/D0tlBKZB",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/D0tlBKZB",
+          "expanded_url":"http:\/\/fb.me\/QdBRC8Uw",
+          "display_url":"fb.me\/QdBRC8Uw",
+          "indices":[
+            49,
+            69
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Fri Dec 23 01:28:02 +0000 2011",
+    "id":150024835039371264,
+    "id_str":"150024835039371264",
+    "text":"Facebookのアルバム「ユヒーロ納会&忘年会2011」に写真を25枚アップロードしました http:\/\/t.co\/WCCpS3Qa",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/WCCpS3Qa",
+          "expanded_url":"http:\/\/fb.me\/17RFjSlo7",
+          "display_url":"fb.me\/17RFjSlo7",
+          "indices":[
+            47,
+            67
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Thu Dec 22 01:11:04 +0000 2011",
+    "id":149658175384207360,
+    "id_str":"149658175384207360",
+    "text":"本日ユヒーロでは、サンタサミットが開催されております。 http:\/\/t.co\/htHWOAbf",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":2,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/htHWOAbf",
+          "expanded_url":"http:\/\/fb.me\/1zR5nQ5nx",
+          "display_url":"fb.me\/1zR5nQ5nx",
+          "indices":[
+            28,
+            48
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Wed Dec 14 05:37:43 +0000 2011",
+    "id":146826177057783808,
+    "id_str":"146826177057783808",
+    "text":"年の瀬が近づいてまいりました。ユヒーロ社の年末年始の休業日は、2011年12月29日〜2012年1月3日です！",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Dec 06 05:51:57 +0000 2011",
+    "id":143930658304163841,
+    "id_str":"143930658304163841",
+    "text":"いよいよ明日、GAIQ（Google Analytics Individual Qualification）実践セミナーを開催致します。2011年12月7日（水）14:00-17:30です。",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Nov 29 15:06:37 +0000 2011",
+    "id":141533529610797056,
+    "id_str":"141533529610797056",
+    "text":"本日、ファミリーマートからスライム肉まんが発売されたということで、早速従業員みんなで食べようと買ってきたところ、、、事件が！！... http:\/\/t.co\/fLwzyChm",
+    "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":3,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/fLwzyChm",
+          "expanded_url":"http:\/\/fb.me\/PMtKjScQ",
+          "display_url":"fb.me\/PMtKjScQ",
+          "indices":[
+            67,
+            87
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Mon Nov 28 12:41:31 +0000 2011",
+    "id":141134624624615424,
+    "id_str":"141134624624615424",
+    "text":"先ほどの投稿に、URLがついていませんでしたこちらから、是非お越し下さい！　http:\/\/t.co\/RkloqdrJ \n\"facebookページを公開開始しました!ユヒーロの魅力を少しずつご紹介致します。\"",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/RkloqdrJ",
+          "expanded_url":"http:\/\/www.facebook.com\/pages\/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%A6%E3%83%92%E3%83%BC%E3%83%AD\/177302168949397",
+          "display_url":"facebook.com\/pages\/%E6%A0%A…",
+          "indices":[
+            38,
+            58
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Mon Nov 28 11:19:11 +0000 2011",
+    "id":141113906071482369,
+    "id_str":"141113906071482369",
+    "text":"facebookページを公開開始しました!ユヒーロの魅力を少しずつご紹介致します。",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Mon Oct 31 09:01:15 +0000 2011",
+    "id":130932334550720512,
+    "id_str":"130932334550720512",
+    "text":"【ニュースを更新しました】google analyticsの公式資格、「GAIQ」をご存知ですか？12月7日に弊社で資格習得のためのセミナーを開催いたします！　http:\/\/t.co\/NMDZa7kI",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/NMDZa7kI",
+          "expanded_url":"http:\/\/www.uhero.co.jp\/news.html#news006",
+          "display_url":"uhero.co.jp\/news.html#news…",
+          "indices":[
+            80,
+            100
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Mon Oct 31 08:58:16 +0000 2011",
+    "id":130931581257912320,
+    "id_str":"130931581257912320",
+    "text":"【ニュースを更新しました】ad:techで配布した資料を、弊社ホームページからもダウンロードできるように掲載いたしました。興味のある方は是非ご覧ください。　http:\/\/t.co\/KuYJwbri",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/KuYJwbri",
+          "expanded_url":"http:\/\/www.uhero.co.jp\/news.html#news005",
+          "display_url":"uhero.co.jp\/news.html#news…",
+          "indices":[
+            78,
+            98
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Mon Oct 31 08:57:06 +0000 2011",
+    "id":130931289573429248,
+    "id_str":"130931289573429248",
+    "text":"【ニュースを更新しました】27日、28日と2日間行われたad:techは無事終了いたしました。ブースにお立ち寄りくださった方、ご多忙のところありがとうございました！",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Fri Oct 28 03:10:37 +0000 2011",
+    "id":129756925607936000,
+    "id_str":"129756925607936000",
+    "text":"アドテック東京、2日目。会場は本日も盛況です。イノベーションブース241にて、お待ちしております！ http:\/\/t.co\/Jsy98Xl1",
+    "source":"<a href=\"http:\/\/twitter.com\/download\/iphone\" rel=\"nofollow\">Twitter for iPhone<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        
+      ],
+      "user_mentions":[
+        
+      ],
+      "media":[
+        {
+          "id":129756925616324608,
+          "id_str":"129756925616324608",
+          "indices":[
+            50,
+            70
+          ],
+          "media_url":"http:\/\/pbs.twimg.com\/media\/Acz9PIKCAAAwSG8.jpg",
+          "media_url_https":"https:\/\/pbs.twimg.com\/media\/Acz9PIKCAAAwSG8.jpg",
+          "url":"http:\/\/t.co\/Jsy98Xl1",
+          "display_url":"pic.twitter.com\/Jsy98Xl1",
+          "expanded_url":"http:\/\/twitter.com\/uhero_PR\/status\/129756925607936000\/photo\/1",
+          "type":"photo",
+          "sizes":{
+            "small":{
+              "w":340,
+              "h":455,
+              "resize":"fit"
+            },
+            "thumb":{
+              "w":150,
+              "h":150,
+              "resize":"crop"
+            },
+            "large":{
+              "w":765,
+              "h":1024,
+              "resize":"fit"
+            },
+            "medium":{
+              "w":600,
+              "h":803,
+              "resize":"fit"
+            }
+          }
+        }
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Thu Oct 27 11:24:39 +0000 2011",
+    "id":129518870414368768,
+    "id_str":"129518870414368768",
+    "text":"アドテック1日目が終了しました！\nたくさんの方にお越しいただき、ありがとうございました！\n明日もまた「第三者配信」について興味のある方は、是非お越しいただきますよう、よろしくお願いいたします。",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Wed Oct 26 09:12:07 +0000 2011",
+    "id":129123129632108544,
+    "id_str":"129123129632108544",
+    "text":"本日は、明日より開催のad:techの搬入でした！ご来場される方は是非お立ち寄りください！",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Oct 25 03:42:35 +0000 2011",
+    "id":128677809274097664,
+    "id_str":"128677809274097664",
+    "text":"RT @adtechtokyo: 本年初参加、イノベーションゾーン出展の株式会社ユヒーロさんです。デジタルマーケティングとテクノロジーを結ぶサービスや活動についてはこちらへどうぞ！ http:\/\/t.co\/Su69N6bB",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweeted_status":{
+      "created_at":"Tue Oct 25 03:13:57 +0000 2011",
+      "id":128670604936220672,
+      "id_str":"128670604936220672",
+      "text":"本年初参加、イノベーションゾーン出展の株式会社ユヒーロさんです。デジタルマーケティングとテクノロジーを結ぶサービスや活動についてはこちらへどうぞ！ http:\/\/t.co\/Su69N6bB",
+      "source":"<a href=\"http:\/\/www.facebook.com\/twitter\" rel=\"nofollow\">Facebook<\/a>",
+      "truncated":false,
+      "in_reply_to_status_id":null,
+      "in_reply_to_status_id_str":null,
+      "in_reply_to_user_id":null,
+      "in_reply_to_user_id_str":null,
+      "in_reply_to_screen_name":null,
+      "user":{
+        "id":53609537,
+        "id_str":"53609537"
+      },
+      "geo":null,
+      "coordinates":null,
+      "place":null,
+      "contributors":null,
+      "retweet_count":1,
+      "favorite_count":0,
+      "entities":{
+        "hashtags":[
+          
+        ],
+        "symbols":[
+          
+        ],
+        "urls":[
+          {
+            "url":"http:\/\/t.co\/Su69N6bB",
+            "expanded_url":"http:\/\/fb.me\/1d3PcuP5Y",
+            "display_url":"fb.me\/1d3PcuP5Y",
+            "indices":[
+              74,
+              94
+            ]
+          }
+        ],
+        "user_mentions":[
+          
+        ]
+      },
+      "favorited":false,
+      "retweeted":false,
+      "possibly_sensitive":false,
+      "lang":"ja"
+    },
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/Su69N6bB",
+          "expanded_url":"http:\/\/fb.me\/1d3PcuP5Y",
+          "display_url":"fb.me\/1d3PcuP5Y",
+          "indices":[
+            91,
+            111
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Oct 25 03:40:44 +0000 2011",
+    "id":128677345954496512,
+    "id_str":"128677345954496512",
+    "text":"アドテック東京2011のfacebookページにて、弊社の出展情報が掲載されました！　http:\/\/t.co\/oubahYVI",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/oubahYVI",
+          "expanded_url":"http:\/\/www.facebook.com\/pages\/adtech-tokyo\/145789162899",
+          "display_url":"facebook.com\/pages\/adtech-t…",
+          "indices":[
+            43,
+            63
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Mon Oct 24 05:51:13 +0000 2011",
+    "id":128347795315892224,
+    "id_str":"128347795315892224",
+    "text":"アドテック東京 2011に出展いたします！ #adtechtokyo http:\/\/t.co\/3ccT0vGq",
+    "source":"<a href=\"http:\/\/twitter.com\/tweetbutton\" rel=\"nofollow\">Tweet Button<\/a>",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":2,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        {
+          "text":"adtechtokyo",
+          "indices":[
+            22,
+            34
+          ]
+        }
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        {
+          "url":"http:\/\/t.co\/3ccT0vGq",
+          "expanded_url":"http:\/\/www.adtech-tokyo.com\/ja\/exhibitor\/details\/exbDetail.html?exbId=ADT-0236",
+          "display_url":"adtech-tokyo.com\/ja\/exhibitor\/d…",
+          "indices":[
+            35,
+            55
+          ]
+        }
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "possibly_sensitive":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Tue Oct 18 08:07:09 +0000 2011",
+    "id":126207676953788416,
+    "id_str":"126207676953788416",
+    "text":"昨日、ユヒーロサイトをリニューアルしました！ユヒーロのサービスをより分かりやすくお伝えできるよう、3つの観点からサービスを紹介しています。",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Wed Aug 03 07:06:33 +0000 2011",
+    "id":98650947122769921,
+    "id_str":"98650947122769921",
+    "text":"社員の皆さーん！今日はユヒーロの日です。",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":0,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Fri Jul 22 03:31:42 +0000 2011",
+    "id":94248226424762370,
+    "id_str":"94248226424762370",
+    "text":"新サイトのコンセプトは、ユヒーロ社の掲げる「uhero Firm 構想」が具現化された世界であります。uhero Firmというフィールドで、各人が最適なパフォーマンスを発揮する事。",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Fri Jul 22 03:30:42 +0000 2011",
+    "id":94247972606455809,
+    "id_str":"94247972606455809",
+    "text":"ユヒーロサイトが公開間近となっております！なかなか時間がかかりましたが、ついに・・・。",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "lang":"ja"
+  },
+  {
+    "created_at":"Mon Jul 04 10:59:20 +0000 2011",
+    "id":87837895494352896,
+    "id_str":"87837895494352896",
+    "text":"uhero社公式アカウントです。今後uhero社内で行われる様々な試みやお知らせなどを配信してまいります。よろしくお願いいたします！",
+    "source":"web",
+    "truncated":false,
+    "in_reply_to_status_id":null,
+    "in_reply_to_status_id_str":null,
+    "in_reply_to_user_id":null,
+    "in_reply_to_user_id_str":null,
+    "in_reply_to_screen_name":null,
+    "user":{
+      "id":328938134,
+      "id_str":"328938134"
+    },
+    "geo":null,
+    "coordinates":null,
+    "place":null,
+    "contributors":null,
+    "retweet_count":1,
+    "favorite_count":0,
+    "entities":{
+      "hashtags":[
+        
+      ],
+      "symbols":[
+        
+      ],
+      "urls":[
+        
+      ],
+      "user_mentions":[
+        
+      ]
+    },
+    "favorited":false,
+    "retweeted":false,
+    "lang":"ja"
+  }
+]
