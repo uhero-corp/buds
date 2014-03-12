@@ -1,3 +1,18 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+a {
+    color: #313030;
+    text-decoration: none;
+}
+
+a:hover{
+    color:#EE706E;
+}
+
+
 html, body {
     color: #313030;
     font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", sans-serif;
@@ -14,46 +29,114 @@ html, body {
 }
 
 html {
+    min-width:960px;
     background: #fbfbfb;
     border-top: 5px #8b8988 solid;
 }
 
-.related{
-    
+#relatedHead{
+    float:right;
+}
+
+#relatedFooter{
+    background:url("bg_footer.gif") top left repeat;
+    position:relative;
+    clear:both;
+    color:#fbfbfb;
+    text-align:center
+}
+
+
+#relatedFooter a {
+    color:#fbfbfb;
+}
+#relatedFooter a:hover{
+    color:#EE706E;
+}
+
+
+#relatedFooter ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+#relatedFooter{
+    padding-top:40px;
+    line-height: 0.9;
+    font-size: 9.9pt;    
+
+}
+
+.underRelatedHead{
+    clear:right;    
+    width:100%;
+    border-bottom:solid #313030 1px;
+    padding-top:20px;
+    margin-bottom:20px;
+}
+
+
+#relatedHead h3,#relatedFooter h3{
+    display:none;
+}
+#relatedHead ul li{
+    display: inline-block;
+    list-style: none;
+    line-height: 0.9;
+    font-size: 9.9pt;
 }
 
 #container {
-    width:90%;
-    max-width:1300px;
-    min-width: 900px;
+    width: 960px;
     margin-left:auto;
     margin-right:auto;
 }
 
 #header {
-    height: 126px;
+    height: 70px;
     margin: 0 auto;
     padding-bottom: 20px;
 }
 
 .sphinxsidebar {
-  float:left;
+  margin-left:10px;
   width: 200px;
   position:absolute;
+}
+
+.sphinxsidebar ul li {
+    padding-bottom:3px;
+    padding-top:3px;
+    margin-left:5px;
+    line-height: 0.9;
+    font-size: 9.9pt;    
 }
 
 .related{
     clear:both;
 }
+
+.related ul li:first-child a{
+    display:none;
+}
+
 .documentwrapper {
-  float:right;
-  margin-left:200px; 
+    width:740px;
+    float:right;
+    padding-left:220px;
 }
 
-#footer {
-  background-color: #fcc1c1;
+#copyright{
+    margin-top:20px;
+    padding-bottom:10px;
 }
 
-h1 {
-  margin: 0;
+#copyright figure{
+    margin:10px;
+}
+
+.bodywrapper ul li {
+    padding-bottom:3px;
+    padding-top:3px;
+    margin-left:30px;
 }
