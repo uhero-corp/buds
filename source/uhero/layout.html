@@ -1,0 +1,29 @@
+{% extends "default/layout.html" %}
+
+{%- block header %}
+<div id="container">
+<div id="header">
+    <a href="http://uhero.co.jp/">
+        <img id="logo" src="http://uhero.co.jp/common/images/logo.png" width="286" height="57" alt="株式会社ユヒーロ" />
+    </a>
+</div>
+{%- endblock header %}
+{% block relbar1 %}
+<div id="relatedHead">
+{{ super() }}
+</div>
+<div class='underRelatedHead'></div>
+{% endblock relbar1 %}
+
+{% block relbar2 %}
+</div>
+<div id="relatedFooter">
+{{ super() }}
+{% endblock relbar2 %}
+{%- block footer %}
+      <div id="copyright">
+    <p><a href="http://uhero.co.jp/">uhero corp</a>. &#169; all rights reserved.</p>
+    <figure><img src="http://uhero.co.jp/common/images/img_footer.gif" width="80" height="14" alt="uhero corp." /></figure>
+  </div><!--/#copyright-->
+    </div>
+{% endblock footer %}
