@@ -1,6 +1,77 @@
-*{
-    margin:0;
-    padding:0;
+@import url('bootstrap.min.css');
+
+blockquote {
+    border:none;
+    padding:0px;
+    font-size:1em;
+}
+
+ul{
+    padding:0px;
+}
+
+strong{
+    margin-top:20px;
+    border-bottom: 1px dotted #CCC;
+}
+
+/* テーブル */
+
+table {
+    border: 1px #c0c0c0 solid; /* 大枠の境界線 */
+    border-collapse: collapse;
+    font-size: 80%;
+}
+
+/* --- セル --- */
+table th,
+table td {
+padding: 6px 8px; /* セルのパディング（上下、左右） */
+border: 1px #c0c0c0 solid; /* セルの境界線 */
+}
+
+/* --- 見出しセル --- */
+table thead th {
+background-color: #deefff; /* 見出しセルの背景色 */
+text-align: center;
+}
+
+/* --- フッタセル --- */
+table tfoot td {
+background-color: #f5f5f5; /* フッタセルの背景色 */
+}
+
+/* --- 表ボディ --- */
+table tbody {
+background-color: #ffffff; /* ボディの背景色 */
+}
+
+/* --- マウスオーバー時 --- */
+table tbody tr:hover {
+background-color: #e5e5e5; /* 行の背景色 */
+}
+
+/* テーブルここまで */
+
+
+h1{
+    font-size: 2em;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 0.5em;
+}
+
+h2{
+    margin-top:50px;
+    font-size: 1.5em;
+    border-bottom: 3px solid #CCC;
+}
+
+h3 {
+    margin-top:30px;
+    font-size: 1.2em;
+    border-bottom: 1px dotted #CCC;
+
 }
 
 a {
@@ -10,6 +81,25 @@ a {
 
 a:hover{
     color:#EE706E;
+}
+
+.admonition {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.note {
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    color: #8a6d3b;
+}
+
+.warning {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
 }
 
 
@@ -28,7 +118,7 @@ html, body {
     padding-left: 30px;
 }
 
-html {
+body {
     min-width:960px;
     background: #fbfbfb;
     border-top: 5px #8b8988 solid;
@@ -104,6 +194,14 @@ html {
   position:absolute;
 }
 
+.sphinxsidebar *{
+    padding:3px;
+}
+
+.admonition-title{
+    font-weight: bold;
+}
+
 .sphinxsidebar ul li {
     padding-bottom:3px;
     padding-top:3px;
@@ -123,12 +221,17 @@ html {
 .documentwrapper {
     width:740px;
     float:right;
-    padding-left:220px;
+    margin-bottom:70px;
 }
+
 
 #copyright{
     margin-top:20px;
     padding-bottom:10px;
+}
+
+#sphinx{
+    margin:10px;
 }
 
 #copyright figure{
