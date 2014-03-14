@@ -26,7 +26,7 @@ jQueryを体験してみよう
 jQueryとは
 =================================
 
-.. image:: /_static/jQuery_logo.png
+.. image:: /_static/jquery_logo.png
     :height: 60px
 
 | jQueryとは一言で言ってしまうと、前回のチャプターで勉強した **JavaScriptのライブラリ** のことです。
