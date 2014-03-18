@@ -669,15 +669,17 @@ for文
   
 .. raw:: html
    
-    <script>
+    <script> 
+    document.write("<table>");
         for (var i = 1; i <= 9; i++) {
-		    document.write("<table><tr>");
+            document.write("<tr>");
             for (var j = 1; j <= 9; j++) {
                 document.write("<td>" + i*j + "</td>");
             }
-			document.write("</tr></table>");
+            document.write("</tr>");
         }
-	</script>
+    document.write("</table>");
+    </script>
 	
 	
 .. raw :: html
