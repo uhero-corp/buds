@@ -59,8 +59,29 @@ mySQLとは
 | プライマリーキーには数字の連番が使われることも多いです。
 
 
-SQLに接続してみよう
+SQLを操作してみよう
 ==========================================
+
+| Windowsならコマンドプロンプト、Macならターミナルを開いて、
+| mysqlにアクセスしましょう。
+| 
+| XAMPP環境の場合（初期値）
+
+
+
+.. code-block:: bat
+
+    cd C:\xampp\mysql\bin
+    mysql -h localhost -u root
+
+| MAMP環境の場合（初期値）
+
+.. code-block:: bat
+
+    cd /Applications/MAMP/Library/bin
+    ./mysql -u root -p
+
+| MAMP環境の場合、パスワードの初期値がrootとなっているようです。
 
 
 
