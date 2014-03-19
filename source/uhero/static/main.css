@@ -206,7 +206,7 @@ body {
     padding-bottom:3px;
     padding-top:3px;
     margin-left:5px;
-    line-height: 0.9;
+    line-height: 1;
     font-size: 9.9pt;    
 }
 
@@ -245,9 +245,6 @@ body {
 }
 
 .bodywrapper a{
-    /*font-weight: bold;*/
     font-style: italic; 
-    border-bottom: 1px dotted #CCC;
-    
-    
+    border-bottom: 1px dotted #CCC;    
 }
