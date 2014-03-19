@@ -664,20 +664,22 @@ for文
   | 適切なHTMLタグと文字を出力する処理を書き込めば、tableで表を出力できます。
   | tableの作り方を思い出してみてください。テーブルは行の場合は<td>、列の場合は<tr>を使います。
   | つまり、改行したい時には<tr>タグで囲んでいる部分が新しくなればいいわけです。
-  |
-  | **出力例**
+
+| **出力例**
   
 .. raw:: html
    
-    <script>
+    <script> 
+    document.write("<table>");
         for (var i = 1; i <= 9; i++) {
-		    document.write("<table><tr>");
+            document.write("<tr>");
             for (var j = 1; j <= 9; j++) {
                 document.write("<td>" + i*j + "</td>");
             }
-			document.write("</tr></table>");
+            document.write("</tr>");
         }
-	</script>
+    document.write("</table>");
+    </script>
 	
 	
 .. raw :: html
