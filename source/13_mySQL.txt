@@ -88,6 +88,31 @@ SQLを操作してみよう
 データベースの作成
 ============================================
 
+| 
+| mySQLにrootでログインしたらデータベースを作ってみましょう。
+| 作成するデータベースの名前が「TEST_DB」で、文字コードがUTF-8だとすれば
+
+.. code-block:: mysql
+
+    mysql> CREATE DATABASE TEST_DB CHARACTER SET utf8;
+
+| このようにすることでデータベースを作成することができます。
+| データベースの一覧を見るには
+
+.. code-block:: mysql
+
+    mysql> SHOW DATABASES;
+
+| と入力します。
+| 「TEST_DB」という名前のデータベースにアクセスするには
+
+.. code-block:: mysql
+
+    mysql> USE TEST_DB;
+
+| と入力します。
+| 
+
 
 ユーザーの作成
 ========================================
