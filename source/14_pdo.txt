@@ -16,6 +16,53 @@ PDO(PHP Data Objects)はPHPに標準搭載されているデータベースア�
 プリペアドステートメントとクエリの実行
 ======================================
 
+ここではPDOのprepareメソッドを使ってSQL文を実行する方法を紹介します。
+
+
+prepareメソッド
+-------------------------------------
+
+| prepareメソッドはSQL文を実行する準備を行います。
+|  **PDOオブジェクト** に対してのみ使用することができます。
+| メソッドの返り値はPDOStatementオブジェクトになります。
+| 
+| 引数にはSQL文を入れます。SQL文中にプレースホルダとして疑問符「?」を使うことができます。
+| 動的にSQL文を変えたい場合は、変えたい部分に疑問符を使います。
+
+例:
+
+     .. code-block:: php
+
+	<?php
+	$pdoObject = new PDO('mysql:dbname=testbase;host=localhost;port=8889', 'testuser', 'pass');
+	$pdoStatementObject = $pdoObject->prepare("SELECT * FROM user WHERE id = ?");
+
+| 上記の例の場合、idはこの時点では定まっておらず、後から動的に指定することができます。
+| SQL文を実行する準備が出来ただけであり、この時点ではSQLは実行されません。
+
+
+executeメソッド
+-------------------------------
+
+| executeメソッドはprepareメソッドで準備したSQL文を実行します。
+| このメソッドは **PDOStatementオブジェクト** に対してのみ実行することができます。
+| 引数にはprepareメソッドで疑問符「?」を記述した部分を配列形式で順番に指定します。
+
+
+例:
+
+     .. code-block:: php
+
+	<?php
+	$pdoObject = new PDO('mysql:dbname=testbase;host=localhost;port=8889', 'testuser', 'pass');
+	$pdoStatementObject = $pdoObject->prepare("SELECT * FROM user WHERE id = ?");
+	$pdoStatementObject->execute(array('uteam')); //idがuteamだった場合
+	$pdoStatementObject->execute(array('uhero')); //idがuheroだった場合
+
+
+| executeメソッドは複数回実行可能です。
+| 上記の例の場合、一度prepareメソッドを実行した後はexecuteメソッドの引数を変えるだけで他のIDでSQL文を実行することが出来ます。
+| 結果の取得方法は後の項目でやります。
 
 結果の取得
 ================
