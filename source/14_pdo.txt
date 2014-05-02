@@ -12,6 +12,73 @@ PDO(PHP Data Objects)はPHPに標準搭載されているデータベースア�
 データベースへの接続
 ==========================
 
+PDOでデータベースと接続するときは、クラスのインスタンス化と同様の手段で行います。
+
+     .. code-block:: php
+
+	$PDOのオブジェクト = new PDO('DNS文字列', 'DBユーザー名', 'DBパスワード');
+
+
+DNS文字列
+--------------
+
+| DNSとは、Data Source Nameの略で、データベースに必要な情報となるデータソース名のことです。
+| データベースにより要素が異なりますが
+| MySQLの場合、
+
+* dbname : データベース名　
+* host : ホスト名
+* port : ポート番号
+
+| から構成されます。
+| ホスト名と、ポート番号の代わりに
+
+* unix_socket : Unixソケット
+
+| を指定することも出来ます。
+| 
+| それぞれの要素の順番には意味はありません。
+| 書式は下のようになります。
+
+     .. code-block:: none
+
+	mysql:dbname=データベース名;host=ホスト名;port=ポート番号
+
+
+PDOによるデータベース接続のサンプル
+-----------------------------------
+
+* データベース名 : testbase
+* ホスト名 : localhost
+* ポート番号 : 8889
+* DBユーザー名 : testuser
+* DBパスワード : pass
+
+上記のデータベースに接続する場合、
+
+     .. code-block:: php
+
+	<?php
+	$pdoObject = new PDO('mysql:dbname=testbase;host=localhost;port=8889', 'testuser', 'pass');
+
+
+| このようになります。
+
+
+データベース接続を解除する
+--------------------------------
+
+| 接続時に生成されたPDOオブジェクトを破棄することで接続を解除できます。
+| 明示的に破棄しない場合はPHPスクリプトの終了時に接続が解除されます。
+| 
+
+     .. code-block:: php
+
+	<?php
+	$pdoObject = new PDO('mysql:dbname=testbase;host=localhost;port=8889', 'testuser', 'pass'); //接続
+	unset($pdoObject); //接続解除
+
+
 
 プリペアドステートメントとクエリの実行
 ======================================
