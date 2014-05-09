@@ -131,10 +131,76 @@ executeメソッド
 | 上記の例の場合、一度prepareメソッドを実行した後はexecuteメソッドの引数を変えるだけで他のIDでSQL文を実行することが出来ます。
 | 結果の取得方法は後の項目で解説します。
 
+プリペアドステートメントを使わないクエリの実行
+=================================================
+
+
 結果の取得
 ================
 
+| SQL文を実行した結果を取得する操作は全てprepareメソッドやqueryメソッドにより生成された
+| **PDOStatementオブジェクト** に対して実行します。
 
-プリペアドステートメントを使わないクエリの実行
-=================================================
+
+fetchメソッド
+---------------------
+
+| fetchメソッドは結果から単一の行を取得します。公式リファレンスでは「次の行を取得する」と書かれています。
+| 実行結果が1行しかない場合や、1行ずつ取得するときに使います。
+
+| 実行した行はPDOStatementオブジェクトから削除されるため、ループ文で次々取得するような書き方も可能です。
+| 
+| 例1：
+
+     .. code-block:: php
+
+	<?php
+	$pdoObject = new PDO('mysql:dbname=testbase;host=localhost;port=8889', 'testuser', 'pass');
+	$pdoStatementObject = $pdoObject->prepare("SELECT name,address FROM user WHERE id = ?"); //IDに重複は無いとする。
+	$pdoStatementObject->execute(array('uteam')); //idがuteamだった場合
+	$row = $pdoStatementObject->fetch();
+	echo $row['name'];//IDに重複がなければ、IDに対応するカラム名nameの値が取得可能
+
+| 例2：
+
+     .. code-block:: php
+
+	<?php
+	$pdoObject = new PDO('mysql:dbname=testbase;host=localhost;port=8889', 'testuser', 'pass');
+	$pdoStatementObject = $pdoObject->query("SELECT name,address FROM user");
+	while ($row = $pdoStatementObject->fetch()){ //実行した行は削除されていくため、nullになるまでループする。
+		echo $row['name']; 
+	}
+
+
+fetchAllメソッド
+------------------------
+
+| fetchAllメソッドは結果の全ての行を配列で取得します。
+| 実行結果が複数行になる場合に、まとめて取得したい場合に使います。
+
+| 例：
+
+     .. code-block:: php
+
+	<?php
+	$pdoObject = new PDO('mysql:dbname=testbase;host=localhost;port=8889', 'testuser', 'pass');
+	$pdoStatementObject = $pdoObject->query("SELECT name,address FROM user");
+	$rows = $pdoStatementObject->fetchAll();
+	foreach ($rows as $row){
+		echo $row['name']; 
+	}
+
+
+
+
+FETCHモード
+---------------------
+
+| fetchメソッドやfetchAllメソッドの第1引数に、FETCHモードを指定することで、結果として取得する配列の書式を切り替えることが出来ます。
+| デフォルトではFETCH_BOTHになっており、結果配列の中には「カラム名をキー」と「カラムに割り当てられた連番をキー」の両方に同じ値が2重に入っています。
+| FETCH_ASSOCと指定すると、「カラム名をキー」のみになり、FETCH_NUMと指定すると「カラム名を数字」のみになります。
+
+| また、$pdoStatementObject->setAttribute(PDO::FETCH_ASSOC); とすることデフォルトの設定を変えることが出来ます。
+
 
