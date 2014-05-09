@@ -248,3 +248,7 @@ body {
     font-style: italic; 
     border-bottom: 1px dotted #CCC;    
 }
+
+#searchbox input[type="text"] {
+    width: 130px;
+}
