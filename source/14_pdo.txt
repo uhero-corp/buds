@@ -131,8 +131,51 @@ executeメソッド
 | 上記の例の場合、一度prepareメソッドを実行した後はexecuteメソッドの引数を変えるだけで他のIDでSQL文を実行することが出来ます。
 | 結果の取得方法は後の項目で解説します。
 
+
+
 プリペアドステートメントを使わないクエリの実行
 =================================================
+
+| プリペアドステートメントを使わない方法もあります。
+| SQL文を一度しか使わず、パラメータが存在しない場合に便利です。
+
+
+queryメソッド
+----------------------------
+
+| queryメソッドはSQL文を実行します。
+|  **PDOオブジェクト** に対してのみ使用することができます。
+| メソッドの返り値はprepareメソッドと同じくPDOStatementオブジェクトになります。
+| 
+| 引数にはSQL文を入れます。
+
+
+例:
+
+     .. code-block:: php
+
+	<?php
+	$pdoObject = new PDO('mysql:dbname=testbase;host=localhost;port=8889', 'testuser', 'pass');
+	$pdoStatementObject = $pdoObject->query("SELECT name FROM user");
+
+| prepareメソッドと異なり、この時点でSQL文が実行されデータベースに問い合わせを行います。
+
+
+execメソッド
+----------------------------
+
+| execメソッドもqueryメソッド同じくSQL文を実行しますが、
+| 返り値は、PDOStatementオブジェクトではなく、そのSQL文により削除または更新された行数となっております。
+| UPDATE文やDELETE文などでのみ有効です。SELECT文からは結果は返りません。
+
+例:
+
+     .. code-block:: php
+
+	<?php
+	$pdoObject = new PDO('mysql:dbname=testbase;host=localhost;port=8889', 'testuser', 'pass');
+	$count = $pdoObject->exec("DELETE FROM user WHERE name = '山田'");
+	echo $count . '行削除されました。';
 
 
 結果の取得
