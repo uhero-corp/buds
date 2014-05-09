@@ -206,7 +206,7 @@ body {
     padding-bottom:3px;
     padding-top:3px;
     margin-left:5px;
-    line-height: 0.9;
+    line-height: 1;
     font-size: 9.9pt;    
 }
 
@@ -242,4 +242,13 @@ body {
     padding-bottom:3px;
     padding-top:3px;
     margin-left:30px;
+}
+
+.bodywrapper a{
+    font-style: italic; 
+    border-bottom: 1px dotted #CCC;    
+}
+
+#searchbox input[type="text"] {
+    width: 130px;
 }

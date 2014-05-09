@@ -231,6 +231,11 @@ while文
 
   document.write(year + "年" + month + "月" + today + "日" + hour + "時" + minute + "分" + second + "秒(" + days[day_index] + "曜日)");
 
-jQuery課題
-=============
+オンラインショップ課題
+========================
+
+| 解答例例をダウンロードできます。
+| 
+ :download:`DOM_assignment.zip </_static/DOM_assignment.zip>`
+
 
