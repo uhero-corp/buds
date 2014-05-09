@@ -152,6 +152,7 @@ fetchメソッド
 | 
 | 例1：
 
+
      .. code-block:: php
 
 	<?php
@@ -202,5 +203,65 @@ FETCHモード
 | FETCH_ASSOCと指定すると、「カラム名をキー」のみになり、FETCH_NUMと指定すると「カラム名を数字」のみになります。
 
 | また、$pdoStatementObject->setAttribute(PDO::FETCH_ASSOC); とすることデフォルトの設定を変えることが出来ます。
+
+
+
+エラー処理
+=====================
+
+| PDOには3つのエラー処理方法があります。
+| デフォルトは PDO::ERRMODE_SILENT です。
+| **PDOオブジェクト** に対してsetAttributeメソッドでエラーモードをセットすることで
+| 設定することができます。
+|
+| 例1：
+
+
+     .. code-block:: php
+
+	<?php
+	$pdoObject->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
+
+
+
+PDO::ERRMODE_SILENT
+---------------------------
+
+| PDOはエラーコードのみを設定します。
+| そのエラーコードを取得するには、errorCodeメソッドとerrorInfoメソッドをPDOオブジェクトかPDOStatementオブジェクトに対して実行します。
+
+
+PDO::ERRMODE_WARNING
+---------------------------
+
+| これを設定すると、PHPでは伝統的なE_WARNINGメッセージを出力します。デバック時に有効です。
+
+
+PDO::ERRMODE_EXCEPTION
+---------------------------
+
+| PDOException をスローします。
+| このモードが有用である理由のひとつとして、伝統的な PHP 形式の警告よりも より明確にエラー処理コードが書けることがあります。
+| 例外を発生させず、 データベースへのコールのたびに毎回明示的に返り値をチェックすることに 比べると、コードの量やネストを減らすことができます。
+
+| PDOExceptionはRuntimeExceptionを継承した例外クラスです。
+| PDOの内部で発生した例外を表します。
+| ユーザー自身が書いたコードからPDOExceptionをスローしてはいけません。
+
+| PDOExceptionのgetCodeメソッドを実行することで、SQL文を取得可能です。
+
+| 例：
+
+
+     .. code-block:: php
+
+	<?php
+	try {
+	    //PDOはtry~catch構文の内側で実行します。
+	    $pdoObject = new PDO('mysql:dbname=testbase;host=localhost;port=8889', 'testuser', 'pass');
+	    $pdoObject->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	} catch (PDOException $e) {
+	    echo '接続に失敗しました: ' . $e->getMessage();
+	}
 
 
