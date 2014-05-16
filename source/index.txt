@@ -29,5 +29,10 @@ Contents:
    10_php_introduction
    11_php_object
    12_regular_expression
-   13_mySQL
+   13_MySQL
    14_pdo
+   15_WebService
+   16_WebSecurity
+   17_CentOS
+   18_git
+   19_Composer
