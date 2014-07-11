@@ -3,8 +3,8 @@
 =========================
 
 
-| PHPやJavaScriptでウェブサービスを作成するときに、セキュリティに関する知識がないとたくさんの脆弱性があるウェブサービスを作りがちです。
-| Webセキュリティに関する知識を身につけて、しっかりと脆弱性対策を行いましょう。
+| PHPやJavaScriptでウェブサービスを作成するときに、セキュリティに関する知識がないと脆弱なウェブサービスを作りがちです。
+| Webセキュリティに関する知識を身につけて、脆弱性対策を行いましょう。
 | 
 | また、脆弱性の対策以前に、プログラムをしっかりと書くようにしましょう。
 | バグを極力減らすことや、バリデーションをしっかりと行うことがセキュリティの観点からしても最も大切なことです。
@@ -13,14 +13,149 @@
 クロスサイトスクリプティング攻撃
 =======================================
 
+| クロスサイトスクリプティング攻撃は、HTMLフォームに悪意のあるJavaScriptを挿入することにより成立します。
+| JavaScriptを利用して複数のサイトを横断させるなどすることで攻撃が成立します。
+
+.. code-block:: html
+
+    <form action='' method="post">
+        名前を入力してください<input type="text" name="name" />
+        <input type="submit" value="送信">
+    </form>
+
+
+| このようなフォームからPOSTされた値を
+
+.. code-block:: php
+
+    <?php
+    if(isset($_POST['name'])){
+        echo $_POST['name'].'さん';
+    }
+    ?>
+
+| PHPで受け取り出力するプログラムがあった。
+| 通常であれば、名前のフォームに「山田」などの文字列が入力されるはずなので
+| PHPでの出力結果は「山田さん」のようになるはずである。
+| ところが、名前フォームに
+
+.. code-block:: none
+
+    <script>alert('XSS成功');</script>
+
+| などと入力すると、PHPでの出力結果が
+
+.. code-block:: html
+
+    <script>alert('XSS成功');</script>さん
+
+| となってしまい、JavaScriptが動作してしまいます。
+| このJavaScriptに悪質なコードが含まれていた場合、サイトの利用者が被害にあう可能性があります。
+| また、他の脆弱性の踏み台にされることもしばしばあります。
+
+
+対策
+--------------------------
+
+PHP標準関数であるhtmlspecialcharsを使うことで、HTMLとして解釈される文字列をエスケープすることができます。
+
+.. code-block:: php
+
+    <?php
+    if(isset($_POST['name'])){
+        echo htmlspecialchars($_POST['name']) . 'さん';
+    }
+    ?>
+
+上記の出力結果は
+
+ .. code-block:: none
+
+    &lt;script&gt;alert('XSS成功');&lt;/script&gt;さん
+
+| このようになります。
+
 
 クロスサイトリクエストフォージェリ攻撃
 ========================================
+
+| クロスサイトリクエストフォージェリは、別のサイトに用意した罠のリンクを踏ませることで
+| ユーザーが意図しないインターネットショッピングサイトでの購入や、
+| 掲示板に意図しない発言が自分のPCから書き込まれたりする攻撃です。
+
+.. code-block:: html
+
+    <body onload="document.attackform.submit();">
+    <form name="attackform" method="post" action="http://example.com/bbs/register.cgi">
+      <input type="hidden" name="title" value="攻撃者が指定した題名">
+      <input type="hidden" name="article" value="攻撃者が指定した本文">
+      <input type="submit" value="送信">
+    </form>
+    </body>
+
+
+(Wikipediaより引用)
+
+| 上記のようなページをユーザーが閲覧した瞬間にhttp://example.com/bbs/register.cgiに文章が送信されてしまいます。
+
+
+対策
+-----------------
+
+.. code-block:: html
+
+    <form action="" method="post">
+      <input type="text" name="title">
+      <input type="text" name="article">
+      <input type="hidden" name="token" value="ワンタイムトークン">
+    </form>
+
+
+このように隠しフォームで、毎回変わる暗号（ワンタイムトークン）を保持し、セッションにも同一の暗号を保存しておくことで、
+双方が一致しているかを確認することで対策することができます。
+暗号は予測不能な文字列とし、隠しフォームに予め入力する値はハッシュ値などにしておくとよいでしょう。
+
+
+セッションハイジャック攻撃
+===================================
+
+| セッションハイジャックはログイン済の状態を悪意ある人が乗っ取る攻撃です。
+| 
 
 
 SQLインジェクション攻撃
 ====================================
 
+| SQLインジェクションは、プログラムの設計者が意図しないSQL文を攻撃者が挿入することで、データベース内のデータを改竄したり盗み出したりする手法です。
+| 
 
-セッションハイジャック攻撃
-===================================
+
+.. code-block:: php
+
+    <?php
+    $pdoObject = new PDO('mysql:dbname=testbase;host=localhost;port=8889', 'testuser', 'pass');
+    $pdoStatementObject = $pdoObject->query("SELECT * FROM user WHERE id = '". $_POST['user'] . "' AND pass = '". $_POST['pass'] . "'");
+
+
+もし、$_POST['pass'] に 「' OR 1 = 1」を入れた場合、実行されるSQL文は
+
+.. code-block:: mysql
+
+    SELECT * FROM user WHERE id = '' AND pass = '' OR 1 = 1
+
+| となり、全てのユーザーのデータを取得することができてしまいます。
+| 
+| この例以外にもセミコロンで区切ることで別のSQL文を連結させて挿入してしまうことも考えられます。
+
+
+対策
+------------------------
+
+| PDOのプリペアドステートメントを使用することで、防ぐことができます。
+| 詳細はPDOの項目を参照してください。
+
+.. toctree::
+   :maxdepth: 1
+
+   14_pdo
+
