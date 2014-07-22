@@ -6,26 +6,58 @@
 ようこそ! Building Uteam Development Skill へ
 ====================================================
 
-Contents:
+ウェブサービスに必要な知識がここにあります。
 
 .. toctree::
    :maxdepth: 1
 
    0_changelog
 
+
+コンテンツ一覧
+===================
+
+
+情報技術の基礎知識
+------------------------
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    
    introduction
    1_pcset
    2_itpassport
    3_fundamental_information
+
+
+HTMLとCSS
+------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
    4_html
    5_css
+
+
+JavaScriptとjQuery
+------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
    6_introduction_programming
    7_JavaScript
    8_jQuery
    9_online_shop
+
+
+サーバーサイドプログラミング
+--------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
    10_php_introduction
    11_php_object
    12_regular_expression
