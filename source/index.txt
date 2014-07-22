@@ -3,20 +3,18 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-ようこそ! Building Uteam Development Skill へ
-====================================================
+ようこそ! Buds へ
+==================================
 
-ウェブサービスに必要な知識がここにあります。
+| BudsとはBuilding Uteam Development Skillの頭文字をとったもので、
+| uTeamがユヒーロで勤務する際に必要な開発スキルなどを習得するための教材です。
+| また、Budsとは英語で"つぼみ"や"芽"といった意味があります。
+| ひとりひとりの"Buds"を育てるためにぜひこのトレーニング教材を活用してください。
 
 .. toctree::
    :maxdepth: 1
 
    0_changelog
-
-
-コンテンツ一覧
-===================
-
 
 情報技術の基礎知識
 ------------------------
@@ -63,8 +61,6 @@ JavaScriptとjQuery
    12_regular_expression
    13_MySQL
    14_pdo
-   15_WebService
-   16_WebSecurity
-   17_CentOS
-   18_git
-   19_Composer
+   15_WebSecurity
+   16_git
+   17_Composer
