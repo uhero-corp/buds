@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>課題の解答 &mdash; Building Uteam Development Skill 0.0.9a ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.9a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Building Uteam Development Skill 0.0.9a ドキュメント" href="index.html" /> 
+  </head>
+  <body>
+<div id="container">
+<div id="header">
+    <a href="http://uhero.co.jp/">
+        <img id="logo" src="http://uhero.co.jp/common/images/logo.png" width="286" height="57" alt="株式会社ユヒーロ" />
+    </a>
+</div>
+<div id="relatedHead">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+</div>
+<div class='underRelatedHead'></div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+<div class="section" id="id1">
+<h1>課題の解答<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="css">
+<h2>CSS課題<a class="headerlink" href="#css" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id2">
+<h3>セレクタとプロパティと値<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><div class="highlight-css"><div class="highlight"><pre><span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="nb">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="idclass">
+<h3>idとclass<a class="headerlink" href="#idclass" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><blockquote>
+<div><div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;blue&quot;</span><span class="nt">&gt;</span>青いですー！<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>ここは関係なーい！<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;red&quot;</span><span class="nt">&gt;</span>赤いですなー<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;red&quot;</span><span class="nt">&gt;</span>赤いですね<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;blue&quot;</span><span class="nt">&gt;</span>青いです！<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>無関係だよん。<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="highlight-css"><div class="highlight"><pre><span class="nc">.red</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.blue</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="nb">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="marginpadding">
+<h3>marginとpadding<a class="headerlink" href="#marginpadding" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><div class="highlight-css"><div class="highlight"><pre><span class="nt">div</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="o">:</span> <span class="m">60px</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">30px</span><span class="p">;</span>
+    <span class="k">width</span><span class="o">:</span><span class="m">200px</span><span class="p">;</span>
+    <span class="k">height</span><span class="o">:</span> <span class="m">150px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="o">:</span> <span class="nb">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="floatclear">
+<h3>floatとclear<a class="headerlink" href="#floatclear" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;redBox&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;p&gt;</span>私を右側にまわりこませて。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;claer:left&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;p&gt;</span>私はまわりこませないで。<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-css"><div class="highlight"><pre><span class="nf">#redBox</span> <span class="p">{</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="nb">red</span><span class="p">;</span>
+  <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="javascript">
+<h2>JavaScript課題<a class="headerlink" href="#javascript" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id3">
+<h3>関数<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-js"><div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;h1&gt;HTMLタグをJavaScriptを使って表示する例です！&lt;/h1&gt;&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>演算子<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">);</span>  <span class="c1">//8</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span> <span class="c1">//改行</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">);</span>  <span class="c1">//2</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">);</span>  <span class="c1">//15</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">a</span> <span class="o">/</span> <span class="nx">b</span><span class="p">);</span> <span class="c1">//1.6666666666666667</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="s2">&quot;7&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="s2">&quot;10&quot;</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">);</span> <span class="c1">//710</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="switch">
+<h3>switch文<a class="headerlink" href="#switch" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">number</span> <span class="o">&lt;</span> <span class="mi">200</span> <span class="o">&amp;&amp;</span> <span class="nx">number</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="nx">number</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;零&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;一&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;二&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;100以上200未満の数字ではありません&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="while">
+<h3>while文<a class="headerlink" href="#while" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">課題①</div>
+</div>
+<div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;x = &quot;</span> <span class="o">+</span> <span class="nx">x</span> <span class="o">+</span> <span class="s2">&quot;のとき、y = &quot;</span> <span class="o">+</span> <span class="nx">x</span><span class="o">*</span><span class="nx">x</span><span class="o">*</span><span class="nx">x</span><span class="p">);</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>
+    <span class="nx">x</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">課題②</div>
+</div>
+<div class="highlight-js"><div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;table&gt;&quot;</span><span class="p">);</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;tr&gt;&quot;</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">*</span> <span class="nx">j</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;/tr&gt;&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;/table&gt;&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>配列<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">people</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="nx">people</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="s2">&quot;田中&quot;</span><span class="p">,</span><span class="s2">&quot;鈴木&quot;</span><span class="p">,</span><span class="s2">&quot;佐藤&quot;</span><span class="p">);</span>
+<span class="nx">people</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="s2">&quot;橋本&quot;</span><span class="p">,</span><span class="s2">&quot;山本&quot;</span><span class="p">,</span><span class="s2">&quot;森川&quot;</span><span class="p">,</span><span class="s2">&quot;中井&quot;</span><span class="p">);</span>
+<span class="nx">people</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="s2">&quot;丸山&quot;</span><span class="p">,</span><span class="s2">&quot;松本&quot;</span><span class="p">);</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;table&gt;&quot;</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">people</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;tr&gt;&quot;</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">people</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">people</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;/tr&gt;&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;/table&gt;&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>値の取得<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-html"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">utf-8</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;title&gt;</span>JS Bin<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;p&gt;</span>名: <span class="nt">&lt;/p&gt;&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">id=</span><span class="s">&quot;firstName&quot;</span> <span class="nt">/&gt;&lt;br&gt;</span>
+  <span class="nt">&lt;p&gt;</span>姓: <span class="nt">&lt;/p&gt;&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">id=</span><span class="s">&quot;lastName&quot;</span> <span class="nt">/&gt;&lt;br&gt;</span>
+  <span class="nt">&lt;p&gt;</span>年齢: <span class="nt">&lt;/p&gt;&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">id=</span><span class="s">&quot;age&quot;</span> <span class="nt">/&gt;&lt;br&gt;</span>
+  <span class="nt">&lt;p&gt;</span>性別: <span class="nt">&lt;/p&gt;&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">id=</span><span class="s">&quot;gender&quot;</span> <span class="nt">/&gt;&lt;br&gt;</span>
+  <span class="nt">&lt;p&gt;</span>出身地: <span class="nt">&lt;/p&gt;&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">id=</span><span class="s">&quot;born&quot;</span> <span class="nt">/&gt;&lt;br&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">onclick=</span><span class="s">&quot;introduce()&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-js"><div class="highlight"><pre><span class="kd">function</span> <span class="nx">introduce</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">firstName</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;firstName&quot;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">lastName</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;lastName&quot;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">age</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">gender</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;gender&quot;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">born</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;born&quot;</span><span class="p">);</span>
+
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;私の名前は&quot;</span> <span class="o">+</span> <span class="nx">lastName</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="nx">firstName</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s2">&quot;です。&quot;</span> <span class="o">+</span> <span class="nx">age</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s2">&quot;歳の&quot;</span> <span class="o">+</span> <span class="nx">gender</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s2">&quot;で、&quot;</span> <span class="o">+</span> <span class="nx">born</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s2">&quot;出身です。&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>オブジェクトの利用<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+
+<span class="kd">var</span> <span class="nx">year</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">month</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">today</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getDate</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">hour</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getHours</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">minute</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getMinutes</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">second</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getSeconds</span><span class="p">();</span>
+
+<span class="kd">var</span> <span class="nx">day_index</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nx">getDay</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">days</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="s2">&quot;月&quot;</span><span class="p">,</span><span class="s2">&quot;火&quot;</span><span class="p">,</span><span class="s2">&quot;水&quot;</span><span class="p">,</span><span class="s2">&quot;木&quot;</span><span class="p">,</span><span class="s2">&quot;金&quot;</span><span class="p">,</span><span class="s2">&quot;土&quot;</span><span class="p">,</span><span class="s2">&quot;日&quot;</span><span class="p">);</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">year</span> <span class="o">+</span> <span class="s2">&quot;年&quot;</span> <span class="o">+</span> <span class="nx">month</span> <span class="o">+</span> <span class="s2">&quot;月&quot;</span> <span class="o">+</span> <span class="nx">today</span> <span class="o">+</span> <span class="s2">&quot;日&quot;</span> <span class="o">+</span> <span class="nx">hour</span> <span class="o">+</span> <span class="s2">&quot;時&quot;</span> <span class="o">+</span> <span class="nx">minute</span> <span class="o">+</span> <span class="s2">&quot;分&quot;</span> <span class="o">+</span> <span class="nx">second</span> <span class="o">+</span> <span class="s2">&quot;秒(&quot;</span> <span class="o">+</span> <span class="nx">days</span><span class="p">[</span><span class="nx">day_index</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;曜日)&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>オンラインショップ課題<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">解答例例をダウンロードできます。</div>
+<div class="line"><a class="reference download internal" href="_downloads/DOM_assignment.zip"><tt class="xref download docutils literal"><span class="pre">DOM_assignment.zip</span></tt></a></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">課題の解答</a><ul>
+<li><a class="reference internal" href="#css">CSS課題</a><ul>
+<li><a class="reference internal" href="#id2">セレクタとプロパティと値</a></li>
+<li><a class="reference internal" href="#idclass">idとclass</a></li>
+<li><a class="reference internal" href="#marginpadding">marginとpadding</a></li>
+<li><a class="reference internal" href="#floatclear">floatとclear</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#javascript">JavaScript課題</a><ul>
+<li><a class="reference internal" href="#id3">関数</a></li>
+<li><a class="reference internal" href="#id4">演算子</a></li>
+<li><a class="reference internal" href="#switch">switch文</a></li>
+<li><a class="reference internal" href="#while">while文</a></li>
+<li><a class="reference internal" href="#id5">配列</a></li>
+<li><a class="reference internal" href="#id6">値の取得</a></li>
+<li><a class="reference internal" href="#id7">オブジェクトの利用</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">オンラインショップ課題</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/answers.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+</div>
+<div id="relatedFooter">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div id="sphinx">このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1 で生成しました。</div>
+      <div id="copyright">
+    <p><a href="http://uhero.co.jp/">uhero corp</a>. &#169; all rights reserved.</p>
+    <figure><img src="http://uhero.co.jp/common/images/img_footer.gif" width="80" height="14" alt="uhero corp." /></figure>
+  </div><!--/#copyright-->
+    </div>
+
+  </body>
+</html>

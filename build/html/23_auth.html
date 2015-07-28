@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SSHと公開鍵認証 &mdash; Building Uteam Development Skill 0.0.9a ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.9a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Building Uteam Development Skill 0.0.9a ドキュメント" href="index.html" /> 
+  </head>
+  <body>
+<div id="container">
+<div id="header">
+    <a href="http://uhero.co.jp/">
+        <img id="logo" src="http://uhero.co.jp/common/images/logo.png" width="286" height="57" alt="株式会社ユヒーロ" />
+    </a>
+</div>
+<div id="relatedHead">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+</div>
+<div class='underRelatedHead'></div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+<div class="section" id="ssh">
+<h1>SSHと公開鍵認証<a class="headerlink" href="#ssh" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>SSH<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">SSH(Secure Shell)とは、リモートコンピューターに接続するためのプロトコルの一種です。</div>
+<div class="line">2014年現在、OpenSSHが最も使われています。</div>
+<div class="line">OS Xではターミナルからも利用することができます。</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>公開鍵認証とは<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">公開鍵認証とは公開鍵暗号を用いた認証です。</div>
+<div class="line">通常のパスワードのような共通鍵暗号を用いた認証では、</div>
+<div class="line">鍵を配送するときに極秘に鍵の配送を行う必要があり、</div>
+<div class="line">鍵が流出してしまうと、暗号化する意味を持たなくなってしまいます。</div>
+<div class="line"><br /></div>
+<div class="line">そこで登場したのが、公開鍵暗号方式です。</div>
+<div class="line">公開鍵暗号方式では暗号化するのに使う鍵と</div>
+<div class="line">復号化するときに使う鍵が異なります。</div>
+<div class="line">公開鍵を使って暗号化したものは公開鍵では複合できず、</div>
+<div class="line">秘密鍵を使って複合します。</div>
+<div class="line">通信相手には公開鍵のみを渡すことで、</div>
+<div class="line">暗号化した通信をすることができます。</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>公開鍵認証を用いたSSH接続<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">ここではクライアント側がOS Xを用いて説明します。</div>
+<div class="line">Windowsの場合は専用のクライアントを利用する必要性がありますが、</div>
+<div class="line">抑えておく必要がある基本は同じですので、順を追ってみてください。</div>
+</div>
+<div class="section" id="id4">
+<h3>公開鍵と秘密鍵の作成<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ターミナルからssh-keygenコマンドを実行してRSA暗号の鍵を生成するには</p>
+<div class="highlight-bat"><div class="highlight"><pre>ssh-keygen -t rsa
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">実行すると、鍵の保存場所を聞かれます。</div>
+<div class="line">保存場所はホームディレクトリ直下の~/.ssh/id_rsaが一般的です。</div>
+<div class="line">通常であれば初期値となっているはずです。</div>
+<div class="line">次に鍵自体を利用するためのパスフレーズを入力するするように促されます。</div>
+<div class="line">万が一鍵が盗まれた時などを想定して、パスフレーズを入力するようにしましょう。</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>chmod <span class="m">600</span> ~<span class="n">/.ssh/id_rsa.pub</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">公開鍵のパーミションは600としましょう。</div>
+<div class="line">鍵の作成が完了すると、id_rsa（秘密鍵）とid_rsa.pub（公開鍵）の2つのファイルが出来ているはずです。</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>サーバーへ公開鍵の設置<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">公開鍵をサーバーに移動させて中身をホームディレクトリ下の~/.ssh/authorized_keysの末尾に追加します。</div>
+<div class="line"><br /></div>
+<div class="line">例（サーバーにて）</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>cat id_rsa.pub &gt;&gt; ~<span class="n">/.ssh/authorized_keys</span>
+    chmod <span class="m">600</span> ~<span class="n">/.ssh/authorized_keys</span>
+    chmod <span class="m">700</span> ~<span class="n">/.ssh</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">また、authorized_leysのパーミッションは600とし、その上の.sshは700にします。</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>クライアントから接続<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">ターミナルからSSHコマンドで接続することができます。</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>ssh [ユーザー名]@exaple.com
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">SSHと公開鍵認証</a><ul>
+<li><a class="reference internal" href="#id1">SSH</a></li>
+<li><a class="reference internal" href="#id2">公開鍵認証とは</a></li>
+<li><a class="reference internal" href="#id3">公開鍵認証を用いたSSH接続</a><ul>
+<li><a class="reference internal" href="#id4">公開鍵と秘密鍵の作成</a></li>
+<li><a class="reference internal" href="#id5">サーバーへ公開鍵の設置</a></li>
+<li><a class="reference internal" href="#id6">クライアントから接続</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/23_auth.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+</div>
+<div id="relatedFooter">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div id="sphinx">このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1 で生成しました。</div>
+      <div id="copyright">
+    <p><a href="http://uhero.co.jp/">uhero corp</a>. &#169; all rights reserved.</p>
+    <figure><img src="http://uhero.co.jp/common/images/img_footer.gif" width="80" height="14" alt="uhero corp." /></figure>
+  </div><!--/#copyright-->
+    </div>
+
+  </body>
+</html>

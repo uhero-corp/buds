@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Composer入門 &mdash; Building Uteam Development Skill 0.0.9a ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.9a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Building Uteam Development Skill 0.0.9a ドキュメント" href="index.html" />
+    <link rel="prev" title="Git入門" href="16_git.html" /> 
+  </head>
+  <body>
+<div id="container">
+<div id="header">
+    <a href="http://uhero.co.jp/">
+        <img id="logo" src="http://uhero.co.jp/common/images/logo.png" width="286" height="57" alt="株式会社ユヒーロ" />
+    </a>
+</div>
+<div id="relatedHead">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="16_git.html" title="Git入門"
+             accesskey="P">前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+</div>
+<div class='underRelatedHead'></div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+<div class="section" id="composer">
+<h1>Composer入門<a class="headerlink" href="#composer" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>Composerとは<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">ComposerはPHPのパッケージ管理システムです。Composerを使えばアプリケーションで使用している</div>
+<div class="line">PHPで出来ているライブラリの依存関係やバージョンを管理することができます。</div>
+<div class="line">Composer用のリポジトリである <a class="reference external" href="https://packagist.org/">packagist</a> にあるライブラリはもちろん</div>
+<div class="line">PEARやGitリポジトリ上にあるアプリケーションや独自のライブラリなど、それ以外のライブラリも管理することができます。</div>
+<div class="line"><br /></div>
+<div class="line">使い方のおおまかな流れは、json形式でパッケージの関係を記述してコマンドを実行し、インストールします。</div>
+<div class="line">インストールすると、どのバージョンをインストールしたかが記述されたファイルが作成されます。</div>
+<div class="line">以後、再度インストールを実行しても、そのときに記述されたバージョンに従ってインストールされます。</div>
+<div class="line">バージョンを上げるコマンドもあり、新しいバージョンに上げることも簡単にできます。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Composerのインストール方法<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Composerを使うにはPHP5.3.2以上を使っている必要があります。</p>
+<div class="section" id="windows">
+<h3>Windowsの場合<a class="headerlink" href="#windows" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Windowsの場合、<a class="reference external" href="https://getcomposer.org/Composer-Setup.exe">Composer-Setup.exe</a> を実行し、インストールすることができます。</p>
+</div>
+<div class="section" id="mac">
+<h3>Macなどの場合<a class="headerlink" href="#mac" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ターミナルを開いて下記のコマンドを実行することでインストールすることができます。</p>
+<div class="highlight-bat"><div class="highlight"><pre>curl -s https:<span class="n">//getcomposer.org/installer</span> <span class="p">|</span> <span class="n">php</span>
+sudo mv composer.phar <span class="n">/usr/local/bin/composer</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>インストール後<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>インストール後、composerとコマンドを入力して、ロゴが出れば成功です。</p>
+</div>
+</div>
+<div class="section" id="composer-json">
+<h2>composer.jsonへライブラリを登録する<a class="headerlink" href="#composer-json" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">アプリケーションで必要なライブラリや依存関係をcomposerではjson形式で記述しcomposer.jsonという名前で保存します。</div>
+<div class="line">composer.jsonの保存場所はアプリケーションのルートディレクトリです。</div>
+</div>
+<div class="section" id="require">
+<h3>require キー<a class="headerlink" href="#require" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">composer.jsonに記述するものとして最も一般的でよく使うのはrequireキーです。</div>
+<div class="line">requireキーでは必要なパッケージを記述します。</div>
+</div>
+<blockquote>
+<div><div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
+        <span class="nt">&quot;require&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;monolog/monolog&quot;</span><span class="p">:</span> <span class="s2">&quot;&gt;=1.0.0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;kertz/twitteroauth&quot;</span><span class="p">:</span> <span class="s2">&quot;dev-master&quot;</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://packagist.org/">packagist</a> に存在するラ必要なイブラリはこのように記述します。</div>
+</div>
+<div class="line">&#8220;monolog/monolog&#8221;や&#8221;abraham/twitteroauth&#8221;はライブラリの名前です。</div>
+<div class="line">&#8220;&gt;=1.0.0&#8221;と&#8221;*&#8221;はバージョンの指定です。</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>バージョンの指定<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ピッタリの番号を指定する以外にも、ワイルドカード、以上、以下、未満などと言った表記も可能です。</p>
+<p>例：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="83%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">表記</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1.0.2</td>
+<td>厳密なバージョン指定</td>
+</tr>
+<tr class="row-odd"><td>&gt;=1.0,&lt;2.0</td>
+<td>バージョン1.0以上、2.0未満。カンマで区切ることで複数指定可能。</td>
+</tr>
+<tr class="row-even"><td>1.0.*</td>
+<td>この場合はバージョン1.0.0以上、1.1.0未満と同じ。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>ライブラリをインストールする<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">composer.jsonを保存したら、composer.jsonと同一のディレクトリで</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>composer install
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">上記のようにコマンドを実行してください。</div>
+<div class="line">すると、vendorというディレクトリが作成されるはずです。</div>
+<div class="line">vendorディレクトリの下にjsonで指定したライブラリや、autoload.phpなどが作成されています。</div>
+<div class="line"><br /></div>
+<div class="line">また、composer.jsonと同じディレクトリに、composer.lockというファイルが作成されます。</div>
+</div>
+<div class="section" id="composer-lock">
+<h3>composer.lock<a class="headerlink" href="#composer-lock" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">composer.lockはcomposer installを実行した時に、どのバージョンのライブラリがインストールされたかを厳密に記録してあります。</div>
+<div class="line">以後、再度composer installを実行しても全く同じバージョンがインストールされます。</div>
+<div class="line">自動的にライブラリのバージョンがアップデートされることはありません。</div>
+<div class="line"><br /></div>
+<div class="line">バージョンをアップデートしたい場合は</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>composer update
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">を実行します。</div>
+<div class="line">このコマンドはcomposer.lockの内容を無視して、composer.jsonの内容にそって実行します。</div>
+<div class="line">その後、新しいcomposer.lockが作成され上書きされます。</div>
+</div>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">ノート</p>
+<p class="last">プロジェクトをGitなどのバージョン管理システムで管理する場合、composer.jsonとcomposer.lockはバージョン管理の対象します。vendorディレクトリは管理外にしておきましょう。</p>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>インストールしたライブラリを利用する<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">composerにはライブラリを利用する方法としてautoload.phpが用意されています。</div>
+<div class="line">PHPアプリケーション本体からインストールしたライブラリを利用するには、</div>
+</div>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">require_once</span> <span class="s1">&#39;vendor/autoload.php&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">このようにautoload.phpをrequireするだけで、composerでインストールされたライブラリ全て使用可能になります。</div>
+<div class="line">クラスをインスタンス化するときに、クラスと同名のファイルがライブラリにあった場合、自動的に読み込みます。</div>
+<div class="line"><br /></div>
+<div class="line">もちろん、vendorの中のライブラリを直接reauireしても構いません。</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>ライブラリを作成する<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">composerで利用できるライブラリを作成する方法です。</div>
+<div class="line">ライブラリのルートディレクトリにもcomposer.jsonを設置する必要があります。</div>
+</div>
+<blockquote>
+<div><div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;uteam/hello-world&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">ライブラリには必ず名前をつける必要があります。</div>
+<div class="line">また、ライブラリが使用しているライブラリも同じようにrequireを使って、composer.jsonに書くことができます。</div>
+<div class="line"><br /></div>
+<div class="line">上記で説明したautoload機能を利用できるようにライブラリ内のPHPファイルはPSRのコーディング規格に従っておくようにしましょう。</div>
+</div>
+<div class="section" id="git">
+<h3>Gitリポジトリに設置したライブラリの利用<a class="headerlink" href="#git" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>gitリポジトリに設置したライブラリを利用する場合は、利用先のcomposer.jsonでこのように表記します。</p>
+<blockquote>
+<div><div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
+        <span class="nt">&quot;repositories&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;vcs&quot;</span><span class="p">,</span>
+                        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://github.com/uteam/hello-world&quot;</span>
+                <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;require&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;uteam/hello-world&quot;</span><span class="p">:</span><span class="s2">&quot;dev-master&quot;</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">repositoriesで、gitリポジトリのURLを指定してあげます。</div>
+<div class="line">後は普段と同じようにrequireしてあげるだけです。</div>
+<div class="line">requireで指定する名前は、ライブラリのルートディレクトリに設置してあるcomposer.jsonのnameと一致している必要があります。</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Composer入門</a><ul>
+<li><a class="reference internal" href="#id1">Composerとは</a></li>
+<li><a class="reference internal" href="#id2">Composerのインストール方法</a><ul>
+<li><a class="reference internal" href="#windows">Windowsの場合</a></li>
+<li><a class="reference internal" href="#mac">Macなどの場合</a></li>
+<li><a class="reference internal" href="#id3">インストール後</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#composer-json">composer.jsonへライブラリを登録する</a><ul>
+<li><a class="reference internal" href="#require">require キー</a></li>
+<li><a class="reference internal" href="#id5">バージョンの指定</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">ライブラリをインストールする</a><ul>
+<li><a class="reference internal" href="#composer-lock">composer.lock</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7">インストールしたライブラリを利用する</a></li>
+<li><a class="reference internal" href="#id8">ライブラリを作成する</a><ul>
+<li><a class="reference internal" href="#git">Gitリポジトリに設置したライブラリの利用</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="16_git.html"
+                        title="前の章へ">Git入門</a></p>
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/17_Composer.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+</div>
+<div id="relatedFooter">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="16_git.html" title="Git入門"
+             >前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div id="sphinx">このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1 で生成しました。</div>
+      <div id="copyright">
+    <p><a href="http://uhero.co.jp/">uhero corp</a>. &#169; all rights reserved.</p>
+    <figure><img src="http://uhero.co.jp/common/images/img_footer.gif" width="80" height="14" alt="uhero corp." /></figure>
+  </div><!--/#copyright-->
+    </div>
+
+  </body>
+</html>

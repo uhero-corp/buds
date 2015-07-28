@@ -1,0 +1,864 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PHPのクラスとオブジェクト指向 &mdash; Building Uteam Development Skill 0.0.9a ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.9a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Building Uteam Development Skill 0.0.9a ドキュメント" href="index.html" />
+    <link rel="next" title="正規表現" href="12_regular_expression.html" />
+    <link rel="prev" title="PHP入門" href="10_php_introduction.html" /> 
+  </head>
+  <body>
+<div id="container">
+<div id="header">
+    <a href="http://uhero.co.jp/">
+        <img id="logo" src="http://uhero.co.jp/common/images/logo.png" width="286" height="57" alt="株式会社ユヒーロ" />
+    </a>
+</div>
+<div id="relatedHead">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="12_regular_expression.html" title="正規表現"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="10_php_introduction.html" title="PHP入門"
+             accesskey="P">前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+</div>
+<div class='underRelatedHead'></div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+<div class="section" id="php">
+<h1>PHPのクラスとオブジェクト指向<a class="headerlink" href="#php" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="line-block">
+<div class="line">ここではPHPを用いた大規模開発で重要な考え方であるオブジェクト指向を学習します。</div>
+<div class="line">PHPのクラスがどのようなものなのかをしっかりと押さえましょう。</div>
+</div>
+<div class="section" id="id1">
+<h2>クラス<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">クラスは下記のようにして作成することができます。クラス名はグローバルに定義されるので衝突しないようにしましょう。</div>
+<div class="line">クラス内にはメソッド(関数)とプロパティ(変数)以外のものを置くことはできません。</div>
+<div class="line">オブジェクトをインスタンス化するときは「$object = new ClassName(param);」のようにインスタンス化したあとで「$object-&gt;MethodName();」のようにして、クラス内のメソッドを利用します。</div>
+<div class="line">コンストラクタもメソッドの一種ですが、「__construct」という名前に特別な意味があり、インスタンス化(new)するときに自動的に読み込まれます。</div>
+<div class="line">また、インスタンス化するときに与えてあげた引数もコンストラクタに与えてあげるのと同じ意味になります。</div>
+<div class="line">クラス内のメソッドでは$thisという変数に特別な意味があり、自分自身のプロパティやメソッドを呼び出すときに使います。</div>
+</div>
+<blockquote>
+<div><div class="highlight-guess"><div class="highlight"><pre><span class="kr">class</span> <span class="err">クラス名</span>
+<span class="p">{</span>
+    <span class="err">アクセス修飾子</span> <span class="nx">$</span><span class="err">プロパティ名</span><span class="p">;</span>
+    <span class="err">アクセス修飾子</span> <span class="nx">$</span><span class="err">プロパティ名</span> <span class="o">=</span> <span class="s1">&#39;プロパティの初期値&#39;</span><span class="p">;</span>
+    <span class="kr">public</span> <span class="kd">function</span> <span class="nx">__construct</span><span class="p">(</span><span class="err">引数</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="cp">[</span><span class="err">コンストラクタの実装</span><span class="cp">]</span>
+    <span class="p">}</span>
+    <span class="err">アクセス修飾子</span> <span class="kd">function</span> <span class="err">メソッド名</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nx">$this</span><span class="o">-&gt;</span><span class="cp">[</span><span class="err">このインスタンスのプロパティ</span><span class="cp">]</span><span class="p">;</span>
+        <span class="cp">[</span><span class="err">メソッドの実装</span><span class="cp">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">$</span><span class="err">オブジェクト名</span> <span class="o">=</span> <span class="k">new</span> <span class="err">クラス名</span><span class="p">(</span><span class="err">引数</span><span class="p">);</span><span class="c1">//この処理をインスタンス化という</span>
+<span class="nx">$</span><span class="err">オブジェクト名</span><span class="o">-&gt;</span><span class="err">プロパティ名</span><span class="p">;</span><span class="c1">//クラス内のPublic修飾子がついたプロパティ。</span>
+<span class="nx">$</span><span class="err">オブジェクト名</span><span class="o">-&gt;</span><span class="err">メソッド名</span><span class="p">;</span><span class="c1">//クラス内のPublic修飾子がついたメソッド。</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">クラスは個別の何かではありません。例えば、ツイッターのアカウントの振る舞いを定義したTwitterAccountクラスがあったとします。</div>
+<div class="line">この場合、&#64;uhero_PRというアカウントはTwitterAccountクラスをインスタンス化したオブジェクトです。</div>
+<div class="line">ではTwitterAccountにはどのような振る舞いが必要か考えてみましょう。</div>
+<div class="line">TwitterAccountが持つべきプロパティは、ユーザーID(userId)、プロフィール(profile)、場所(location)、URL(url)です。</div>
+<div class="line">TwitterAccountが持つべきメソッドはそれらを登録したり取得したりする機能です。</div>
+<div class="line">初期値を登録するときはコンストラクタでできるようにしましょう。それを実装してみるとこのようになります。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">TwitterAccount</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$name</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$profile</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$location</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$url</span><span class="p">;</span>
+    <span class="sd">/**</span>
+<span class="sd">    * これがコンストラクタです。</span>
+<span class="sd">    * 引数で受け取ったものを、プロパティにセットしています。</span>
+<span class="sd">    */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$profile</span><span class="p">,</span> <span class="nv">$location</span><span class="p">,</span> <span class="nv">$url</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="nv">$name</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">profile</span> <span class="o">=</span> <span class="nv">$profile</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">location</span> <span class="o">=</span> <span class="nv">$location</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">url</span> <span class="o">=</span> <span class="nv">$url</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="sd">/**</span>
+<span class="sd">    * ユーザー名を取得するためのメソッドです。</span>
+<span class="sd">    */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getName</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="sd">/**</span>
+<span class="sd">    * プロフィールを取得するためのメソッドです。</span>
+<span class="sd">    */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getProfile</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">profile</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="sd">/**</span>
+<span class="sd">    * 場所を取得するためのメソッドです。</span>
+<span class="sd">    */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getLocation</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">location</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="sd">/**</span>
+<span class="sd">    * URLを取得するためのメソッドです。</span>
+<span class="sd">    */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getUrl</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">url</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nv">$uhero_PR</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TwitterAccount</span><span class="p">(</span><span class="s1">&#39;株式会社ユヒーロ&#39;</span><span class="p">,</span> <span class="s1">&#39;株式会社ユヒーロ公式アカウントです。サイトの更新情報や、社内の取り組みなどツイートしてまいります。&#39;</span><span class="p">,</span> <span class="s1">&#39;日本橋&#39;</span><span class="p">,</span> <span class="s1">&#39;uhero.co.jp&#39;</span><span class="p">);</span> <span class="c1">//インスタンス化</span>
+
+<span class="k">echo</span> <span class="nv">$uhero_PR</span><span class="o">-&gt;</span><span class="na">getName</span><span class="p">();</span> <span class="c1">//uhero_PRはTwitterAccountなので、getName()することができる。</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h2>クラスの継承と抽象クラス<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id3">
+<h3>クラスの継承<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">継承はクラスのメソッドやプロパティを引き継いで、新しいクラスを作ることです。</div>
+</div>
+<blockquote>
+<div><div class="highlight-none"><div class="highlight"><pre>class クラス名 extends 親クラス名
+{
+}
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">例えば、Userというクラスがあったとします。その中で特にAdminUserというクラスを別に作ることになりました。</div>
+<div class="line">しかし、ほとんどの機能はUserと共通だった場合は同じことを書くのは面倒ですし、メンテナンス時に書き換える場所を増やしてしまうことになります。</div>
+<div class="line">このような場合はUserクラスを継承し、異なる部分のみAdminUserクラスに実装します。</div>
+<div class="line">そうするとAdminUserクラスでは、Userのメソッドをあたかも自分自身のメソッドのように呼び出すことができます。</div>
+<div class="line">また、親クラスと同じ名前を子クラスで定義するとオーバーライドといって上書きされます。</div>
+<div class="line">ただし、メソッドの場合、上書き元と引数の数が違う場合はエラーになります。</div>
+<div class="line">その場合はオーバーライドしたメソッドにしか存在しない引数にデフォルト値を設定することで動作するようになります。</div>
+</div>
+<blockquote>
+<div><div class="highlight-guess"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">User</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$userId</span><span class="p">;</span>
+    <span class="k">private</span> <span class="nv">$password</span><span class="p">;</span>
+    <span class="cm">/*</span>
+<span class="cm">    * 新規登録のメソッドです。</span>
+<span class="cm">    */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nv">$userId</span><span class="p">,</span> <span class="nv">$password</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">userId</span> <span class="o">=</span> <span class="nv">$userId</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">password</span> <span class="o">=</span> <span class="nv">$password</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="cm">/*</span>
+<span class="cm">    * 記事を投稿するメソッドです。</span>
+<span class="cm">    */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">submit</span><span class="p">(</span><span class="nv">$text</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="err">処理</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/*</span>
+<span class="cm">* 管理者ユーザーを管理するクラス</span>
+<span class="cm">*/</span>
+<span class="k">class</span> <span class="nc">AdminUser</span> <span class="k">extends</span> <span class="nx">User</span>
+<span class="p">{</span>
+    <span class="cm">/*</span>
+<span class="cm">    * 管理者は削除することができます。</span>
+<span class="cm">    */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">delete</span><span class="p">(</span><span class="nv">$id</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="err">処理</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">AdminUserクラスにはsubmitメソッドは存在しませんが、Userクラスを継承しているため、呼び出すことができます。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="c1">//上記の続き</span>
+<span class="nv">$adminUser</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AdminUser</span><span class="p">(</span><span class="s1">&#39;admin&#39;</span><span class="p">,</span> <span class="s1">&#39;pass&#39;</span><span class="p">);</span>
+<span class="nv">$adminUser</span><span class="o">-&gt;</span><span class="na">submit</span><span class="p">(</span><span class="s1">&#39;AdminUserも投稿することができます&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h3>抽象クラス<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">抽象クラスは、親クラスを直接newするような使い方をしない場合に使います。</div>
+<div class="line">例えば、学部生の情報を管理するstudentクラスを作ったとします。また各学部ごとにそれぞれクラスを作りました。</div>
+<div class="line">学部生は全員、学部に所属しているため、全員が所属学部のクラスをインスタンス化することになります。</div>
+<div class="line">その結果、studentクラスを直接インスタンス化することは起きません。このようなクラスを抽象クラスといいます。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="x">abstract クラス名</span>
+<span class="x">{</span>
+<span class="x">    [クラスの中身]</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">抽象クラスはこのように作成します。</div>
+<div class="line">また抽象クラスには抽象的なメソッドを作成することもできます。</div>
+<div class="line">抽象的なメソッドとはメソッドの存在を宣言するだけで、中身を書かないメソッドのことです。</div>
+<div class="line">メソッドの中身は継承したそれぞれのクラスで書かなくてはいけません。子クラスにそのメソッドが存在しない場合はエラーになります。</div>
+</div>
+<blockquote>
+<div><div class="highlight-guess"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">abstract</span> <span class="k">class</span> <span class="nc">Student</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="nv">$grade</span><span class="p">;</span><span class="c1">//学年</span>
+    <span class="k">private</span> <span class="nv">$studentId</span><span class="p">;</span><span class="c1">//学籍番号</span>
+    <span class="cm">/*</span>
+<span class="cm">    * コンストラクタでセットする</span>
+<span class="cm">    */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nv">$studentId</span><span class="p">,</span> <span class="nv">$grade</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">studentId</span> <span class="o">=</span> <span class="nv">$studentId</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">grade</span> <span class="o">=</span> <span class="nv">$grade</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="cm">/*</span>
+<span class="cm">    * 学年を取得するメソッドは全学部共通</span>
+<span class="cm">    */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getGrade</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">Grade</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="cm">/*</span>
+<span class="cm">    * キャンパス名を取得する抽象メソッド</span>
+<span class="cm">    * 学部によって取得方法が異なるので中身を書くことは出来ないが、</span>
+<span class="cm">    * どの学部生もどこかしらのキャンパスに在籍しているので、共通のメソッドである。</span>
+<span class="cm">    * このクラスを継承した子クラスでも必ず中身を書く必要があることを宣言。</span>
+<span class="cm">    */</span>
+    <span class="k">abstract</span> <span class="k">public</span> <span class="k">function</span> <span class="nf">getCampus</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="cm">/*</span>
+<span class="cm">* 環境情報学部の学生を管理するクラス</span>
+<span class="cm">*/</span>
+<span class="k">class</span> <span class="nc">EnvironmentalInformationStudent</span> <span class="k">extends</span> <span class="nx">Student</span>
+<span class="p">{</span>
+    <span class="cm">/*</span>
+<span class="cm">    * 抽象メソッドの中身</span>
+<span class="cm">    */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getCampus</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">&#39;湘南藤沢&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/*</span>
+<span class="cm"> * 経済学部の学生を管理するクラス</span>
+<span class="cm"> */</span>
+<span class="k">class</span> <span class="nc">EconomicsStudent</span> <span class="k">extends</span> <span class="nx">Student</span>
+<span class="p">{</span>
+    <span class="cm">/*</span>
+<span class="cm">    * 抽象メソッドの中身</span>
+<span class="cm">    */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getCampus</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getGrade</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+         <span class="err">　　　</span><span class="k">return</span> <span class="s1">&#39;日吉&#39;</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="s1">&#39;三田&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nv">$economicsStudent</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EconomicsStudent</span><span class="p">(</span><span class="mi">21204723</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+<span class="nv">$environmentalInformationStudent</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EnvironmentalInformationStudent</span><span class="p">(</span><span class="mi">81271483</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nv">$economicsStudent</span><span class="o">-&gt;</span><span class="na">getCampus</span><span class="p">()</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nv">$environmentalInformationStudent</span><span class="o">-&gt;</span><span class="na">getCampus</span><span class="p">()</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">上記の例では抽象クラスであるstudentに、getCampusという抽象メソッドを実装し、継承した子クラスで中身を実装してます。</div>
+<div class="line">また、EconomicsStudentクラスでは、$this-&gt;getGrade()のように$thisで継承元の親クラスのメソッドを呼び出しています。</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>インターフェイス<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">インターフェイスは規格統一のための仕組みです。</div>
+<div class="line">例えば、あるオンラインショップでは本、DVD、CDの3種類のものを扱っています。</div>
+<div class="line">これらを同じように管理できるようにするために、統一された方法で商品番号を取得できるようにします。</div>
+<div class="line">現実世界で例えるなら統一されたバーコードを必ず商品の右下に配置するような感じでしょうか。</div>
+<div class="line">オブジェクト指向プログラミングの世界では「商品番号を取得するメソッド」が必ずどの商品にも存在するということを規格することで、統一された方法で管理することが可能になります。</div>
+<div class="line">これがインターフェイスです。インターフェイス自体はプログラムには影響は与えませんが、インターフェイスで定義したメソッドが実装されていないとエラーになります。今回の例で言うと、「この店ではここにバーコードを貼るようにしてください」というルールがインターフェイスです。</div>
+<div class="line">このルール自体が消滅しても、全ての商品にバーコードが貼られていれば影響はありませんが、将来のことを考えればあった方がいいですよね。</div>
+<div class="line">また、インターフェイスを使うメリットとしては「特定のインターフェイスを実装しているもの以外を引数として受け付けない」という書き方が可能です。</div>
+<div class="line">先ほどの例えで言うなら「バーコードを右下に貼るというルール」に従わずに搬入された商品を受け付けないという書き方が可能になります。</div>
+<div class="line">インターフェイスはこのように作成します。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="x">interface インターフェイス名</span>
+<span class="x">{</span>
+<span class="x">    [インターフェイスの定義];</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">インターフェイスにはPublicのメソッドの定義のみが可能です。</div>
+<div class="line">実装はこのように行います。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="x">class クラス名 implents インターフェイス名[, インターフェイス名(複数指定も可), ...]</span>
+<span class="x">{</span>
+<span class="x">    [クラスの中身];</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">先ほどのオンラインショップの例ではこうなります。</div>
+</div>
+<blockquote>
+<div><div class="highlight-guess"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">interface</span> <span class="nx">Products</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getProductNumber</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">Book</span> <span class="k">implements</span> <span class="nx">Products</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getProductNumber</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="err">本の商品番号取得するロジックの実装</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">DVD</span> <span class="k">implements</span> <span class="nx">Products</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getProductNumber</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="nx">DVD</span><span class="err">の商品番号取得するロジックの実装</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">CD</span> <span class="k">implements</span> <span class="nx">Products</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getProductNumber</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="nx">CD</span><span class="err">の商品番号取得するロジックの実装</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">次にこの店の各クラスをインスタンス化したものを取り扱うメソッドを書いてみましょう。</div>
+<div class="line">引数の$productには本、CD、DVDのどれが入っても大丈夫なようにすると共通で利用出来て便利ですよね。</div>
+<div class="line">現実世界で例えるなら本、CD、DVDのどれも同じレジで同じように取り扱えるようにするといった感じでしょうか。</div>
+</div>
+<blockquote>
+<div><div class="highlight-guess"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="c1">//続き</span>
+<span class="k">function</span> <span class="nf">getProductDetial</span><span class="p">(</span><span class="nx">Products</span> <span class="nv">$product</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$product</span><span class="o">-&gt;</span><span class="na">getProductNumber</span><span class="p">();</span>
+    <span class="p">[</span><span class="err">以下省略</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">引数の$productには各商品クラスをインスタンス化したオブジェクトが入っています。</div>
+<div class="line">引数に「Products $product」と表記することで、Productsというインターフェイスを実装したクラスをインスタンス化したオブジェクトのみを引数として受け付けるようにすることができます。</div>
+<div class="line">つまり、引数として受け取った$productには必ず商品番号を取得するメソッドが存在することが保証されています。</div>
+<div class="line">だから「$product-&gt;getProductNumber();」という書き方が可能になります。</div>
+<div class="line">こうして、複数のクラスのオブジェクトをまとめて取り扱い処理することが可能になります。</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>例外<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">例外は、何かしらの異常が発生したときに、別の処理を行うときに使います。</div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><div class="highlight-none"><div class="highlight"><pre>throw new 例外クラス名([メッセージ]);
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">このようにして、例外を発生させることが出来ます。</div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><div class="highlight-none"><div class="highlight"><pre>try {
+        [処理]
+} catch (例外クラス 変数名) {
+        [例外処理]
+}
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">例外が発生する可能性がある場所をtryで囲むことによって、捕捉することが出来ます。</div>
+<div class="line">try文で囲まれてない場所でエラーが発生した場合は、致命的なエラーとなります。</div>
+<div class="line"><br /></div>
+<div class="line">catchは例外が発生した場合に実行される内容です。</div>
+<div class="line">例外クラスとは、ExceptionなどPHPに予め定義されているクラスを利用するか、それを継承して作成したクラスです。</div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id7">
+<h3>定義済みの例外クラス<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">PHPには定義済みの例外がいくつかあります。</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">例外</th>
+<th class="head">解説(php.netより引用)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Exception</td>
+<td>Exception は、すべての例外の基底クラスです。</td>
+</tr>
+<tr class="row-odd"><td>ErrorException</td>
+<td>エラー例外です。</td>
+</tr>
+<tr class="row-even"><td>BadFunctionCallException</td>
+<td>未定義の関数をコールバックが参照したり、引数を指定しなかったりした場合にスローされる例外です。</td>
+</tr>
+<tr class="row-odd"><td>BadMethodCallException</td>
+<td>未定義のメソッドをコールバックが参照したり、引数を指定しなかったりした場合にスローされる例外です。</td>
+</tr>
+<tr class="row-even"><td>DomainException</td>
+<td>定義したデータドメインに値が従わないときにスローされる例外です。</td>
+</tr>
+<tr class="row-odd"><td>InvalidArgumentException</td>
+<td>引数の型が期待する型と一致しなかった場合にスローされる例外です。</td>
+</tr>
+<tr class="row-even"><td>LengthException</td>
+<td>長さが無効な場合にスローされる例外です。</td>
+</tr>
+<tr class="row-odd"><td>LogicException</td>
+<td>プログラムのロジック内でのエラーを表す例外です。</td>
+</tr>
+<tr class="row-even"><td>OutOfBoundsException</td>
+<td>値が有効なキーでなかった場合にスローされる例外です。</td>
+</tr>
+<tr class="row-odd"><td>OutOfRangeException</td>
+<td>無効なインデックスを要求した場合にスローされる例外です。</td>
+</tr>
+<tr class="row-even"><td>OverflowException</td>
+<td>いっぱいになっているコンテナに要素を追加した場合にスローされる例外です。</td>
+</tr>
+<tr class="row-odd"><td>RangeException</td>
+<td>プログラムの実行時に範囲エラーが発生したことを示すときにスローされる例外です。</td>
+</tr>
+<tr class="row-even"><td>RuntimeException</td>
+<td>実行時にだけ発生するようなエラーの際にスローされます。</td>
+</tr>
+<tr class="row-odd"><td>UnderflowException</td>
+<td>空のコンテナ上で無効な操作 (要素の削除など) を試みたときにスローされる例外です。</td>
+</tr>
+<tr class="row-even"><td>UnexpectedValueException</td>
+<td>いくつかの値のセットに一致しない値であった際にスローされる例外です。</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">これらの例外の中から適切なものをthrowするようにしましょう。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>例外の拡張<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">上記の中に適切な例外な無い場合は、自分で例外クラスを作成することも出来ます。</div>
+<div class="line">例外クラスを作成する場合は、必ずExceptionかそれを継承したクラスを継承する必要があります。</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>例外の活用方法<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">大規模開発では、同じメソッドを複数の場所から呼び出すことがしばしばあります。</div>
+<div class="line">呼び出した先のメソッドで何か想定外のことが発生した場合、メソッド内のif文などで対処してしまうと</div>
+<div class="line">どこから呼び出されても同じ対処しかできません。</div>
+<div class="line">メソッドで失敗した場合はfalseを返す場合もありますが、</div>
+<div class="line">これではどのような失敗をしたかによって呼び出し元で処理をわかることができません。</div>
+<div class="line">失敗した場合の対処が呼び出し元によって異なる処理を書きたい時に役立つのが例外です。</div>
+<div class="line"><br /></div>
+<div class="line">例えば、txtファイルを読み込むメソッドがあったとします。</div>
+<div class="line">このメソッドで下記の場合例外を発生させることにします</div>
+<div class="line">・ファイルが存在しなかった場合</div>
+<div class="line">・ファイルの拡張子がtxtではなかった場合</div>
+<div class="line">ファイルが存在しなかった場合の例外はFileNotFoundExceptionは自作することにします。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="c1">//例外クラスの拡張。</span>
+<span class="c1">//中身はexceptionと同一だが、catchするときに名前で識別するために新しいクラスを作る。</span>
+<span class="k">class</span> <span class="nc">FileNotFoundException</span> <span class="k">extends</span> <span class="nx">exception</span>
+<span class="p">{</span>
+<span class="p">}</span>
+<span class="sd">/**</span>
+<span class="sd"> * テキストファイルから中身を読み込みます。</span>
+<span class="sd"> * @param string $filePath ファイルパス</span>
+<span class="sd"> * @return string ファイルの中身</span>
+<span class="sd"> */</span>
+<span class="k">function</span> <span class="nf">getText</span><span class="p">(</span><span class="nv">$filePath</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="s1">&#39;txt&#39;</span><span class="o">==</span><span class="nx">strtolower</span><span class="p">(</span><span class="nx">substr</span><span class="p">(</span><span class="nb">strrchr</span><span class="p">(</span><span class="nv">$filePath</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">),</span> <span class="mi">1</span><span class="p">))){</span>
+                <span class="k">throw</span> <span class="k">new</span> <span class="nx">InvalidArgumentException</span><span class="p">(</span><span class="s1">&#39;拡張子がtxtではありません&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">file_exists</span><span class="p">(</span><span class="nv">$filePath</span><span class="p">))</span> <span class="p">{</span>
+                <span class="k">throw</span> <span class="k">new</span> <span class="nx">FileNotFoundException</span><span class="p">(</span><span class="s1">&#39;ファイルが存在しません&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">file_get_contents</span><span class="p">(</span><span class="nv">$filePath</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">このメソッドを利用するプログラムではこのように書きます。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span><span class="c1">//(つづき)</span>
+<span class="k">try</span> <span class="p">{</span>
+        <span class="nx">getText</span><span class="p">(</span><span class="nv">$filePath</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">FileNotFoundException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s1">&#39;ファイルが存在しなかったため処理を終了します。&#39;</span><span class="p">;</span>
+        <span class="k">exit</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">){</span>
+        <span class="k">echo</span> <span class="s1">&#39;想定外のデータが渡されました。&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">このようにすることで、tryの中でFileNotFoundExceptionが発生した場合は、</div>
+<div class="line">処理を中断し「ファイルが存在しなかったため処理を終了します。」と出力します。</div>
+<div class="line">また、catch (Exception $e)と表記することで、全ての例外クラスをcatchすることが出来ます。</div>
+<div class="line">今回の場合は拡張子が違った場合は「想定外のデータが渡されました。」が出力されます。</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">ノート</p>
+<p class="last">catch文の中で$e-&gt;getMessage()と記述すると、その例外をthrowしたときに添えたメッセージを取得することができます。
+上の場合だと&#8217;拡張子がtxtではありません’もしくは&#8217;ファイルが存在しません’にあたります。</p>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>課題<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">それでは引き続き課題に取り組んでみましょう！</div>
+</div>
+<div class="section" id="id11">
+<h3>■第５問<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">PrimePrinterという名前のクラスを作成し、その中で第４問と同じことをしなさい。</div>
+<div class="line">クラスの外側ではオブジェクトの作成とメソッドの呼び出し以外は記述しないこと。</div>
+<div class="line">狙い : クラスの入門。外側から呼び出す。外側から呼び出すメソッドをパブリックそれ以外をプライベートにすること。</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h3>■第６問<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">Smartphoneクラスを作成し、下記のプロパティをプライベートで作成しなさい。</div>
+<div class="line">・電話番号</div>
+<div class="line">・キャリア名</div>
+<div class="line">・機種名</div>
+<div class="line">・OS</div>
+<div class="line">これらのプロパティをコンストラクタでセットできるようにしなさい。</div>
+<div class="line">また、これらのプロパティを返り値とするパブリックメソッドをそれぞれ実装しなさい。</div>
+<div class="line">電話番号を取得するメソッド名はpublic function getNumberとすること。</div>
+<div class="line"><br /></div>
+<div class="line">次に</div>
+<div class="line">Featurephoneクラスを作成し、下記のプロパティをプライベートで作成しなさい。</div>
+<div class="line">・電話番号</div>
+<div class="line">・キャリア名</div>
+<div class="line">・機種名</div>
+<div class="line">・実行できるアプリ名</div>
+<div class="line">これらのプロパティをコンストラクタでセットできるようにしなさい。</div>
+<div class="line">また、これらのプロパティを返り値とするパブリックメソッドをそれぞれ実装しなさい。</div>
+<div class="line">電話番号を取得するメソッド名はpublic function getNumberとすること。</div>
+<div class="line"><br /></div>
+<div class="line">最後に下記のオブジェクトを作りなさい。</div>
+<div class="line">・電話番号(080-2222-2222)、キャリア名(docomo)、機種名(iPhone5)、OS(iOS6)のSmartphoneオブジェクト</div>
+<div class="line">・電話番号(090-7777-7777)、キャリア名(au)、機種名(W61SH)、実行できるアプリ(EZアプリ)のFeaturephoneオブジェクト</div>
+<div class="line">狙い : コンストラクタの利用、プロパティの使用。</div>
+</div>
+</div>
+<div class="section" id="id13">
+<h3>■第７問<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">6問目で定義した2つのクラスの共通部分を実装した抽象クラス Mobilephone を作成しなさい。</div>
+<div class="line">また、６問目で作成した各クラスはMobilephoneクラスを継承し、異なる部分のみを実装するように修正しなさい。</div>
+<div class="line">狙い : abstractの利用、継承の利用。</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h3>■第８問<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">(1)</div>
+<div class="line">AppleProductというインタフェースを作成し、シリアル番号を取得するメソッドを宣言しなさい。</div>
+<div class="line">次に</div>
+<div class="line">AppleProductをimplementsしたMacクラスを作成し、下記のプロパティを実装しなさい。</div>
+<div class="line">ーシリアル番号</div>
+<div class="line">ー機種名</div>
+<div class="line">ーOS</div>
+<div class="line">ーCPUメーカー</div>
+<div class="line">これらのプロパティをコンストラクタでセットできるようにしなさい。</div>
+<div class="line">また、これらのプロパティを返り値とするパブリックメソッドをそれぞれ実装しなさい。</div>
+<div class="line"><br /></div>
+<div class="line">(2)</div>
+<div class="line">AppleProductをimplementsしたIPodTouchクラスを作成し、下記のプロパティを実装しなさい。</div>
+<div class="line">ーシリアル番号</div>
+<div class="line">ー機種名</div>
+<div class="line">ーOS</div>
+<div class="line">ー容量</div>
+<div class="line">これらのプロパティをコンストラクタでセットできるようにしなさい。</div>
+<div class="line">また、これらのプロパティを返り値とするパブリックメソッドをそれぞれ実装しなさい。</div>
+<div class="line"><br /></div>
+<div class="line">(3)</div>
+<div class="line">Smartphoneを継承してIphoneクラスを作り、AppleProductをimplementsしなさい。また下記のプロパティを実装しなさい。</div>
+<div class="line">ーシリアル番号</div>
+<div class="line">このプロパティと継承元のプロパティをコンストラクタでセットできるようにしなさい。</div>
+<div class="line">また、これらのプロパティを返り値とするパブリックメソッドをそれぞれ実装しなさい。</div>
+<div class="line"><br /></div>
+<div class="line">(4)</div>
+<div class="line">下記のオブジェクトを作りなさい。</div>
+<div class="line">・シリアル番号(X001QWERTYUIOP)、電話番号(080-2222-2222)、キャリア(docomo)、機種名(iPhone5)、OS(iOS6) のIphoneオブジェクト</div>
+<div class="line">・シリアル番号(X09878LKJHGFDS)、機種名(MacBook Pro Retina 13.3)、OS(MacOS X 10.9)、CPUメーカー(Intel) のMacオブジェクト</div>
+<div class="line">・シリアル番号(C456787TYFTY)、機種名(iPodTouch 4g)、OS(iOS6)、容量(64GB) のIpodTouchオブジェクト</div>
+<div class="line">狙い : インターフェイスの利用</div>
+</div>
+</div>
+<div class="section" id="id15">
+<h3>■第９問<a class="headerlink" href="#id15" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">AppleStoreクラスを作成し、下記のプロパティをプライベートで作成しなさい。</div>
+<div class="line">・在庫（配列形式）</div>
+<div class="line">在庫プロパティは、AppleProductインターフェイスをimplementsしたオブジェクトのみが追加できる配列である。</div>
+<div class="line"><br /></div>
+<div class="line">次に下記のパブリックメソッドを追加しなさい。</div>
+<div class="line">・在庫内のシリアル番号を全て配列形式で取得できる。</div>
+<div class="line">・在庫を末尾に追加することができる。引数はAppleProductとする。</div>
+<div class="line">狙い : インターフェイスの理解、複数クラスの利用。</div>
+</div>
+</div>
+<div class="section" id="id16">
+<h3>■第10問<a class="headerlink" href="#id16" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">(1)</div>
+<div class="line"><br /></div>
+<div class="line">整数の割り算をする関数divideNumberを作成しなさい。2つ数字の引数を持ち、返り値を1番目の引数を2番目の引数で割った数としなさい。</div>
+<div class="line">ただし、下記の場合は「不正な値です」という例外メッセージを持つ InvalidArgumentException をスローしなさい。</div>
+<div class="line"><br /></div>
+<div class="line">・数字以外がどちらかの引数に与えられた場合。</div>
+<div class="line">・2番目の引数に0が与えられた場合。</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">(2)</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$values</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;hogehoge&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,);</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$values</span> <span class="k">as</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">[</span><span class="nx">todo</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">上記のforeach文の中身を書き換え</div>
+<div class="line">ループの内側でtry-catch構文を使いなさい。</div>
+<div class="line">そのtryの内部で(1)で作成した関数を呼び出して出力しなさい。</div>
+<div class="line">ただし、第一引数は15120、第二引数は$valueとすること。</div>
+<div class="line"><br /></div>
+<div class="line">さらに、tryの内側で関数実行後に「実行しました」と出力する処理を書きなさい。</div>
+<div class="line">また、catchの内側では、発生したエラーメッセージを取得して出力する処理を書きなさい。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line">(3)</div>
+<div class="line">上記(2)で作成したコードにもう一つforeach文を追加し、</div>
+<div class="line">2つ目のforeach文では例外が発生した場合はエラーメッセージを出力して、</div>
+<div class="line">処理を終了させるようにしなさい。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id17">
+<h3>■最終課題<a class="headerlink" href="#id17" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>はじめに、 <a class="reference download internal" href="_downloads/tweet.json"><tt class="xref download docutils literal"><span class="pre">tweet.json</span></tt></a> をダウンロードしなさい。</p>
+<div class="line-block">
+<div class="line">tweet.jsonを読み込み、ユヒーロ公式アカウントがツイートした時刻を時間別に取得し、下記の形式で出力しなさい。</div>
+<div class="line">ただし、東京の時刻を基準とする。また、機能ごとに適宜クラスに分けて使用すること。</div>
+<div class="line"><br /></div>
+<div class="line">例：</div>
+<div class="line">12時　5回</div>
+<div class="line">13時　9回</div>
+<div class="line">14時　10回</div>
+<div class="line">狙い : 複数クラスの利用。オブジェクト指向の理解、PHP標準の関数の利用。適切な型変換。</div>
+</div>
+</div>
+<div class="section" id="id18">
+<h3>■課題の答え<a class="headerlink" href="#id18" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><a class="reference download internal" href="_downloads/answer_php.zip"><tt class="xref download docutils literal"><span class="pre">解答の例</span></tt></a> をダウンロードできます。</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PHPのクラスとオブジェクト指向</a><ul>
+<li><a class="reference internal" href="#id1">クラス</a></li>
+<li><a class="reference internal" href="#id2">クラスの継承と抽象クラス</a><ul>
+<li><a class="reference internal" href="#id3">クラスの継承</a></li>
+<li><a class="reference internal" href="#id4">抽象クラス</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">インターフェイス</a></li>
+<li><a class="reference internal" href="#id6">例外</a><ul>
+<li><a class="reference internal" href="#id7">定義済みの例外クラス</a></li>
+<li><a class="reference internal" href="#id8">例外の拡張</a></li>
+<li><a class="reference internal" href="#id9">例外の活用方法</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10">課題</a><ul>
+<li><a class="reference internal" href="#id11">■第５問</a></li>
+<li><a class="reference internal" href="#id12">■第６問</a></li>
+<li><a class="reference internal" href="#id13">■第７問</a></li>
+<li><a class="reference internal" href="#id14">■第８問</a></li>
+<li><a class="reference internal" href="#id15">■第９問</a></li>
+<li><a class="reference internal" href="#id16">■第10問</a></li>
+<li><a class="reference internal" href="#id17">■最終課題</a></li>
+<li><a class="reference internal" href="#id18">■課題の答え</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="10_php_introduction.html"
+                        title="前の章へ">PHP入門</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="12_regular_expression.html"
+                        title="次の章へ">正規表現</a></p>
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/11_php_object.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+</div>
+<div id="relatedFooter">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="12_regular_expression.html" title="正規表現"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="10_php_introduction.html" title="PHP入門"
+             >前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div id="sphinx">このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1 で生成しました。</div>
+      <div id="copyright">
+    <p><a href="http://uhero.co.jp/">uhero corp</a>. &#169; all rights reserved.</p>
+    <figure><img src="http://uhero.co.jp/common/images/img_footer.gif" width="80" height="14" alt="uhero corp." /></figure>
+  </div><!--/#copyright-->
+    </div>
+
+  </body>
+</html>

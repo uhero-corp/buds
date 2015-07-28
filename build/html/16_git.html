@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Git入門 &mdash; Building Uteam Development Skill 0.0.9a ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.9a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Building Uteam Development Skill 0.0.9a ドキュメント" href="index.html" />
+    <link rel="next" title="Composer入門" href="17_Composer.html" />
+    <link rel="prev" title="PDO入門" href="14_pdo.html" /> 
+  </head>
+  <body>
+<div id="container">
+<div id="header">
+    <a href="http://uhero.co.jp/">
+        <img id="logo" src="http://uhero.co.jp/common/images/logo.png" width="286" height="57" alt="株式会社ユヒーロ" />
+    </a>
+</div>
+<div id="relatedHead">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="17_Composer.html" title="Composer入門"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="14_pdo.html" title="PDO入門"
+             accesskey="P">前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+</div>
+<div class='underRelatedHead'></div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+<div class="section" id="git">
+<h1>Git入門<a class="headerlink" href="#git" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>Gitとは<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Git（ギット）とは、ソースコードなどの変更履歴を記録・追跡するための分散型バージョン管理システムです。
+変更履歴の管理以外にも複数人で作業する時などに強みを発揮します。</p>
+</div>
+<div class="section" id="id2">
+<h2>Gitのインストール<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>詳細は <a class="reference external" href="http://git-scm.com/book/ja/%E4%BD%BF%E3%81%84%E5%A7%8B%E3%82%81%E3%82%8B-Git%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Gitのインストール</a> を参考にインストールしてください。</p>
+<div class="section" id="windows">
+<h3>Windowsの場合<a class="headerlink" href="#windows" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://msysgit.github.com/">Git for Windows</a> よりexeファイルをダウンロードして実行してください。</div>
+</div>
+<div class="line">インストールが完了するとgit bashがインストールされるはずです。</div>
+<div class="line">この後の説明で、gitコマンドを使うときはgit bashから行うようにしてください。</div>
+</div>
+</div>
+<div class="section" id="mac">
+<h3>Macの場合<a class="headerlink" href="#mac" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://sourceforge.net/projects/git-osx-installer/">SourceForge git-osx-installer</a> よりインストーラーをダウンロードし実行してください。</div>
+<div class="line">この後の説明で、gitコマンドを使うときはターミナルから行うようにしてください。</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>ユーザー登録<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">Gitでは誰が作業したかを記録するために、ユーザー名とメールアドレスを利用します。</div>
+<div class="line">ユーザー名とメールアドレスを設定しましょう。</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>git config --global user.name {usersname}
+git config --global user.email {mail@example.com}
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">上記のコマンドをusersnameを自分のユーザー名に、<a class="reference external" href="mailto:mail&#37;&#52;&#48;example">mail<span>&#64;</span>example</a>.comをメールアドレスに書き換えて実行してください。</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>リポジトリの作成とコミット<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">リポジトリは履歴を管理する場所です。</div>
+<div class="line">ローカルリポジトリとリモートリポジトリの2種類が存在します。</div>
+<div class="line">リモートリポジトリは専用のサーバーに設置されており、複数人で作業するときに共通する場所のことです。</div>
+<div class="line">ローカルリポジトリは普段、作業するときに使う場所で、作業するときの手元のPC上に存在します。</div>
+<div class="line">Gitを利用するためには必ずリポジトリを作成する必要があります。</div>
+</div>
+<div class="section" id="id6">
+<h3>リポジトリの作成<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">リポジトリは新規のリポジトリを作成するか、他のリポジトリをコピーすることで作成することが出来ます。</div>
+<div class="line">コピーする方法はリモートリポジトリの項目で扱います。</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre><span class="k">cd</span> [GIT管理したいディレクトリ]
+git init .
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">上記のようにGitで管理したいディレクトリに移動し、「git init .」を実行するとローカルリポジトリが作成されます。</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>コミット<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">コミットとは変更履歴を記録することです。</div>
+<div class="line">意味のある変更を行った場合は可能な限り最小単位でコミットすることをオススメします。</div>
+<div class="line"><br /></div>
+<div class="line">コミットするためには、まずはコミットに含まれるファイルを「git add」で指定します。</div>
+<div class="line">次にgit commit でコミットします。コミットするときには、変更内容をコミットメッセージに必ずメモする必要があります。</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>git add [追加したいファイル]
+git commit -m <span class="s2">&quot;変更内容をメモ&quot;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">書式は上記のようになります。</div>
+<div class="line">現在居るディレクトリ以下、全てのファイルでの変更を反映する場合は</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>git add .
+git commit -m <span class="s2">&quot;新しいクラスを追加しました&quot;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">このようになります。</div>
+<div class="line"><br /></div>
+<div class="line">「git add」とは逆にGitの管理対象から外したい場合は</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>git rm [除きたいファイル]
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">このようにします。</div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>ブランチ<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">ブランチとは分岐してバージョン管理を行う方法です。</div>
+<div class="line">複数人で作業を行う時などに利用します。</div>
+<div class="line">分岐したブランチは元のブランチの影響を受けないので、</div>
+<div class="line">同時に並行して作業をすることが可能になります。</div>
+<div class="line">また、作業単位でブランチを分岐させることで、変更箇所を把握しやすくすることもできます。</div>
+<div class="line"><br /></div>
+<div class="line">初期状態ではmasterという名前のブランチに居ることになっています。</div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id9">
+<h3>ブランチを切り替える<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ブランチを切り替える場合は</p>
+<div class="highlight-bat"><div class="highlight"><pre>git checkout [ブランチ名]
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">のようにします。</div>
+<div class="line">例えばmastaerブランチに切り替える場合は</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>git checkout master
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">です。</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>ブランチを分岐して作成する<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ブランチを作成するには</p>
+<div class="highlight-bat"><div class="highlight"><pre>git branch [作成するブランチ名]
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">このように作成しますが、</div>
+<div class="line">実際には「ブランチを作成し、そのブランチに切り替える」ことが多いので</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>git checkout -b [ブランチ名]
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">このようにすることの方が一般的です。</div>
+<div class="line">checkout に -b　を指定すると、新規作成したブランチに切り替えることができます。</div>
+<div class="line"><br /></div>
+<div class="line">ブランチ一覧を見るには</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>git branch
+</pre></div>
+</div>
+<p>とすれば可能です。</p>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>マージ<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">マージとは分岐したブランチを再び統合するときに利用します。</div>
+<div class="line">複数のブランチでのコミットを反映することができるため</div>
+<div class="line">複数人で同時にそれぞれが作業した内容を統合することができます。</div>
+<div class="line"><br /></div>
+<div class="line">ブランチをマージするには</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>git merge [吸収するブランチ名]
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">このようにします。</div>
+<div class="line"><br /></div>
+<div class="line">例えばmasterブランチにdevelopブランチをマージしたい場合は</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>git checkout master
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">masterブランチに移動した後</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>git merge develop
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">とします。</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>リモートリポジトリ<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>リモートリポジトリとは専用のサーバーに設置されているgitリポジトリのことです。
+複数人で作業するとき使います。</p>
+<div class="section" id="clone">
+<h3>clone<a class="headerlink" href="#clone" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">cloneはリモートリポジトリの内容をそのままローカルリポジトリに持ってくることです。</div>
+<div class="line">過去のコミットやブランチなどもそのままクローンされます。</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>git clone [リモートリポジトリのurl]
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">git cloneを利用してリポジトリを作成する場合は、git initで初期化する必要性はありません。</div>
+</div>
+</div>
+<div class="section" id="push">
+<h3>push<a class="headerlink" href="#push" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">pushはローカルリポジトリでの変更内容をリモートリポジトリに反映させるときに利用します。</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>git push origin [元のローカルリポジトリのブランチ名]:[反映先のリモートリポジトリのブランチ名]
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">ただしローカルリポジトリとリモートリポジトリのブランチ名が同一の場合は</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>git push origin [ブランチ名]
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">と省略することができます。</div>
+</div>
+</div>
+<div class="section" id="pull">
+<h3>pull<a class="headerlink" href="#pull" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">pullはリモートリポジトリでの変更内容をローカルリポジトリに反映させるときに使います。</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>git push origin [リモートリポジトリのブランチ名]
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">このようにすると、リモートリポジトリのブランチ名と同名のブランチがローカルリポジトリに作成され、リモートリポジトリの内容がコピーされます。</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Git入門</a><ul>
+<li><a class="reference internal" href="#id1">Gitとは</a></li>
+<li><a class="reference internal" href="#id2">Gitのインストール</a><ul>
+<li><a class="reference internal" href="#windows">Windowsの場合</a></li>
+<li><a class="reference internal" href="#mac">Macの場合</a></li>
+<li><a class="reference internal" href="#id4">ユーザー登録</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">リポジトリの作成とコミット</a><ul>
+<li><a class="reference internal" href="#id6">リポジトリの作成</a></li>
+<li><a class="reference internal" href="#id7">コミット</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">ブランチ</a><ul>
+<li><a class="reference internal" href="#id9">ブランチを切り替える</a></li>
+<li><a class="reference internal" href="#id10">ブランチを分岐して作成する</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id11">マージ</a></li>
+<li><a class="reference internal" href="#id12">リモートリポジトリ</a><ul>
+<li><a class="reference internal" href="#clone">clone</a></li>
+<li><a class="reference internal" href="#push">push</a></li>
+<li><a class="reference internal" href="#pull">pull</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="14_pdo.html"
+                        title="前の章へ">PDO入門</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="17_Composer.html"
+                        title="次の章へ">Composer入門</a></p>
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/16_git.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+</div>
+<div id="relatedFooter">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="17_Composer.html" title="Composer入門"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="14_pdo.html" title="PDO入門"
+             >前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div id="sphinx">このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1 で生成しました。</div>
+      <div id="copyright">
+    <p><a href="http://uhero.co.jp/">uhero corp</a>. &#169; all rights reserved.</p>
+    <figure><img src="http://uhero.co.jp/common/images/img_footer.gif" width="80" height="14" alt="uhero corp." /></figure>
+  </div><!--/#copyright-->
+    </div>
+
+  </body>
+</html>

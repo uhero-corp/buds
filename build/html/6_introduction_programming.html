@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>プログラミングの基礎知識 &mdash; Building Uteam Development Skill 0.0.9a ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.9a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Building Uteam Development Skill 0.0.9a ドキュメント" href="index.html" />
+    <link rel="next" title="JavaScript入門" href="7_JavaScript.html" />
+    <link rel="prev" title="CSS入門" href="5_css.html" /> 
+  </head>
+  <body>
+<div id="container">
+<div id="header">
+    <a href="http://uhero.co.jp/">
+        <img id="logo" src="http://uhero.co.jp/common/images/logo.png" width="286" height="57" alt="株式会社ユヒーロ" />
+    </a>
+</div>
+<div id="relatedHead">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="7_JavaScript.html" title="JavaScript入門"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="5_css.html" title="CSS入門"
+             accesskey="P">前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+</div>
+<div class='underRelatedHead'></div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+<div class="section" id="id1">
+<h1>プログラミングの基礎知識<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ここではプログラミングに関する基礎的な知識について解説していきます。</p>
+<div class="section" id="id2">
+<h2>プログラミング言語とは？<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">プログラムとは、コンピュータに一連の指示を記述したものです。</div>
+<div class="line">例えば</div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre>30m右に行ってください
+10m左に行ってください
+そこにリンゴの木があったら、リンゴを1つ摘み取りなさい
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">このような、マニュアル化された一種の指示書みたいなものです。</div>
+<div class="line">コンピュータは柔軟な解釈ができないため、定型化された、かっちりした文章を書く必要があります。</div>
+<div class="line">そのために作られたのがプログラミング言語です。</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>アプリケーションの種類<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>アプリケーションは、コンピュータ上で特定の作業をするためのソフトウェアのことを言います。アプリケーションにはデスクトップアプリケーション、ウェブアプリケーション、スマートフォン向けアプリケーションなどがあります。ここではウェブアプリケーションを中心に扱っていきます。</p>
+<div class="section" id="id4">
+<h3>ウェブアプリケーションについて<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ウェブアプリケーションは主にブラウザ上で動作するアプリケーションのことです。ウェブアプリケーションはデータの管理などはサーバ上で行い、クライアント側は主に入力と結果の表示のみを行うのが特徴です。</p>
+<dl class="docutils">
+<dt>ウェブアプリケーションには以下のメリットがあります。</dt>
+<dd><ul class="first last simple">
+<li>対応しているブラウザを搭載しているどのデバイスからもインターネットに繋がっていれば使える。</li>
+<li>ユーザーはインストールする手間がない。</li>
+<li>バージョンアップが容易である。</li>
+<li>複数のユーザーで共有したデータを使うことができる。</li>
+<li>個人のPCでは処理できない巨大なデータを利用することができる。</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="id5">
+<h3>サーバサイドとクライアントサイド<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">ネットワークのモデルとして、代表的なものがクライアント・サーバモデルです。</div>
+<div class="line">このモデルにおいては、サーバというデータを溜め込んだコンピュータがあり、ネットワークを通じて、複数のクライアント（PC等のデバイス）がサーバに接続し、サーバの中のデータを見るということになります。</div>
+</div>
+<img alt="_images/cs.png" src="_images/cs.png" />
+<div class="line-block">
+<div class="line">そして、クライアントはサーバに「リクエスト」を行い、サーバはそのリクエストをもとに処理を行ない「レスポンス」を返します。</div>
+</div>
+<img alt="_images/req.png" src="_images/req.png" />
+<div class="line-block">
+<div class="line">ウェブアプリケーションではサーバサイドとクライアントサイドの双方で、処理を行うことができます。その処理を行う言語のことをサーバサイドスクリプト、クライアントサイドスクリプトと呼びます。</div>
+</div>
+<blockquote>
+<div><dl class="docutils">
+<dt><strong>サーバサイドスクリプト</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">代表的な言語はPHP、Perl、Python、Ruby</div>
+<div class="line">サーバ上で動作する言語</div>
+<div class="line">複雑な処理ができる</div>
+<div class="line">必ず実行される枠組みを作ることができる</div>
+<div class="line">クライアントの環境に依存しない</div>
+</div>
+</dd>
+<dt><strong>クライアントサイドスクリプト</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">代表的な言語はJavaScript、ActionScript</div>
+<div class="line">ブラウザ上でデータを処理するための言語</div>
+<div class="line">主に見た目や、ユーザインタフェースに関わってくる</div>
+<div class="line">実行されない場合がある</div>
+<div class="line">クライアントの環境に依存する</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>この教材で扱うプログラミング言語<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>これから、この教材では主にこの２つの言語を勉強します。</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>Javascript</strong></dt>
+<dd><p class="first">Javascriptはクライアントサイドの言語です。動的なサイトの構築や高度なユーザーインターフェースの開発に用いられます。HTMLに埋め込むことで実行可能で、比較的簡単な文法で記述することができます。</p>
+<blockquote class="last">
+<div><div class="admonition note">
+<p class="first admonition-title">ノート</p>
+<p class="last">JAVAというプログラミング言語とは完全に別物です。インドとインドネシアぐらい違うので混同しないようにしましょう。</p>
+</div>
+</div></blockquote>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>PHP</strong></dt>
+<dd><p class="first last">PHPはサーバサイドの言語です。平易な文法で動的なサイトをサーバサイドで生成することができます。初心者でも習得しやすく、大規模開発にも多く使われています。</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>また、PHPを動かすために必要なUNIXでのサーバの構築方法や、サーバサイドでデータを保管するために必要なデータベースに関しても今後勉強します。</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">プログラミングの基礎知識</a><ul>
+<li><a class="reference internal" href="#id2">プログラミング言語とは？</a></li>
+<li><a class="reference internal" href="#id3">アプリケーションの種類</a><ul>
+<li><a class="reference internal" href="#id4">ウェブアプリケーションについて</a></li>
+<li><a class="reference internal" href="#id5">サーバサイドとクライアントサイド</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">この教材で扱うプログラミング言語</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="5_css.html"
+                        title="前の章へ">CSS入門</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="7_JavaScript.html"
+                        title="次の章へ">JavaScript入門</a></p>
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/6_introduction_programming.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+</div>
+<div id="relatedFooter">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="7_JavaScript.html" title="JavaScript入門"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="5_css.html" title="CSS入門"
+             >前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div id="sphinx">このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1 で生成しました。</div>
+      <div id="copyright">
+    <p><a href="http://uhero.co.jp/">uhero corp</a>. &#169; all rights reserved.</p>
+    <figure><img src="http://uhero.co.jp/common/images/img_footer.gif" width="80" height="14" alt="uhero corp." /></figure>
+  </div><!--/#copyright-->
+    </div>
+
+  </body>
+</html>

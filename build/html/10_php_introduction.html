@@ -1,0 +1,1126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PHP入門 &mdash; Building Uteam Development Skill 0.0.9a ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.9a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Building Uteam Development Skill 0.0.9a ドキュメント" href="index.html" />
+    <link rel="next" title="PHPのクラスとオブジェクト指向" href="11_php_object.html" />
+    <link rel="prev" title="オンラインショップを作ってみよう" href="9_online_shop.html" /> 
+  </head>
+  <body>
+<div id="container">
+<div id="header">
+    <a href="http://uhero.co.jp/">
+        <img id="logo" src="http://uhero.co.jp/common/images/logo.png" width="286" height="57" alt="株式会社ユヒーロ" />
+    </a>
+</div>
+<div id="relatedHead">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="11_php_object.html" title="PHPのクラスとオブジェクト指向"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="9_online_shop.html" title="オンラインショップを作ってみよう"
+             accesskey="P">前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+</div>
+<div class='underRelatedHead'></div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+<div class="section" id="php">
+<h1>PHP入門<a class="headerlink" href="#php" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>PHPとは<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">PHPはサーバーサイドで動作するプログラミング言語です。</div>
+<div class="line">文法はわかりやすさ、習得のしやすさを重視して作られており、初心者でも習得しやすいと言われています。</div>
+<div class="line">一方で、PHP5以降では本格的なオブジェクト指向プログラミングが可能になり、大規模開発でも多く使われています。</div>
+<div class="line">また多くのライブラリやフレームワークが存在するため開発の手助けになります。</div>
+<div class="line">2012年の2月6日にIDC Japanが発表した「国内ソフトウェア開発者の実態調査」によれば、国内で最も使われているスクリプト言語だそうです。</div>
+<div class="line">PHPを設置する方法はPHPが動作するサーバーに、HTMLと同様にアップロードするだけです。拡張子はphpとなります。</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>ローカルサーバー<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">先述した通り、javascriptがクライアントサイドである事に対して、PHPはサーバーサイドのプログラミング言語です。</div>
+<div class="line">PHPが動作するサーバーにファイルをアップロードするだけでいいのですが、サーバーの環境を簡単に用意できない人もいると思います。</div>
+<div class="line">そんな時に使用するのがローカル開発サーバーです。ざっくり言ってしまえば、自分のPCをサーバーに見立てるということです。</div>
+<div class="line">以下にローカル開発環境を構築する方法を示します。</div>
+</div>
+<div class="section" id="xamppwindows">
+<h3>XAMPPのインストール【Windowsをお使いの方】<a class="headerlink" href="#xamppwindows" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">Windowsでローカル開発環境を構築するにはXAMPP(ザンプと読む)というアプリケーションがオススメです。</div>
+<div class="line"><a class="reference external" href="https://www.apachefriends.org/jp/">XAMPPのダウンロードページ</a> へ行き、インストールしてください。</div>
+<div class="line">インストール場所はデフォルトのままにしておくことがオススメです。</div>
+<div class="line">インストールが完了したら、Xampp Control Panelを起動し、ApacheとMySQLの横の「Start」をそれぞれ押してください。</div>
+<div class="line">正常に起動することができたら、ブラウザを開いて「localhost」にアクセスしてみてください</div>
+<div class="line">「c:/xampp/htdocs」に置かれたファイルを実行する事ができるはずです。</div>
+<div class="line"><br /></div>
+<div class="line">もし正常にStart出来ない場合はポート番号を変える必要があります。</div>
+</div>
+<ul class="simple">
+<li>「C:xamppapacheconf」の「httpd.conf」を開きます。</li>
+<li>「httpd.conf」内の「Listen」を変更したいポート番号に変更する。</li>
+<li>「httpd.conf」内の「ServerName」の番号も変更したいポート番号と同じにする。</li>
+</ul>
+<div class="line-block">
+<div class="line">この手順を終えた上でもう一度Startしてみてください</div>
+<div class="line">正常に起動することができたら、ブラウザを開いて「localhost:変更後のポート番号」にアクセスしてみてください。</div>
+<div class="line">表示されれば成功です。</div>
+</div>
+</div>
+<div class="section" id="mampmac">
+<h3>MAMPのインストール【Macをお使いの方】<a class="headerlink" href="#mampmac" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">Macでローカル開発環境を構築するにはMAMP(マンプと読む)というアプリケーションがオススメです。</div>
+<div class="line"><a class="reference external" href="http://www.mamp.info/en/downloads/">MAMPのダウンロードページ</a> へ行き、画面中央付近にあるオレンジ色のDownloadボタンを押してダウンロードして下さい。</div>
+<div class="line">ダウンロードが完了したらファイルを解凍し、拡張子.pkgのインストーラファイルをダブルクリックしてインストールを進めてください。</div>
+<div class="line">インストールが完了したら、アプリケーションフォルダ内にあるMAMPフォルダからMAMP.appを起動し、「サーバーを起動する」ボタンを押してブラウザが自動的に開けば準備は完了です。</div>
+<div class="line">デフォルトの設定ではおそらく、MAMPを起動した状態でブラウザにlocalhost:8888と入力すれば、/Applications/MAMP/htdocsに置かれたファイルを実行する事ができるはずです。</div>
+<div class="line">分からない事があったら、<a class="reference external" href="http://pc-karuma.net/mamp-install-mac/">MAMPのインストールを解説しているページ</a> などを参考にしてみましょう。</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>PHPの文とコメント<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id5">
+<h3>PHPブロック<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">PHPは全て「&lt;?php」で始まり「?&gt;」で終了するPHPブロックの内側で実行されます。</div>
+<div class="line">終了タグは必要ある場合のみ書いてください。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="x">PHPブロックの外側はそのまま出力されます。</span>
+<span class="cp">&lt;?php</span>
+<span class="k">echo</span> <span class="s2">&quot;PHPブロックの中に書かれた内容がPHPプログラムとして実行されます。&quot;</span><span class="p">;</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">終了タグは省略可能であれば省略します。</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h3>PHPの設定情報を出力する<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nb">phpinfo</span><span class="p">();</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">上記のプログラムをそのままコピーして、PHPという拡張子をつけて保存します。</div>
+<div class="line">次にブラウザを開いてWebサーバー経由でそのファイルにアクセスしてみてください。</div>
+<div class="line">PHPが正常に動作していれば、PHPの設定情報が表示されるはずです。</div>
+<div class="line">もし、表示されない場合はもう一度設定を見なおしてみてください。</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>文<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">echo</span> <span class="s1">&#39;PHPは文末に「;」を書きます。&#39;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s1">&#39;途中に改行や</span>
+<span class="s1">　       スペースがあっても無視されます。&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">PHPは文の区切りにセミコロンを使用します。</div>
+<div class="line">途中で行が変わったりスペースが入っていても無視されます。</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>コメント<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">echo</span> <span class="s1">&#39;ここはコメントではありません&#39;</span><span class="p">;</span> <span class="c1">//ここが１行コメントです。</span>
+<span class="k">echo</span> <span class="s1">&#39;ここはコメントではありません&#39;</span><span class="p">;</span> <span class="c1">#ここも１行コメントです。</span>
+<span class="k">echo</span> <span class="s1">&#39;ここはコメントではありません&#39;</span><span class="p">;</span><span class="cm">/* ここからブロックコメントです。</span>
+<span class="cm">ここもコメントです。</span>
+<span class="cm">ここまでコメントです。*/</span>
+<span class="k">echo</span> <span class="s1">&#39;ここはコメントではありません&#39;</span><span class="p">;</span>
+<span class="c1">//ここはコメントです。?&gt;PHPブロックの外側にはコメントは適応されません。ここはそのまま出力されます。</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">PHPでは１行コメントと、複数行に渡るブロックコメントを使用することができます。</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>出力<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">echo</span> <span class="s1">&#39;PHPで出力するときはechoを使います。&#39;</span><span class="p">;</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">PHPでCLIやブラウザで出力するときは、基本的にechoを使います。</div>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>エラー設定<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nb">error_reporting</span><span class="p">(</span><span class="k">E_ALL</span><span class="p">);</span>
+<span class="nb">ini_set</span><span class="p">(</span><span class="s1">&#39;display_errors&#39;</span><span class="p">,</span> <span class="s1">&#39;On&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">error_reportingは表示するエラーのレベルを指定することができる関数です。</div>
+<div class="line">PHPを学習するときは、全てのエラーが表示されるように、E_ALLを指定しておきましょう。</div>
+<div class="line">またini_set(&#8216;display_errors&#8217;, &#8216;On&#8217;);と書くことでエラーを画面に出力することができます。</div>
+<div class="line">ただし、実際に公開するときには適切なエラーレベルに設定する必要があります。</div>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>変数とスコープ<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id12">
+<h3>変数<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$var</span>  <span class="o">=</span> <span class="s1">&#39;全てのPHPの変数は必ず先頭に$がつきます。&#39;</span><span class="p">;</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">PHPの変数は先頭に$をつきます。大文字と小文字が区別されます。</div>
+</div>
+</div>
+<div class="section" id="id13">
+<h3>スコープ<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">PHPでは関数やメソッド内ではその外側で定義された変数を使用することはできません。</div>
+<div class="line">また、関数やメソッド内で定義された変数をその外側で使うことができません。これをローカルスコープと言います。</div>
+<div class="line">関数やメソッドの外側で定義された変数はグローバル変数となり、全ての場所で利用、書き換えることができます。</div>
+</div>
+</div>
+</div>
+<div class="section" id="post-get">
+<h2>スーパーグローバル変数　$_POST $_GET<a class="headerlink" href="#post-get" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">PHPには予め自動的に定義される変数があります。PHPでは定義済みの変数を書き換えることもできますので注意してください。</div>
+<div class="line">定義済みの変数にはスーパーグローバル変数という、全てのスコープから参照可能な変数も存在します。</div>
+<div class="line">スーパーグローバル変数には例えば、HTTP POSTで渡された内容を含む$_POSTなどが存在します。</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>型<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">PHPでは型を宣言する必要はありませんが、全ての変数が型を持っています。型は代入された内容に応じて自動的に割り当てられます。</div>
+<div class="line">また、PHPでは型が自動的に変換されることがあります。</div>
+</div>
+<div class="section" id="int">
+<h3>整数型(int)<a class="headerlink" href="#int" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">整数型は10進法の他に8進法、16進法に対応しています。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$i</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="double">
+<h3>倍精度浮動小数点型(double)<a class="headerlink" href="#double" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">倍精度浮動小数点型とは整数型で表すことができない実数を入れる型です。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$d</span> <span class="o">=</span> <span class="mf">4.015</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="string">
+<h3>文字列型(string)<a class="headerlink" href="#string" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">PHPでは多くの場合、文字列型を使います。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="s1">&#39;文字列型&#39;</span><span class="p">;</span>
+<span class="nv">$b</span> <span class="o">=</span> <span class="s2">&quot;文字列型&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">文字列を代入するときは、シングルクォーテーションまたはダブルクオーテーションを使います。</div>
+<div class="line">ダブルクオーテーションの中ではエスケープ文字や変数が展開されますが、シングルクォーテーションの中では展開されません。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="s1">&#39;文字列型&#39;</span><span class="p">;</span>
+<span class="nv">$b</span> <span class="o">=</span> <span class="s2">&quot;文字 </span><span class="si">$a</span><span class="s2"> 列型&quot;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nv">$b</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">これを実行すると、「文字 文字列型 列型」と出力されますが</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="s2">&quot;文字列型&quot;</span><span class="p">;</span>
+<span class="nv">$b</span> <span class="o">=</span> <span class="s1">&#39;文字 $a 列型&#39;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nv">$b</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">この場合は「文字 $a 列型」となります。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="s1">&#39;う&#39;</span><span class="p">;</span>
+<span class="nv">$b</span> <span class="o">=</span> <span class="s2">&quot;あい</span><span class="si">$a</span><span class="s2">えお&quot;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nv">$b</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">この場合、「あいうえお」が出力されることが期待されるのですが、変数「$aえお」が存在しないというエラーになってしまいます。</div>
+<div class="line">このようなことを防ぐために</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="s1">&#39;う&#39;</span><span class="p">;</span>
+<span class="nv">$b</span> <span class="o">=</span> <span class="s2">&quot;あい</span><span class="si">{</span><span class="nv">$a</span><span class="si">}</span><span class="s2">えお&quot;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nv">$b</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">このように{}で変数を囲むようにしましょう。</div>
+</div>
+</div>
+<div class="section" id="bool">
+<h3>論理型(bool)<a class="headerlink" href="#bool" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">true/falseの真偽値を入れておく型です。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$flag</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="array">
+<h3>配列型(array)<a class="headerlink" href="#array" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">複数の値を代入することができます。</div>
+<div class="line">$配列変数名 = array(キー =&gt; 値, キー =&gt; 値, キー =&gt; 値, );の形式で可能です。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="s1">&#39;りんご&#39;</span><span class="p">;</span>
+<span class="nv">$fruits</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;banana&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;バナナ&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span> <span class="o">=&gt;</span>  <span class="s1">&#39;オレンジ&#39;</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span> <span class="o">=&gt;</span> <span class="nv">$a</span><span class="p">,</span> <span class="s1">&#39;peach&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;桃&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">一つの配列に複数の型が混在しても構いません。</div>
+<div class="line">PHPは全て連想配列ですが、キーを指定する必要はありません。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$fruits</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;バナナ&#39;</span><span class="p">,</span> <span class="s1">&#39;オレンジ&#39;</span><span class="p">,</span> <span class="s1">&#39;りんご&#39;</span><span class="p">,</span> <span class="s1">&#39;桃&#39;</span><span class="p">);</span>
+<span class="nv">$fruits2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;バナナ&#39;</span><span class="p">,</span> <span class="s1">&#39;オレンジ&#39;</span><span class="p">,</span> <span class="s1">&#39;りんご&#39;</span><span class="p">,</span> <span class="s1">&#39;桃&#39;</span><span class="p">];</span> <span class="c1">//PHP5.4以降</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">このように表記することもできます。この場合は</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$fruits</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="mi">0</span> <span class="o">=&gt;</span> <span class="s1">&#39;バナナ&#39;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">=&gt;</span> <span class="s1">&#39;オレンジ&#39;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">=&gt;</span> <span class="s1">&#39;りんご&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">=&gt;</span> <span class="s1">&#39;桃&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">と同じ意味になります。</div>
+<div class="line">配列の中の値を利用するには、「配列変数名[キー]」のようにして取り出します。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$fruits</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="mi">0</span> <span class="o">=&gt;</span> <span class="s1">&#39;バナナ&#39;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">=&gt;</span> <span class="s1">&#39;オレンジ&#39;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">=&gt;</span> <span class="s1">&#39;りんご&#39;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">=&gt;</span> <span class="s1">&#39;桃&#39;</span><span class="p">);</span>
+<span class="nv">$apple</span> <span class="o">=</span> <span class="nv">$fruits</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span> <span class="c1">// 変数appleには&#39;りんご&#39;が代入される。</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">配列の中に配列を入れることも可能です。それを多次元配列といいます。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$apple</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;青りんご&#39;</span><span class="p">,</span> <span class="s1">&#39;赤りんご&#39;</span><span class="p">,</span> <span class="s1">&#39;緑りんご&#39;</span><span class="p">);</span>
+<span class="nv">$fruits</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;オレンジ&#39;</span><span class="p">,</span> <span class="s1">&#39;蜜柑&#39;</span><span class="p">,</span> <span class="s1">&#39;柚子&#39;</span><span class="p">),</span> <span class="nv">$apple</span><span class="p">);</span>
+<span class="nv">$blueApple</span> <span class="o">=</span> <span class="nv">$fruits</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span><span class="c1">//青りんご</span>
+<span class="nv">$orange</span> <span class="o">=</span> <span class="nv">$fruits</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span><span class="c1">//オレンジ</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="null">
+<h3>null型<a class="headerlink" href="#null" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">値を持っていないことを意味します。nullを代入するか、値が代入されていない場合にnullとなります。</div>
+</div>
+</div>
+<div class="section" id="id15">
+<h3>キャスト<a class="headerlink" href="#id15" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">下記の場合、自動キャストが発生します。</div>
+</div>
+<div class="line-block">
+<div class="line">異なる型同士で演算を行う場合</div>
+<div class="line">特定の型でしか出来ない処理に、異なる型が与えられた場合</div>
+<div class="line">また、文字列型でも処理する双方の値の中身が数字の場合は整数型や倍精度浮動小数点型に自動でキャストします。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">if</span> <span class="p">(</span><span class="s1">&#39;007&#39;</span> <span class="o">==</span> <span class="s1">&#39;7.0&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">&#39;同じです&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="mf">50.0</span> <span class="o">==</span> <span class="s2">&quot;050plus&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">&#39;同じです&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">これらは全て「同じです」と表示されます。自動キャストは便利ですが、使い方を間違えるとバグを生む可能性があります。</div>
+<div class="line">「050plus」というパスワードを設定してたのに、「50」と入力するだけで、入れたら深刻な問題です。</div>
+<div class="line">比較をするときはなるべく型まで比較するイコール3つ「===」を使いましょう。</div>
+</div>
+</div>
+<div class="section" id="var-dump">
+<h3>var_dump()<a class="headerlink" href="#var-dump" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">変数の中身や型を確認したいときはvar_dump()を使いましょう。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="s1">&#39;apple&#39;</span><span class="p">;</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$a</span><span class="p">);</span><span class="c1">//string(5) &quot;apple&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">var_dumpに$aを入れると、string(5)&#8221;apple&#8221;のように出力されます。</div>
+</div>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>演算子<a class="headerlink" href="#id16" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id17">
+<h3>代入演算子<a class="headerlink" href="#id17" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">左辺の値を右辺の値と同じにします。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="s1">&#39;apple&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id18">
+<h3>代数演算子<a class="headerlink" href="#id18" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="81%" />
+<col width="19%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>加算</td>
+<td>+</td>
+</tr>
+<tr class="row-even"><td>減算</td>
+<td>-</td>
+</tr>
+<tr class="row-odd"><td>乗算</td>
+<td>=</td>
+</tr>
+<tr class="row-even"><td>除算</td>
+<td>/</td>
+</tr>
+<tr class="row-odd"><td>剰余(割ったあまりを返す)</td>
+<td>%</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nv">$a</span> <span class="c1">//3</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id19">
+<h3>複合演算子<a class="headerlink" href="#id19" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">複合演算子は演算した結果を元の変数に代入したい場合に使います。</div>
+<div class="line">使い方は「左辺 演算子= 右辺」です。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nv">$a</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nv">$a</span> <span class="c1">//3</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">定型的な演算子もあります。</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="77%" />
+<col width="23%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>インクリメント(整数型の値に1を足す)</td>
+<td>++</td>
+</tr>
+<tr class="row-even"><td>デクリメント(整数型の値から1を引く)</td>
+<td>- -</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">※デクリメントはマイナス2つ</div>
+<div class="line"><br /></div>
+<div class="line">「$a++;」は「$a += 1;」と同意義になります。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="nv">$a</span><span class="o">++</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nv">$a</span> <span class="c1">//4</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id20">
+<h3>比較演算子<a class="headerlink" href="#id20" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="82%" />
+<col width="18%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>左辺と右辺が等しい場合はtrue(型は比較しない)</td>
+<td>==</td>
+</tr>
+<tr class="row-even"><td>左辺と右辺が等しく型が一致した場合はtrue</td>
+<td>===</td>
+</tr>
+<tr class="row-odd"><td>左辺と右辺が等しくない場合はtrue(型は比較しない)</td>
+<td>!=</td>
+</tr>
+<tr class="row-even"><td>左辺と右辺が型まで含めて等しくない場合はtrue</td>
+<td>!==</td>
+</tr>
+<tr class="row-odd"><td>右辺が左辺より大きい場合true</td>
+<td>&lt;</td>
+</tr>
+<tr class="row-even"><td>左辺が右辺より大きい場合true</td>
+<td>&gt;</td>
+</tr>
+<tr class="row-odd"><td>右辺が左辺以上の場合true</td>
+<td>&lt;=</td>
+</tr>
+<tr class="row-even"><td>左辺が右辺以上の場合true</td>
+<td>&gt;=</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id21">
+<h3>論理演算子<a class="headerlink" href="#id21" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="82%" />
+<col width="18%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>論理積 (両辺ともにtrueならtrue)</td>
+<td>&amp;&amp;、and</td>
+</tr>
+<tr class="row-even"><td>論理和 (どちらかがtrueならtrue)</td>
+<td>or 、||</td>
+</tr>
+<tr class="row-odd"><td>排他的論理和 (片方がtrueで、もう片方がfalseの場合true)</td>
+<td>xor</td>
+</tr>
+<tr class="row-even"><td>否定 (falseならtrue)</td>
+<td>!</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+<span class="nv">$b</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+<span class="nv">$c</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">&amp;&amp;</span> <span class="nv">$c</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">&#39;真&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">||</span> <span class="nv">$b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">&#39;真&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$b</span> <span class="k">xor</span> <span class="nv">$c</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">&#39;真&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">&#39;真&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">上記は全てtrueになります。</div>
+</div>
+</div>
+<div class="section" id="id22">
+<h3>文字列演算子<a class="headerlink" href="#id22" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">PHPでは文字列を繋げるときは「.」を使います。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="s1">&#39;あい&#39;</span><span class="p">;</span>
+<span class="nv">$b</span> <span class="o">=</span> <span class="s1">&#39;えお&#39;</span><span class="p">;</span>
+<span class="nv">$c</span> <span class="o">=</span> <span class="nv">$a</span> <span class="o">.</span> <span class="s1">&#39;う&#39;</span> <span class="o">.</span> <span class="nv">$b</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nv">$c</span><span class="p">;</span> <span class="c1">//あいうえお</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id23">
+<h2>制御構造<a class="headerlink" href="#id23" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id24">
+<h3>PHPの制御構造<a class="headerlink" href="#id24" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">if文、switch文、for文、while文はJavascriptとほぼ同じです。</div>
+<div class="line">ただし、PHPではelse ifをelseifと省略できるなど多少の違いはあります。</div>
+<div class="line">また、PHPの制御構造は同じファイルであれば、PHPブロックを超えて継続します。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">if</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span> <span class="p">{</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">この部分はif文がtrueのとき以外は出力されません。</span>
+<span class="cp">&lt;?php</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">この部分はif文がfalseのとき以外は出力されません。</span>
+<span class="cp">&lt;?php</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="if">
+<h3>if文(条件分岐)<a class="headerlink" href="#if" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">if文は「もし条件ならば、処理◯◯を実行する。条件でなければ、処理××を実行する」という制御構造です。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>          <span class="c1">// 変数aに、10を代入</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$a</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>        <span class="c1">// もし変数aを2で割った余りが0であれば、以下の処理を実行</span>
+    <span class="k">echo</span> <span class="s2">&quot;偶数&quot;</span><span class="p">;</span>     <span class="c1">// 「偶数」と出力</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>               <span class="c1">// 上記条件に当てはまらなければ、以下の処理を実行</span>
+    <span class="k">echo</span> <span class="s2">&quot;奇数&quot;</span><span class="p">;</span>     <span class="c1">// 「奇数」と出力</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="switch">
+<h3>switch文<a class="headerlink" href="#switch" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">switch文は与えられた変数の値によって処理を分岐する方法です。</div>
+<div class="line">caseの後に想定する変数の値を記述し、case毎に処理を記述します。</div>
+<div class="line">実行時に変数に渡された値と、caseの後に記述した値が一致すると処理が実行されます。</div>
+<div class="line">それぞれの処理の終了部分には「break;」を記述します。</div>
+<div class="line">「break;」が記述されていないと以下に続く処理が続いて実行されてしまいますので気をつけましょう。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$science</span> <span class="o">=</span> <span class="s1">&#39;chemistry&#39;</span><span class="p">;</span>                            <span class="c1">// 変数scienceを定義し、chemistryという文字列を代入</span>
+<span class="k">switch</span> <span class="p">(</span><span class="nv">$science</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="s1">&#39;physics&#39;</span><span class="o">:</span>                                   <span class="c1">// 変数scienceの値がphysicsであれば以下の処理を実行</span>
+        <span class="k">echo</span> <span class="s2">&quot;私は物理が好きです。&quot;</span><span class="p">;</span>          <span class="c1">// 「私は物理が好きです。」と表示する</span>
+        <span class="k">break</span><span class="p">;</span>                                       <span class="c1">// switch文を終了</span>
+    <span class="k">case</span> <span class="s1">&#39;biology&#39;</span><span class="o">:</span>                                  <span class="c1">// 変数schienceの値がbiologyであれば以下の処理を実行</span>
+        <span class="k">echo</span> <span class="s2">&quot;私は生物が好きです。&quot;</span><span class="p">;</span>         <span class="c1">// 「私は生物が好きです。」と表示する</span>
+        <span class="k">break</span><span class="p">;</span>                                       <span class="c1">// switch文を終了</span>
+<span class="k">case</span> <span class="s1">&#39;chemistry&#39;</span><span class="o">:</span>                                <span class="c1">// 変数schienceの値がchemistryであれば以下の処理を実行</span>
+        <span class="k">echo</span> <span class="s2">&quot;私は化学が好きです。&quot;</span><span class="p">;</span>         <span class="c1">// 「私は化学が好きです。」と表示する</span>
+        <span class="k">break</span><span class="p">;</span>                                      <span class="c1">// switch文を終了</span>
+<span class="k">default</span><span class="o">:</span>                                    <span class="c1">// 変数scienceの値がphysicsでもbiologyでもchemistryでもない場合以下の処理を実行</span>
+        <span class="k">echo</span> <span class="s2">&quot;私は理科が好きです。&quot;</span><span class="p">;</span>        <span class="c1">// 「私は理科が好きです。」と表示する</span>
+        <span class="k">break</span><span class="p">;</span>                                      <span class="c1">// switch文を終了</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">上記の例では変数scienceにchemistryが代入されているので「case &#8216;chemistry&#8217;:」の処理が実行され、「私は化学が好きです。」と表示されます。</div>
+</div>
+</div>
+<div class="section" id="while">
+<h3>while文<a class="headerlink" href="#while" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">while文は条件式が真の間だけ、処理を繰り返し実行するものです。</div>
+<div class="line">以下は&#8221;ありがとう&#8221;を100回表示するプログラムです。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>                         <span class="c1">// 変数iを定義して0を代入</span>
+<span class="k">while</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>                   <span class="c1">// 変数iが100未満であれば処理を実行、100より大きければ処理を実行せずループを終了</span>
+    <span class="k">echo</span> <span class="s2">&quot;ありがとう&quot;</span><span class="p">;</span>    <span class="c1">// 「ありがとう」と表示する</span>
+    <span class="nv">$i</span><span class="o">++</span><span class="p">;</span>                           <span class="c1">// 変数iに1を加算する</span>
+<span class="p">}</span>                                  <span class="c1">// 条件式へ戻る</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="for">
+<h3>for文<a class="headerlink" href="#for" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">while文以外のもうひとつの繰り返し処理の例が、for文です。</div>
+<div class="line">for文は継続条件式が真の間繰り返し実行されるというものです。定義は以下の通りです。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="x">for(初期化式; 継続条件式; 再初期化式){</span>
+<span class="x">    処理;</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">こう書くととても難しいように見えますが、実際的には、限られた回数だけ処理を行ないたい場合、while文より便利です。</div>
+<div class="line">処理の流れを見てみましょう。</div>
+</div>
+<div class="line-block">
+<div class="line">1.「初期化式」を実行</div>
+<div class="line">2.「継続条件式」で真と判定された場合に内部の処理を実行、判定結果が偽の場合ループを終了</div>
+<div class="line">3.「再初期化処理」を実行</div>
+<div class="line">※以降2,3の繰り返しとなります。</div>
+</div>
+<div class="line-block">
+<div class="line">例えばwhileの例であった、「ありがとう」を100個表示するプログラムをfor文で記述してみましょう。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+                                      <span class="c1">// 変数iを定義し0を代入 ※ループの初回のみ実行される</span>
+<span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>      <span class="c1">// 変数iが100未満だったら以下の処理を実行、変数iが100より大きければ処理を実行せずにループを終了</span>
+    <span class="k">echo</span> <span class="s2">&quot;ありがとう&quot;</span><span class="p">;</span>    <span class="c1">// 「ありがとう」と表示する</span>
+<span class="p">}</span>                                  <span class="c1">// 変数iに1を加算し、継続条件式へ再び「i &lt; 100」が真となるか判断する。</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="foreach">
+<h3>foreach文<a class="headerlink" href="#foreach" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">foreachは配列など反復可能なデータ構造の中の値を一個づつ処理するのに使います。</div>
+</div>
+<blockquote>
+<div><div class="highlight-none"><div class="highlight"><pre>foreach(配列 as 値){
+    処理;
+}
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">現在の配列のキーを取得したい場合は</div>
+</div>
+<blockquote>
+<div><div class="highlight-none"><div class="highlight"><pre>foreach(配列 as キー =&gt; 値){
+    処理;
+}
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">となります。</div>
+<div class="line">例えば</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$fruits</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;banana&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;バナナ&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span> <span class="o">=&gt;</span>  <span class="s1">&#39;オレンジ&#39;</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;りんご&#39;</span><span class="p">,</span> <span class="s1">&#39;peach&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;桃&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">という配列があって、この配列の中身を全て出力したい場合、下記のようにします。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$fruits</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;banana&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;バナナ&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span> <span class="o">=&gt;</span>  <span class="s1">&#39;オレンジ&#39;</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;りんご&#39;</span><span class="p">,</span> <span class="s1">&#39;peach&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;桃&#39;</span><span class="p">);</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$fruits</span> <span class="k">as</span> <span class="nv">$fruit</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">//配列の値の数だけ繰り返します。</span>
+    <span class="k">echo</span> <span class="nv">$fruit</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>     <span class="c1">//$fruitには現在いる場所の値が入っています。この場合、最初ならバナナ、次はオレンジになります。</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">出力結果</div>
+</div>
+<div class="line-block">
+<div class="line">バナナ</div>
+<div class="line">オレンジ</div>
+<div class="line">りんご</div>
+<div class="line">桃</div>
+</div>
+</div>
+</div>
+<div class="section" id="id25">
+<h2>関数<a class="headerlink" href="#id25" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id26">
+<h3>PHPの関数<a class="headerlink" href="#id26" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">PHPでは、関数もjavascriptと同じように使うことができます。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="x">function 関数名(引数)</span>
+<span class="x">{</span>
+<span class="x">    処理;</span>
+<span class="x">    return 戻り値;</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">function</span> <span class="nf">hello</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nv">$answer</span> <span class="o">=</span> <span class="s2">&quot;こんにちは、</span><span class="si">{</span><span class="nv">$name</span><span class="si">}</span><span class="s2">さん。&quot;</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nv">$answer</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">$nameに&#8221;太郎&#8221;を渡すと</div>
+</div>
+<div class="line-block">
+<div class="line">”こんにちは、太郎さん。&#8221;</div>
+<div class="line">が返ってきます。</div>
+</div>
+</div>
+<div class="section" id="id27">
+<h3>無名関数<a class="headerlink" href="#id27" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">PHPでもjavascriptと同じように無名関数を使うこともできます。変数自体が関数オブジェクトとなります。使い方は、変数を代入する時と同じようなやり方です。</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$a</span> <span class="o">=</span> <span class="k">function</span><span class="p">(){</span>
+    <span class="k">echo</span> <span class="s2">&quot;test&quot;</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="nv">$a</span><span class="p">();</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id28">
+<h3>関数のコメント<a class="headerlink" href="#id28" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">関数には、その関数がどのような動作をするのかを説明するコメントを必ず添えるようにしましょう。</div>
+<div class="line">実はコメントの書き方にも決まりがあるのです。</div>
+<div class="line">例えば、1つの整数を引数にとり、その整数に1を加算して返すadd1という関数を実装したらコメントは次のようになります。</div>
+</div>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="sd">/**</span>
+<span class="sd"> * 1を加算する関数</span>
+<span class="sd"> * @param int $number 1を加算したい数値</span>
+<span class="sd"> * @return int 加算後の数値</span>
+<span class="sd"> */</span>
+<span class="k">function</span> <span class="nf">add1</span> <span class="p">(</span><span class="nv">$number</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$number</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">1行目から見ていきましょう。1行目はコメントの始まりを示す「/**」が記述されています。</div>
+<div class="line">2行目には関数add1の説明を記述します。</div>
+<div class="line">3行目の始めには&#64;paramと書かれていますね。このparamタグはこの関数がparameter、つまり引数を必要とすることを意味しています。</div>
+<div class="line">&#64;param [データ型] [変数名] [引数の説明]という順番になっています。この場合引数は1個ですが、複数個ある場合は複数行に渡って記述します。</div>
+<div class="line">4行目の&#64;returnはこのadd1関数が何らかの値を返すことを示しています。この場合は変数名は入らず、&#64;return [データ型] [戻り値の説明]と続きます。</div>
+<div class="line">他にも様々なタグがありますが、よく使う&#64;paramと&#64;returnについてはしっかりと押さえておきましょう。</div>
+<div class="line">最後にはコメント行の終わりを示す「*/」を忘れずに。</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">タグ</th>
+<th class="head">意味</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&#64;access</td>
+<td>アクセス権限</td>
+</tr>
+<tr class="row-odd"><td>&#64;see</td>
+<td>別要素へのリンク</td>
+</tr>
+<tr class="row-even"><td>&#64;link</td>
+<td>ハイパーリンク</td>
+</tr>
+<tr class="row-odd"><td>&#64;todo</td>
+<td>todo, 開発予定</td>
+</tr>
+<tr class="row-even"><td>&#64;var</td>
+<td>変数</td>
+</tr>
+<tr class="row-odd"><td>&#64;author</td>
+<td>作者</td>
+</tr>
+<tr class="row-even"><td>&#64;example</td>
+<td>サンプルファイル</td>
+</tr>
+<tr class="row-odd"><td>&#64;version</td>
+<td>ヴァージョン</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id29">
+<h2>課題<a class="headerlink" href="#id29" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">それではPHPの課題に取り組んでみましょう！</div>
+</div>
+<div class="section" id="id30">
+<h3>■準備問題<a class="headerlink" href="#id30" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">1〜100までの数値を順に出力しなさい。</div>
+<div class="line">ただし、3で割り切れる場合は「Fizz」、5で割り切れる場合は「Buzz」、3でも5でも割り切れる場合は「FizzBuzz」、</div>
+<div class="line">それ以外は数値をそのまま出力する。出力はコンソール上で行うものとする。</div>
+<div class="line">狙い : PHPの変数の理解、for文とif文の理解</div>
+</div>
+</div>
+<div class="section" id="id31">
+<h3>■第1問<a class="headerlink" href="#id31" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">引数が素数であれば、返り値にtrue、素数でなければ返り値にfalseを返す関数を作成しなさい。</div>
+<div class="line">ただし、素数とは１とその数自身でしか割れない数のことである。</div>
+<div class="line">また、その関数を利用し、100以下の素数を配列形式で出力するプログラムを作成しなさい。</div>
+<div class="line">狙い : bool型、配列型の理解。関数の理解。</div>
+</div>
+</div>
+<div class="section" id="id32">
+<h3>■第2問<a class="headerlink" href="#id32" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">第1問を応用し、次のような配列を作成して出力させなさい。</div>
+<div class="line">・100以下の素数ではない数を配列のキーとする</div>
+<div class="line">・そのキーに対する値は、キーの素因数(1と自身を除いた割り切れる数全て)を格納した配列とする</div>
+<div class="line">狙い : 多次元配列の理解。</div>
+</div>
+</div>
+<div class="section" id="id33">
+<h3>■第3問<a class="headerlink" href="#id33" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">整数を引数とし、漢数字を返り値とする関数を作りなさい。</div>
+<div class="line">ただし、以降漢数字は、10は十ではなく一〇とする。21は二十一ではなく二一とする。100は百でなく一〇〇とする。</div>
+<div class="line">狙い : PHP標準関数、文字列処理の理解。配列の適切な利用。</div>
+</div>
+</div>
+<div class="section" id="id34">
+<h3>■第4問<a class="headerlink" href="#id34" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">2問目で作成された配列の中身を全て、3問目の関数を使って、漢数字にして出力しなさい。</div>
+<div class="line">狙い : 多次元配列の利用、２重ループ。</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PHP入門</a><ul>
+<li><a class="reference internal" href="#id1">PHPとは</a></li>
+<li><a class="reference internal" href="#id2">ローカルサーバー</a><ul>
+<li><a class="reference internal" href="#xamppwindows">XAMPPのインストール【Windowsをお使いの方】</a></li>
+<li><a class="reference internal" href="#mampmac">MAMPのインストール【Macをお使いの方】</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">PHPの文とコメント</a><ul>
+<li><a class="reference internal" href="#id5">PHPブロック</a></li>
+<li><a class="reference internal" href="#id6">PHPの設定情報を出力する</a></li>
+<li><a class="reference internal" href="#id7">文</a></li>
+<li><a class="reference internal" href="#id8">コメント</a></li>
+<li><a class="reference internal" href="#id9">出力</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10">エラー設定</a></li>
+<li><a class="reference internal" href="#id11">変数とスコープ</a><ul>
+<li><a class="reference internal" href="#id12">変数</a></li>
+<li><a class="reference internal" href="#id13">スコープ</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#post-get">スーパーグローバル変数　$_POST $_GET</a></li>
+<li><a class="reference internal" href="#id14">型</a><ul>
+<li><a class="reference internal" href="#int">整数型(int)</a></li>
+<li><a class="reference internal" href="#double">倍精度浮動小数点型(double)</a></li>
+<li><a class="reference internal" href="#string">文字列型(string)</a></li>
+<li><a class="reference internal" href="#bool">論理型(bool)</a></li>
+<li><a class="reference internal" href="#array">配列型(array)</a></li>
+<li><a class="reference internal" href="#null">null型</a></li>
+<li><a class="reference internal" href="#id15">キャスト</a></li>
+<li><a class="reference internal" href="#var-dump">var_dump()</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id16">演算子</a><ul>
+<li><a class="reference internal" href="#id17">代入演算子</a></li>
+<li><a class="reference internal" href="#id18">代数演算子</a></li>
+<li><a class="reference internal" href="#id19">複合演算子</a></li>
+<li><a class="reference internal" href="#id20">比較演算子</a></li>
+<li><a class="reference internal" href="#id21">論理演算子</a></li>
+<li><a class="reference internal" href="#id22">文字列演算子</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id23">制御構造</a><ul>
+<li><a class="reference internal" href="#id24">PHPの制御構造</a></li>
+<li><a class="reference internal" href="#if">if文(条件分岐)</a></li>
+<li><a class="reference internal" href="#switch">switch文</a></li>
+<li><a class="reference internal" href="#while">while文</a></li>
+<li><a class="reference internal" href="#for">for文</a></li>
+<li><a class="reference internal" href="#foreach">foreach文</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id25">関数</a><ul>
+<li><a class="reference internal" href="#id26">PHPの関数</a></li>
+<li><a class="reference internal" href="#id27">無名関数</a></li>
+<li><a class="reference internal" href="#id28">関数のコメント</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id29">課題</a><ul>
+<li><a class="reference internal" href="#id30">■準備問題</a></li>
+<li><a class="reference internal" href="#id31">■第1問</a></li>
+<li><a class="reference internal" href="#id32">■第2問</a></li>
+<li><a class="reference internal" href="#id33">■第3問</a></li>
+<li><a class="reference internal" href="#id34">■第4問</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="9_online_shop.html"
+                        title="前の章へ">オンラインショップを作ってみよう</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="11_php_object.html"
+                        title="次の章へ">PHPのクラスとオブジェクト指向</a></p>
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/10_php_introduction.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+</div>
+<div id="relatedFooter">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="11_php_object.html" title="PHPのクラスとオブジェクト指向"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="9_online_shop.html" title="オンラインショップを作ってみよう"
+             >前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div id="sphinx">このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1 で生成しました。</div>
+      <div id="copyright">
+    <p><a href="http://uhero.co.jp/">uhero corp</a>. &#169; all rights reserved.</p>
+    <figure><img src="http://uhero.co.jp/common/images/img_footer.gif" width="80" height="14" alt="uhero corp." /></figure>
+  </div><!--/#copyright-->
+    </div>
+
+  </body>
+</html>

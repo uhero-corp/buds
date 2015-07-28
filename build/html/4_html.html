@@ -1,0 +1,622 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>HTML入門 &mdash; Building Uteam Development Skill 0.0.9a ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.9a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Building Uteam Development Skill 0.0.9a ドキュメント" href="index.html" />
+    <link rel="next" title="CSS入門" href="5_css.html" />
+    <link rel="prev" title="情報基礎" href="3_fundamental_information.html" /> 
+  </head>
+  <body>
+<div id="container">
+<div id="header">
+    <a href="http://uhero.co.jp/">
+        <img id="logo" src="http://uhero.co.jp/common/images/logo.png" width="286" height="57" alt="株式会社ユヒーロ" />
+    </a>
+</div>
+<div id="relatedHead">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="5_css.html" title="CSS入門"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="3_fundamental_information.html" title="情報基礎"
+             accesskey="P">前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+</div>
+<div class='underRelatedHead'></div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+<div class="section" id="html">
+<h1>HTML入門<a class="headerlink" href="#html" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ここではHTMLに関する基礎的な知識や書き方について解説していきます。</p>
+<div class="section" id="id1">
+<h2>やってみよう!<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">突然ですが、実際にHTMLファイルと呼ばれるものを作成してみましょう。</div>
+<div class="line">1. 今回のトレーニングで一番最初にインストールしたテキストエディタ(TeraPad, mi)を開いてください。</div>
+<div class="line">2. エディタに以下のコードを書き込んでください。</div>
+</div>
+<div class="highlight-html"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;ja&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;UTF-8&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Webページのタイトル<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>h1タグは一番大きな見出しになります<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>h2タグはその次に大きい見出しで<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;h3&gt;</span>h3タグはその次に大きい見出しになります<span class="nt">&lt;/h3&gt;</span>
+
+    <span class="nt">&lt;p&gt;</span>pタグを使うと文書が書くことができます。
+    しかしhtmlファイルの方で改行しても出力時には改行されません。<span class="nt">&lt;br&gt;</span>
+    改行するためには<span class="nt">&lt;br&gt;</span>という改行タグを使います。
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://www.google.co.jp&quot;</span><span class="nt">&gt;</span>Google<span class="nt">&lt;/a&gt;</span>へのリンクも簡単に作れます。<span class="nt">&lt;br&gt;</span>
+    strongタグを使用するとその名の通り<span class="nt">&lt;strong&gt;</span>ストロング<span class="nt">&lt;/strong&gt;</span>なものができます。<span class="nt">&lt;br&gt;</span>
+    画像を貼付けるのもとても簡単です。<span class="nt">&lt;/p&gt;</span>
+
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://www.uhero.co.jp/common/images/logo.png&quot;</span> <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;</span>普通のリスト<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>普通のリスト<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>普通のリスト<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="nt">&lt;ol&gt;</span>
+        <span class="nt">&lt;li&gt;</span>数字リスト<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>数字リスト<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>数字リスト<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ol&gt;</span>
+
+    <span class="nt">&lt;table&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;th&gt;</span>名前<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;th&gt;</span>フルーツ<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;th&gt;</span>スポーツ<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>田中<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>りんご<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>サッカー<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>鈴木<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>オレンジ<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>野球<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>佐藤<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>ぶどう<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>バスケ<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">3. test.html という名前でデスクトップなど分かりやすい所に保存します。</div>
+<div class="line">4. test.html ファイルをダブルクリックします。</div>
+<div class="line"><br /></div>
+<div class="line">ウェブブラウザが立ち上がりましたか？</div>
+<div class="line">Internet Explorer, Google Chrome, Safari, Fire Fox, Opera等これらはすべてウェブブラウザと呼ばれるもので</div>
+<div class="line">Webページを閲覧するためにHTMLファイルや画像・音楽ファイルなどを解析し、ユーザーに表示するためにアプリケーションです。</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>HTMLとは？<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>HTMLは、Web上のドキュメントを作るためのマークアップ言語です。</p>
+<p><strong>マークアップ言語とは？</strong></p>
+<p>普通の文書に、構造を記述するための言語です。例えば・・・</p>
+<div class="highlight-html"><div class="highlight"><pre>第一章
+　うんぬんかんぬん
+第二章
+　うんぬんかんぬん
+　・あ
+　・い
+第三章
+</pre></div>
+</div>
+<p>これだと、人間にとっては視覚的には文書の構造が把握しやすい。
+しかし、コンピュータ側から見た場合、文書の文脈を理解することができないため
+これでは文書の構造を把握することができません。そこで・・・</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;h1&gt;</span>第一章<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>うんぬんかんぬん<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;h1&gt;</span>第二章<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;p&gt;</span>うんぬんかんぬん<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+<span class="nt">&lt;li&gt;</span>あ<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;</span>い<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+</div>
+<p>このようにすることにより、コンピュータが文書の構造を理解できるようにする言語のことをマークアップ言語と言います。</p>
+<div class="section" id="id3">
+<h3>HTMLタグとは？<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>タグとは、HTMLで&lt;と&gt;に囲まれた、一つの指示の固まりです。
+&lt;と&gt;で囲まれる開始タグで始まり、&lt;/と&gt;で囲まれる終了タグで終わります。
+開始タグと終了タグではさまれた部分が内容となります。</p>
+<p>例）</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;strong&gt;</span>強調部分です。<span class="nt">&lt;/strong&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>属性とは？<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>例えば、画像を表示するためのタグ「img」は単に</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;img&gt;</span>
+</pre></div>
+</div>
+<p>と記述しても、表示する画像がどこにあるのか指定されていないため、画像が表示されません。
+画像がどこにあるかを指定するためにimgタグに「src」という「属性」を追記します。</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;hogehoge.gif&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>imgタグは表示するべき画像を知ることができたので、画像を表示することができるようになります。
+この様に「属性」をタグに追加することでタグに情報を与え、表示内容を制御することができます。</p>
+<p>属性には種類が多数あります。
+タグによって付与できる属性、付与できない属性、付与することが必須である属性があり、正しいHTMLを書くには適切な属性の記述がされている事が必要です。</p>
+</div>
+<div class="section" id="id5">
+<h3>HTMLの基本構造<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>HTMLにはこれらが必須となります。</p>
+<dl class="docutils">
+<dt><strong>&lt;!DOCTYPE html&gt;</strong></dt>
+<dd><p class="first">文書がHTML5で作成されたものであることを示す宣言です。先頭に記述します。DOCTYPE宣言をしたからにはそのバージョンの仕様に正確に従うようにしましょう。</p>
+<div class="last admonition note">
+<p class="first admonition-title">ノート</p>
+<p class="last">DOCTYPE宣言はタグではありません。</p>
+</div>
+</dd>
+<dt><strong>&lt;html&gt;</strong></dt>
+<dd><p class="first">HTML文書であることを示します。lang属性で言語を指定することができます。全てのHTMLタグは&lt;html&gt;から&lt;/html&gt;の中に入れる必要性があります。直下には&lt;head&gt;と&lt;body&gt;のみ使うことができます。</p>
+<dl class="last docutils">
+<dt>日本語の場合は</dt>
+<dd><div class="first last highlight-html"><div class="highlight"><pre><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;ja&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt><strong>&lt;head&gt;</strong></dt>
+<dd>headはHTML文書の情報などを記述を示すために使います。後述のmetaやtitleなどが中に入ります。</dd>
+<dt><strong>&lt;meta&gt;</strong></dt>
+<dd><p class="first">metaタグはHTMLの様々な情報を指定することができます。例えば文字エンコーディングを指定する場合は&lt;meta charset=&#8221;UTF-8&#8221;&gt;のように記述します。</p>
+<div class="last admonition note">
+<p class="first admonition-title">ノート</p>
+<p class="last">文字エンコーディングは必須ではありませんが、文字化け対策のために指定するようにしましょう。</p>
+</div>
+</dd>
+<dt><strong>&lt;title&gt;</strong></dt>
+<dd><p class="first">titleタグはページのタイトルを指定することができます。</p>
+<div class="last admonition note">
+<p class="first admonition-title">ノート</p>
+<p class="last">タイトルはブラウザなど各種アプリケーションや検索エンジンに表示される名前になりますので、必ず指定しましょう。</p>
+</div>
+</dd>
+<dt><strong>&lt;body&gt;</strong></dt>
+<dd>bodyはhtmlの文書本体部分を指定するタグです。本文は必ず&lt;body&gt;から&lt;/body&gt;の間に記述してください。</dd>
+</dl>
+<p><strong>HTML文書に最低限必須な記述</strong></p>
+<blockquote>
+<div><div class="highlight-html"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;ja&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;UTF-8&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Webページのタイトル<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        本文はここに書きます。
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>主要なタグの紹介<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="docutils">
+<dt><strong>&lt;h1&gt; - &lt;h6&gt;</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">&lt;h1&gt;-&lt;h6&gt;は見出しをつけるタグです。&lt;h1&gt;が最もランクの高い見出しで、&lt;h6&gt;が最もランクが小さい見出しになります。</div>
+<div class="line"><br /></div>
+</div>
+</dd>
+<dt><strong>&lt;p&gt;</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">&lt;p&gt;は段落を示すタグです。</div>
+<div class="line"><br /></div>
+</div>
+</dd>
+<dt><strong>&lt;br&gt;</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">&lt;br&gt;は改行するときに使います。</div>
+<div class="line"><br /></div>
+</div>
+</dd>
+<dt><strong>&lt;a&gt;</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">&lt;a&gt;はリンクを貼るときに使うタグです。href属性でリンク先を指定します。</div>
+<div class="line">例：</div>
+</div>
+</dd>
+</dl>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;map.html&quot;</span><span class="nt">&gt;</span>地図はこちら<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://www.google.co.jp&quot;</span><span class="nt">&gt;</span>Googleはこちら<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;../index.html&quot;</span><span class="nt">&gt;</span>トップはこちら<span class="nt">&lt;/a&gt;</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><strong>&lt;strong&gt;</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">&lt;strong&gt;は重要な箇所に使います。</div>
+<div class="line"><br /></div>
+</div>
+</dd>
+<dt><strong>&lt;img&gt;</strong></dt>
+<dd><div class="first line-block">
+<div class="line">&lt;img&gt;は画像を表示するときに使います。src属性で画像のURLを指定することが必須です。</div>
+<div class="line">例：</div>
+</div>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;hogehoge.gif&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<div class="last line-block">
+<div class="line"><br /></div>
+</div>
+</dd>
+<dt><strong>&lt;ul&gt;</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">&lt;ul&gt;は順序を入れ替えても文書の意味が変わらないリストに使います。リストの各項目は&lt;li&gt;タグを使用します。</div>
+</div>
+</dd>
+</dl>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;</span>普通のリスト<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>普通のリスト<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>普通のリスト<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><strong>&lt;ol&gt;</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">&lt;ol&gt;は順序に意味があるリストに使います。リストの各項目は&lt;li&gt;タグを使用します。</div>
+</div>
+</dd>
+</dl>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;ol&gt;</span>
+    <span class="nt">&lt;li&gt;</span>数字リスト<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>数字リスト<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>数字リスト<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><strong>&lt;table&gt;</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">&lt;table&gt;は表を作るために使います。表の外側は&lt;table&gt;、表の行は&lt;tr&gt;、表のセルは&lt;td&gt;を使います。&lt;td&gt;の代わりに&lt;th&gt;を使うことにより、そのセルが見出しとして扱われます。</div>
+<div class="line"><br /></div>
+<div class="line">例：</div>
+</div>
+</dd>
+</dl>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;table&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;th&gt;</span>名前<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>フルーツ<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>スポーツ<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+         <span class="nt">&lt;td&gt;</span>田中<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>りんご<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>サッカー<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+         <span class="nt">&lt;td&gt;</span>鈴木<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>オレンジ<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>野球<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+         <span class="nt">&lt;td&gt;</span>佐藤<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>ぶどう<span class="nt">&lt;/td&gt;</span>
+         <span class="nt">&lt;td&gt;</span>バスケ<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">ブラウザでの表示</div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><table>
+    <tr>
+        <th>名前</th>
+        <th>フルーツ</th>
+        <th>スポーツ</th>
+    </tr>
+    <tr>
+        <td>田中</td>
+        <td>りんご</td>
+        <td>サッカー</td>
+    </tr>
+    <tr>
+        <td>鈴木</td>
+        <td>オレンジ</td>
+        <td>野球</td>
+    </tr>
+    <tr>
+        <td>佐藤</td>
+        <td>ぶどう</td>
+        <td>バスケ</td>
+    </tr>
+</table><div class="admonition warning">
+<p class="first admonition-title">警告</p>
+<p class="last">&lt;table&gt;タグは表であることを示すものです。tableタグを初め、HTMLは文書構造を示すためのものであり、デザインのため使ってはいけません。デザインはCSSを用いて行いましょう。</p>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id7">
+<h2>HTML課題 - 自分の好きなもの紹介ページ<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">HTMLがどのようなものか分かり始めましたか？</div>
+<div class="line">最初は覚えるタグが多く、難しく感じてしまいがちですが、何度も使っていくうちに自然と覚えていくでしょう。</div>
+<div class="line"><br /></div>
+<div class="line">それではまず自分の好きな人物や趣味などを紹介する <strong>自分の好きなもの紹介ページ</strong> を作成してみましょう。</div>
+<div class="line">先ほどと同様にテキストエディタを開き、test.htmlやタグのリファレンスサイト等を参考にしながら制作してみてください。</div>
+<div class="line">見出し、リスト、テーブル、画像などを配置する、できるだけたくさんの種類のタグを使用することをオススメします。</div>
+<div class="line">文字の色や背景を変えたりと装飾が欲しくなるかもしれませんが、それらは次のチャプターで勉強します。</div>
+<div class="line"><br /></div>
+<div class="line">HTMLファイルが完成したら <a class="reference external" href="http://validator.w3.org/unicorn/?ucn_lang=ja#validate-by-upload+task_conformance">W3Cの検証サービス</a> を開き、作ったファイルをアップロードしてください。</div>
+<div class="line">これは文法のエラーなどが無いか自動的にチェックしてくれるサービスです。エラー箇所が表示されたらそこを修正し、最終的にエラーが表示されないようにしましょう。</div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div>ここから <a class="reference download internal" href="_downloads/timburton.html.zip"><tt class="xref download docutils literal"><span class="pre">制作例</span></tt></a> がダウンロードできます。</div></blockquote>
+</div>
+<div class="section" id="id8">
+<h2>HTMLのバージョンについて<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>HTML5はWorld Wide Web Consortium(略:W3C)が2014年の正式勧告に向けて策定している規格です。
+今世紀入ってから最大の改定となります。
+既に最新のブラウザーではHTML5の機能の多くが使うことができるようになっています。</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">ノート</p>
+<p class="last">World Wide Web Consortium：Webで使われる技術の標準化を進めることを目的として設立された団体。慶應義塾大学湘南藤沢キャンパスに東アジアを担当する支部がある。</p>
+</div>
+</div></blockquote>
+<p>HTML4.01のDOCTYPE宣言：</p>
+<blockquote>
+<div><div class="highlight-html"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>HTML5のDOCTYPE宣言：</p>
+<blockquote>
+<div><div class="highlight-html"><div class="highlight"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>HTML5ではaudioやvideoなど、マルチメディアをHTMLから直接扱うことが可能になりました。</p>
+<p>HTML5での動画再生の例：</p>
+<blockquote>
+<div><div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;video</span> <span class="na">src=</span><span class="s">&quot;example.mp4&quot;</span><span class="nt">&gt;&lt;/video&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>また、フォーム関連の新しい機能が多数追加されました。</p>
+<p>HTML5でのフォームの例：</p>
+<blockquote>
+<div><div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">&quot;submit.php&quot;</span> <span class="na">method=</span><span class="s">&quot;post&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;range&quot;</span> <span class="na">name=</span><span class="s">&quot;range&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">value=</span><span class="s">&quot;送信&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>ブラウザでの表示例：</p>
+<blockquote>
+<div><form action="submit.php" method="post">
+<input type="range" name="range">
+<input type="submit" value="送信">
+</form><div class="admonition note">
+<p class="first admonition-title">ノート</p>
+<p class="last">最新のChrome、Internet Explorer10で閲覧してください。</p>
+</div>
+</div></blockquote>
+<p>文書構造を示す言語としての性格も強化されており、
+&lt;header&gt;、&lt;footer&gt;、&lt;section&gt;、&lt;article&gt;などが追加されました。
+これにより、&lt;div id=&#8221;header&#8221;&gt;など何もかも&lt;div&gt;タグにならずにより正確に表現できるようになりました。</p>
+</div>
+<div class="section" id="id9">
+<h2>便利なショートカットキー紹介<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">これからHTML/CSSを記述したり、プログラムのコードを書いたりする機会が多くなると思いますが、</div>
+<div class="line">そんな時に非常に役立つ <strong>ショートカットキー</strong> をいくつか紹介します。</div>
+<div class="line">ショートカットキーとはコンピューターに特定の機能を動作させるために押すキーのことです。</div>
+<div class="line">マウスを使って画面上のポインタを動かしてクリックするのと同じ動作が行われるのですが、</div>
+<div class="line">ショートカットキーを使うと手軽で迅速にコンピュータを動かすことができます。</div>
+<div class="line">WindowsやMacだけでなく、ブラウザやテキストエディタなど使用環境やアプリケーションによって</div>
+<div class="line">ショートカットキーが異なるので注意してください。</div>
+<div class="line">なお、基本的にWindowsのCtrlキーはMacではcommandキー(⌘)に対応していることが多いです。</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="28%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">動作</th>
+<th class="head">ショートカットキー</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>全選択</td>
+<td>Ctrl + A</td>
+<td>テキストやファイルを全選択する</td>
+</tr>
+<tr class="row-odd"><td>コピー</td>
+<td>Ctrl + C</td>
+<td>選択した範囲のテキストやファイルをコピーする</td>
+</tr>
+<tr class="row-even"><td>切り取り</td>
+<td>Ctrl + X</td>
+<td>選択した範囲のテキストやファイルを切り取る</td>
+</tr>
+<tr class="row-odd"><td>貼り付け</td>
+<td>Ctrl + V</td>
+<td>コピー・切り取りしたものを貼り付け・ペーストする</td>
+</tr>
+<tr class="row-even"><td>検索</td>
+<td>Ctrl + F</td>
+<td>ファイル内やWebページ内で検索をかける</td>
+</tr>
+<tr class="row-odd"><td>新規作成</td>
+<td>Ctrl + N</td>
+<td>テキストエディタ等のアプリケーションで新規作成をする</td>
+</tr>
+<tr class="row-even"><td>更新</td>
+<td>Ctrl + R</td>
+<td>ブラウザで開いているページを更新・リロードする</td>
+</tr>
+<tr class="row-odd"><td>保存</td>
+<td>Ctrl + S</td>
+<td>テキストエディタで編集中のファイルを上書き保存する</td>
+</tr>
+<tr class="row-even"><td>新しいタブ</td>
+<td>Ctrl + T</td>
+<td>ブラウザで新しいタブを開く</td>
+</tr>
+<tr class="row-odd"><td>戻る</td>
+<td>Ctrl + Z</td>
+<td>直前の作業を取り消す</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">ショートカットキーは大変便利です。</div>
+<div class="line">自分がよく使用する動作のショートカットキーをできるだけ覚えて使用してみることをオススメします。</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">HTML入門</a><ul>
+<li><a class="reference internal" href="#id1">やってみよう!</a></li>
+<li><a class="reference internal" href="#id2">HTMLとは？</a><ul>
+<li><a class="reference internal" href="#id3">HTMLタグとは？</a></li>
+<li><a class="reference internal" href="#id4">属性とは？</a></li>
+<li><a class="reference internal" href="#id5">HTMLの基本構造</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">主要なタグの紹介</a></li>
+<li><a class="reference internal" href="#id7">HTML課題 - 自分の好きなもの紹介ページ</a></li>
+<li><a class="reference internal" href="#id8">HTMLのバージョンについて</a></li>
+<li><a class="reference internal" href="#id9">便利なショートカットキー紹介</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="3_fundamental_information.html"
+                        title="前の章へ">情報基礎</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="5_css.html"
+                        title="次の章へ">CSS入門</a></p>
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/4_html.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+</div>
+<div id="relatedFooter">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="5_css.html" title="CSS入門"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="3_fundamental_information.html" title="情報基礎"
+             >前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div id="sphinx">このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1 で生成しました。</div>
+      <div id="copyright">
+    <p><a href="http://uhero.co.jp/">uhero corp</a>. &#169; all rights reserved.</p>
+    <figure><img src="http://uhero.co.jp/common/images/img_footer.gif" width="80" height="14" alt="uhero corp." /></figure>
+  </div><!--/#copyright-->
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,1092 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>MySQL入門 &mdash; Building Uteam Development Skill 0.0.9a ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.9a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Building Uteam Development Skill 0.0.9a ドキュメント" href="index.html" />
+    <link rel="next" title="PDO入門" href="14_pdo.html" />
+    <link rel="prev" title="正規表現" href="12_regular_expression.html" /> 
+  </head>
+  <body>
+<div id="container">
+<div id="header">
+    <a href="http://uhero.co.jp/">
+        <img id="logo" src="http://uhero.co.jp/common/images/logo.png" width="286" height="57" alt="株式会社ユヒーロ" />
+    </a>
+</div>
+<div id="relatedHead">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="14_pdo.html" title="PDO入門"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="12_regular_expression.html" title="正規表現"
+             accesskey="P">前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+</div>
+<div class='underRelatedHead'></div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+<div class="section" id="mysql">
+<h1>MySQL入門<a class="headerlink" href="#mysql" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>MySQLとは<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">MySQLはリレーショナルデータベースマネジメントシステムの一種です。</div>
+<div class="line">世界で最も普及しているオープンソース・データベースでもあります。</div>
+<div class="line"><br /></div>
+<div class="line">MySQLを利用することでPHPなどで利用するデータを保存や管理することができます。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>リレーショナルデータベースを利用するメリット<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">データベースは巨大なデータを効率よく利用することが出来ます。</div>
+<div class="line">全データを読み込まなくても必要なデータをピンポイントで取り出すことが出来ます。</div>
+<div class="line"><br /></div>
+<div class="line">リレーショナルデータベースは、行と列で構成される表で表現できるような関係性を持ったデータを管理するのに特に向いています。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>リレーショナルデータベースの構造<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>「会員」</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="16%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">会員番号</th>
+<th class="head">年齢</th>
+<th class="head">名前</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>25</td>
+<td>山本健介</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>36</td>
+<td>川島忠</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>82</td>
+<td>梅沢誠信</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>19</td>
+<td>今井幸太</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>45</td>
+<td>森田和一</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>65</td>
+<td>花澤三郎</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">データベース中にはこのような構造の表を複数入れることが出来ます。</div>
+<div class="line">この表のことをテーブルと言います。</div>
+<div class="line">テーブル名は「会員」になります。</div>
+<div class="line">各列の名前である「会員番号」、「年齢」、「名前」のことをカラム名と言います。</div>
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">ノート</p>
+<p class="last">実際には日本語のテーブル名やカラム名はあまり使われません。英字を使用するようにしましょう。</p>
+</div>
+<div class="line-block">
+<div class="line">上記の例で、会員番号は同じ番号が複数回現れることはありません。</div>
+<div class="line">このようなカラムのことを主キー（プライマリーキー）と呼びます。</div>
+<div class="line">プライマリーキーの特徴は</div>
+<div class="line">・値の重複がない</div>
+<div class="line">・データは必ず入力しなければならない</div>
+<div class="line">ことです。</div>
+<div class="line">プライマリーキーには数字の連番が使われることも多いです。</div>
+</div>
+</div>
+<div class="section" id="sql">
+<h2>SQLを操作してみよう<a class="headerlink" href="#sql" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">Windowsならコマンドプロンプト、Macならターミナルを開いて、</div>
+<div class="line">MySQLにアクセスしましょう。</div>
+<div class="line"><br /></div>
+<div class="line">XAMPP環境の場合（初期値）</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre><span class="k">cd</span> C:\xampp\mysql\bin
+mysql -h localhost -u root
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">MAMP環境の場合（初期値）</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre><span class="k">cd</span> <span class="n">/Applications/MAMP/Library/bin</span>
+.<span class="n">/mysql</span> -u root -p
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">MAMP環境の場合、パスワードの初期値がrootとなっているようです。</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>データベースの作成<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">MySQLにrootでログインしたらデータベースを作ってみましょう。</div>
+<div class="line">作成するデータベースの名前が「TEST_DB」で、文字コードがUTF-8だとすれば</div>
+</div>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">TEST_DB</span> <span class="k">CHARACTER</span> <span class="kt">SET</span> <span class="n">utf8</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">このようにすることでデータベースを作成することができます。</div>
+<div class="line">データベースの一覧を見るには</div>
+</div>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">SHOW</span> <span class="k">DATABASES</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">と入力します。</div>
+<div class="line">「TEST_DB」という名前のデータベースにアクセスするには</div>
+</div>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">USE</span> <span class="n">TEST_DB</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">と入力します。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>ユーザーの作成と権限<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">データベースに直接root権限でアクセスするのは危険です。</div>
+<div class="line">公開されているサービスで使われているMySQLでroot権限を悪質なユーザーに</div>
+<div class="line">乗っ取られた場合、取り返しのつかない事態になります。</div>
+<div class="line">また、誤操作やバグによる事故を防ぐためにも権限は最小に設定しておく必要があります。</div>
+</div>
+<div class="section" id="id6">
+<h3>ユーザーを作成する<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">名前が「yamada」、パスワードが「pass」のユーザーを作成するには</div>
+</div>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="k">CREATE</span> <span class="n">USER</span> <span class="n">yamada</span> <span class="n">IDENTIFIED</span> <span class="k">BY</span> <span class="p">[</span><span class="n">PASSWORD</span><span class="p">]</span> <span class="s1">&#39;pass&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">このようにします。</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>権限を与える<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">作成したユーザーに適切な権限を与えましょう。</div>
+</div>
+<div class="highlight-mysql"><div class="highlight"><pre>mysql&gt; GRANT 権限 ON 範囲 TO ユーザー名;
+</pre></div>
+</div>
+<p>このようにして権限を与えることができます。
+例えば、「yamada」と言うユーザーに、「test_db」という名前のデータベースを操作できる全権限「ALL」を与える場合は。</p>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">GRANT</span> <span class="k">ALL</span> <span class="k">ON</span> <span class="n">test_db</span><span class="p">.</span><span class="o">*</span> <span class="k">TO</span> <span class="n">yamada</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>となります。</p>
+</div>
+<div class="section" id="id8">
+<h3>作成したユーザーでアクセスする<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">一度、exitを実行してMySQLを終了後、rootの時と同様に、ログインすることができます。</div>
+<div class="line">以後の作業は、作成した新しいユーザーで行うようにしましょう。</div>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>データ型<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">データベースでは、全ての列（カラム）の型を指定します。</div>
+<div class="line">型の選び方は</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li>格納する予定のデータの種類にあった型</li>
+<li>格納する予定の最大のデータが入る型で、なるべく小さいもの</li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line">この２つを意識して選びましょう。</div>
+<div class="line"><br /></div>
+<div class="line">MySQLで利用可能な型は</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li>数値型</li>
+<li>文字列型</li>
+<li>日時型</li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line">などです。</div>
+</div>
+<div class="section" id="id10">
+<h3>数値型<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="9%" />
+<col width="41%" />
+<col width="26%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">型</th>
+<th class="head">説明</th>
+<th class="head">範囲</th>
+<th class="head">オプション</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>INT(桁数)</td>
+<td>整数</td>
+<td>-2147483648 〜 2147483647</td>
+<td>桁数の指定も可</td>
+</tr>
+<tr class="row-odd"><td>DOUBLE(桁数,小数点以下の桁数)</td>
+<td>浮動小数点</td>
+<td>-1.7976931348623157E+308 〜 -2.2250738585072014E-308</td>
+<td>桁数と小数点以下の桁数の指定も可</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">INT(6)のように表記することで、6桁以下と指定することが可能です。</div>
+<div class="line">数値型はこれ以外にも多数存在しますが、ここでは省略します。</div>
+</div>
+</div>
+<div class="section" id="id11">
+<h3>文字列型<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="15%" />
+<col width="30%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">型</th>
+<th class="head">説明</th>
+<th class="head">範囲</th>
+<th class="head">オプション</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>CHAR(文字数)</td>
+<td>固定長文字列</td>
+<td>0 〜 255 文字</td>
+<td>文字数を指定して使います</td>
+</tr>
+<tr class="row-odd"><td>VARCHAR(文字数)</td>
+<td>可変長文字列</td>
+<td>0 〜 255 文字</td>
+<td>文字数の指定も可</td>
+</tr>
+<tr class="row-even"><td>TEXT(バイト数)</td>
+<td>文字列</td>
+<td>最大65,535バイトまで</td>
+<td>バイト数の指定も可</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">65,535バイトを超える場合にはMEDIUMTEXT、LONGTEXTなどを使用します。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h3>日付型<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="24%" />
+<col width="46%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">型</th>
+<th class="head">説明</th>
+<th class="head">形式</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>DATE</td>
+<td>年月日</td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr class="row-odd"><td>DATETIME</td>
+<td>可変長文字列</td>
+<td>YYYY-MM-DD HH:MM:SS</td>
+</tr>
+<tr class="row-even"><td>TIME</td>
+<td>時刻</td>
+<td>HH:MM:SS</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>テーブルの作成方法<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">テーブルを作るときにはMySQLで、use文をデータベースに予め接続してください。</div>
+<div class="line">テーブルはデータベースの中に作成されます。</div>
+</div>
+<div class="section" id="id14">
+<h3>テーブルを作成する<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-mysql"><div class="highlight"><pre>CREATE TABLE テーブル名(カラム名1 型名, カラム名2 型名, ...);
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">このようにしてテーブルを作成することが出来ます。</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>テーブル名「member」</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="16%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">id</th>
+<th class="head">age</th>
+<th class="head">name</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>25</td>
+<td>山本健介</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>36</td>
+<td>川島忠</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>82</td>
+<td>梅沢誠信</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>19</td>
+<td>今井幸太</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>45</td>
+<td>森田和一</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>65</td>
+<td>花澤三郎</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">上記のようなデータが入ることを想定したテーブルを作成する場合はこのようになります。</div>
+</div>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">create</span> <span class="k">table</span> <span class="nf">member</span><span class="p">(</span><span class="n">id</span> <span class="kt">int</span><span class="p">,</span> <span class="n">age</span> <span class="kt">int</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">name</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id15">
+<h3>テーブルの一覧を見る<a class="headerlink" href="#id15" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">SHOW</span> <span class="kp">TABLES</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">データベース内のテーブル一覧を見ることが出来ます。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id16">
+<h3>テーブルの削除<a class="headerlink" href="#id16" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">テーブルを削除する場合は、下記の通り入力します。</div>
+</div>
+<div class="highlight-mysql"><div class="highlight"><pre>DROP TABLE テーブル名;
+</pre></div>
+</div>
+</div>
+<div class="section" id="id17">
+<h3>テーブルの構造を見る<a class="headerlink" href="#id17" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-mysql"><div class="highlight"><pre>DESC テーブル名;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">このように実行することで、テーブルのカラム名や型を見ることが出来ます。</div>
+</div>
+</div>
+<div class="section" id="id18">
+<h3>主キー(プライマリーキー)<a class="headerlink" href="#id18" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">この「member」と言う名前のテーブルではidが主キーになります。</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="16%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">id</th>
+<th class="head">age</th>
+<th class="head">name</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>25</td>
+<td>山本健介</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>36</td>
+<td>川島忠</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>82</td>
+<td>梅沢誠信</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>19</td>
+<td>今井幸太</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>45</td>
+<td>森田和一</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>65</td>
+<td>花澤三郎</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">何も入力されてなくても連番が自動的に入力される機能がAUTO_INCREMENTです。</div>
+<div class="line">データベースで連番を割り振ることで衝突する可能性が低くなります。</div>
+<div class="line">また、PRIMARY KEY制約を使うことで、重複やNULLを格納できないようにすることが出来ます。</div>
+<div class="line">上記のテーブルにAUTO_INCREMENTの主キーを設定する場合はこうなります。</div>
+</div>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">create</span> <span class="k">table</span> <span class="nf">member</span><span class="p">(</span><span class="n">id</span> <span class="kt">int</span> <span class="kp">AUTO_INCREMENT</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span> <span class="n">age</span> <span class="kt">int</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">name</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id19">
+<h2>データの入れ方<a class="headerlink" href="#id19" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id20">
+<h3>データの追加<a class="headerlink" href="#id20" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-mysql"><div class="highlight"><pre>INSERT INTO テーブル名(カラム名1, カラム名2, ...)VALUES (カラム１に追加するデータ, カラム２に追加するデータ, ...);
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">このようにしてテーブルにデータを追加することが出来ます。</div>
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="16%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">id</th>
+<th class="head">age</th>
+<th class="head">name</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>25</td>
+<td>山本健介</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>36</td>
+<td>川島忠</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>82</td>
+<td>梅沢誠信</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>19</td>
+<td>今井幸太</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>45</td>
+<td>森田和一</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>65</td>
+<td>花澤三郎</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">上記の「member」と言う名前のテーブルに30歳の山田太郎を追加する場合は</div>
+</div>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="k">INSERT</span> <span class="k">INTO</span> <span class="nf">member</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span><span class="k">VALUES</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;山田太郎&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">となります。</div>
+<div class="line">実行後、idがAUTO_INCREMENTだった場合はmemberの中身は下記のようになります。</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="16%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">id</th>
+<th class="head">age</th>
+<th class="head">name</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>25</td>
+<td>山本健介</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>36</td>
+<td>川島忠</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>82</td>
+<td>梅沢誠信</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>19</td>
+<td>今井幸太</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>45</td>
+<td>森田和一</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>65</td>
+<td>花澤三郎</td>
+</tr>
+<tr class="row-even"><td>6</td>
+<td>30</td>
+<td>山田太郎</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id21">
+<h3>データの更新<a class="headerlink" href="#id21" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-mysql"><div class="highlight"><pre>UPDATE テーブル名 SET カラム名 = 更新するデータ WHERE 検索条件 ;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">データの更新は上記のように行います。</div>
+<div class="line">テーブル「member」の山田太郎の年齢を40歳に変更する場合は</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="k">UPDATE</span> <span class="n">member</span> <span class="kt">SET</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">40</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">のようになります。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id22">
+<h3>データの削除<a class="headerlink" href="#id22" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-mysql"><div class="highlight"><pre>DELETE FROM テーブル名;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">これを実行するとテーブル内全てのデータが削除されます。</div>
+<div class="line">テーブル「member」のid=6に該当するデータのみを削除したい場合は</div>
+</div>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">member</span> <span class="k">WHERE</span> <span class="n">id</span><span class="o">=</span><span class="mi">6</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">このようにwhereで条件を指定しましょう。</div>
+</div>
+</div>
+</div>
+<div class="section" id="id23">
+<h2>データの取得<a class="headerlink" href="#id23" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-mysql"><div class="highlight"><pre>SELECT カラム名, カラム名, ... FROM テーブル名;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">データを取得する場合はこのようにします。</div>
+<div class="line">全てのデータを取得したい場合は</div>
+</div>
+<div class="highlight-mysql"><div class="highlight"><pre>SELECT * FROM テーブル名;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">とします。</div>
+<div class="line"><br /></div>
+<div class="line">テーブル名「member」のid=6の名前と年齢を取得したい場合は</div>
+</div>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="k">SELECT</span> <span class="n">age</span><span class="p">,</span><span class="n">name</span> <span class="k">FROM</span> <span class="n">member</span> <span class="k">WHERE</span> <span class="n">id</span><span class="o">=</span><span class="mi">6</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">とします。</div>
+</div>
+</div>
+<div class="section" id="id24">
+<h2>複数のテーブルを接続する<a class="headerlink" href="#id24" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">リレーショナルデータベースでは複数のテーブルを接続して管理することがあります。</div>
+<div class="line"><br /></div>
+<div class="line">例えば、「誰がどの商品を注文したか」をデータベースに保存したいと思います。</div>
+<div class="line">「誰が」には、名前の他に、住所、電話番号、年齢、性別が含まれるとします。</div>
+<div class="line">「どの商品」には、商品名の他に、価格、メーカー名、型番が含まれているとします。</div>
+<div class="line"><br /></div>
+<div class="line">これを一つの表に表すとこうなります。</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="11%" />
+<col width="11%" />
+<col width="8%" />
+<col width="9%" />
+<col width="9%" />
+<col width="7%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">注文id</th>
+<th class="head">注文者氏名</th>
+<th class="head">注文者住所</th>
+<th class="head">注文者電話番号</th>
+<th class="head">注文者年齢</th>
+<th class="head">注文者性別</th>
+<th class="head">商品名</th>
+<th class="head">価格</th>
+<th class="head">メーカー</th>
+<th class="head">型番</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>山田太郎</td>
+<td>藤沢市</td>
+<td>0466000000</td>
+<td>30</td>
+<td>男</td>
+<td>冷蔵庫</td>
+<td>50000</td>
+<td>日立</td>
+<td>H-F1</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>川島忠</td>
+<td>中央区</td>
+<td>0300000000</td>
+<td>36</td>
+<td>男</td>
+<td>冷蔵庫</td>
+<td>50000</td>
+<td>日立</td>
+<td>H-F1</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>山田太郎</td>
+<td>藤沢市</td>
+<td>0466000000</td>
+<td>30</td>
+<td>男</td>
+<td>洗濯機</td>
+<td>40000</td>
+<td>松下</td>
+<td>P-S1</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>山田太郎</td>
+<td>藤沢市</td>
+<td>0466000000</td>
+<td>30</td>
+<td>男</td>
+<td>電池</td>
+<td>100</td>
+<td>三洋</td>
+<td>S-D1</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>山田太郎</td>
+<td>藤沢市</td>
+<td>0466000000</td>
+<td>30</td>
+<td>男</td>
+<td>自転車</td>
+<td>40000</td>
+<td>松下</td>
+<td>P-Z1</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>山田太郎</td>
+<td>藤沢市</td>
+<td>0466000000</td>
+<td>30</td>
+<td>男</td>
+<td>扇風機</td>
+<td>8000</td>
+<td>日立</td>
+<td>H-K1</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">もし、この状態で、山田太郎の住所が変更された場合、山田太郎が注文したもの全てを書き換える必要が出てしまいます。</div>
+<div class="line">また、商品の価格を変更する場合も同様です。</div>
+<div class="line"><br /></div>
+<div class="line">この状態で、さらに「商品をお気に入りに登録に登録する新機能」を追加しようとしたとします。</div>
+<div class="line">すると、上記の表とそっくりな表がもう一個必要になります。</div>
+<div class="line">そうなった状態で、商品名の価格が変わった場合はどうなるでしょうか？</div>
+<div class="line">２つのテーブルの該当するデータを全て書き直す必要があります。</div>
+<div class="line">これではあまりにも非合理的です。</div>
+</div>
+<div class="line-block">
+<div class="line">そこで、リレーショナルデータベースではこのような場合、複数のテーブルで管理するのが一般的です。</div>
+<div class="line"><br /></div>
+</div>
+<p>user</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="17%" />
+<col width="16%" />
+<col width="22%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">id</th>
+<th class="head">氏名</th>
+<th class="head">住所</th>
+<th class="head">電話番号</th>
+<th class="head">年齢</th>
+<th class="head">性別</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>山田太郎</td>
+<td>藤沢市</td>
+<td>0466000000</td>
+<td>30</td>
+<td>男</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>川島忠</td>
+<td>中央区</td>
+<td>0300000000</td>
+<td>36</td>
+<td>男</td>
+</tr>
+</tbody>
+</table>
+<p>product</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="21%" />
+<col width="23%" />
+<col width="23%" />
+<col width="17%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">id</th>
+<th class="head">商品名</th>
+<th class="head">価格</th>
+<th class="head">メーカー</th>
+<th class="head">型番</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>冷蔵庫</td>
+<td>50000</td>
+<td>日立</td>
+<td>H-F1</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>洗濯機</td>
+<td>40000</td>
+<td>松下</td>
+<td>P-S1</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>電池</td>
+<td>100</td>
+<td>三洋</td>
+<td>S-D1</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>自転車</td>
+<td>40000</td>
+<td>松下</td>
+<td>P-Z1</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>扇風機</td>
+<td>8000</td>
+<td>日立</td>
+<td>H-K1</td>
+</tr>
+</tbody>
+</table>
+<p>order</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="38%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">id</th>
+<th class="head">user_id</th>
+<th class="head">product_id</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>0</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">このようにすることで、山田太郎の住所や商品の価格が変更されても変更するのは一箇所で済むようになります。</div>
+<div class="line">orderのテーブルには、ユーザーidと商品idが含まれています。</div>
+<div class="line">このIDをたどることで、必要なデータにアクセスすることが出来ます。</div>
+<div class="line">これを 【外部キー】と言います。</div>
+</div>
+<div class="section" id="id25">
+<h3>外部キー制約<a class="headerlink" href="#id25" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">ノート</p>
+<p class="last">外部キー制約はInnoDB型テーブルでのみ利用できます。</p>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">外部キーをMySQLで管理する仕組みとして、外部キー制約があります。</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-mysql"><div class="highlight"><pre>CREATE TABLE テーブル名(カラム名 データ型,FOREIGN KEY (このテーブルで外部キー制約するカラム名)REFERENCES 参照するテーブル名(参照するテーブルのカラム名));
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">テーブルを作成するときに、このようにすることで、外部キー制約をすることができます。</div>
+<div class="line"><br /></div>
+<div class="line">上記のuser、product、orderの場合は、orderからuserとproductを参照します。</div>
+<div class="line">この場合は、注文のテーブルを作成する時に</div>
+</div>
+<div class="highlight-mysql"><div class="highlight"><pre><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">order</span><span class="p">(</span><span class="n">id</span> <span class="kt">INT</span><span class="p">,</span><span class="n">user_id</span> <span class="kt">INT</span><span class="p">,</span><span class="n">product_id</span> <span class="kt">INT</span><span class="p">,</span>
+    <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">user_id</span><span class="p">)</span><span class="k">REFERENCES</span> <span class="nf">user</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+    <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">product_id</span><span class="p">)</span><span class="k">REFERENCES</span> <span class="nf">product</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+    <span class="p">);</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">こうすることで、参照先のテーブルに存在しないIDを入れることを出来なくすることが出来ます。</div>
+<div class="line">また、参照先で他のテーブルから参照されているデータを削除するとエラーになります。</div>
+</div>
+</div>
+</div>
+<div class="section" id="phpmyadmin">
+<h2>phpmyadmin<a class="headerlink" href="#phpmyadmin" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">ここまでMySQLをコマンドで操作する方法を解説してきましたが、</div>
+<div class="line">ブラウザ上からグラフィカルインターフェースでMySQLを操作するツールもあります。</div>
+<div class="line">それが、phpmyadminです。</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="_images/phpmyadmin.png"><img alt="_images/phpmyadmin.png" src="_images/phpmyadmin.png" style="height: 300px;" /></a>
+<div class="line-block">
+<div class="line">XAMPPやMAMPにはデフォルトでインストールされているので、是非使ってみてください。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">MySQL入門</a><ul>
+<li><a class="reference internal" href="#id1">MySQLとは</a></li>
+<li><a class="reference internal" href="#id2">リレーショナルデータベースを利用するメリット</a></li>
+<li><a class="reference internal" href="#id3">リレーショナルデータベースの構造</a></li>
+<li><a class="reference internal" href="#sql">SQLを操作してみよう</a></li>
+<li><a class="reference internal" href="#id4">データベースの作成</a></li>
+<li><a class="reference internal" href="#id5">ユーザーの作成と権限</a><ul>
+<li><a class="reference internal" href="#id6">ユーザーを作成する</a></li>
+<li><a class="reference internal" href="#id7">権限を与える</a></li>
+<li><a class="reference internal" href="#id8">作成したユーザーでアクセスする</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">データ型</a><ul>
+<li><a class="reference internal" href="#id10">数値型</a></li>
+<li><a class="reference internal" href="#id11">文字列型</a></li>
+<li><a class="reference internal" href="#id12">日付型</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id13">テーブルの作成方法</a><ul>
+<li><a class="reference internal" href="#id14">テーブルを作成する</a></li>
+<li><a class="reference internal" href="#id15">テーブルの一覧を見る</a></li>
+<li><a class="reference internal" href="#id16">テーブルの削除</a></li>
+<li><a class="reference internal" href="#id17">テーブルの構造を見る</a></li>
+<li><a class="reference internal" href="#id18">主キー(プライマリーキー)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id19">データの入れ方</a><ul>
+<li><a class="reference internal" href="#id20">データの追加</a></li>
+<li><a class="reference internal" href="#id21">データの更新</a></li>
+<li><a class="reference internal" href="#id22">データの削除</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id23">データの取得</a></li>
+<li><a class="reference internal" href="#id24">複数のテーブルを接続する</a><ul>
+<li><a class="reference internal" href="#id25">外部キー制約</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#phpmyadmin">phpmyadmin</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="12_regular_expression.html"
+                        title="前の章へ">正規表現</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="14_pdo.html"
+                        title="次の章へ">PDO入門</a></p>
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/13_MySQL.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+</div>
+<div id="relatedFooter">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="14_pdo.html" title="PDO入門"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="12_regular_expression.html" title="正規表現"
+             >前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div id="sphinx">このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1 で生成しました。</div>
+      <div id="copyright">
+    <p><a href="http://uhero.co.jp/">uhero corp</a>. &#169; all rights reserved.</p>
+    <figure><img src="http://uhero.co.jp/common/images/img_footer.gif" width="80" height="14" alt="uhero corp." /></figure>
+  </div><!--/#copyright-->
+    </div>
+
+  </body>
+</html>

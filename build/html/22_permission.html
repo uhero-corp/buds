@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>UNIXのユーザーとパーミッション入門 &mdash; Building Uteam Development Skill 0.0.9a ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.9a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Building Uteam Development Skill 0.0.9a ドキュメント" href="index.html" /> 
+  </head>
+  <body>
+<div id="container">
+<div id="header">
+    <a href="http://uhero.co.jp/">
+        <img id="logo" src="http://uhero.co.jp/common/images/logo.png" width="286" height="57" alt="株式会社ユヒーロ" />
+    </a>
+</div>
+<div id="relatedHead">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+</div>
+<div class='underRelatedHead'></div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+<div class="section" id="unix">
+<h1>UNIXのユーザーとパーミッション入門<a class="headerlink" href="#unix" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>UNIXのユーザーとは<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">UNIXでは複数のユーザーが同時に利用できます。</div>
+<div class="line">それぞれのユーザーに任意の英数字を指定できるユーザー名がありますが、コンピューターが識別するときには</div>
+<div class="line">ユーザー名とは別にそれぞれのユーザーに割り当てられたUIDという番号を利用します。</div>
+<div class="line">またユーザーは必ず1つのグループに所属しています。</div>
+<div class="line">グループは複数のユーザーをまとめることが可能です。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="root">
+<h2>スーパーユーザー(root)<a class="headerlink" href="#root" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">UNIXではrootという名前のユーザーが最高権限を持っており、スーパーユーザーと言われています。</div>
+<div class="line">システムの変更をする場合などはroot権限が必要です。rootとしてログインするか、sudoコマンドを使う必要があります。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>パーミッション<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">パーミッションはファイル、ディレクトリの「読む(Read)」、「書く(Write)」、「実行(eXecute)」が許可されているかどうかのことです。</div>
+<div class="line">全てのファイルとディレクトリにパーミッションが存在します。</div>
+<div class="line">そのため、ディレクトリとその中のファイルのパーミッションが同じとは限りません。</div>
+<div class="line">パーミッションは「ファイルを所有するユーザー(user)」、「ファイルを所有するユーザーが所属するグループ(group)」、「その他(others)」のそれぞれ全てに対して、許可を定める必要があります。</div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id3">
+<h3>所有者<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">通常はファイルを作成した人が所有者です。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="read">
+<h3>読む権限(Read)<a class="headerlink" href="#read" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">ファイルの場合は中身を見ることができることです。</div>
+<div class="line">ディレクトリの場合はファイルの一覧を見ることができることです。</div>
+<div class="line">ファイル自体を読む権限がなくても、ディレクトリを読む権限がある場合は、</div>
+<div class="line">ファイルの名前をみることまではできます。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="write">
+<h3>書く権限(Write)<a class="headerlink" href="#write" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">ファイルの場合は修正、上書きをしたり、削除したりすることができることです。</div>
+<div class="line">ディレクトリの場合は、そのディレクトリの中でファイルを新規作成することができることです。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="execute">
+<h3>実行する権限(eXecute)<a class="headerlink" href="#execute" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">ファイルを実行することができます。実行するには読む権限も必要です。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>パーミッションの表記と変更<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>パーミッションには様々な表現方法があります。</p>
+<div class="section" id="id5">
+<h3>記号表記(シンボリックモード)<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">パーミッションを10文字の文字列で表記する手法です。</div>
+<div class="line">先頭の一文字はファイルの種別を表します。</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li>「-」 は一般のファイル</li>
+<li>「d」 はディレクトリ</li>
+<li>「b」 はブロックデバイスのスペシャルファイル</li>
+<li>「c」 はキャラクターデバイスのスペシャルファイル</li>
+<li>「l」 はシンボリックリンク</li>
+<li>「p」 は名前付きパイプ</li>
+<li>「s」 はUNIXドメインのソケット</li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line">次に2桁目〜4桁目で「ファイルを所有するユーザー(user)」、5桁目〜7桁目で「ファイルを所有するユーザーが所属するグループ(group)」、8桁目〜10桁目で「その他(others)」に対してrwxの順でパーミッションを表記します。</div>
+<div class="line">表記</div>
+<div class="line"><br /></div>
+<div class="line">「r」 ならばRead可で、「-」 ならばRead不可。</div>
+<div class="line">「w」 ならばWrite可で、「-」 ならばWrite不可。</div>
+<div class="line">「x」 ならば実行可で、「-」 ならば実行不可。</div>
+<div class="line"><br /></div>
+<div class="line">記号表記の実例</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li>「-rwxr-xr-x」 通常ファイルで、所有者は全操作可、それ以外のユーザーはリードと実行のみ可能。</li>
+<li>「dr-x&#8212;&#8212;」 ディレクトリで、所有者がリードとそこへの移動が可能、それ以外のユーザーはなにもできない。</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h3>八進表記<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">3桁の8進数で表記する手法です。</div>
+<div class="line">1桁目が「ファイルを所有するユーザー(user)」、2桁目で「ファイルを所有するユーザーが所属するグループ(group)」、3桁目で「その他(others)」のパーミッションを表記します。</div>
+<div class="line">Read可なら4、Write可なら2、実行可なら1を足します。</div>
+<div class="line">全てのユーザーに対してRead、Write、実行を許可する場合は4+2+1=7となるので、777となります。</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>パーミッションの変更方法<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">8進表記で指定する場合はこのようになります。</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>chmod <span class="m">777</span> [ファイルまたはディレクトリ]
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">記号表記ではこのようなこともできます。</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>chmod g+x [ファイルまたはディレクトリ]
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">このようにすることで「ファイルを所有するユーザーが所属するグループ(group)」に対して新たに実行権限を追加することができます。</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>chmod o-w [ファイルまたはディレクトリ]
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">「その他(others)」のユーザーをWrite不可にするにはこのようにします。</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">UNIXのユーザーとパーミッション入門</a><ul>
+<li><a class="reference internal" href="#id1">UNIXのユーザーとは</a></li>
+<li><a class="reference internal" href="#root">スーパーユーザー(root)</a></li>
+<li><a class="reference internal" href="#id2">パーミッション</a><ul>
+<li><a class="reference internal" href="#id3">所有者</a></li>
+<li><a class="reference internal" href="#read">読む権限(Read)</a></li>
+<li><a class="reference internal" href="#write">書く権限(Write)</a></li>
+<li><a class="reference internal" href="#execute">実行する権限(eXecute)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">パーミッションの表記と変更</a><ul>
+<li><a class="reference internal" href="#id5">記号表記(シンボリックモード)</a></li>
+<li><a class="reference internal" href="#id6">八進表記</a></li>
+<li><a class="reference internal" href="#id7">パーミッションの変更方法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/22_permission.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+</div>
+<div id="relatedFooter">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div id="sphinx">このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1 で生成しました。</div>
+      <div id="copyright">
+    <p><a href="http://uhero.co.jp/">uhero corp</a>. &#169; all rights reserved.</p>
+    <figure><img src="http://uhero.co.jp/common/images/img_footer.gif" width="80" height="14" alt="uhero corp." /></figure>
+  </div><!--/#copyright-->
+    </div>
+
+  </body>
+</html>

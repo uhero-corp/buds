@@ -1,0 +1,241 @@
+=============
+課題の解答
+=============
+
+CSS課題
+==========
+
+セレクタとプロパティと値
+-------------------------
+
+ .. code-block:: css
+ 
+    h1 {
+        color: blue;
+    }
+
+idとclass
+----------------
+
+    .. code-block:: html
+
+      <p class="blue">青いですー！</p>
+      <p>ここは関係なーい！</p>
+      <p class="red">赤いですなー</p>
+      <p class="red">赤いですね</p>
+      <p class="blue">青いです！</p>
+      <p>無関係だよん。</p>
+
+ .. code-block:: css
+    
+    .red {
+        color: red;
+    }
+	
+    .blue {
+        color: blue;
+    }
+
+marginとpadding
+--------------------
+
+  .. code-block:: css
+
+    div {
+        margin: 60px;
+        padding: 30px;
+        width:200px;
+        height: 150px;
+        background-color: yellow;
+    }
+	
+floatとclear
+------------------
+
+  .. code-block:: html
+  
+   <div id="redBox"></div>
+   <p>私を右側にまわりこませて。</p>
+   <div style="claer:left" />
+   <p>私はまわりこませないで。</p>
+  
+  .. code-block:: css
+  
+     #redBox {
+       width: 100px;
+       height: 100px;
+       background-color: red;
+       float: left;
+     }
+	
+
+JavaScript課題
+=================
+
+関数
+--------
+
+.. code-block:: js
+
+   document.write("<h1>HTMLタグをJavaScriptを使って表示する例です！</h1>");
+   
+
+演算子
+---------
+
+.. code-block:: js
+   
+   var a = 5;
+   var b = 3;
+
+   document.write(a + b);  //8
+   document.write("<br>"); //改行
+   document.write(a - b);  //2
+   document.write("<br>");
+   document.write(a * b);  //15
+   document.write("<br>");
+   document.write(a / b); //1.6666666666666667
+   document.write("<br>");
+
+   var a = "7";
+   var b = "10"
+
+   document.write(a + b); //710
+   
+switch文
+-----------
+
+.. code-block:: js
+
+  var number = 120;
+  
+  if (number < 200 && number >= 100) {
+      switch (number % 3) {
+        case 0:
+          document.write("零");
+          break;
+        case 1:
+          document.write("一");
+          break;
+        case 2:
+          document.write("二");
+          break;  
+      }
+  } else {
+      document.write("100以上200未満の数字ではありません");
+  }
+  
+while文
+------------
+
+| 課題①
+
+.. code-block:: js
+
+  var x = -10;
+
+  while (x <= 10) {
+      document.write("x = " + x + "のとき、y = " + x*x*x);
+      document.write("<br>");
+      x++;
+  }
+
+| 課題②
+
+.. code-block:: js
+
+  document.write("<table>");
+
+  for (var i = 1; i <= 9; i++) {
+      document.write("<tr>");
+ 
+      for (var j = 1; j <= 9; j++) {
+          document.write("<td>" + i * j + "</td>");
+      }
+  
+      document.write("</tr>");
+  }
+
+  document.write("</table>");
+  
+配列
+--------
+
+.. code-block:: js
+
+  var people = new Array(3);
+  people[0] = new Array("田中","鈴木","佐藤");
+  people[1] = new Array("橋本","山本","森川","中井");
+  people[2] = new Array("丸山","松本");
+
+  document.write("<table>");
+  for (i = 0; i < people.length; i++) {
+    document.write("<tr>");
+    for (j = 0; j < people[i].length; j++) {
+        document.write("<td>" + people[i][j] + "</td>");
+    }
+    document.write("</tr>");
+  }  
+  document.write("</table>");
+  
+値の取得
+----------
+
+.. code-block:: html
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta charset=utf-8 />
+  <title>JS Bin</title>
+  </head>
+  <body>
+    <p>名: </p><input type="text" id="firstName" /><br>
+    <p>姓: </p><input type="text" id="lastName" /><br>
+    <p>年齢: </p><input type="text" id="age" /><br>
+    <p>性別: </p><input type="text" id="gender" /><br>
+    <p>出身地: </p><input type="text" id="born" /><br>
+    <input type="submit" onclick="introduce()" />
+  </body>
+  </html>
+
+.. code-block:: js
+
+    function introduce()
+    {
+        var firstName = document.getElementById("firstName");
+        var lastName = document.getElementById("lastName");
+        var age = document.getElementById("age");
+        var gender = document.getElementById("gender");
+        var born = document.getElementById("born");
+
+        alert("私の名前は" + lastName.value + firstName.value + "です。" + age.value + "歳の" + gender.value + "で、" + born.value + "出身です。");
+    }
+
+オブジェクトの利用
+--------------------
+
+.. code-block:: js
+
+  var date = new Date();
+  
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  var today = date.getDate();
+  var hour = date.getHours();
+  var minute = date.getMinutes();
+  var second = date.getSeconds();
+  
+  var day_index = date.getDay();
+  var days = new Array("月","火","水","木","金","土","日");
+
+  document.write(year + "年" + month + "月" + today + "日" + hour + "時" + minute + "分" + second + "秒(" + days[day_index] + "曜日)");
+
+オンラインショップ課題
+========================
+
+| 解答例例をダウンロードできます。
+| 
+ :download:`DOM_assignment.zip </_static/DOM_assignment.zip>`
+
+

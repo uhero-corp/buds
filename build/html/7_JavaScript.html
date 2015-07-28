@@ -1,0 +1,1296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>JavaScript入門 &mdash; Building Uteam Development Skill 0.0.9a ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.9a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Building Uteam Development Skill 0.0.9a ドキュメント" href="index.html" />
+    <link rel="next" title="jQuery入門" href="8_jQuery.html" />
+    <link rel="prev" title="プログラミングの基礎知識" href="6_introduction_programming.html" /> 
+  </head>
+  <body>
+<div id="container">
+<div id="header">
+    <a href="http://uhero.co.jp/">
+        <img id="logo" src="http://uhero.co.jp/common/images/logo.png" width="286" height="57" alt="株式会社ユヒーロ" />
+    </a>
+</div>
+<div id="relatedHead">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="8_jQuery.html" title="jQuery入門"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="6_introduction_programming.html" title="プログラミングの基礎知識"
+             accesskey="P">前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+</div>
+<div class='underRelatedHead'></div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+<div class="section" id="javascript">
+<h1>JavaScript入門<a class="headerlink" href="#javascript" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="hello-world">
+<h2>Hello, World!<a class="headerlink" href="#hello-world" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">それではJavaScriptについて勉強していきたいと思います。</div>
+<div class="line">JavaScriptはHTML内に記述することができます。</div>
+<div class="line">headタグ内、もしくはbodyタグ内に下記のような記述をしたHTMLファイルを作成してみてください。</div>
+</div>
+<blockquote>
+<div><div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+<span class="c">&lt;!--</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">);</span>
+<span class="c1">// --&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">作成したHTMLファイルをブラウザで確認してみましょう。</div>
+<div class="line">Hello, World! と表示されたら成功です。</div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="javascript-js">
+<h3>外部JavaScriptファイル(.js)<a class="headerlink" href="#javascript-js" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">JavaScriptもCSSと同様に、基本的にHTMLファイルから分離させます。</div>
+<div class="line">以下の１行を書いたファイルをsample.jsという名前で作成してください。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;It Works!!&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">そして、このjsファイルを読み込むためのHTMLファイルを作成します。</div>
+<div class="line">sample.jsと同じ階層に以下のようなファイルを作成してください。</div>
+</div>
+<blockquote>
+<div><div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;sample.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">うまく外部ファイルを読み込めましたでしょうか？</div>
+<div class="line">It Works!!と表示されたら成功です。</div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>コメント<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>コードを記述する中で、「何の処理なのかメモしたい」とか「他の人が見たときに分かり易いようにコメントを書こう」ということがよくあります。
+JavaScript中にコメントを記述するには、コメントにしたい文章の頭に「//」を書きます。</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="c1">//ここは表示されません。</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">「//」以降はコメントとして認識され、javascriptの実行時に無視されます。行の途中からコメントを記述することもできます。</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">);</span> <span class="c1">//ハローワールド</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">上記の場合、「alert(&#8220;Hello World&#8221;);」は実行されますが、「//ハローワールド」はコメントとして扱われ無視されます。</div>
+<div class="line">また、複数行に渡るコメントも設定可能です。</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="cm">/*</span>
+<span class="cm">ここの領域は</span>
+<span class="cm">コメントとして</span>
+<span class="cm">扱われ</span>
+<span class="cm">無視されます</span>
+<span class="cm">*/</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">/*と*/で囲まれた部分はコメントとなります。</div>
+<div class="line">Javascriptに限った話ではなく、後々のためにも、そして他の人のためにもプログラムには適時コメントを書き残しておきましょう。</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>行末<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">プログラムを書く際、「ココからココまでが1つの処理だよ！」ということを認識させてあげる必要があります。日本語の文章で言うところの句点です。</div>
+<div class="line">言語によっては改行が1つの処理を表すこともありますが、JavaScriptでは『;(セミコロン)』を使います。</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;Hello World!!&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">は、「Hello World!! と表示します。」という意味のプログラムで、document.write(&#8220;Hello World!!&#8221;)で1つの処理が終わる事を意味していました。</div>
+<div class="line">複数行のプログラムを記述する際、セミコロンが抜けてしまったら</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;Hello World!!&quot;</span><span class="p">)</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;Hello Japan!!&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">document.write(&#8220;Hello World!!&#8221;)document.write(&#8220;Hello Japan!!&#8221;); で一つの処理と認識されてしまい、文法エラーとなってしまいます。</div>
+<div class="line">日本語で考えてみると「Hello World!! と表示しますHello Japan!! と表示します。」です。</div>
+<div class="line">慣れないうちはセミコロンを忘れてしまいがちです。エラーが出たら先ずセミコロンがもれていないか確認してみるとよいでしょう。</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>関数<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">数学で関数を学習されたことがあると思います。例えば「f(x)」。これはxにある値を入れたら、値が変換されて返ってくるというものです。</div>
+<div class="line">プログラムにおける関数も基本的には数学の関数と同じ理解で問題ありません。</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">先ほどから登場しているdocument.write(x)、これも関数です。xに入れた値をHTML本文中に表示します。</div>
+<div class="line"><br /></div>
+<div class="line">他にも</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>     <span class="c1">// xに入れた値をアラートウィンドウで表示する</span>
+<span class="nx">print</span><span class="p">();</span>      <span class="c1">// 印刷を実行する</span>
+<span class="nx">scroll</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span> <span class="c1">// 座標x,yの位置まで画面をスクロールする</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">など、いろいろな関数がありますので調べて実行してみましょう。</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id4">
+<h3>課題1<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">document.write()、及びalert()を使って、自由に文章を表示してみましょう。</div>
+<div class="line">文章を表示することが出来たら、文章内にHTMLタグを打ち込んでみましょう。</div>
+</div>
+<a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script></div>
+</div>
+<div class="section" id="id5">
+<h2>データ型<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><strong>文字列型</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">JavaScriptに『文字列(String)』を記述する場合、文字列全体を『&#8221;(ダブルクオート)』あるいは「&#8217;(シングルクオート)」で括ります。</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;Hello World!!&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">はwrite関数に「Hello World」という文字列を渡したいから「&#8221;」で括られていたことがわかりますね。</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;Hello World!!&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">でも同じ挙動になります。</div>
+<div class="line"><br /></div>
+<div class="line">ひとつ注意しなければならないのが、文字列の中でシングルクオートやダブルクオートを使いたい場合です。</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;a href=&quot;</span><span class="nx">index</span><span class="p">.</span><span class="nx">html</span><span class="s2">&quot;&gt;リンクだよ&lt;/a&gt;&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">と書きたくなりますが、&#8221;&#8220;の間が文字列と認識されるので、「&lt;a href=」と「&gt;リンクだよ&lt;/a&gt;」という2つの文字列、そして間のindex.htmlというナニかである、と解釈されてしまいます。</div>
+<div class="line">後述のエスケープシーケンスを使うか、或いは</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;a href=&#39;index.html&#39;&gt;リンクだよ&lt;/a&gt;&quot;</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;a href=&quot;index.html&quot;&gt;リンクだよ&lt;/a&gt;&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">のように、ダブル(シングル)クオート中でシングル(ダブル)クオートを使うことで回避できます。</div>
+</div>
+</div></blockquote>
+<p><strong>数値型</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">JavaScriptに『数値』を記述する場合は括る必要性はありません。</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>論理型</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">論理型はtrue,もしくはfalseであらわされる2項の型です。これも括る必要性はありません。</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">flag_a</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">flag_b</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>ヌル型</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">nullは有効な値が存在しないということを表すための値です。これも括る必要性はありません。</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h2>デバッガの使い方<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">デバッガは、何行目にどういうエラーが出ているかを教えてくれるツールです。</div>
+<div class="line">これを使いこなせるととても便利なので、使う習慣を身につけましょう。</div>
+</div>
+<img alt="_images/error.png" src="_images/error.png" />
+<dl class="docutils">
+<dt><strong>Google Chrome、IEの場合</strong></dt>
+<dd>F12キーでデバッガを立ち上げることができます。</dd>
+<dt><strong>FireFoxの場合</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">FireFoxにはFirebugというアドオンがあります。下記のURLから入手できます。</div>
+<div class="line"><a class="reference external" href="https://addons.mozilla.org/ja/firefox/addon/1843/">https://addons.mozilla.org/ja/firefox/addon/1843/</a> これを使うと、構文のエラー等、エラーの内容を表示してくれます。</div>
+</div>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line">また、デバッガにはプログラムを特定に位置で中断するブレークポイント機能や、一段階ごとに実行するステップ実行などがついています。</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>変数<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">先ほどのプログラムでは、コンピュータに指示をする関数の勉強をしました。関数と並んでプログラムで重要なのが、変数です。</div>
+<div class="line">変数はコンピュータである値を保管しておくための器です。数学でも&#8217;x&#8217;という変数がよく定義されます。xにはいろいろな数字が入ります。それを拡張して、データなら何でも入れられるようになっているのが変数です。</div>
+<div class="line">試しに、1つ変数を作ってみましょう。</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">varというのは以下の文字が変数であることを示すものです。JavaScriptの場合、varをつけて変数であるという宣言をする必要はありませんが、変数を定義した場所が分かるので、varをつけておくことをお勧めします。</div>
+<div class="line">=の意味ですが、この場合は数学のように等号を示すものではなく、代入を示すものです。つまり、textという変数の中に、&#8221;Hello, World!&#8221;という文字列を入れるということを意味しています。 このテキストの中身を表示するには、</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">で可能です。先ほどと違うのは、ダブルクオーテーションがありません。これは、textという変数の中身を示しているからです。これを動かしてみると、</div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre>Hello, World!
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">と表示されるはずです。このtextに入れる文章の値をさまざまに入れ替えてみてください。</div>
+<div class="line">変数の名前も自由です。さまざまな名前の変数を作ってみてください。</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>演算子<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>これらの数値は、演算子を使うことで計算することが出来ます。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">演算子</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>+</td>
+<td>加算</td>
+</tr>
+<tr class="row-odd"><td>-</td>
+<td>減算</td>
+</tr>
+<tr class="row-even"><td>=</td>
+<td>乗算</td>
+</tr>
+<tr class="row-odd"><td>/</td>
+<td>除算</td>
+</tr>
+<tr class="row-even"><td>%</td>
+<td>剰余(割ったあまりを返す)</td>
+</tr>
+</tbody>
+</table>
+<p>これとは別に、定型的な演算子もあります。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">演算子</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>++</td>
+<td>インクリメント(整数型の値に1を足す)</td>
+</tr>
+<tr class="row-odd"><td>- -</td>
+<td>デクリメント(整数型の値から1を引く)</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-none"><div class="highlight"><pre>注：表記上見難いですが、デクリメントはマイナス2つ連続して表記します。
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">これらの演算子は、</div>
+</div>
+<div class="highlight-none"><div class="highlight"><pre>++a;
+a++;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">のように使います。この場合、aが整数であれば、aに1が加算されます。</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="o">++</span><span class="nx">a</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">で試してみてください。これは、一見必要性がわかりにくいですが、後の単元で行う繰り返し処理などで非常に活躍します。</div>
+<div class="line">ちなみに、++aとa++の違いですが、先に++を書いた場合、aに1を足してから処理が実行されます。あとに++を書いた場合、処理を実行してからaに数が足されます。</div>
+</div>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">a</span><span class="o">++</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">a</span><span class="o">++</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="o">++</span><span class="nx">b</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="o">++</span><span class="nx">b</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">を実行して、その挙動の違いを確かめてみてください。</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id9">
+<h3>課題2<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><ul>
+<li><p class="first">2つの変数を作成し、一通り四則演算を行いましょう。</p>
+</li>
+<li><p class="first">次に、変数に代入する値にダブルクオーテーションをつけ、文字列型に変更し、その結果を数列型と比較してみましょう。</p>
+<blockquote>
+<div><p>例えば、</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">100</span><span class="o">+</span><span class="mi">100</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="s2">&quot;100&quot;</span><span class="o">+</span><span class="s2">&quot;100&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>と入力し、それぞれどういう違いがでるか確かめてみてください。</p>
+</div></blockquote>
+<a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script></div>
+</div>
+<div class="section" id="id10">
+<h2>条件分岐<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><strong>if文</strong></p>
+<p>if文は以下のように記述します。</p>
+<div class="highlight-none"><div class="highlight"><pre>if (条件) {
+　処理A;
+} else {
+　処理B;
+}
+</pre></div>
+</div>
+<p>条件に合致した場合は処理Aを、合致しなかった場合は処理Bを実行します。else節以降を外して、</p>
+<div class="highlight-none"><div class="highlight"><pre>if (条件) {
+　処理A;
+}
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">とすれば、条件に合致したときにのみ実行する処理を記述可能です。</div>
+<div class="line">「<strong>もし条件ならば、処理Aを実行する。条件でなければ、処理Bを実行する</strong>」ということです。</div>
+<div class="line">例として、与えられた数字が偶数であるかを判定するプログラムを作成します。</div>
+</div>
+<blockquote>
+<div><div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>          <span class="c1">// 変数aを定義し、10を代入</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nx">a</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>        <span class="c1">// もし変数iを2で割った余りが0であれば、以下の処理を実行</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;偶数&quot;</span><span class="p">);</span>     <span class="c1">// アラートで「偶数」と表示</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>               <span class="c1">// 上記条件に当てはまらなければ、以下の処理を実行</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;奇数&quot;</span><span class="p">);</span>     <span class="c1">// アラートで「奇数」と表示</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>この条件式の中に含まれている==ですが、これは等しいことを表す演算子です。左右の値が同じであれば、条件に合致したと見なされます。
+この場合、条件式が真であるといいます。</p>
+<p><strong>比較演算子</strong></p>
+<p>これらの演算子は比較演算子と呼ばれ、以下のようなものがあります。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="43%" />
+<col width="57%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">符号</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>==</td>
+<td>等しい</td>
+</tr>
+<tr class="row-odd"><td>!=</td>
+<td>異なる</td>
+</tr>
+<tr class="row-even"><td>&lt;</td>
+<td>小なり</td>
+</tr>
+<tr class="row-odd"><td>&gt;</td>
+<td>大なり</td>
+</tr>
+<tr class="row-even"><td>&lt;=</td>
+<td>以下</td>
+</tr>
+<tr class="row-odd"><td>&gt;=</td>
+<td>以上</td>
+</tr>
+</tbody>
+</table>
+<p><strong>論理演算子</strong></p>
+<p>さらに複雑な条件式を組むために、論理演算子が使用できます。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&amp;&amp;</td>
+<td>AND</td>
+</tr>
+<tr class="row-even"><td>||</td>
+<td>OR</td>
+</tr>
+</tbody>
+</table>
+<p>例えば、aが偶数かつ100より大きい、という条件を作る場合は、</p>
+<div class="highlight-none"><div class="highlight"><pre>a % 2 == 0 &amp;&amp; a &gt; 100
+</pre></div>
+</div>
+<p>と書くことが出来ます。</p>
+<p><strong>elseif文</strong></p>
+<p>if文をさらに高度にさせた文に、elseif文があります。if文のelseの場合、さらに条件分岐をさせるものです。</p>
+<div class="highlight-none"><div class="highlight"><pre>if (条件式A) {
+  処理A;
+} else if (条件式B) {
+  処理B;
+} else {
+  処理C;
+}
+</pre></div>
+</div>
+<p>条件式Aが真の場合は処理A、条件式Aが偽の場合で条件式Bが真の場合はB、どちらも偽の場合はCが実行されます。else ifをたくさんつなげて、より高度な処理を行なうことも可能です。</p>
+</div>
+<div class="section" id="id11">
+<h2>インデント・字下げ<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">プログラムを記述するときに注意しなければいけない事のひとつにインデント(字下げ)があります。</div>
+<div class="line">HTMLやJavaScriptの構造を分かりやすくするために空白を入れたり、適切な所で改行することが求められます。</div>
+<div class="line">例えば以下の2つのプログラムは全く同じ働きをします。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="k">if</span><span class="p">(</span><span class="nx">a</span><span class="o">==</span> <span class="nx">b</span><span class="p">){</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;aとbは等しい&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+                <span class="k">else</span>
+   <span class="p">{</span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;aとbは等しくない&quot;</span><span class="p">);</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="highlight-js"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="nx">a</span> <span class="o">==</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;aとbは等しい&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;aとbは等しくない&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">上のようにインデントを無視してしまうと、文法エラーを起こしやすくなったり、他の人が読みにくいコードになってしまいます。</div>
+<div class="line">単語や括弧の間には1つスペースを空ける。4つスペースを空ける等といったルールがあります。</div>
+<div class="line">プログラミング言語によってはこのインデント自体がプログラム構造の解釈を決定づけるものもあります。</div>
+<div class="line">最初のうちは戸惑ってしまいがちですが、大事なことなので学習する時からしっかりと注意してみてください。</div>
+</div>
+</div>
+<div class="section" id="switch">
+<h2>switch文<a class="headerlink" href="#switch" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">条件分岐の項目でif文について理解したと思います。</div>
+<div class="line">switch文は与えられた変数の値によって処理を分岐する方法です。</div>
+<div class="line">caseの後に想定する変数の値を記述し、case毎に処理を記述します。</div>
+<div class="line">実行時に変数に渡された値と、caseの後に記述した値が一致すると処理が実行されます。</div>
+<div class="line">それぞれの処理の終了部分には「break;」を記述します。「break;」が記述されていないと以下に続く処理が続いて実行されてしまいますので気をつけましょう。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">science</span> <span class="o">=</span> <span class="s1">&#39;chemistry&#39;</span><span class="p">;</span>                            <span class="c1">// 変数scienceを定義し、chemistryという文字列を代入</span>
+
+<span class="k">switch</span> <span class="p">(</span><span class="nx">science</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="s1">&#39;physics&#39;</span><span class="o">:</span>                                   <span class="c1">// 変数scienceの値がphysicsであれば以下の処理を実行</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;私は物理が好きです。&quot;</span><span class="p">);</span>          <span class="c1">// 「私は物理が好きです。」と表示する</span>
+        <span class="k">break</span><span class="p">;</span>                                       <span class="c1">// switch文を終了</span>
+    <span class="k">case</span> <span class="s1">&#39;biology&#39;</span><span class="o">:</span>                                  <span class="c1">// 変数schienceの値がbiologyであれば以下の処理を実行</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;私は生物が好きです。&quot;</span><span class="p">);</span>         <span class="c1">// 「私は生物が好きです。」と表示する</span>
+        <span class="k">break</span><span class="p">;</span>                                       <span class="c1">// switch文を終了</span>
+    <span class="k">case</span> <span class="s1">&#39;chemistry&#39;</span><span class="o">:</span>                                <span class="c1">// 変数schienceの値がchemistryであれば以下の処理を実行</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;私は化学が好きです。&quot;</span><span class="p">);</span>         <span class="c1">// 「私は化学が好きです。」と表示する</span>
+        <span class="k">break</span><span class="p">;</span>                                      <span class="c1">// switch文を終了</span>
+    <span class="k">default</span><span class="o">:</span>                                        <span class="c1">// 変数scienceの値がphysicsでもbiologyでもchemistryでもない場合、以下の処理を実行</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;私は理科が好きです。&quot;</span><span class="p">);</span>        <span class="c1">// 「私は理科が好きです。」と表示する</span>
+        <span class="k">break</span><span class="p">;</span>                                      <span class="c1">// switch文を終了</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">上記の例では変数scienceにchemistryが代入されているので「case &#8216;chemistry&#8217;:」の処理が実行され、「私は化学が好きです。」と表示されます。</div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id12">
+<h3>課題3<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">数値を入れ、100以上200未満の場合は、その数を3で割った余りを「漢数字」で表示するプログラムを作りましょう。</div>
+<div class="line">if文とswitch文の両方を使ってください。</div>
+</div>
+<a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script></div>
+</div>
+<div class="section" id="id13">
+<h2>繰り返し文<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">プログラムを書いていると、ループ(繰り返し)をさせて複数の項目の表示を行いたいことがあります。</div>
+<div class="line">例えば1～99までの連番を表示させたいとき、いちいち手入力で入力するよりもループさせた方が確実に早いです。</div>
+<div class="line">繰り返し文の表記にはwhile文とfor文の2種類があります。</div>
+</div>
+<div class="section" id="while">
+<h3>while文<a class="headerlink" href="#while" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">while文は条件式が真の間だけ、処理を繰り返し実行するものです。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre>while (条件式) {
+    処理;
+}
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">以下は&#8221;ありがとう&#8221;を100回表示するプログラムです。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>                         <span class="c1">// 変数iを定義して0を代入</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>                   <span class="c1">// 変数iが100未満であれば処理を実行、100より大きければ処理を実行せずループを終了</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;ありがとう&quot;</span><span class="p">);</span>    <span class="c1">// 「ありがとう」と表示する</span>
+    <span class="nx">i</span><span class="o">++</span><span class="p">;</span>                           <span class="c1">// 変数iに1を加算する</span>
+<span class="p">}</span>                                  <span class="c1">// 条件式へ戻る</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">処理を実行する度に変数iを1ずつ増やして、変数iが100未満の間だけ処理を実行するようにしています。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="k">while</span> <span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;ありがとう&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">上記のように必ず真になる条件式を設定してしまうと、永遠に&#8221;ありがとう&#8221;を表示し続けるプログラムが作成されてしまいます。</div>
+<div class="line">こういった場合は、どこかでif文を組み込み、「break」という命令を入力することで処理を中断させることができます。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>                   <span class="c1">// 変数iを定義して0を代入</span>
+<span class="k">while</span> <span class="p">(</span><span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>               <span class="c1">// 1 == 1 は真となるので必ず処理を実行</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;ありがとう&quot;</span><span class="p">);</span>    <span class="c1">// 「ありがとう」と表示する</span>
+    <span class="nx">i</span><span class="o">++</span><span class="p">;</span>                       <span class="c1">// 変数iに1を追加する</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>               <span class="c1">// もし変数iが100より大きければ以下の処理を実行</span>
+        <span class="k">break</span><span class="p">;</span>                   <span class="c1">// ループを終了</span>
+    <span class="p">}</span>
+<span class="p">}</span>                            <span class="c1">// 条件式へ戻る</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">while文は無限ループの原因になりやすいので、条件式をきちんと設定するように気をつけましょう。</div>
+</div>
+</div>
+<div class="section" id="for">
+<h3>for文<a class="headerlink" href="#for" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">while文以外のもうひとつの繰り返し処理の例が、for文です。</div>
+<div class="line">for文は継続条件式が真の間繰り返し実行されるというものです。定義は以下の通りです。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre>for(初期化式; 継続条件式; 再初期化式){
+    処理;
+}
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">こう書くととても難しいように見えますが、実際的には、限られた回数だけ処理を行ないたい場合、while文より便利です。</div>
+<div class="line">処理の流れを見てみましょう。</div>
+<div class="line"><br /></div>
+<div class="line">1.「初期化式」を実行</div>
+<div class="line">2.「継続条件式」で真と判定された場合に内部の処理を実行、判定結果が偽の場合ループを終了</div>
+<div class="line">3.「再初期化処理」を実行</div>
+<div class="line">※以降2,3の繰り返しとなります。</div>
+<div class="line"><br /></div>
+<div class="line">例えばwhileの例であった、「ありがとう」を100個表示するプログラムをfor文で記述してみましょう。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre>                                   <span class="c1">// 変数iを定義し0を代入 ※ループの初回のみ実行される</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>      <span class="c1">// 変数iが100未満だったら以下の処理を実行、変数iが100より大きければ処理を実行せずにループを終了</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;ありがとう&quot;</span><span class="p">);</span>    <span class="c1">// 「ありがとう」と表示する</span>
+<span class="p">}</span>                                  <span class="c1">// 変数iに1を加算し、継続条件式へ再び「i &lt; 100」が真となるか判断する。</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id14">
+<h3>ネスト<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">if文の中にif分を書き込むことができるように、</div>
+<div class="line">繰り返し処理も、何重にも記述することができます。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">j</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">この場合、1から100までの連番が100セット表示されます。</div>
+</div>
+</div>
+<div class="section" id="id15">
+<h3>課題4<a class="headerlink" href="#id15" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">①while文を使って、xの3乗の値を表示させて下さい。xの定義域は-10以上10以下とします。</div>
+<div class="line"><br /></div>
+<div class="line"><strong>出力例</strong></div>
+<div class="line">x = -10のとき, y = -1000</div>
+<div class="line">x = -9のとき, y = -729</div>
+<div class="line">~~~~~~~~省略~~~~~~~~</div>
+<div class="line">x = 10のとき, y = 1000</div>
+</div>
+<a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">②for文をネストさせて、使って九九の表を作ってください。</div>
+</div>
+<div class="highlight-js"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">ノート</p>
+<div class="last line-block">
+<div class="line">適切なHTMLタグと文字を出力する処理を書き込めば、tableで表を出力できます。</div>
+<div class="line">tableの作り方を思い出してみてください。テーブルは行の場合は&lt;td&gt;、列の場合は&lt;tr&gt;を使います。</div>
+<div class="line">つまり、改行したい時には&lt;tr&gt;タグで囲んでいる部分が新しくなればいいわけです。</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>出力例</strong></div>
+</div>
+<script>
+document.write("<table>");
+    for (var i = 1; i <= 9; i++) {
+        document.write("<tr>");
+        for (var j = 1; j <= 9; j++) {
+            document.write("<td>" + i*j + "</td>");
+        }
+        document.write("</tr>");
+    }
+document.write("</table>");
+</script><a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script></div>
+</div>
+<div class="section" id="id16">
+<h2>配列<a class="headerlink" href="#id16" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">それでは <strong>配列</strong> というものを学習しましょう。</div>
+<div class="line">varを使った変数が1つのデータを入れる箱だとすれば、配列は仕切りを作って複数のデータを入れられるようにした箱、と考えてください。</div>
+</div>
+<blockquote>
+<div><img alt="_images/array_1.gif" src="_images/array_1.gif" />
+</div></blockquote>
+<div class="line-block">
+<div class="line">データを入れる領域を「要素」と呼びます。上記配列は3つの領域に分けられているので、要素が3つの配列となります。</div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id17">
+<h3>配列の定義法<a class="headerlink" href="#id17" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line"><strong>配列の要素の個数を設定する</strong></div>
+<div class="line">配列を定義するには、変数におまじない「new Array(要素数)」を代入します。</div>
+<div class="line">深く考えずに「おまじない」を書くと配列ができると覚えてください。JavaScriptの理解が進んだら調べてみましょう。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">配列の要素には0から順に番号が振られます。1番目のデータは0、2番目のデータは1という具合です。</div>
+<div class="line">これを「添え字」または「キー」と呼び、配列のデータを操作する際に利用します。</div>
+</div>
+<blockquote>
+<div><img alt="_images/array_2.gif" src="_images/array_2.gif" />
+</div></blockquote>
+<div class="line-block">
+<div class="line">配列のデータを操作するには、「変数名[添え字]」の様に記述します。例えば、配列の2番目の要素に値を代入するには</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="nx">array</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">代入した値を表示するには</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">となります。</div>
+</div>
+</div>
+<div class="section" id="id18">
+<h3>配列の中身を設定する<a class="headerlink" href="#id18" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>配列の値を設定する方法には</p>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span><span class="p">;</span>
+<span class="nx">array</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">;</span>
+<span class="nx">array</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span><span class="p">;</span>
+<span class="nx">array</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;d&#39;</span><span class="p">;</span>
+<span class="nx">array</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;e&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">上記の様に配列を作成してから値を代入する方法と</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">配列作成時にカンマ繋ぎで値を指定することで、値を代入した状態で配列を作成する方法があります。</div>
+<div class="line">作成するプログラムの内容によって、どちらの方法で配列を作成するかが変わってきますので、適切な定義方法を選ぶようにしましょう。</div>
+</div>
+</div>
+<div class="section" id="id19">
+<h3>配列の長さを取得する<a class="headerlink" href="#id19" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">配列の要素の個数を <strong>長さ</strong> といいます。配列の長さは</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre>配列名.length;
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">で取得することが出来ます。</div>
+<div class="line">つまり、for文の条件式にこの配列の長さを組み込めば、配列の長さ分だけ処理を行なうことが可能です。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">programming</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="s1">&#39;プ&#39;</span><span class="p">,</span> <span class="s1">&#39;ロ&#39;</span><span class="p">,</span> <span class="s1">&#39;グ&#39;</span><span class="p">,</span> <span class="s1">&#39;ラ&#39;</span><span class="p">,</span> <span class="s1">&#39;ミ&#39;</span><span class="p">,</span> <span class="s1">&#39;ン&#39;</span><span class="p">,</span> <span class="s1">&#39;グ&#39;</span><span class="p">);</span>    <span class="c1">// 変数aを定義して配列を代入</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">programming</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>           <span class="c1">// 変数iの値が配列aの要素数「7」未満であれば処理を実行</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">programming</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>                   <span class="c1">// 配列の「変数i」番目の値を表示（変数iが3であればdocument.write(programming[3]);となる）</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">上記を実行すると</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre>プログラミング
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">と出力されます。</div>
+</div>
+</div>
+<div class="section" id="id20">
+<h3>連想配列<a class="headerlink" href="#id20" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">配列の添え字は数字以外で管理することができます。</div>
+<div class="line">例えば人物の情報を配列に格納する時、名前があって、性別があって、年齢があって・・・、どの情報が配列の何番目に格納されているか分かり易くしたいですね。</div>
+<div class="line">こういうときは連想配列を用いて配列を定義します。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="nx">person</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;のび太&quot;</span><span class="p">;</span>
+<span class="nx">person</span><span class="p">[</span><span class="s2">&quot;sex&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;男&quot;</span><span class="p">;</span>
+<span class="nx">person</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;10歳&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<img alt="_images/array_3.gif" src="_images/array_3.gif" />
+</div></blockquote>
+<div class="line-block">
+<div class="line">配列の添え字が数字ではなく英字になっています。</div>
+<div class="line">添え字の文字列を取得することもできますので、変数の変わりに添え字に値を持たせてしまうこともあります。</div>
+<div class="line">連想配列は下記の二次元配列と組み合わせて配列を生成すると、特定のデータを持つリストとして配列を作成できるので非常に便利です。</div>
+</div>
+</div>
+<div class="section" id="id21">
+<h3>二次元配列<a class="headerlink" href="#id21" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">二次元配列とは <strong>配列を格納した配列</strong> を指します。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre>var array = new Array(3);                 // 変数arrayを作成し配列を代入
+array[0] = new Array(&#39;A&#39;, &#39;B&#39;, ’C&#39;);     // 配列arrayの1番目の要素に配列を代入
+array[1] = new Array(&#39;D&#39;, &#39;E&#39;, ’F&#39;);     // 配列arrayの2番目の要素に配列を代入
+array[2] = new Array(&#39;G&#39;, &#39;H&#39;, ’I&#39;);     // 配列arrayの3番目の要素に配列を代入
+</pre></div>
+</div>
+<img alt="_images/array_4.gif" src="_images/array_4.gif" />
+</div></blockquote>
+<div class="line-block">
+<div class="line">このとき、</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">とすると。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="nx">CEG</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">と出力されます。</div>
+</div>
+</div>
+<div class="section" id="id22">
+<h3>課題5<a class="headerlink" href="#id22" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">二次元配列(二次元目は連想配列にする)を用いて、人物のリストを作りなさい。作った配列を、テーブルで表示しなさい。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>ヒント</strong></div>
+<div class="line">配列を表示するには、配列の数だけfor文でループさせれば大丈夫です。</div>
+<div class="line">配列の個数(長さ)を取得するには、<strong>配列名.length</strong>  で可能なので配列名arrayの配列を表示するには、</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">となります。</div>
+<div class="line"><br /></div>
+</div>
+<a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script></div>
+</div>
+<div class="section" id="id23">
+<h2>関数の作成<a class="headerlink" href="#id23" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id24">
+<h3>関数を定義する<a class="headerlink" href="#id24" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">JavaScriptにはdocument.write()やalert()等、あらかじめ定義された関数が数多くありますが、自分で定義することもできます。</div>
+<div class="line">プログラム中で何度も出てくる処理をそのたびに記述するのは面倒ですし、</div>
+<div class="line">変更が必要になった場合に修正箇所が散在してしまい、修正漏れの原因にもなります。</div>
+<div class="line">そこで、よく出てくる処理を関数として定義し、共通利用する方法をとります。</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">引数とは、関数に与えるパラメータのことで&#8221;ひきすう&#8221;と読みます。</div>
+<div class="line">戻り値とは、関数の実行元に返す値です。</div>
+</div>
+</div>
+<div class="section" id="id25">
+<h3>関数の見本<a class="headerlink" href="#id25" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">それでは見本として、引数として与えた数を2乗した数字を返す関数を作ってみましょう。</div>
+<div class="line">関数名はquadraticにしてみましょう。もちろん、自分の好きな名前で構いません。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="kd">function</span> <span class="nx">quadratic</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span>       <span class="c1">// 関数名、引数を指定して関数定義の宣言</span>
+<span class="p">{</span>
+    <span class="nx">answer</span> <span class="o">=</span> <span class="nx">number</span> <span class="o">*</span> <span class="nx">number</span><span class="p">;</span>      <span class="c1">// 変数answerに「引数number×引数number」の結果を代入</span>
+    <span class="k">return</span> <span class="nx">answer</span><span class="p">;</span>               <span class="c1">// 変数answerを返す</span>
+<span class="p">}</span>
+
+<span class="c1">// 実行してみる</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>                     <span class="c1">// 変数aを定義し、4を代入</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">quadratic</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>          <span class="c1">// 変数bを定義し、引数に変数aを渡して関数quadraticを実行した結果を代入</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>                      <span class="c1">// 変数bの値をアラートで表示</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">関数quadratic(number)は受け取った引数numberを2乗した値を実行結果として返します。</div>
+<div class="line">実行例では関数quadraticに4を渡しているので、4×4の結果「16」が関数の実行結果として返却され、変数bに代入されます。結果、アラートで16と表示されます。</div>
+</div>
+<div class="line-block">
+<div class="line">もちろん引数にとるのは、数値型に限りません。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="kd">function</span> <span class="nx">hello</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nx">answer</span> <span class="o">=</span> <span class="s2">&quot;こんにちは、&quot;</span> <span class="o">+</span> <span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot;さん。&quot;</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nx">answer</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">nameに&#8221;太郎&#8221;を渡すと</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="s2">&quot;こんにちは、太郎さん。&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">が返ってきます。</div>
+<div class="line">関数にはもっと複雑な処理を入れることも可能ですし、引数と戻り値の型が違っていても問題ありません。</div>
+<div class="line">戻り値を指定しなければ、処理を実行するだけの関数となります。</div>
+</div>
+</div>
+</div>
+<div class="section" id="id26">
+<h2>値の取得<a class="headerlink" href="#id26" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">何らかのWebサービスを使用したときに、ユーザー情報を記述したことはありませんか?</div>
+<div class="line">ここではJavaScriptを使ってユーザーが入力した情報を取得する方法を解説します。</div>
+<div class="line">下のJsBinの入力欄に名前を入力し、送信ボタンを押してみてください。</div>
+</div>
+<a class="jsbin-embed" href="http://jsbin.com/uMUJolO/2/embed?output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script><div class="line-block">
+<div class="line">すると、○○さん、こんにちは！というアラートが出ましたね。</div>
+<div class="line">もちろんこのアラートは最初からあなたの名前を知っていた訳ではありません。</div>
+<div class="line">あなたが入力したテキストを取得、それを変数に格納し、その変数に少し文言を付け加えてアラートしたのです。</div>
+<div class="line">ユーザーの入力した情報を取得するにはgetElementByIdメソッドを使用します。</div>
+<div class="line">その名の通り、idによって取得したい情報を特定します。</div>
+<div class="line">JsBinに書かれたHTMLとJavaScriptを見てみてください。</div>
+<div class="line">入力欄を用意するinputタグが2つあります。1つ目にはmyNameというidがついており、ユーザーはここに名前を入力します。</div>
+<div class="line">それをJavaScriptではmyNameという変数の中にgetElementById(&#8220;myName&#8221;)を格納しています。</div>
+<div class="line">もう一つのinputタグは送信ボタンです。onclick=&#8221;hello()&#8221;と書かれているのが分かりますね。</div>
+<div class="line">これはその名の通りonclick、つまりクリックされたときにJavaScriptのhello関数を呼ぶというものです。</div>
+<div class="line">hello関数は自作した関数であり、取得したあなたの名前をアラートするようになっています。</div>
+<div class="line">ここで注意しなければいけないのが、アラートする名前の部分がmyName.valueとなっていることです。</div>
+<div class="line">myName変数の中にはgetElementById(&#8220;myName&#8221;)が格納されており、このままアラートしてしまうと実は[object HTMLInputElement]さん、こんにちは！と表示されてしまいます。</div>
+<div class="line">次のチャプターで学習しますが、このままではHTMLでインプットした情報の&#8221;オブジェクト&#8221;が格納されているからなのです。</div>
+<div class="line">ユーザーが入力したテキストを取得するために.valueを付け加えます。</div>
+</div>
+<div class="section" id="id27">
+<h3>課題6<a class="headerlink" href="#id27" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ユーザーの名字、名前、年齢、性別、出身を入力する欄を作り、
+送信ボタンをクリックすると自己紹介文を生成してアラートするプログラムを書きなさい。</p>
+<p>出力例) 私の名前は鈴木太郎です。22歳の男性で、東京都出身です。</p>
+<a class="jsbin-embed" href="http://jsbin.com/UdAmoKI/1/embed?html,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script></div>
+</div>
+<div class="section" id="id28">
+<h2>オブジェクトの利用<a class="headerlink" href="#id28" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">オブジェクトとは、とても省略して誤解を恐れずに言ってしまうと <strong>メソッドとプロパティを格納しているもの</strong> です。</div>
+<div class="line">メソッドは&#8221;関数&#8221;、プロパティは&#8221;変数&#8221;と考えてください。</div>
+<div class="line">JavaScriptの次に勉強するPHPという言語で詳しく説明します。</div>
+<div class="line">ここ、JavaScriptでは予め定義されたオブジェクトつまり組み込みオブジェクトを簡単に解説します。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre>オブジェクト名：document
+メソッド名：write
+引数：文字列
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">どこかで見た気がしますね。</div>
+<div class="line">そう、document.write()です。</div>
+<div class="line">document.writeとはdocumentオブジェクトのwriteメソッドです。</div>
+<div class="line">オブジェクト名とメソッド名を.(ピリオド)で繋いで記述します。</div>
+<div class="line"><br /></div>
+<div class="line">他にもMath、String、Date等の組み込みオブジェクトがあります。</div>
+<div class="line">まずMathオブジェクトを見てみましょう。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">pi</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">pi</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">例えばこのようにMathオブジェクトのPIメソッドを使うと円周率を得る事ができます。</div>
+<div class="line">piという変数を用意し、そこにMath.PIを格納し、piを表示すると&#8221;3.141592653589793&#8221;となります。</div>
+<div class="line">Mathオブジェクトには数字の絶対値を出すabsメソッドや平方根(ルート)を出すsqrtメソッド、三角関数のsinメソッド、cosメソッド、taメソッド等があります。</div>
+<div class="line"><br /></div>
+<div class="line">次に、Stringオブジェクトを見てみましょう。Stringオブジェクトでは文字列に関する処理が含まれています。</div>
+<div class="line">まず一番有名なlengthというプロパティを見てみましょう。</div>
+<div class="line">これは文字列の文字数を返します。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">hello</span> <span class="o">=</span>  <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s2">&quot;Hello,World!&quot;</span><span class="p">);</span>
+<span class="c1">//または</span>
+<span class="kd">var</span> <span class="nx">hello</span> <span class="o">=</span> <span class="s2">&quot;Hello,World!&quot;</span><span class="p">;</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">hello</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">こうすると、Hello,World!という文字列の文字数である12という数字が表示されることになります。</div>
+<div class="line">他にも指定の開始位置から指定した文字列分だけを抜き出すsubstrメソッドや、</div>
+<div class="line">文字列を大文字にするtoUpperCaseメソッド、複数の文字列を結合するconcatメソッド等があります。</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">lastName</span>  <span class="o">=</span> <span class="s2">&quot;Suzuki&quot;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">firstName</span> <span class="o">=</span> <span class="s2">&quot;Ichiro&quot;</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">lastName</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>    <span class="c1">// 3文字目から文字を4つ抜き取る</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>    <span class="c1">// zuki</span>
+
+<span class="kd">var</span> <span class="nx">Omoji</span> <span class="o">=</span> <span class="nx">lastName</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>    <span class="c1">//文字列を大文字にする</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">Omoji</span><span class="p">);</span>    <span class="c1">// SUZUKI</span>
+
+<span class="kd">var</span> <span class="nx">fullName</span> <span class="o">=</span> <span class="nx">lastName</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">firstName</span><span class="p">);</span>    <span class="c1">//文字列を結合する</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">fullName</span><span class="p">);</span>    <span class="c1">// SuzukiIchiro</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">他にも様々なメソッド等が使えます。</div>
+<div class="line"><a class="reference external" href="http://memopad.bitter.jp/w3c/jsref/jsref_obj_string.html">Stringオブジェクト 参考サイト</a></div>
+<div class="line"><br /></div>
+<div class="line">これらを使用することで更に高度なプログラムを作る事が出来ます。</div>
+<div class="line"><a class="reference external" href="http://www.ibm.com/developerworks/jp/web/library/wa-objectsinjs-v1b/?cmp=dw&amp;cpb=dwwdv&amp;ct=dwrss&amp;cr=dwrss&amp;ccy=jp&amp;csr=091611">JavaScript組み込みオブジェクト 参考サイト</a></div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id30">
+<h3>課題7<a class="headerlink" href="#id30" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">としたとき、dateにはその時間の情報が入っています。</div>
+<div class="line">Dateでは、日付や時間、曜日などを取り扱うメソッドがあらかじめ用意されています。</div>
+<div class="line">例えば、</div>
+</div>
+<blockquote>
+<div><div class="highlight-js"><div class="highlight"><pre><span class="nx">date</span><span class="p">.</span><span class="nx">getYear</span><span class="p">();</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">で、その年が引き出せます。</div>
+<div class="line">この機能を使って、dateを引数にとり、文字列で&#8221;○年○月○日○時○分○秒(○曜日)&#8221;という形で値を表示する関数を作ってください。</div>
+<div class="line"><strong>参考サイト</strong></div>
+<div class="line"><a class="reference external" href="http://www.scollabo.com/banban/java/ref_15.html">Dateオブジェクト / JavaScriptリファレンス</a></div>
+<div class="line"><a class="reference external" href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Date">Date - JavaScript | MDN</a></div>
+</div>
+<a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script></div>
+</div>
+<div class="section" id="id31">
+<h2>JavaScript最終課題<a class="headerlink" href="#id31" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>今月から半年分のカレンダーを、JavaScriptを使って作成してください。いままで習ったことをフル活用してください。その際、</p>
+<blockquote>
+<div><ul class="simple">
+<li>配列を使うこと</li>
+<li>Dateオブジェクトを使うこと</li>
+<li>まとまった処理は関数を使うこと</li>
+</ul>
+</div></blockquote>
+<p>を守るようにしてください。もちろん直接カレンダーを表示するのは禁止です。</p>
+<div class="section" id="id32">
+<h3>ヒント<a class="headerlink" href="#id32" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>関数を作るときは、以下の関数を作ってみて、それぞれで値や配列を渡してみましょう。</p>
+<blockquote>
+<div><ul class="simple">
+<li>今日の日付を取得して、半年後までの年と月を取得し、配列で返す関数</li>
+<li>年と月を渡すと、月の日数と最初の曜日を返す関数</li>
+<li>月の日数と最初の曜日を渡すと、テーブルにしてくれる関数</li>
+</ul>
+</div></blockquote>
+<p>参考サイト
+<a class="reference external" href="http://www.hoge256.net/2007/08/64.html">JavaScript による日付・時刻・時間の計算・演算のまとめ</a></p>
+<a class="jsbin-embed" href="http://jsbin.com/esEBUBo/3/embed?html">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">JavaScript入門</a><ul>
+<li><a class="reference internal" href="#hello-world">Hello, World!</a><ul>
+<li><a class="reference internal" href="#javascript-js">外部JavaScriptファイル(.js)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id1">コメント</a></li>
+<li><a class="reference internal" href="#id2">行末</a></li>
+<li><a class="reference internal" href="#id3">関数</a><ul>
+<li><a class="reference internal" href="#id4">課題1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">データ型</a></li>
+<li><a class="reference internal" href="#id6">デバッガの使い方</a></li>
+<li><a class="reference internal" href="#id7">変数</a></li>
+<li><a class="reference internal" href="#id8">演算子</a><ul>
+<li><a class="reference internal" href="#id9">課題2</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id10">条件分岐</a></li>
+<li><a class="reference internal" href="#id11">インデント・字下げ</a></li>
+<li><a class="reference internal" href="#switch">switch文</a><ul>
+<li><a class="reference internal" href="#id12">課題3</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id13">繰り返し文</a><ul>
+<li><a class="reference internal" href="#while">while文</a></li>
+<li><a class="reference internal" href="#for">for文</a></li>
+<li><a class="reference internal" href="#id14">ネスト</a></li>
+<li><a class="reference internal" href="#id15">課題4</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id16">配列</a><ul>
+<li><a class="reference internal" href="#id17">配列の定義法</a></li>
+<li><a class="reference internal" href="#id18">配列の中身を設定する</a></li>
+<li><a class="reference internal" href="#id19">配列の長さを取得する</a></li>
+<li><a class="reference internal" href="#id20">連想配列</a></li>
+<li><a class="reference internal" href="#id21">二次元配列</a></li>
+<li><a class="reference internal" href="#id22">課題5</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id23">関数の作成</a><ul>
+<li><a class="reference internal" href="#id24">関数を定義する</a></li>
+<li><a class="reference internal" href="#id25">関数の見本</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id26">値の取得</a><ul>
+<li><a class="reference internal" href="#id27">課題6</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id28">オブジェクトの利用</a><ul>
+<li><a class="reference internal" href="#id30">課題7</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id31">JavaScript最終課題</a><ul>
+<li><a class="reference internal" href="#id32">ヒント</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="6_introduction_programming.html"
+                        title="前の章へ">プログラミングの基礎知識</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="8_jQuery.html"
+                        title="次の章へ">jQuery入門</a></p>
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/7_JavaScript.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+</div>
+<div id="relatedFooter">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="8_jQuery.html" title="jQuery入門"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="6_introduction_programming.html" title="プログラミングの基礎知識"
+             >前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div id="sphinx">このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1 で生成しました。</div>
+      <div id="copyright">
+    <p><a href="http://uhero.co.jp/">uhero corp</a>. &#169; all rights reserved.</p>
+    <figure><img src="http://uhero.co.jp/common/images/img_footer.gif" width="80" height="14" alt="uhero corp." /></figure>
+  </div><!--/#copyright-->
+    </div>
+
+  </body>
+</html>

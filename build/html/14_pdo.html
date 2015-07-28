@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PDO入門 &mdash; Building Uteam Development Skill 0.0.9a ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.9a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Building Uteam Development Skill 0.0.9a ドキュメント" href="index.html" />
+    <link rel="up" title="Webセキュリティ基礎知識" href="15_WebSecurity.html" />
+    <link rel="next" title="Git入門" href="16_git.html" />
+    <link rel="prev" title="Webセキュリティ基礎知識" href="15_WebSecurity.html" /> 
+  </head>
+  <body>
+<div id="container">
+<div id="header">
+    <a href="http://uhero.co.jp/">
+        <img id="logo" src="http://uhero.co.jp/common/images/logo.png" width="286" height="57" alt="株式会社ユヒーロ" />
+    </a>
+</div>
+<div id="relatedHead">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="16_git.html" title="Git入門"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="15_WebSecurity.html" title="Webセキュリティ基礎知識"
+             accesskey="P">前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li>
+          <li><a href="15_WebSecurity.html" accesskey="U">Webセキュリティ基礎知識</a> &raquo;</li> 
+      </ul>
+    </div>
+</div>
+<div class='underRelatedHead'></div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+<div class="section" id="pdo">
+<h1>PDO入門<a class="headerlink" href="#pdo" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>PDOとは<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>PDO(PHP Data Objects)はPHPに標準搭載されているデータベースアクセス抽象化ライブラリです。
+データベースの違いを吸収し、共通の関数でデータベースを操作することを可能にしています。</p>
+</div>
+<div class="section" id="id2">
+<h2>データベースへの接続<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>PDOでデータベースと接続するときは、クラスのインスタンス化と同様の手段で行います。</p>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="x">$PDOのオブジェクト = new PDO(&#39;DNS文字列&#39;, &#39;DBユーザー名&#39;, &#39;DBパスワード&#39;);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="section" id="dns">
+<h3>DNS文字列<a class="headerlink" href="#dns" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">DNSとは、Data Source Nameの略で、データベースに必要な情報となるデータソース名のことです。</div>
+<div class="line">データベースにより要素が異なりますが</div>
+<div class="line">MySQLの場合、</div>
+</div>
+<ul class="simple">
+<li>dbname : データベース名</li>
+<li>host : ホスト名</li>
+<li>port : ポート番号</li>
+</ul>
+<div class="line-block">
+<div class="line">から構成されます。</div>
+<div class="line">ホスト名と、ポート番号の代わりに</div>
+</div>
+<ul class="simple">
+<li>unix_socket : Unixソケット</li>
+</ul>
+<div class="line-block">
+<div class="line">を指定することも出来ます。</div>
+<div class="line"><br /></div>
+<div class="line">それぞれの要素の順番には意味はありません。</div>
+<div class="line">書式は下のようになります。</div>
+</div>
+<blockquote>
+<div><div class="highlight-none"><div class="highlight"><pre>mysql:dbname=データベース名;host=ホスト名;port=ポート番号
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h3>PDOによるデータベース接続のサンプル<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li>データベース名 : testbase</li>
+<li>ホスト名 : localhost</li>
+<li>ポート番号 : 8889</li>
+<li>DBユーザー名 : testuser</li>
+<li>DBパスワード : pass</li>
+</ul>
+<p>上記のデータベースに接続する場合、</p>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$pdoObject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">&#39;mysql:dbname=testbase;host=localhost;port=8889&#39;</span><span class="p">,</span> <span class="s1">&#39;testuser&#39;</span><span class="p">,</span> <span class="s1">&#39;pass&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">このようになります。</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>データベース接続を解除する<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">接続時に生成されたPDOオブジェクトを破棄することで接続を解除できます。</div>
+<div class="line">明示的に破棄しない場合はPHPスクリプトの終了時に接続が解除されます。</div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$pdoObject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">&#39;mysql:dbname=testbase;host=localhost;port=8889&#39;</span><span class="p">,</span> <span class="s1">&#39;testuser&#39;</span><span class="p">,</span> <span class="s1">&#39;pass&#39;</span><span class="p">);</span> <span class="c1">//接続</span>
+<span class="nb">unset</span><span class="p">(</span><span class="nv">$pdoObject</span><span class="p">);</span> <span class="c1">//接続解除</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>プリペアドステートメントとクエリの実行<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ここではPDOのprepareメソッドを使ってSQL文を実行する方法を紹介します。</p>
+<div class="section" id="prepare">
+<h3>prepareメソッド<a class="headerlink" href="#prepare" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">prepareメソッドはSQL文を実行する準備を行います。</div>
+<div class="line-block">
+<div class="line"><strong>PDOオブジェクト</strong> に対してのみ使用することができます。</div>
+</div>
+<div class="line">メソッドの返り値はPDOStatementオブジェクトになります。</div>
+<div class="line"><br /></div>
+<div class="line">引数にはSQL文を入れます。SQL文中にプレースホルダとして疑問符「?」を使うことができます。</div>
+<div class="line">動的にSQL文を変えたい場合は、変えたい部分に疑問符を使います。</div>
+</div>
+<p>例:</p>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$pdoObject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">&#39;mysql:dbname=testbase;host=localhost;port=8889&#39;</span><span class="p">,</span> <span class="s1">&#39;testuser&#39;</span><span class="p">,</span> <span class="s1">&#39;pass&#39;</span><span class="p">);</span>
+<span class="nv">$pdoStatementObject</span> <span class="o">=</span> <span class="nv">$pdoObject</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM user WHERE id = ?&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">上記の例の場合、idはこの時点では定まっておらず、後から動的に指定することができます。</div>
+<div class="line">SQL文を実行する準備が出来ただけであり、この時点ではSQLは実行されません。</div>
+</div>
+</div>
+<div class="section" id="execute">
+<h3>executeメソッド<a class="headerlink" href="#execute" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">executeメソッドはprepareメソッドで準備したSQL文を実行します。</div>
+<div class="line">このメソッドは <strong>PDOStatementオブジェクト</strong> に対してのみ実行することができます。</div>
+<div class="line">引数にはprepareメソッドで疑問符「?」を記述した部分を配列形式で順番に指定します。</div>
+</div>
+<p>例:</p>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$pdoObject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">&#39;mysql:dbname=testbase;host=localhost;port=8889&#39;</span><span class="p">,</span> <span class="s1">&#39;testuser&#39;</span><span class="p">,</span> <span class="s1">&#39;pass&#39;</span><span class="p">);</span>
+<span class="nv">$pdoStatementObject</span> <span class="o">=</span> <span class="nv">$pdoObject</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM user WHERE id = ?&quot;</span><span class="p">);</span>
+<span class="nv">$pdoStatementObject</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;uteam&#39;</span><span class="p">));</span> <span class="c1">//idがuteamだった場合</span>
+<span class="nv">$pdoStatementObject</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;uhero&#39;</span><span class="p">));</span> <span class="c1">//idがuheroだった場合</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">executeメソッドは複数回実行可能です。</div>
+<div class="line">上記の例の場合、一度prepareメソッドを実行した後はexecuteメソッドの引数を変えるだけで他のIDでSQL文を実行することが出来ます。</div>
+<div class="line">結果の取得方法は後の項目で解説します。</div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>プリペアドステートメントを使わないクエリの実行<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">プリペアドステートメントを使わない方法もあります。</div>
+<div class="line">SQL文を一度しか使わず、パラメータが存在しない場合に便利です。</div>
+</div>
+<div class="section" id="query">
+<h3>queryメソッド<a class="headerlink" href="#query" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">queryメソッドはSQL文を実行します。</div>
+<div class="line-block">
+<div class="line"><strong>PDOオブジェクト</strong> に対してのみ使用することができます。</div>
+</div>
+<div class="line">メソッドの返り値はprepareメソッドと同じくPDOStatementオブジェクトになります。</div>
+<div class="line"><br /></div>
+<div class="line">引数にはSQL文を入れます。</div>
+</div>
+<p>例:</p>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$pdoObject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">&#39;mysql:dbname=testbase;host=localhost;port=8889&#39;</span><span class="p">,</span> <span class="s1">&#39;testuser&#39;</span><span class="p">,</span> <span class="s1">&#39;pass&#39;</span><span class="p">);</span>
+<span class="nv">$pdoStatementObject</span> <span class="o">=</span> <span class="nv">$pdoObject</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">&quot;SELECT name FROM user&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">prepareメソッドと異なり、この時点でSQL文が実行されデータベースに問い合わせを行います。</div>
+</div>
+</div>
+<div class="section" id="exec">
+<h3>execメソッド<a class="headerlink" href="#exec" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">execメソッドもqueryメソッド同じくSQL文を実行しますが、</div>
+<div class="line">返り値は、PDOStatementオブジェクトではなく、そのSQL文により削除または更新された行数となっております。</div>
+<div class="line">UPDATE文やDELETE文などでのみ有効です。SELECT文からは結果は返りません。</div>
+</div>
+<p>例:</p>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$pdoObject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">&#39;mysql:dbname=testbase;host=localhost;port=8889&#39;</span><span class="p">,</span> <span class="s1">&#39;testuser&#39;</span><span class="p">,</span> <span class="s1">&#39;pass&#39;</span><span class="p">);</span>
+<span class="nv">$count</span> <span class="o">=</span> <span class="nv">$pdoObject</span><span class="o">-&gt;</span><span class="na">exec</span><span class="p">(</span><span class="s2">&quot;DELETE FROM user WHERE name = &#39;山田&#39;&quot;</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nv">$count</span> <span class="o">.</span> <span class="s1">&#39;行削除されました。&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>結果の取得<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">SQL文を実行した結果を取得する操作は全てprepareメソッドやqueryメソッドにより生成された</div>
+<div class="line"><strong>PDOStatementオブジェクト</strong> に対して実行します。</div>
+</div>
+<div class="section" id="fetch">
+<h3>fetchメソッド<a class="headerlink" href="#fetch" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">fetchメソッドは結果から単一の行を取得します。公式リファレンスでは「次の行を取得する」と書かれています。</div>
+<div class="line">実行結果が1行しかない場合や、1行ずつ取得するときに使います。</div>
+</div>
+<div class="line-block">
+<div class="line">実行した行はPDOStatementオブジェクトから削除されるため、ループ文で次々取得するような書き方も可能です。</div>
+<div class="line"><br /></div>
+<div class="line">例1：</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$pdoObject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">&#39;mysql:dbname=testbase;host=localhost;port=8889&#39;</span><span class="p">,</span> <span class="s1">&#39;testuser&#39;</span><span class="p">,</span> <span class="s1">&#39;pass&#39;</span><span class="p">);</span>
+<span class="nv">$pdoStatementObject</span> <span class="o">=</span> <span class="nv">$pdoObject</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">&quot;SELECT name,address FROM user WHERE id = ?&quot;</span><span class="p">);</span> <span class="c1">//IDに重複は無いとする。</span>
+<span class="nv">$pdoStatementObject</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;uteam&#39;</span><span class="p">));</span> <span class="c1">//idがuteamだった場合</span>
+<span class="nv">$row</span> <span class="o">=</span> <span class="nv">$pdoStatementObject</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">();</span>
+<span class="k">echo</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span><span class="c1">//IDに重複がなければ、IDに対応するカラム名nameの値が取得可能</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">例2：</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$pdoObject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">&#39;mysql:dbname=testbase;host=localhost;port=8889&#39;</span><span class="p">,</span> <span class="s1">&#39;testuser&#39;</span><span class="p">,</span> <span class="s1">&#39;pass&#39;</span><span class="p">);</span>
+<span class="nv">$pdoStatementObject</span> <span class="o">=</span> <span class="nv">$pdoObject</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">&quot;SELECT name,address FROM user&quot;</span><span class="p">);</span>
+<span class="k">while</span> <span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nv">$pdoStatementObject</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">()){</span> <span class="c1">//実行した行は削除されていくため、nullになるまでループする。</span>
+        <span class="k">echo</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="fetchall">
+<h3>fetchAllメソッド<a class="headerlink" href="#fetchall" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">fetchAllメソッドは結果の全ての行を配列で取得します。</div>
+<div class="line">実行結果が複数行になる場合に、まとめて取得したい場合に使います。</div>
+</div>
+<div class="line-block">
+<div class="line">例：</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$pdoObject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">&#39;mysql:dbname=testbase;host=localhost;port=8889&#39;</span><span class="p">,</span> <span class="s1">&#39;testuser&#39;</span><span class="p">,</span> <span class="s1">&#39;pass&#39;</span><span class="p">);</span>
+<span class="nv">$pdoStatementObject</span> <span class="o">=</span> <span class="nv">$pdoObject</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">&quot;SELECT name,address FROM user&quot;</span><span class="p">);</span>
+<span class="nv">$rows</span> <span class="o">=</span> <span class="nv">$pdoStatementObject</span><span class="o">-&gt;</span><span class="na">fetchAll</span><span class="p">();</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$rows</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">){</span>
+        <span class="k">echo</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id8">
+<h3>FETCHモード<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">fetchメソッドやfetchAllメソッドの第1引数に、FETCHモードを指定することで、結果として取得する配列の書式を切り替えることが出来ます。</div>
+<div class="line">デフォルトではFETCH_BOTHになっており、結果配列の中には「カラム名をキー」と「カラムに割り当てられた連番をキー」の両方に同じ値が2重に入っています。</div>
+<div class="line">FETCH_ASSOCと指定すると、「カラム名をキー」のみになり、FETCH_NUMと指定すると「カラム名を数字」のみになります。</div>
+</div>
+<div class="line-block">
+<div class="line">また、$pdoStatementObject-&gt;setAttribute(PDO::FETCH_ASSOC); とすることデフォルトの設定を変えることが出来ます。</div>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>エラー処理<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">PDOには3つのエラー処理方法があります。</div>
+<div class="line">デフォルトは PDO::ERRMODE_SILENT です。</div>
+<div class="line"><strong>PDOオブジェクト</strong> に対してsetAttributeメソッドでエラーモードをセットすることで</div>
+<div class="line">設定することができます。</div>
+<div class="line"><br /></div>
+<div class="line">例1：</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$pdoObject</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_SILENT</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="section" id="pdo-errmode-silent">
+<h3>PDO::ERRMODE_SILENT<a class="headerlink" href="#pdo-errmode-silent" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">PDOはエラーコードのみを設定します。</div>
+<div class="line">そのエラーコードを取得するには、errorCodeメソッドとerrorInfoメソッドをPDOオブジェクトかPDOStatementオブジェクトに対して実行します。</div>
+</div>
+</div>
+<div class="section" id="pdo-errmode-warning">
+<h3>PDO::ERRMODE_WARNING<a class="headerlink" href="#pdo-errmode-warning" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">これを設定すると、PHPでは伝統的なE_WARNINGメッセージを出力します。デバック時に有効です。</div>
+</div>
+</div>
+<div class="section" id="pdo-errmode-exception">
+<h3>PDO::ERRMODE_EXCEPTION<a class="headerlink" href="#pdo-errmode-exception" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">PDOException をスローします。</div>
+<div class="line">このモードが有用である理由のひとつとして、伝統的な PHP 形式の警告よりも より明確にエラー処理コードが書けることがあります。</div>
+<div class="line">例外を発生させず、 データベースへのコールのたびに毎回明示的に返り値をチェックすることに 比べると、コードの量やネストを減らすことができます。</div>
+</div>
+<div class="line-block">
+<div class="line">PDOExceptionはRuntimeExceptionを継承した例外クラスです。</div>
+<div class="line">PDOの内部で発生した例外を表します。</div>
+<div class="line">ユーザー自身が書いたコードからPDOExceptionをスローしてはいけません。</div>
+</div>
+<div class="line-block">
+<div class="line">PDOExceptionのgetCodeメソッドを実行することで、SQL文を取得可能です。</div>
+</div>
+<div class="line-block">
+<div class="line">例：</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">try</span> <span class="p">{</span>
+    <span class="c1">//PDOはtry~catch構文の内側で実行します。</span>
+    <span class="nv">$pdoObject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">&#39;mysql:dbname=testbase;host=localhost;port=8889&#39;</span><span class="p">,</span> <span class="s1">&#39;testuser&#39;</span><span class="p">,</span> <span class="s1">&#39;pass&#39;</span><span class="p">);</span>
+    <span class="nv">$pdoObject</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span><span class="p">,</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">&#39;接続に失敗しました: &#39;</span> <span class="o">.</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PDO入門</a><ul>
+<li><a class="reference internal" href="#id1">PDOとは</a></li>
+<li><a class="reference internal" href="#id2">データベースへの接続</a><ul>
+<li><a class="reference internal" href="#dns">DNS文字列</a></li>
+<li><a class="reference internal" href="#id3">PDOによるデータベース接続のサンプル</a></li>
+<li><a class="reference internal" href="#id4">データベース接続を解除する</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">プリペアドステートメントとクエリの実行</a><ul>
+<li><a class="reference internal" href="#prepare">prepareメソッド</a></li>
+<li><a class="reference internal" href="#execute">executeメソッド</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">プリペアドステートメントを使わないクエリの実行</a><ul>
+<li><a class="reference internal" href="#query">queryメソッド</a></li>
+<li><a class="reference internal" href="#exec">execメソッド</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7">結果の取得</a><ul>
+<li><a class="reference internal" href="#fetch">fetchメソッド</a></li>
+<li><a class="reference internal" href="#fetchall">fetchAllメソッド</a></li>
+<li><a class="reference internal" href="#id8">FETCHモード</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">エラー処理</a><ul>
+<li><a class="reference internal" href="#pdo-errmode-silent">PDO::ERRMODE_SILENT</a></li>
+<li><a class="reference internal" href="#pdo-errmode-warning">PDO::ERRMODE_WARNING</a></li>
+<li><a class="reference internal" href="#pdo-errmode-exception">PDO::ERRMODE_EXCEPTION</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="15_WebSecurity.html"
+                        title="前の章へ">Webセキュリティ基礎知識</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="16_git.html"
+                        title="次の章へ">Git入門</a></p>
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/14_pdo.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+</div>
+<div id="relatedFooter">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="16_git.html" title="Git入門"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="15_WebSecurity.html" title="Webセキュリティ基礎知識"
+             >前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li>
+          <li><a href="15_WebSecurity.html" >Webセキュリティ基礎知識</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div id="sphinx">このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1 で生成しました。</div>
+      <div id="copyright">
+    <p><a href="http://uhero.co.jp/">uhero corp</a>. &#169; all rights reserved.</p>
+    <figure><img src="http://uhero.co.jp/common/images/img_footer.gif" width="80" height="14" alt="uhero corp." /></figure>
+  </div><!--/#copyright-->
+    </div>
+
+  </body>
+</html>

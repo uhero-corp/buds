@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Unixコマンド &mdash; Building Uteam Development Skill 0.0.9a ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.9a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Building Uteam Development Skill 0.0.9a ドキュメント" href="index.html" /> 
+  </head>
+  <body>
+<div id="container">
+<div id="header">
+    <a href="http://uhero.co.jp/">
+        <img id="logo" src="http://uhero.co.jp/common/images/logo.png" width="286" height="57" alt="株式会社ユヒーロ" />
+    </a>
+</div>
+<div id="relatedHead">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+</div>
+<div class='underRelatedHead'></div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+<div class="section" id="unix">
+<h1>Unixコマンド<a class="headerlink" href="#unix" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>UnixコマンドはUnix系の各OSで利用することができます。
+主要なコマンドは暗記して使えこなせるようになりましょう。</p>
+<div class="section" id="id1">
+<h2>ファイル操作<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="man">
+<h3>【man】マニュアルを表示<a class="headerlink" href="#man" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">コマンドの使い方を知りたいときに使用します。</div>
+<div class="line"><br /></div>
+<div class="line">例：cdコマンドの使い方を見たい場合</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre>man <span class="k">cd</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cd">
+<h3>【cd】ディレクトリの移動<a class="headerlink" href="#cd" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">カレントディレクトリを変更するときに使います。</div>
+<div class="line"><br /></div>
+<div class="line">例：一個上のディレクトリに移動する場合</div>
+</div>
+<div class="highlight-bat"><div class="highlight"><pre><span class="k">cd</span> ../
+</pre></div>
+</div>
+<p>例：/Library/WebServer/Documentsに移動する場合</p>
+<div class="highlight-bat"><div class="highlight"><pre><span class="k">cd</span> <span class="n">/Library/WebServer/Documents</span>
+</pre></div>
+</div>
+<p>例：ホームディレクトリに移動する場合</p>
+<div class="highlight-bat"><div class="highlight"><pre><span class="k">cd</span> ~
+</pre></div>
+</div>
+</div>
+<div class="section" id="ls">
+<h3>【ls】ファイル・ディレクトリの一覧表示<a class="headerlink" href="#ls" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>カレントディレクトリに存在するファイルとディレクトリの一覧を表示することができます。</p>
+<p>例：</p>
+<div class="highlight-bat"><div class="highlight"><pre>ls
+</pre></div>
+</div>
+</div>
+<div class="section" id="pwd">
+<h3>【pwd】現在のディレクトリを表示<a class="headerlink" href="#pwd" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>カレントディレクトリのパスを表示します。</p>
+<p>例：</p>
+<div class="highlight-bat"><div class="highlight"><pre>pwd
+</pre></div>
+</div>
+</div>
+<div class="section" id="cp">
+<h3>【cp】ファイルのコピー<a class="headerlink" href="#cp" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ファイルをコピーします。</p>
+<p>使い方</p>
+<div class="highlight-bat"><div class="highlight"><pre>cp [オリジナルのファイル] [コピー先]
+</pre></div>
+</div>
+<p>例：sample1.txt を sample2.txt にコピー</p>
+<div class="highlight-bat"><div class="highlight"><pre>cp sample sample<span class="m">1</span>.txt sample<span class="m">2</span>.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="mv">
+<h3>【mv】ファイルの移動<a class="headerlink" href="#mv" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ファイルやディレクトリを移動させるときに使います。</p>
+<p>使い方</p>
+<div class="highlight-bat"><div class="highlight"><pre>mv [移動元] [移動先]
+</pre></div>
+</div>
+</div>
+<div class="section" id="rm">
+<h3>【rm】ファイルの削除<a class="headerlink" href="#rm" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ファイルを削除するときに使います。</p>
+<p>使い方</p>
+<div class="highlight-bat"><div class="highlight"><pre>rm [消したいファイル名]
+</pre></div>
+</div>
+</div>
+<div class="section" id="mkdir">
+<h3>【mkdir】新しいディレクトリの作成<a class="headerlink" href="#mkdir" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>新しいディレクトリを作成するときに使います。</p>
+<div class="highlight-bat"><div class="highlight"><pre>mkdir [作成したいディレクトリ名]
+</pre></div>
+</div>
+</div>
+<div class="section" id="rmdir">
+<h3>【rmdir】ディレクトリの削除<a class="headerlink" href="#rmdir" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ディレクトリを削除するときに使います。</p>
+<p>使い方</p>
+<div class="highlight-bat"><div class="highlight"><pre>rmdir [消したいディレクトリ名]
+</pre></div>
+</div>
+</div>
+<div class="section" id="tartar">
+<h3>【tar】tarファイルの圧縮・解凍<a class="headerlink" href="#tartar" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>tar形式に圧縮したり、tar形式を解凍したりするときに使用します。</p>
+<p>使い方</p>
+<div class="highlight-bat"><div class="highlight"><pre>tar [オプション] [ファイル名 / ディレクトリ名]
+</pre></div>
+</div>
+<p>例：a.tarを解凍する場合(形式を自動判別する場合)</p>
+<div class="highlight-bat"><div class="highlight"><pre>tar xvf a.tar
+</pre></div>
+</div>
+<p>例：file1とfile2をb.tarにtar形式で圧縮する場合</p>
+<div class="highlight-bat"><div class="highlight"><pre>tar cvf b.tar file<span class="m">1</span> file<span class="m">2</span>
+</pre></div>
+</div>
+<p>例：file1とfile2をc.tar.gzにtar＋gzip形式で圧縮する場合</p>
+<div class="highlight-bat"><div class="highlight"><pre>tar zcvf c.tar.gz file<span class="m">1</span> file<span class="m">2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="chmod">
+<h3>【chmod】パーミッションの変更<a class="headerlink" href="#chmod" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ファイルやディレクトリのアクセス権限を変更します。</p>
+<p>使い方</p>
+<div class="highlight-bat"><div class="highlight"><pre>chmod [パーミッション] [ファイル名 / ディレクトリ名]
+</pre></div>
+</div>
+<p>例：a.cgiを644に変更</p>
+<div class="highlight-bat"><div class="highlight"><pre>chmod <span class="m">644</span> a.cgi
+</pre></div>
+</div>
+</div>
+<div class="section" id="touch">
+<h3>【touch】ファイルの新規作成、タイムスタンプの変更<a class="headerlink" href="#touch" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ファイルのタイムスタンプを変更します。
+またはファイルを新規作成します。</p>
+<p>使い方</p>
+<div class="highlight-bat"><div class="highlight"><pre>touch [オプション(省略可)] [ファイル名]
+</pre></div>
+</div>
+<p>例：a.txtを新規作成</p>
+<div class="highlight-bat"><div class="highlight"><pre>touch a.txt
+</pre></div>
+</div>
+<p>例：a.txtのタイムスタンプを1992年12月20日03時33分に変更</p>
+<div class="highlight-bat"><div class="highlight"><pre>touch -t <span class="m">199212200333</span> a.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="less">
+<h3>【less】ファイルの中身を表示<a class="headerlink" href="#less" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>テキストファイルの中身を見るときに使います。</p>
+<p>使い方</p>
+<div class="highlight-bat"><div class="highlight"><pre>less [オプション(省略可)] [ファイル名]
+</pre></div>
+</div>
+<p>例：a.txtの中身を表示</p>
+<div class="highlight-bat"><div class="highlight"><pre>less a.txt
+</pre></div>
+</div>
+<p>閲覧中はfで進み、bで戻り、qで終了することができます。</p>
+</div>
+<div class="section" id="grep">
+<h3>【grep】ファイル検索<a class="headerlink" href="#grep" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ファイルに対して検索し、一致する行を出力します。</p>
+<p>使い方</p>
+<div class="highlight-bat"><div class="highlight"><pre>grep [オプション(省略可)] [検索する文字列] [検索されるファイル名(複数ファイルも可) / 検索されるディレクトリ名]
+</pre></div>
+</div>
+<p>例:a.txtから文字列aaaを探す場合</p>
+<div class="highlight-bat"><div class="highlight"><pre>grep <span class="s1">&#39;aaa&#39;</span> a.txt
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="vi">
+<h2>Vi<a class="headerlink" href="#vi" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Viはテキストエディタの一種です。同様のエディタにEmacsが存在します。</p>
+<div class="section" id="id2">
+<h3>説明<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">viには2種類のモードが存在します。</div>
+<div class="line">このことは常に意識しておく必要があります。</div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li>コマンドモード・・・保存やカーソルの移動、検索などの操作を実行します。</li>
+<li>編集モード・・・テキストの中身を編集します。Escキーによりコマンドモードに切り替えることができます。</li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line">起動直後はコマンドモードになっています。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>コマンド<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">コマンドモードで利用可能なコマンドの説明です。</div>
+<div class="line"><br /></div>
+<div class="line">終了させるときは「:q」です。</div>
+<div class="line">保存するときは「:w」です。</div>
+<div class="line">保存して終了するときは「:wq」、</div>
+<div class="line">変更せずに終了するときは「:q!」です。</div>
+<div class="line"><br /></div>
+<div class="line">挿入方式で編集モードに切り替える場合は「i」です。</div>
+<div class="line">置換方式で編集モードを利用したいときは「R」です。</div>
+<div class="line">編集モードからコマンドモードに切り替えるときは「Escキー」です。</div>
+<div class="line"><br /></div>
+<div class="line">1文字削除する場合は「x」、1行削除する場合は「dd」です。</div>
+<div class="line">Viは各コマンドの前に数字を入力することで、その数だけ繰り返すことができます。</div>
+<div class="line">5文字削除する場合は「5x」のようになります。</div>
+<div class="line"><br /></div>
+<div class="line">1行丸ごとコピーする場合は「yy」、カットする場合は「dd」です。</div>
+<div class="line">貼り付ける場合は「p」です。</div>
+<div class="line"><br /></div>
+<div class="line">変更を元に戻すときは「.」です。</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Unixコマンド</a><ul>
+<li><a class="reference internal" href="#id1">ファイル操作</a><ul>
+<li><a class="reference internal" href="#man">【man】マニュアルを表示</a></li>
+<li><a class="reference internal" href="#cd">【cd】ディレクトリの移動</a></li>
+<li><a class="reference internal" href="#ls">【ls】ファイル・ディレクトリの一覧表示</a></li>
+<li><a class="reference internal" href="#pwd">【pwd】現在のディレクトリを表示</a></li>
+<li><a class="reference internal" href="#cp">【cp】ファイルのコピー</a></li>
+<li><a class="reference internal" href="#mv">【mv】ファイルの移動</a></li>
+<li><a class="reference internal" href="#rm">【rm】ファイルの削除</a></li>
+<li><a class="reference internal" href="#mkdir">【mkdir】新しいディレクトリの作成</a></li>
+<li><a class="reference internal" href="#rmdir">【rmdir】ディレクトリの削除</a></li>
+<li><a class="reference internal" href="#tartar">【tar】tarファイルの圧縮・解凍</a></li>
+<li><a class="reference internal" href="#chmod">【chmod】パーミッションの変更</a></li>
+<li><a class="reference internal" href="#touch">【touch】ファイルの新規作成、タイムスタンプの変更</a></li>
+<li><a class="reference internal" href="#less">【less】ファイルの中身を表示</a></li>
+<li><a class="reference internal" href="#grep">【grep】ファイル検索</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#vi">Vi</a><ul>
+<li><a class="reference internal" href="#id2">説明</a></li>
+<li><a class="reference internal" href="#id3">コマンド</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/18_unix.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+</div>
+<div id="relatedFooter">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div id="sphinx">このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1 で生成しました。</div>
+      <div id="copyright">
+    <p><a href="http://uhero.co.jp/">uhero corp</a>. &#169; all rights reserved.</p>
+    <figure><img src="http://uhero.co.jp/common/images/img_footer.gif" width="80" height="14" alt="uhero corp." /></figure>
+  </div><!--/#copyright-->
+    </div>
+
+  </body>
+</html>

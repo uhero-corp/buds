@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>正規表現 &mdash; Building Uteam Development Skill 0.0.9a ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.9a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Building Uteam Development Skill 0.0.9a ドキュメント" href="index.html" />
+    <link rel="next" title="MySQL入門" href="13_MySQL.html" />
+    <link rel="prev" title="PHPのクラスとオブジェクト指向" href="11_php_object.html" /> 
+  </head>
+  <body>
+<div id="container">
+<div id="header">
+    <a href="http://uhero.co.jp/">
+        <img id="logo" src="http://uhero.co.jp/common/images/logo.png" width="286" height="57" alt="株式会社ユヒーロ" />
+    </a>
+</div>
+<div id="relatedHead">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="13_MySQL.html" title="MySQL入門"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="11_php_object.html" title="PHPのクラスとオブジェクト指向"
+             accesskey="P">前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+</div>
+<div class='underRelatedHead'></div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+<div class="section" id="id1">
+<h1>正規表現<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="line-block">
+<div class="line">正規表現とは、文字列の集合を表現する方法です。</div>
+<div class="line">電話番号やメールアドレス、郵便番号、パスワードなどが規格にあってるかを確かめたり、特定の文字列のパターンに対して処理を行う時などに使います。</div>
+<div class="line">PHPではPerl互換のPCREの正規表現を使うのが基本です。POSIX拡張正規表現(ereg)も使用することが出来ましたがPHP5.3以降は非推奨となっています。</div>
+<div class="line">PCREの正規表現を扱う関数はpregから始まる名称がついています。</div>
+</div>
+<div class="section" id="pcre">
+<h2>PCRE正規表現構文<a class="headerlink" href="#pcre" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">PCRE正規表現を使うためにはPCRE正規表現構文を理解しておく必要があります。</div>
+<div class="line">詳細は <a class="reference external" href="http://jp.php.net/manual/ja/reference.pcre.pattern.syntax.php">PHP: PCRE 正規表現構文 - Manual</a> を参照してください。</div>
+<div class="line">また、ここから先の多くの部分を上記サイトより引用しました。</div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="id2">
+<h3>デリミタ<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">デリミタは，データの区切りを示す文字符号のことです。PCRE関数を使うときはパターンをデリミタで囲む必要があります。</div>
+<div class="line">デリミタは、英数字、バックスラッシュ、空白文字以外の任意の文字を使うことができますが、</div>
+<div class="line">パターンの中でデリミタとなっている文字を使いたい場合はバックスラッシュでエスケープする必要があるため</div>
+<div class="line">パターンの中であまり使われていない文字を使うことが推奨されます。</div>
+<div class="line">デリミタとしてよく使われる文字は、スラッシュ (/)、 ハッシュ記号 (#) およびチルダ (~) です。</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line">例：デリミタがスラッシュ (/)の場合</div>
+</div>
+<blockquote>
+<div><div class="highlight-none"><div class="highlight"><pre>/foo bar/
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">例：ハッシュ記号 (#) の場合</div>
+</div>
+<blockquote>
+<div><div class="highlight-none"><div class="highlight"><pre>#^[^0-9]$#
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>メタ文字<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">正規表現で選択肢やパターンなどを表す特殊な文字をメタ文字と言います。</div>
+<div class="line"><br /></div>
+<div class="line">角カッコ (<strong>[ ]</strong>) 外で使用できるメタ文字(php.netより引用)</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="96%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">記号</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>\</td>
+<td>多目的に使う一般的なエスケープ文字</td>
+</tr>
+<tr class="row-odd"><td>^</td>
+<td>検索対象（複数行モードでは行）の始まりを言明</td>
+</tr>
+<tr class="row-even"><td>$</td>
+<td>検索対象の終わりあるいは終端の改行文字の前（複数行モードでは行の終わり）を言明</td>
+</tr>
+<tr class="row-odd"><td>.</td>
+<td>改行を除くすべての文字にマッチ（デフォルト時）</td>
+</tr>
+<tr class="row-even"><td>[</td>
+<td>文字クラス定義の開始</td>
+</tr>
+<tr class="row-odd"><td>]</td>
+<td>文字クラス定義の終了</td>
+</tr>
+<tr class="row-even"><td>|</td>
+<td>選択枝の開始</td>
+</tr>
+<tr class="row-odd"><td>(</td>
+<td>サブパターンの開始</td>
+</tr>
+<tr class="row-even"><td>)</td>
+<td>サブパターンの終了</td>
+</tr>
+<tr class="row-odd"><td>?</td>
+<td>( の意味を拡張／0 または 1 回マッチ／なるべく少ない回数だけマッチ</td>
+</tr>
+<tr class="row-even"><td>*</td>
+<td>0 回以上の繰り返し</td>
+</tr>
+<tr class="row-odd"><td>+</td>
+<td>1 回以上の繰り返し</td>
+</tr>
+<tr class="row-even"><td>{</td>
+<td>最小／最大を指定する量指定子の開始</td>
+</tr>
+<tr class="row-odd"><td>}</td>
+<td>最小／最大を指定する量指定子の終了</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>文字クラス<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">角カッコ (<strong>[ ]</strong>) の内側を文字クラスと言います</div>
+<div class="line">文字クラスはマッチさせたい文字の候補群を入れておきます。</div>
+<div class="line">数字を含んでいることを表したい場合は「/[0-9]/」のようになります。</div>
+<div class="line"><br /></div>
+<div class="line">角カッコ (<strong>[ ]</strong>) 内でも使用できるメタ文字(php.netより引用)</div>
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="5%" />
+<col width="95%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">記号</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>\</td>
+<td>一般的なエスケープ文字</td>
+</tr>
+<tr class="row-odd"><td>^</td>
+<td>クラスの否定。ただし、文字クラスの最初の文字に用いた場合のみ</td>
+</tr>
+<tr class="row-even"><td>-</td>
+<td>文字の範囲の指定</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">それぞれの詳細に関しては公式マニュアルを参照してください。</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>エスケープシーケンス<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">正規表現構文の中で意味を持ってしまう文字自体を使用したい場合にはその文字の前にバックスラッシュを表記します。</div>
+<div class="line">例えば「*」は正規表現構文では「0 回以上の繰り返し」を表す記号として認識されしまいます。</div>
+<div class="line">「*」自体を表したい場合は「\*」のようにその文字の直前にバックスラッシュを書くことで表すことができます。</div>
+<div class="line"><br /></div>
+<div class="line">バックスラッシュの第2の使用方法は、目に見えない文字をバックスラッシュに英数字を続けて見えるように表記することができます。</div>
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="89%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">記号</th>
+<th class="head">説明(php.netより引用)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>\a</td>
+<td>アラーム、ベル文字 (16進 07)</td>
+</tr>
+<tr class="row-odd"><td>\cx</td>
+<td>&#8220;control-x&#8221;, ここで x は任意の文字</td>
+</tr>
+<tr class="row-even"><td>\e</td>
+<td>エスケープ文字 (16進 1B)</td>
+</tr>
+<tr class="row-odd"><td>\f</td>
+<td>改ページ (formfeed) (16進 0C)</td>
+</tr>
+<tr class="row-even"><td>\n</td>
+<td>改行 (newline) (16進 0A)</td>
+</tr>
+<tr class="row-odd"><td>\p{xx}</td>
+<td>xx プロパティを持つ文字、詳細は下記のunicodeプロパティを参照</td>
+</tr>
+<tr class="row-even"><td>\P{xx}</td>
+<td>xx プロパティを持たない文字、詳細は下記のunicodeプロパティを参照</td>
+</tr>
+<tr class="row-odd"><td>\r</td>
+<td>復帰 (carriage return) (16進 0D)</td>
+</tr>
+<tr class="row-even"><td>\t</td>
+<td>タブ (16進 09)</td>
+</tr>
+<tr class="row-odd"><td>\xhh</td>
+<td>16 進コードで hh の文字</td>
+</tr>
+<tr class="row-even"><td>\ddd</td>
+<td>8 進コードで ddd の文字</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">バックスラッシュ第3の使用方法としては、包括的な文字型を指定する用途です。</div>
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">記号</th>
+<th class="head">説明(php.netより引用)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>\d</td>
+<td>10 進数字</td>
+</tr>
+<tr class="row-odd"><td>\D</td>
+<td>10 進数字でない文字</td>
+</tr>
+<tr class="row-even"><td>\h</td>
+<td>水平方向の空白文字 (PHP 5.2.4 以降)</td>
+</tr>
+<tr class="row-odd"><td>\H</td>
+<td>水平方向の空白文字でない文字 (PHP 5.2.4 以降)</td>
+</tr>
+<tr class="row-even"><td>\s</td>
+<td>空白文字</td>
+</tr>
+<tr class="row-odd"><td>\S</td>
+<td>空白文字でない文字</td>
+</tr>
+<tr class="row-even"><td>\v</td>
+<td>垂直方向の空白文字 (PHP 5.2.4 以降)</td>
+</tr>
+<tr class="row-odd"><td>\V</td>
+<td>垂直方向の空白文字でない文字 (PHP 5.2.4 以降)</td>
+</tr>
+<tr class="row-even"><td>\w</td>
+<td>単語構成文字 (word character)</td>
+</tr>
+<tr class="row-odd"><td>\W</td>
+<td>非単語構成文字 (non-word character)</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">第4の使用法は、簡単な言明です。言明とは、マッチがある特定の位置でだけ可能だという条件を指定するもので、</div>
+<div class="line">検索対象文字列から文字を消費しません。</div>
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="89%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">記号</th>
+<th class="head">説明(php.netより引用)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>\b</td>
+<td>単語境界</td>
+</tr>
+<tr class="row-odd"><td>\B</td>
+<td>非単語境界</td>
+</tr>
+<tr class="row-even"><td>\A</td>
+<td>検索対象文字列の始端（複数行モードとは独立）</td>
+</tr>
+<tr class="row-odd"><td>\Z</td>
+<td>検索対象文字列の終端、または終端の改行（複数行モードとは独立）</td>
+</tr>
+<tr class="row-even"><td>\z</td>
+<td>検索対象文字列の終端（複数行モードとは独立）</td>
+</tr>
+<tr class="row-odd"><td>\G</td>
+<td>マッチングの開始位置</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="unicode">
+<h3>Unicode文字プロパティ<a class="headerlink" href="#unicode" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">UTF-8モードを指定した場合に、Unicodeでカテゴリが規定されているものを指定することが出来ます。</div>
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">プロパティ</th>
+<th class="head">マッチ(php.netより引用)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>C</td>
+<td>その他 (Other)</td>
+</tr>
+<tr class="row-odd"><td>Cc</td>
+<td>コントロール文字 (Control)</td>
+</tr>
+<tr class="row-even"><td>Cf</td>
+<td>非可視整形用文字 (Format)</td>
+</tr>
+<tr class="row-odd"><td>Cn</td>
+<td>未定義コードポイント (Unassigned)</td>
+</tr>
+<tr class="row-even"><td>Co</td>
+<td>私的利用領域 (Private use)</td>
+</tr>
+<tr class="row-odd"><td>Cs</td>
+<td>サロゲート (Surrogate)</td>
+</tr>
+<tr class="row-even"><td>L</td>
+<td>アルファベット (Letter)</td>
+</tr>
+<tr class="row-odd"><td>Ll</td>
+<td>小文字アルファベット (Lower case letter)</td>
+</tr>
+<tr class="row-even"><td>Lm</td>
+<td>擬似文字 (Modifier letter)</td>
+</tr>
+<tr class="row-odd"><td>Lo</td>
+<td>その他の文字 (Other letter)</td>
+</tr>
+<tr class="row-even"><td>Lt</td>
+<td>タイトル文字 (Title case letter)</td>
+</tr>
+<tr class="row-odd"><td>Lu</td>
+<td>大文字アルファベット (Upper case letter)</td>
+</tr>
+<tr class="row-even"><td>M</td>
+<td>記号 (Mark)</td>
+</tr>
+<tr class="row-odd"><td>Mc</td>
+<td>修飾文字 (Spacing mark)</td>
+</tr>
+<tr class="row-even"><td>Me</td>
+<td>他の文字を囲むための文字 (Enclosing mark)</td>
+</tr>
+<tr class="row-odd"><td>Mn</td>
+<td>他の文字を修飾するための文字 (Non-spacing mark)</td>
+</tr>
+<tr class="row-even"><td>N</td>
+<td>数字 (Number)</td>
+</tr>
+<tr class="row-odd"><td>Nd</td>
+<td>10 進数字 (Decimal number)</td>
+</tr>
+<tr class="row-even"><td>Nl</td>
+<td>数値を表す文字 (Letter number)</td>
+</tr>
+<tr class="row-odd"><td>No</td>
+<td>その他の数字 (Other number)</td>
+</tr>
+<tr class="row-even"><td>P</td>
+<td>句読記号 (Punctuation)</td>
+</tr>
+<tr class="row-odd"><td>Pc</td>
+<td>連結用句読記号 (Connector punctuation)</td>
+</tr>
+<tr class="row-even"><td>Pd</td>
+<td>ダッシュ (Dash punctuation)</td>
+</tr>
+<tr class="row-odd"><td>Pe</td>
+<td>閉じ句読記号 (Close punctuation)</td>
+</tr>
+<tr class="row-even"><td>Pf</td>
+<td>末尾句読記号 (Final punctuation)</td>
+</tr>
+<tr class="row-odd"><td>Pi</td>
+<td>先頭句読記号 (Initial punctuation)</td>
+</tr>
+<tr class="row-even"><td>Po</td>
+<td>その他の句読記号 (Other punctuation)</td>
+</tr>
+<tr class="row-odd"><td>Ps</td>
+<td>開き句読記号 (Open punctuation)</td>
+</tr>
+<tr class="row-even"><td>S</td>
+<td>記号 (Symbol)</td>
+</tr>
+<tr class="row-odd"><td>Sc</td>
+<td>通貨記号 (Currency symbol)</td>
+</tr>
+<tr class="row-even"><td>Sk</td>
+<td>合わせ文字 (Modifier symbol)</td>
+</tr>
+<tr class="row-odd"><td>Sm</td>
+<td>数学記号 (Mathematical symbol)</td>
+</tr>
+<tr class="row-even"><td>So</td>
+<td>その他の記号 (Other symbol)</td>
+</tr>
+<tr class="row-odd"><td>Z</td>
+<td>区切り文字 (Separator)</td>
+</tr>
+<tr class="row-even"><td>Zl</td>
+<td>行区切り文字 (Line separator)</td>
+</tr>
+<tr class="row-odd"><td>Zp</td>
+<td>段落区切り文字 (Paragraph separator)</td>
+</tr>
+<tr class="row-even"><td>Zs</td>
+<td>空白文字 (Space separator)</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>パターン修飾子<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">パターン修飾子は終端デリミタの後に続けて指定することで使用することができます。</div>
+<div class="line">パターンマッチングの挙動を変更することができます。</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">修飾子(PCRE内部の名前)</th>
+<th class="head">説明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>i (PCRE_CASELESS)</td>
+<td>この修飾子を設定すると、パターンの中の文字は 大文字にも小文字にもマッチします。</td>
+</tr>
+<tr class="row-odd"><td>m (PCRE_MULTILINE)</td>
+<td>行頭メタ文字(^)と行末メタ文字(^)が対象文字列に含まれる改行の前後にもマッチするようにします。</td>
+</tr>
+<tr class="row-even"><td>s (PCRE_DOTALL)</td>
+<td>この修飾子を設定すると、パターン中のドットメタ文字は 改行を含む全ての文字にマッチします。 これを設定しない場合は、改行にはマッチしません。</td>
+</tr>
+<tr class="row-odd"><td>x (PCRE_EXTENDED)</td>
+<td>この修飾子を設定すると、エスケープするか 文字クラスの内部を除き、 パターンの空白文字は完全に無視されます。</td>
+</tr>
+<tr class="row-even"><td>A (PCRE_ANCHORED)</td>
+<td>この修飾子を設定すると、パターンは強制的に検索対象文字列の先頭でのみマッチするように制限されます。</td>
+</tr>
+<tr class="row-odd"><td>D (PCRE_DOLLAR_ENDONLY)</td>
+<td>この修飾子を設定すると、パターン内のドルメタ文字は、検索対象文字列の 終わりにのみマッチします。この修飾子は、m を設定している場合に無視されます。</td>
+</tr>
+<tr class="row-even"><td>S</td>
+<td>この修飾子を設定すると、追加のパターン分析が 行われます。</td>
+</tr>
+<tr class="row-odd"><td>U (PCRE_UNGREEDY)</td>
+<td>この修飾子を設定すると、量指定子の「貪欲さ」が反転します。 つまり、量指定子は、デフォルトで貪欲でなく、 疑問符を後ろに付けてはじめて貪欲になるようになります。</td>
+</tr>
+<tr class="row-even"><td>X (PCRE_EXTRA)</td>
+<td>パターン内で文字が後ろに続くバックスラッシュ で特に意味がないものをエラーにします。</td>
+</tr>
+<tr class="row-odd"><td>J (PCRE_INFO_JCHANGED)</td>
+<td>ローカルのオプション PCRE_DUPNAMES の設定を変更します。 サブパターンで重複した名前を使用できるようになります。</td>
+</tr>
+<tr class="row-even"><td>u (PCRE_UTF8)</td>
+<td>パターン文字列は、UTF-8 エンコードされた文字列として処理されます。</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="preg">
+<h2>preg関数<a class="headerlink" href="#preg" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">preg関数はPCRE正規表現構文を利用した処理を行うことができる関数です。</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="preg-match">
+<h3>preg_match<a class="headerlink" href="#preg-match" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">preg_matchは正規表現によるマッチングを行う関数です。</div>
+</div>
+<blockquote>
+<div><div class="highlight-none"><div class="highlight"><pre>preg_match([正規表現] , [対象となる文字列]);
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">対象となる文字列が正規表現にマッチした場合はint型の1を、マッチしなかった場合は0を返します。</div>
+<div class="line"><br /></div>
+<div class="line">例：</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nb">preg_match</span><span class="p">(</span><span class="s2">&quot;/uhero/u&quot;</span><span class="p">,</span> <span class="s2">&quot;デジタルエージェンシーで必要とされるテクノロジーをuheroは提供します。&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">第二引数の文字列にuheroが含まれているため、返り値が1となります。</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="preg-replace">
+<h3>preg_replace<a class="headerlink" href="#preg-replace" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">preg_replaceは正規表現により置換する関数です。</div>
+</div>
+<blockquote>
+<div><div class="highlight-none"><div class="highlight"><pre>preg_replace([正規表現], [置換する内容], [元の文字列または文字列により構成される配列]);
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">返り値は置換後の文字列または配列です。</div>
+<div class="line"><br /></div>
+<div class="line">例1：</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">echo</span> <span class="nb">preg_replace</span><span class="p">(</span><span class="s2">&quot;/uhero/u&quot;</span><span class="p">,</span> <span class="s2">&quot;株式会社ユヒーロ&quot;</span><span class="p">,</span> <span class="s2">&quot;デジタルエージェンシーで必要とされるテクノロジーをuheroは提供します。&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">「デジタルエージェンシーで必要とされるテクノロジーを株式会社ユヒーロは提供します。」と出力されます。</div>
+<div class="line"><br /></div>
+<div class="line">例2：</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$string</span> <span class="o">=</span> <span class="s1">&#39;12-20-2014&#39;</span><span class="p">;</span>
+<span class="nv">$pattern</span> <span class="o">=</span> <span class="s1">&#39;/(\d+)-(\d+)-(\d+)/i&#39;</span><span class="p">;</span>
+<span class="nv">$replacement</span> <span class="o">=</span> <span class="s1">&#39;$3年$1月$2日&#39;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="nb">preg_replace</span><span class="p">(</span><span class="nv">$pattern</span><span class="p">,</span> <span class="nv">$replacement</span><span class="p">,</span> <span class="nv">$string</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">「2014年12月20日」が出力されます。</div>
+<div class="line">正規表現のサブパターンを左から順に$1、$2、$3のように利用することが出来ます。</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="preg-split">
+<h3>preg_split<a class="headerlink" href="#preg-split" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="line-block">
+<div class="line">preg_split関数は正規表現を用いて文字列を分割する関数です。</div>
+</div>
+<blockquote>
+<div><div class="highlight-none"><div class="highlight"><pre>preg_split([正規表現], [分割する文字列]);
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">返り値は分割された配列です。</div>
+<div class="line"><br /></div>
+<div class="line">例：</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="nv">$string</span> <span class="o">=</span> <span class="s1">&#39;asdfa5dthdtnr4dt7drbdrb0drbdr1&#39;</span><span class="p">;</span>
+<span class="nv">$pattern</span> <span class="o">=</span> <span class="s1">&#39;/[0-9]+/&#39;</span><span class="p">;</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nb">preg_split</span><span class="p">(</span><span class="nv">$pattern</span><span class="p">,</span> <span class="nv">$string</span><span class="p">));</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">出力結果</div>
+</div>
+<blockquote>
+<div><div class="highlight-none"><div class="highlight"><pre>Array
+(
+    [0] =&gt; asdfa
+    [1] =&gt; dthdtnr
+    [2] =&gt; dt
+    [3] =&gt; drbdrb
+    [4] =&gt; drbdr
+    [5] =&gt;
+)
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">この例では、正規表現に数字を指定することで「文字列中に数字があれば分割する」という処理になります。</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="preg-quote">
+<h3>preg_quote<a class="headerlink" href="#preg-quote" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>PCRE正規表現構文では、メタ文字が多数あります。これらの文字を利用したい場合はバックスラッシュでエスケープすることで使うことが出来ます。
+preg_quoteはメタ文字のエスケープを自動的に行うことが出来ます。</p>
+<blockquote>
+<div><div class="highlight-none"><div class="highlight"><pre>preg_quote([エスケープする文字列]);
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">返り値はエスケープされた文字列です。</div>
+<div class="line"><br /></div>
+<div class="line">例：</div>
+</div>
+<blockquote>
+<div><div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">echo</span> <span class="nb">preg_quote</span><span class="p">(</span><span class="s2">&quot;*very*&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">出力結果</div>
+</div>
+<blockquote>
+<div><div class="highlight-none"><div class="highlight"><pre>\*very\*
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>課題<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">引数で渡された文字列がEmailアドレスであるかと判定し、正しければtrueを、間違っていればfalseを返す関数をPHPで書きなさい。</div>
+<div class="line"><br /></div>
+<div class="line">Emailアドレスであるかの判定条件は以下の通りとする。</div>
+<div class="line">・ローカル部分とドメイン部分が「&#64;」で区切られている。(<a class="reference external" href="mailto:local&#37;&#52;&#48;domain">local<span>&#64;</span>domain</a>)</div>
+<div class="line">・ローカル部分とドメイン部分で使用できる文字は大文字と小文字のアルファベット、英数字、そしてピリオド(.)、ハイフン(-)、アンダースコア(_)の3種類の記号のみとする。</div>
+<div class="line">・しかしローカル部分は1文字以上であり、始めの1文字目で記号を使用できないものとする。</div>
+<div class="line">・また、ドメイン部分は2文字以上であり、1文字目はピリオドが使用できないものとする。</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">正規表現</a><ul>
+<li><a class="reference internal" href="#pcre">PCRE正規表現構文</a><ul>
+<li><a class="reference internal" href="#id2">デリミタ</a></li>
+<li><a class="reference internal" href="#id3">メタ文字</a></li>
+<li><a class="reference internal" href="#id4">文字クラス</a></li>
+<li><a class="reference internal" href="#id5">エスケープシーケンス</a></li>
+<li><a class="reference internal" href="#unicode">Unicode文字プロパティ</a></li>
+<li><a class="reference internal" href="#id6">パターン修飾子</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#preg">preg関数</a><ul>
+<li><a class="reference internal" href="#preg-match">preg_match</a></li>
+<li><a class="reference internal" href="#preg-replace">preg_replace</a></li>
+<li><a class="reference internal" href="#preg-split">preg_split</a></li>
+<li><a class="reference internal" href="#preg-quote">preg_quote</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7">課題</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="11_php_object.html"
+                        title="前の章へ">PHPのクラスとオブジェクト指向</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="13_MySQL.html"
+                        title="次の章へ">MySQL入門</a></p>
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/12_regular_expression.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+</div>
+<div id="relatedFooter">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="13_MySQL.html" title="MySQL入門"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="11_php_object.html" title="PHPのクラスとオブジェクト指向"
+             >前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div id="sphinx">このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1 で生成しました。</div>
+      <div id="copyright">
+    <p><a href="http://uhero.co.jp/">uhero corp</a>. &#169; all rights reserved.</p>
+    <figure><img src="http://uhero.co.jp/common/images/img_footer.gif" width="80" height="14" alt="uhero corp." /></figure>
+  </div><!--/#copyright-->
+    </div>
+
+  </body>
+</html>

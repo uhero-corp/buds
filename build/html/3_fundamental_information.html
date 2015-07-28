@@ -1,0 +1,833 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>情報基礎 &mdash; Building Uteam Development Skill 0.0.9a ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/main.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.9a',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Building Uteam Development Skill 0.0.9a ドキュメント" href="index.html" />
+    <link rel="next" title="HTML入門" href="4_html.html" />
+    <link rel="prev" title="ITパスポート試験演習" href="2_itpassport.html" /> 
+  </head>
+  <body>
+<div id="container">
+<div id="header">
+    <a href="http://uhero.co.jp/">
+        <img id="logo" src="http://uhero.co.jp/common/images/logo.png" width="286" height="57" alt="株式会社ユヒーロ" />
+    </a>
+</div>
+<div id="relatedHead">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="4_html.html" title="HTML入門"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="2_itpassport.html" title="ITパスポート試験演習"
+             accesskey="P">前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+</div>
+<div class='underRelatedHead'></div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+<div class="section" id="id1">
+<h1>情報基礎<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ここでは情報に関する基礎的な用語やコンピュータの仕組みについて解説していきます。</p>
+<div class="section" id="id2">
+<h2>情報の基礎理論<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><strong>【2進数】</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">2進数とは、数を&#8221;0&#8221;と&#8221;1&#8221;の2つの文字の組み合わせで表現したものです。</div>
+<div class="line">コンピュータの内部では「電圧が高い/低い」という2つの状態を使ってデータを管理しており、これを表現するために最適な方法が2種類の値を持つ2進数です。</div>
+</div>
+</div></blockquote>
+<p><strong>【16進数】</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">16進数とは、数を16個の文字を用いて表現したものです。16進数の1桁は、2進数の4桁に相当します。</div>
+<div class="line">コンピュータでは、2進数8桁のデータをひとつの単位として扱うことが多いので、16進数はコンピュータ上のデータを扱う上で非常に効率が良くなります。16進数では、&#8221;0&#8221;から&#8221;9&#8221;までの数字のほかに&#8221;A&#8221;から&#8221;F&#8221;までのアルファベットを使って数を表現します。</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">2進数</th>
+<th class="head">10進数</th>
+<th class="head">16進数</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>10</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td>11</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr class="row-even"><td>100</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="row-odd"><td>101</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr class="row-even"><td>110</td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr class="row-odd"><td>111</td>
+<td>7</td>
+<td>7</td>
+</tr>
+<tr class="row-even"><td>1000</td>
+<td>8</td>
+<td>8</td>
+</tr>
+<tr class="row-odd"><td>1001</td>
+<td>9</td>
+<td>9</td>
+</tr>
+<tr class="row-even"><td>1010</td>
+<td>10</td>
+<td>A</td>
+</tr>
+<tr class="row-odd"><td>1011</td>
+<td>11</td>
+<td>B</td>
+</tr>
+<tr class="row-even"><td>1100</td>
+<td>12</td>
+<td>C</td>
+</tr>
+<tr class="row-odd"><td>1101</td>
+<td>13</td>
+<td>D</td>
+</tr>
+<tr class="row-even"><td>1110</td>
+<td>14</td>
+<td>E</td>
+</tr>
+<tr class="row-odd"><td>1111</td>
+<td>15</td>
+<td>F</td>
+</tr>
+<tr class="row-even"><td>10000</td>
+<td>16</td>
+<td>10</td>
+</tr>
+<tr class="row-odd"><td>11111</td>
+<td>31</td>
+<td>1F</td>
+</tr>
+<tr class="row-even"><td>100000</td>
+<td>32</td>
+<td>20</td>
+</tr>
+<tr class="row-odd"><td>111111</td>
+<td>63</td>
+<td>3F</td>
+</tr>
+<tr class="row-even"><td>1000000</td>
+<td>64</td>
+<td>40</td>
+</tr>
+<tr class="row-odd"><td>111111</td>
+<td>127</td>
+<td>7F</td>
+</tr>
+<tr class="row-even"><td>10000000</td>
+<td>128</td>
+<td>80</td>
+</tr>
+<tr class="row-odd"><td>11111111</td>
+<td>255</td>
+<td>FF</td>
+</tr>
+<tr class="row-even"><td>100000000</td>
+<td>256</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div></blockquote>
+<p><strong>【ビットとバイト】</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ビット(bit)は2進数一桁のことを言います。コンピュータが扱う、情報の最小単位です。1ビットでは2通りを表現することができ、一般的には「0」「1」で表記されます。nビットであれば、2のn乗の情報を扱うことができます。例えば、8ビットであれば2*2*2*2*2*2*2*2=256通り表現することができます。</div>
+<div class="line"><br /></div>
+<div class="line">バイト(Byte)は情報の大きさを表すのに使われる単位であり、1Byte = 8bitsです。一般的に1024Bを1kB(キロバイト)、1024kBを1MB(メガバイト)、1024MBを1GB(ギガバイト)、1024GBを1TB(テラバイト)とされています。</div>
+</div>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">ノート</p>
+<p class="last">混同を防ぐために、ビットは小文字のb、バイトは大文字のBで表記します。</p>
+</div>
+</div></blockquote>
+</div></blockquote>
+<p><strong>【文字コード】</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">文字化けを経験したことがある人は多いと思います。</div>
+<div class="line">その文字化けを生じる原因になっているのが、文字コードの違いです。</div>
+</div>
+<div class="line-block">
+<div class="line">文字コードとは文字の表現形式で、ある&#8221;文字セット&#8221;に対する&#8221;符号化方法&#8221;の事です。</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>文字セット</strong> とは、その名のとおり文字の集合体を表すもので、例えば以下の文字を複数組み合わせたものです。</div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line">* 半角英数</div>
+<div class="line">* 半角カナ</div>
+<div class="line">* 日本語</div>
+<div class="line">* ラテン語</div>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line">文字セットの具体例として、以下があります。</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>JIS X0201</strong></td>
+<td><div class="first last line-block">
+<div class="line">半角英数、半角カナ、日本語の集合体</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><strong>Unicode</strong></td>
+<td><div class="first last line-block">
+<div class="line">世界中で使われるすべての文字</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><strong>符号化方法</strong> とは、文字セットの各文字に対して、どのようにして数値を当てはめるか定めたものです。</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>ASCII</strong></td>
+<td><div class="first last line-block">
+<div class="line">半角英数の符号化方法。すべての文字は7ビットで表現される。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><strong>Shift_JIS</strong></td>
+<td><div class="first last line-block">
+<div class="line">JIS X0201の符号化方法。半角英数と半角カナは1バイト、その他の日本語は2バイトで表現される。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>EUC</strong></td>
+<td><div class="first last line-block">
+<div class="line">JIS X0201の符号化方法。半角英数以外のすべての文字が2バイトで表現される。</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><strong>Unicode</strong></td>
+<td><div class="first last line-block">
+<div class="line">Unicode(文字セット)の符号化方法のひとつ。すべての文字が2バイトで表現される。</div>
+<div class="line">文字セットのUnicodeと文字コードのUnicodeは別の概念であることに注意すること。</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>UTF-8</strong></td>
+<td><div class="first last line-block">
+<div class="line">Unicodeの符号化方法のひとつ。XMLの仕様では標準の文字コードとされている。</div>
+<div class="line">半角英数が1バイトで済むように工夫されているが、日本語を表現するためには3バイト必要である。</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>ハードウェア<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>コンピュータは主に以下の5パーツで構成されており、一般に五大装置と呼ばれています。</p>
+<dl class="docutils">
+<dt><strong>【入力装置】</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">コンピュータに処理させるデータやプログラム、操作などを入力するための装置です。</div>
+<div class="line">最も代表的なものはキーボードとマウスで、他にもタッチパネルなどが挙げられます。</div>
+</div>
+</dd>
+<dt><strong>【出力装置】</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">コンピュータで処理した結果や途中経過を出力するための装置です。</div>
+<div class="line">最も代表的なものにはディスプレイ、ステレオ装置、プリンタなどが挙げられます。</div>
+</div>
+</dd>
+<dt><strong>【記憶装置】</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">記憶装置は、コンピュータ本体の中でシステムの稼働中に使用される&#8221;主記憶装置&#8221;とそれを補う形の&#8221;補助記憶装置&#8221;とに分けられます。</div>
+<div class="line">主記憶装置は一般的にメモリ（memory）と呼ばれる装置であるのに対し、補助記憶装置は、主記憶装置の容量不足を補うため</div>
+<div class="line">あるいはシステムが稼働していないときの保存のために、外部の媒体（メディア）に記憶しておく役割を持ちます。</div>
+<div class="line">補助記憶装置は種類が非常に豊富で、代表的なものにハードディスク、CD、DVD、フラッシュメモリなどがあります。</div>
+</div>
+</dd>
+<dt><strong>【演算装置】</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">演算装置には、算術演算装置（arithmetic unit）と論理演算装置（logic unit）と呼ばれるものがあります。</div>
+<div class="line">これらを一括して算術論理演算装置（Arithmetic and Logic Unit）といい、省略してALUと呼ぶこともあります。</div>
+<div class="line">コンピュータはよく「計算機」と言われますが、実際にその計算を行っているのがこの演算装置です。</div>
+</div>
+</dd>
+<dt><strong>【制御装置】</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">コンピュータを動作させるプログラムを解析し、入力装置、出力装置、記憶装置、演算装置に制御信号を出す装置です。</div>
+<div class="line">演算装置とこの制御装置がコンピュータの心臓部であり、この2つをあわせて中央処理装置（CPU：Central Processing Unit</div>
+<div class="line">あるいは単に処理装置（プロセッサ：Processor）と呼びます。</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="id4">
+<h2>ソフトウェア<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">ソフトウェア(software)という言葉は、先ほどあげた五大装置のようなハードウェア(hardware)と対比する言葉であり、それをもじった造語です。</div>
+<div class="line">一般的には、道具そのものをハードウェア、その道具の使い方をソフトウェアといいます。</div>
+<div class="line">ITの分野でハードは「機械そのもの」、「ソフト」はプログラムなどの目には見えないものを指す場合がほとんどです。</div>
+</div>
+</div>
+<div class="section" id="os">
+<h2>OS<a class="headerlink" href="#os" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><strong>【OS】</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">OSとは、Operateing Systemの略称です。コンピュータ資源（システム資源）を効率よく実行させるためのソフトウェアの集まりであり、コンピュータシステム全体を管理するソフトウェアなのです。</div>
+<div class="line">代表的なOSとして有名なものは、</div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>Windows</li>
+<li>Mac OS</li>
+<li>UNIX</li>
+<li>Linux</li>
+</ul>
+<p>　　　等が挙げられます。</p>
+<p><strong>【API】</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">APIとはApplication Program Interfaceの略称で、ソフトウェア開発を容易にするためにあらかじめ提供されているプログラムの部品のことです。</div>
+<div class="line">多くのソフトウェアに共通して用いられるような機能等をあらかじめ用意しておくことで開発の負担を減らしたり、データをコンパクトにしたりきます。</div>
+</div>
+</div></blockquote>
+<p><strong>【プログラム】</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">プログラム言語というのは、コンピュータに対する一連の動作の指示を記述するための人工言語の総称です。</div>
+<div class="line">この一連の指示をプログラムと呼びます。</div>
+</div>
+<div class="line-block">
+<div class="line">プログラム言語は以下の４種類に大別されます。</div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>汎用プログラム言語</li>
+<li>スクリプト言語</li>
+<li>第４世代言語</li>
+<li>特殊問題向き言語</li>
+</ul>
+<blockquote>
+<div><div class="line-block">
+<div class="line">ちなみに、HTML等はプログラム言語ではありません。</div>
+</div>
+<div class="line-block">
+<div class="line">そしてそのプログラム言語はさら２種類、低水準言語と高水準言語に分けることができます。</div>
+<div class="line">低水準言語とはコンピュータが理解しやすい機械語、またはより機械語に近い形式で記述されるプログラム言語のことを指します。</div>
+<div class="line">そして高水準言語とは、より人間の言語表現に近い形式で記述されるプログラム言語のことを指します。</div>
+</div>
+<div class="line-block">
+<div class="line">有名なプログラム言語を大別すると以下のようになります。</div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li>汎用プログラム言語</li>
+</ul>
+<p>　　　低水準言語:アセンブラ語</p>
+<p>　　　高水準言語：C、JAVA</p>
+<ul class="simple">
+<li>スクリプト言語</li>
+</ul>
+<p>　　　PHP、Perl、Javascript</p>
+</div>
+<div class="section" id="id5">
+<h2>ディレクトリ構造<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">ここではディレクトリにまつわることを解説します。</div>
+<div class="line"><strong>ディレクトリ</strong> とは、パソコンで使われているMS-DOSやUNIXといったOSにおけるファイル管理の単位のことです。</div>
+<div class="line">WindowsやMacではディレクトリよりも&#8221;フォルダ&#8221;という名称の方が親しみがあるかもしれません。</div>
+<div class="line">ディレクトリにはファイルの管理情報が記録されており、ファイルの読み書きはこの管理情報を通じて行われます。</div>
+<div class="line">3種類のディレクトリを簡単に解説します。</div>
+</div>
+<dl class="docutils">
+<dt><strong>【ルートディレクトリ】</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">最上位のディレクトリのことです。ルートディレクトリは常に1つしかありません。</div>
+</div>
+</dd>
+<dt><strong>【サブディレクトリ】</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">ルートディレクトリの下層にある複数のディレクトリのことです。</div>
+<div class="line">ユーザが自由に作成でき、サブディレクトリの中にはファイルやディレクトリをさらに作ることができます。</div>
+</div>
+</dd>
+<dt><strong>【カレントディレクトリ】</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">ユーザが現在の作業を行っているディレクトリのことです。ユーザの作業状況によってカレントディレクトリの位置は変化します。</div>
+</div>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line">また、 <strong>パス</strong> というのも重要なワードです。</div>
+<div class="line">ファイルやディレクトリまでの経路のことをパス(path)と呼んでいます。</div>
+<div class="line">目的のファイルやディレクトリを指定するときは、その位置をパス指定します。</div>
+<div class="line">パスには主に２種類の記述があります。</div>
+</div>
+<dl class="docutils">
+<dt><strong>【絶対パス】</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">パス指定のやり方の1つで、ルートディレクトリから指定します。</div>
+<div class="line">カレントディレクトリに関係なく、位置が一意に決まります。</div>
+</div>
+</dd>
+<dt><strong>【相対パス】</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">パス指定のやり方の1つで、カレントディレクトリから指定します。</div>
+<div class="line">カレントディレクトリからの相対的なパスなので、位置が一意に決まらない。</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="id6">
+<h2>データベース<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="line-block">
+<div class="line">データベースが登場するまで、ファイルはプログラムごとに管理されていたため、</div>
+<div class="line">各ファイル間にかなりのデータの重複が見られ、データの更新のずれにより</div>
+<div class="line">ファイル間のデータの不一致といった問題を引き起こすことが多くありました。</div>
+<div class="line">そこで、個別に作成していたファイルを整理し、一元化することでデータの共用化と</div>
+<div class="line">プログラムからの独立性を図り、データの質と安全性を向上させようという考えが生まれたのです。</div>
+</div>
+<div class="line-block">
+<div class="line">データベースで、データ構造やコンピュータ操作をどのようにするか決めたものをデータモデルです。</div>
+<div class="line">データモデルには階層モデル、網モデル、関係モデルの３つがあります。</div>
+<div class="line">現在一般的に使用されているのは関係モデルであり、そのデーターベースをリレーショナルデータベースと呼んでいます。</div>
+</div>
+<p><strong>【関係モデル】</strong></p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">二次元の表構造によってデータ構造を表現したものです。</div>
+<div class="line">表の列を属性(attribute)、行を組(tuple)と呼び、属性と組で構成された表を関係(relational)と定義します。</div>
+</div>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">列</th>
+<th class="head">列</th>
+<th class="head">列</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>行</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>行</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>行</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line">１つの表の中で各組すべて、その値がことなるものが主キー(primary key)です。</div>
+<div class="line">この主キーの値は重複しない、空ではないという実態の完全性を持ち、</div>
+<div class="line">通常、通し番号(学籍番号とか商品番号など)が主キーに相当します。</div>
+<div class="line">また、主キーが他の表の属性として使われているとき、その属性を外部キー(foreign key)といいます。</div>
+<div class="line">主キーと外部キーは、</div>
+<div class="line"><strong>「表Aに主キー、表Bに外部キーがある場合、Bの属性欄のデータはAの属性欄の値として必ず存在しなければならない」</strong></div>
+<div class="line">という参照の完全性が成立します。</div>
+<div class="line">使いやすさ、システムの柔軟性、拡張性などの利点から現在、</div>
+<div class="line">関係モデルのリレーショナルデータベース(Relational DataBase：RDB)は</div>
+<div class="line">パソコンをはじめさまざまなコンピュータ上で広く利用されています。</div>
+</div>
+</div></blockquote>
+<p><strong>【データベースマネージメントシステム】</strong></p>
+<div class="line-block">
+<div class="line">データベースを作成し、保守・管理するソフトウェアをDBMSといいます。</div>
+<div class="line">DBMSには、データベースを定義する機能、データベースのデータを効率よく操作する機能、</div>
+<div class="line">データベースのデータを保護する機能などがあります。</div>
+<div class="line">このシステムによってデータベースをガードし、ユーザは直接データに触れることなく</div>
+<div class="line">必要な情報を入手できるようになりました。また、DBMSの働きでユーザが自分のプログラムに</div>
+<div class="line">データやファイルに関する記述をする必要がなくなり、DBMSに直接対話することで、</div>
+<div class="line">データベースへのデータの受け渡しが可能となりました。この対話は、データベース言語によって行われます。</div>
+</div>
+<p><strong>【SQL (Structured Query Language)】</strong></p>
+<div class="line-block">
+<div class="line">SQLはリレーショナルデータベースを操作するための言語で、</div>
+<div class="line">データの定義言語（SQL-DDL）とデータの操作言語（SQL-DML）から成ります。</div>
+<div class="line">SQLは独立言語方式で利用できるほか、Cなどの高水準言語にSQLを埋め込んで利用する親言語方式もあります。</div>
+<div class="line">この単元でのポイントは、</div>
+<div class="line">* データベースを操作するための言語のことをSQLという</div>
+<div class="line">* SQLにはデータ定義言語とデータ操作言語がある</div>
+<div class="line">* 他のプログラム言語などからも使うことができる</div>
+<div class="line">という点です。</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>ネットワークシステム<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id8">
+<h3>プロトコル<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>データの通信方法に関する取り決めを「プロトコル」と呼びます。
+日常生活における「プロトコル」の例は、例えば信号です。
+信号の「青」は「前に進んでも良い」という意味で
+「赤」は「止まらなければならない」という意味だと
+あらかじめ規定しておき、各ドライバーがその取り決めを
+理解して遵守することによって、交通の流れをスムーズに
+させたり事故を防いだりしていると解釈することができます。</p>
+</div>
+<div class="section" id="osi">
+<h3>OSI基本参照モデル<a class="headerlink" href="#osi" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>「OSI基本参照モデル」とは、ネットワークでデータを通信するために必要な仕様の取り決めを、7つの層に分けて定義したものです。</p>
+<dl class="docutils">
+<dt><strong>物理層</strong></dt>
+<dd>データをどのように信号化するか(例えば銅線のケーブルであれば電流の強弱, 光ケーブルであれば光の明るさなど)などを規定する</dd>
+<dt><strong>データリンク層</strong></dt>
+<dd>2つの通信機器同士におけるデータの管理方法などを担当する</dd>
+<dt><strong>ネットワーク層</strong></dt>
+<dd>データの経路の制御を担当する</dd>
+<dt><strong>トランスポート層</strong></dt>
+<dd>通信におけるデータの転送方法について規定する</dd>
+<dt><strong>セッション層</strong></dt>
+<dd>通信が確実に行われるための</dd>
+<dt><strong>プレゼンテーション層</strong></dt>
+<dd>送受信されるデータの形式などを管理する</dd>
+<dt><strong>アプリケーション層</strong></dt>
+<dd>Webページのアクセスやメールの送受信など、具体的なサービスのプロトコルなどを規定する</dd>
+</dl>
+</div>
+<div class="section" id="tcp-ip">
+<h3>TCP／IP<a class="headerlink" href="#tcp-ip" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>米国防総省が開発したインターネットアーキテクチャです。これらから構成されています。</p>
+<ol class="arabic simple">
+<li>アプリケーション層</li>
+<li>TCP</li>
+<li>IP</li>
+<li>ネットワークインターフェース層</li>
+</ol>
+<p>TCP/IPを使って通信を行う際、送信先のコンピュータを特定するために用いられるID番号のことをIPアドレスと言います。</p>
+</div>
+<div class="section" id="dhcp">
+<h3>DHCPとは<a class="headerlink" href="#dhcp" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>DHCPはDynamic Host Configuration Protocolの略です。</p>
+<p>TCP/IP環境でネットワークを接続するとき、接続する各コンピュータにIPアドレスなどの必要な情報を自動的に割り当てるプロトコルです。
+自分のノートPCをDHCPが有効なネットワークにつなぐと、自動的にIPアドレスが与えられ、すぐにインターネットに接続することができます。</p>
+</div>
+<div class="section" id="www">
+<h3>WWW<a class="headerlink" href="#www" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>WWWとは、World Wide Webの略です。
+世界中のWWWサーバに登録されているWebページが、クモの巣のように互いに結びつき、誰でも情報を閲覧できるように公開した大規模なデータベースシステムです。</p>
+<p>Webページどうしが縦横無尽にリンクされている状態を「クモの巣のよう」と表現しております。</p>
+<p>通常、閲覧には「Internet Explorer」や「Fire Fox」といったWebブラウザが広く利用されています。</p>
+</div>
+<div class="section" id="ftp">
+<h3>FTP<a class="headerlink" href="#ftp" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>FTPは、File Transfer Protocol の略です。</p>
+<p>TCP/IPにおけるファイル転送するためのプロトコルです。
+インターネット上のファイルを公開しているサーバと
+やり取りするときなどに使います。
+CUIで利用することはもちろん、GUIで利用することもできます。</p>
+</div>
+<div class="section" id="email">
+<h3>Email<a class="headerlink" href="#email" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="docutils">
+<dt><strong>POP</strong></dt>
+<dd><p class="first">Post Office Protocolの略。</p>
+<p class="last">メール受信用プロトコルです。
+現在は改良されたPOP3が主に使われています。
+POPでのメールの受信は、ユーザがPOPサーバからメールをダウンロードしてくる、
+という仕組みになっていて、一度ダウンロードしたメールはネットに繋がなくても見ることができます。
+ダウンロードしたメールは原則としてサーバーには残りません。</p>
+</dd>
+<dt><strong>IMAP</strong></dt>
+<dd><p class="first">Internet Message Access Protocolの略。</p>
+<p class="last">これもメール受信用プロトコルです。
+IMAPで受信したメールはサーバーに蓄積され、ユーザーはサーバー上にある自分宛のメールに直接アクセスすることでメールを見ることができます。
+ネットにさえつながれば、どの端末からもメールを読むことができるという利点があります。</p>
+</dd>
+<dt><strong>SMTP</strong></dt>
+<dd><p class="first">Simple Mail Transfer Protocolの略。</p>
+<p class="last">メール送信用プロトコルです。
+PCなどの端末から送信されたメールは指定したSMTPサーバに送られます。
+そしてSMTPサーバはまた別のSMTPサーバに対してその送られてきたメールを送信し、
+最終的に受信用のサーバであるPOPサーバやIMAPサーバに届けられる仕組みになっています。</p>
+</dd>
+<dt><strong>まとめ</strong></dt>
+<dd>メールを送信するときには送信用のプロトコルとサーバ
+受信するときには受信用のプロトコルとサーバを用いてEmailのやりとりをします。</dd>
+</dl>
+</div>
+<div class="section" id="dns">
+<h3>DNS<a class="headerlink" href="#dns" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="docutils">
+<dt><strong>ドメイン名とは</strong></dt>
+<dd>数値で羅列されたIPアドレスを、わかりやすく文字に置き換えたものです。uheroの公式サイトの場合、IPアドレスは46.51.246.254、ドメイン名はwww.uhero.co.jpです。</dd>
+<dt><strong>DNSとは</strong></dt>
+<dd><p class="first">DNS（Domain Name System）とは、IPアドレスとドメイン名とを対応させ管理するシステムです。これによって、登録さえされていればIPアドレスでもドメイン名でも同じ扱いになります。基本的なドメイン名の命名規則は「ホスト名.組織名.組織属性.国コード」で表します。例えばユヒーロのドメイン名である「www.uhero.co.jp」では</p>
+<blockquote>
+<div><ul class="simple">
+<li>www：ホスト名</li>
+<li>uhero：組織名</li>
+<li>co：組織属性</li>
+<li>jp：国コード</li>
+</ul>
+</div></blockquote>
+<p class="last">となります。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="uri">
+<h3>URIとは<a class="headerlink" href="#uri" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>&#8220;Uniform Resource Identifier&#8221; の略で、情報資源を特定するためのIDです。
+インターネットにおける情報の「住所」にあたります。
+URLはURIの機能の一部を具体的に仕様化したものです。</p>
+</div>
+<div class="section" id="id9">
+<h3>イントラネット<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>イントラネットとはインターネット技術を利用して
+企業などの内部ネットワーク（LAN）を構築し、
+情報の共有化や外部への情報提供などを行うシステムです。</p>
+<p>これまでイントラネットでは、専用のソフトウェアを使用して構築されることが多かったのですが、
+既存のインターネットの技術を利用することにより、安く、使いやすいシステムを実現することが可能になりました。</p>
+</div>
+<div class="section" id="id10">
+<h3>ファイアウォール<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>インターネット上からLAN内部に不正侵入されないようにするための防衛機能です。
+外部からの不正アクセスなどから内部ネットワークを守るセキュリティ対策機能として、
+インターネットなどの外部ネットワークとLANなどの内部ネットワークの間に設置します。</p>
+<p>プロキシサーバ（proxy server）の設定やルータのフィルタリング（filtering）機能によって、
+インターネットと内部ネットワークの間にバリアセグメントを作り、内部ネットワークに
+外部ネットワークからの不正侵入ができないようにします。</p>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>情報システムのセキュリティ<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><strong>【プライバシーの保護】</strong></p>
+<div class="line-block">
+<div class="line">情報システム上での個人情報の漏洩や不正使用を未然に防ぐことがプライバシーの保護です。</div>
+<div class="line">プライバシーの保護策としては、個人情報の流出防止法といった法的規制のほかに次のような防止策があります。</div>
+</div>
+<blockquote>
+<div><dl class="docutils">
+<dt><strong>アクセス管理</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">コンピュータシステムへの不正アクセスを防止するためにユーザが与えるアクセス権減を明確にし、管理することを言います。</div>
+<div class="line">個人の識別方法として、ユーザIDやパスワードが多く利用されています。</div>
+</div>
+</dd>
+<dt><strong>認証</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">相手が本人であるか確認する、ということです。主にパスワード入力かコールバック、発信番号の自動検出機能、デジタル署名などが利用されています。</div>
+</div>
+</dd>
+<dt><strong>暗号化</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">ネットワーク上で買わされる個人情報や取引内容などのデータを第三者には理解できないように暗号に変換することをいいます。</div>
+</div>
+</dd>
+<dt><strong>複合</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">暗号化されたデータを元に戻すことをいいます。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>【暗号方式】</strong></p>
+<blockquote>
+<div><dl class="docutils">
+<dt><strong>秘密鍵暗号方式</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">共通鍵暗号方式ともいいます。暗号化と複合化に同じ鍵を使い、当事者（送信者と受信者）以外には秘密にしておく方式です。</div>
+<div class="line">暗号化、複合化の速度が速く、グループの利用に適しています。欠点は鍵が盗まれてしまうとすぐにその鍵で複合化ができてしまうこと、</div>
+<div class="line">そして相手の数だけ鍵を用意する必要があることです。</div>
+</div>
+</dd>
+<dt><strong>公開鍵暗号方式</strong></dt>
+<dd><div class="first last line-block">
+<div class="line">暗号化鍵と複合化鍵を別にし、暗号化鍵の法は公開して複合化鍵の方だけを受信者のみの秘密としておく方式です。</div>
+<div class="line">受信者側は秘密にしてある鍵一つだけで複合化できるので鍵の管理が楽になります。</div>
+<div class="line">ネット上での取引や顧客のクレジット番号のやり取りなど多数対１の利用に適しています。</div>
+<div class="line">欠点としては、暗号化/複合化の速度がやや遅いこと、誰でも暗号化はすることができるので成り済ましの危険があることです。</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">情報基礎</a><ul>
+<li><a class="reference internal" href="#id2">情報の基礎理論</a></li>
+<li><a class="reference internal" href="#id3">ハードウェア</a></li>
+<li><a class="reference internal" href="#id4">ソフトウェア</a></li>
+<li><a class="reference internal" href="#os">OS</a></li>
+<li><a class="reference internal" href="#id5">ディレクトリ構造</a></li>
+<li><a class="reference internal" href="#id6">データベース</a></li>
+<li><a class="reference internal" href="#id7">ネットワークシステム</a><ul>
+<li><a class="reference internal" href="#id8">プロトコル</a></li>
+<li><a class="reference internal" href="#osi">OSI基本参照モデル</a></li>
+<li><a class="reference internal" href="#tcp-ip">TCP／IP</a></li>
+<li><a class="reference internal" href="#dhcp">DHCPとは</a></li>
+<li><a class="reference internal" href="#www">WWW</a></li>
+<li><a class="reference internal" href="#ftp">FTP</a></li>
+<li><a class="reference internal" href="#email">Email</a></li>
+<li><a class="reference internal" href="#dns">DNS</a></li>
+<li><a class="reference internal" href="#uri">URIとは</a></li>
+<li><a class="reference internal" href="#id9">イントラネット</a></li>
+<li><a class="reference internal" href="#id10">ファイアウォール</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id11">情報システムのセキュリティ</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="2_itpassport.html"
+                        title="前の章へ">ITパスポート試験演習</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="4_html.html"
+                        title="次の章へ">HTML入門</a></p>
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/3_fundamental_information.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+</div>
+<div id="relatedFooter">
+
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="4_html.html" title="HTML入門"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="2_itpassport.html" title="ITパスポート試験演習"
+             >前へ</a> |</li>
+        <li><a href="index.html">Building Uteam Development Skill 0.0.9a ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div id="sphinx">このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1 で生成しました。</div>
+      <div id="copyright">
+    <p><a href="http://uhero.co.jp/">uhero corp</a>. &#169; all rights reserved.</p>
+    <figure><img src="http://uhero.co.jp/common/images/img_footer.gif" width="80" height="14" alt="uhero corp." /></figure>
+  </div><!--/#copyright-->
+    </div>
+
+  </body>
+</html>

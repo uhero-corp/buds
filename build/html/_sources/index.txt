@@ -1,0 +1,66 @@
+.. Test for buds documentation master file, created by
+   sphinx-quickstart on Fri Jun  7 15:37:48 2013.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+ようこそ! Buds へ
+==================================
+
+| BudsとはBuilding Uteam Development Skillの頭文字をとったもので、
+| uTeamがユヒーロで勤務する際に必要な開発スキルなどを習得するための教材です。
+| また、Budsとは英語で"つぼみ"や"芽"といった意味があります。
+| ひとりひとりの"Buds"を育てるためにぜひこのトレーニング教材を活用してください。
+
+.. toctree::
+   :maxdepth: 1
+
+   0_changelog
+
+情報技術の基礎知識
+------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   introduction
+   1_pcset
+   2_itpassport
+   3_fundamental_information
+
+
+HTMLとCSS
+------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   4_html
+   5_css
+
+
+JavaScriptとjQuery
+------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   6_introduction_programming
+   7_JavaScript
+   8_jQuery
+   9_online_shop
+
+
+サーバーサイドプログラミング
+--------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   10_php_introduction
+   11_php_object
+   12_regular_expression
+   13_MySQL
+   14_pdo
+   15_WebSecurity
+   16_git
+   17_Composer
